@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="thes-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="thes-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="thes-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#thes-sky)"/>
+  <rect width="800" height="600" fill="url(#thes-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="48" y1="0" x2="48" y2="600"/><line x1="96" y1="0" x2="96" y2="600"/><line x1="144" y1="0" x2="144" y2="600"/><line x1="192" y1="0" x2="192" y2="600"/><line x1="240" y1="0" x2="240" y2="600"/><line x1="288" y1="0" x2="288" y2="600"/><line x1="336" y1="0" x2="336" y2="600"/><line x1="384" y1="0" x2="384" y2="600"/><line x1="432" y1="0" x2="432" y2="600"/><line x1="480" y1="0" x2="480" y2="600"/><line x1="528" y1="0" x2="528" y2="600"/><line x1="576" y1="0" x2="576" y2="600"/><line x1="624" y1="0" x2="624" y2="600"/><line x1="672" y1="0" x2="672" y2="600"/><line x1="720" y1="0" x2="720" y2="600"/><line x1="768" y1="0" x2="768" y2="600"/>
+  </g>
+  <g fill="none" stroke="url(#thes-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <rect x="330" y="188" width="140" height="252" rx="4"/>
+    <rect x="316" y="170" width="168" height="22" rx="3"/>
+    <path d="M330 240 h140 M330 300 h140 M330 360 h140" stroke-opacity="0.55"/>
+    <rect x="356" y="212" width="14" height="20" rx="7"/><rect x="388" y="212" width="14" height="20" rx="7"/><rect x="420" y="212" width="14" height="20" rx="7"/><rect x="452" y="212" width="14" height="20" rx="7"/>
+    <rect x="356" y="272" width="14" height="20" rx="7"/><rect x="388" y="272" width="14" height="20" rx="7"/><rect x="420" y="272" width="14" height="20" rx="7"/><rect x="452" y="272" width="14" height="20" rx="7"/>
+    <rect x="356" y="332" width="14" height="20" rx="7"/><rect x="388" y="332" width="14" height="20" rx="7"/><rect x="420" y="332" width="14" height="20" rx="7"/><rect x="452" y="332" width="14" height="20" rx="7"/>
+    <rect x="352" y="152" width="96" height="20" rx="3"/>
+    <path d="M400 152 v-28 M386 124 h28"/>
+    <rect x="112" y="316" width="136" height="124"/>
+    <path d="M112 316 h136 M112 352 h136 M112 396 h136" stroke-opacity="0.5"/>
+    <path d="M128 440 v-30 a10 10 0 0 1 20 0 v30"/><path d="M160 440 v-30 a10 10 0 0 1 20 0 v30"/><path d="M192 440 v-30 a10 10 0 0 1 20 0 v30"/><path d="M224 440 v-30 a10 10 0 0 1 20 0 v30"/>
+    <rect x="128" y="362" width="20" height="24" rx="10"/><rect x="160" y="362" width="20" height="24" rx="10"/><rect x="192" y="362" width="20" height="24" rx="10"/><rect x="224" y="362" width="20" height="24" rx="10"/>
+    <rect x="556" y="344" width="148" height="96"/>
+    <path d="M556 344 h148 M556 388 h148" stroke-opacity="0.5"/>
+    <path d="M572 440 v-32 a11 11 0 0 1 22 0 v32"/><path d="M606 440 v-32 a11 11 0 0 1 22 0 v32"/><path d="M640 440 v-32 a11 11 0 0 1 22 0 v32"/><path d="M674 440 v-32 a11 11 0 0 1 22 0 v32"/>
+    <path d="M60 440 h680"/>
+  </g>
+  <g stroke="#C8A44D" stroke-opacity="0.28" stroke-width="1.2" stroke-linecap="round">
+    <line x1="30" y1="462.0" x2="70" y2="462.0"/>
+    <line x1="167" y1="471.9" x2="274" y2="471.9"/>
+    <line x1="304" y1="481.7" x2="478" y2="481.7"/>
+    <line x1="441" y1="491.6" x2="522" y2="491.6"/>
+    <line x1="578" y1="501.4" x2="726" y2="501.4"/>
+    <line x1="135" y1="511.3" x2="190" y2="511.3"/>
+    <line x1="272" y1="521.1" x2="394" y2="521.1"/>
+    <line x1="409" y1="531.0" x2="598" y2="531.0"/>
+    <line x1="546" y1="540.9" x2="642" y2="540.9"/>
+    <line x1="103" y1="550.7" x2="266" y2="550.7"/>
+    <line x1="240" y1="560.6" x2="310" y2="560.6"/>
+    <line x1="377" y1="570.4" x2="514" y2="570.4"/>
+    <line x1="514" y1="580.3" x2="558" y2="580.3"/>
+    <line x1="71" y1="590.1" x2="182" y2="590.1"/>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="599" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

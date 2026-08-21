@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600" role="img">
+  <defs>
+    <linearGradient id="cr-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/><stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <linearGradient id="cr-gold" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+      <stop offset="0" stop-color="#D9BD77"/><stop offset="1" stop-color="#C8A44D"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="600" fill="url(#cr-bg)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.12">
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="48" y1="0" x2="48" y2="600"/><line x1="96" y1="0" x2="96" y2="600"/><line x1="144" y1="0" x2="144" y2="600"/><line x1="192" y1="0" x2="192" y2="600"/><line x1="240" y1="0" x2="240" y2="600"/><line x1="288" y1="0" x2="288" y2="600"/><line x1="336" y1="0" x2="336" y2="600"/><line x1="384" y1="0" x2="384" y2="600"/><line x1="432" y1="0" x2="432" y2="600"/>
+  </g>
+  <g fill="none" stroke="url(#cr-gold)" stroke-width="1.6">
+    <circle cx="240" cy="268" r="118"/>
+    <circle cx="240" cy="268" r="98" stroke-opacity="0.45"/>
+    <path d="M240 192 l11 27 l29 3 l-21 21 l6 29 l-25 -15 l-25 15 l6 -29 l-21 -21 l29 -3 z" stroke-opacity="0.85"/>
+    <path d="M150 268 h-40 M330 268 h40"/>
+  </g>
+  <text x="240" y="322" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="54" letter-spacing="6" fill="url(#cr-gold)">NK</text>
+  <text x="240" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="19" letter-spacing="7" fill="#FAF9F6" fill-opacity="0.82">N. KAKKOS ESTATE</text>
+  <text x="240" y="462" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
+        font-size="12" letter-spacing="5" fill="#C8A44D" fill-opacity="0.8">ATHENS · SINCE 2014</text>
+  <g stroke="#C8A44D" stroke-opacity="0.55" stroke-width="1.3" fill="none">
+    <path d="M138 522 h204"/>
+    <path d="M144 522 v-22 h22 v14 h-13 v-7 h5"/><path d="M178 522 v-22 h22 v14 h-13 v-7 h5"/><path d="M212 522 v-22 h22 v14 h-13 v-7 h5"/><path d="M246 522 v-22 h22 v14 h-13 v-7 h5"/><path d="M280 522 v-22 h22 v14 h-13 v-7 h5"/><path d="M314 522 v-22 h22 v14 h-13 v-7 h5"/>
+  </g>
+  <rect x="0.8" y="0.8" width="478.4" height="598.4" fill="none" stroke="#C8A44D" stroke-opacity="0.4"/>
+</svg>

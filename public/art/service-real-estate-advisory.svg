@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img">
+  <defs>
+    <linearGradient id="sv3-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="sv3-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="sv3-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="480">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#sv3-sky)"/>
+  <rect width="640" height="480" fill="url(#sv3-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="480"/><line x1="48" y1="0" x2="48" y2="480"/><line x1="96" y1="0" x2="96" y2="480"/><line x1="144" y1="0" x2="144" y2="480"/><line x1="192" y1="0" x2="192" y2="480"/><line x1="240" y1="0" x2="240" y2="480"/><line x1="288" y1="0" x2="288" y2="480"/><line x1="336" y1="0" x2="336" y2="480"/><line x1="384" y1="0" x2="384" y2="480"/><line x1="432" y1="0" x2="432" y2="480"/><line x1="480" y1="0" x2="480" y2="480"/><line x1="528" y1="0" x2="528" y2="480"/><line x1="576" y1="0" x2="576" y2="480"/><line x1="624" y1="0" x2="624" y2="480"/>
+  </g>
+  <g fill="none" stroke="url(#sv3-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <rect x="190" y="252" width="34" height="120"/>
+    <rect x="246" y="196" width="34" height="176"/>
+    <rect x="302" y="224" width="34" height="148"/>
+    <rect x="358" y="146" width="34" height="226"/>
+    <rect x="414" y="174" width="34" height="198"/>
+    <rect x="470" y="104" width="34" height="268"/>
+    <path d="M150 372 h380 M150 372 V132"/>
+    <path d="M172 300 L228 246 L284 268 L340 190 L396 214 L452 136" stroke="#D9BD77" stroke-opacity="0.9"/>
+    <circle cx="172" cy="300" r="5" fill="#071B30"/>
+    <circle cx="228" cy="246" r="5" fill="#071B30"/>
+    <circle cx="284" cy="268" r="5" fill="#071B30"/>
+    <circle cx="340" cy="190" r="5" fill="#071B30"/>
+    <circle cx="396" cy="214" r="5" fill="#071B30"/>
+    <circle cx="452" cy="136" r="5" fill="#071B30"/>
+    <path d="M452 136 l26 -6 l-6 26" />
+    <path d="M150 404 h380" stroke-opacity="0.4"/>
+  </g>
+  <rect x="0.5" y="0.5" width="639" height="479" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

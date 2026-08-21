@@ -1,0 +1,111 @@
+/* source("../") giới hạn Tailwind quét trong src/.
+   Thư mục home là một git repo nên nếu không có nó Tailwind sẽ quét cả C:\Users\admin và treo. */
+@import "tailwindcss" source("../");
+
+@theme {
+  --color-navy-950: #071b30;
+  --color-navy-900: #0e2a47;
+  --color-navy-800: #163758;
+  --color-navy-700: #1f4a72;
+  --color-navy-100: #dbe4ee;
+
+  --color-gold-600: #a8863a;
+  --color-gold-500: #c8a44d;
+  --color-gold-400: #d9bd77;
+  --color-gold-100: #f2e8d1;
+
+  --color-cream-50: #faf9f6;
+  --color-cream-100: #f3f1ea;
+  --color-cream-200: #e7e3d8;
+
+  --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --tracking-widest2: 0.22em;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-cream-50);
+    color: var(--color-navy-900);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif);
+    font-weight: 500;
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background-color: var(--color-gold-500);
+    color: #fff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-gold-600);
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* Nhãn nhỏ chữ hoa giãn cách — dùng trên đầu mỗi section */
+  .eyebrow {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: var(--tracking-widest2);
+    text-transform: uppercase;
+  }
+
+  .rule-gold {
+    height: 1px;
+    width: 3.5rem;
+    background-color: var(--color-gold-500);
+  }
+
+  .prose-lux p {
+    margin-bottom: 1.15rem;
+    line-height: 1.85;
+  }
+  .prose-lux p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* Hiện dần khi cuộn tới — tiết chế, không parallax */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}

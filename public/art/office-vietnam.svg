@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="vn-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="vn-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="vn-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#vn-sky)"/>
+  <rect width="800" height="600" fill="url(#vn-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="48" y1="0" x2="48" y2="600"/><line x1="96" y1="0" x2="96" y2="600"/><line x1="144" y1="0" x2="144" y2="600"/><line x1="192" y1="0" x2="192" y2="600"/><line x1="240" y1="0" x2="240" y2="600"/><line x1="288" y1="0" x2="288" y2="600"/><line x1="336" y1="0" x2="336" y2="600"/><line x1="384" y1="0" x2="384" y2="600"/><line x1="432" y1="0" x2="432" y2="600"/><line x1="480" y1="0" x2="480" y2="600"/><line x1="528" y1="0" x2="528" y2="600"/><line x1="576" y1="0" x2="576" y2="600"/><line x1="624" y1="0" x2="624" y2="600"/><line x1="672" y1="0" x2="672" y2="600"/><line x1="720" y1="0" x2="720" y2="600"/><line x1="768" y1="0" x2="768" y2="600"/>
+  </g>
+  <g fill="none" stroke="url(#vn-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <rect x="92" y="322" width="74" height="138"/><line x1="99" y1="346" x2="159" y2="346" stroke-opacity="0.6"/><line x1="99" y1="370" x2="159" y2="370" stroke-opacity="0.6"/><line x1="99" y1="394" x2="159" y2="394" stroke-opacity="0.6"/><line x1="99" y1="418" x2="159" y2="418" stroke-opacity="0.6"/>
+    <rect x="174" y="268" width="58" height="192"/><line x1="181" y1="292" x2="225" y2="292" stroke-opacity="0.6"/><line x1="181" y1="316" x2="225" y2="316" stroke-opacity="0.6"/><line x1="181" y1="340" x2="225" y2="340" stroke-opacity="0.6"/><line x1="181" y1="364" x2="225" y2="364" stroke-opacity="0.6"/><line x1="181" y1="388" x2="225" y2="388" stroke-opacity="0.6"/><line x1="181" y1="412" x2="225" y2="412" stroke-opacity="0.6"/>
+    <rect x="242" y="350" width="66" height="110"/><line x1="249" y1="374" x2="301" y2="374" stroke-opacity="0.6"/><line x1="249" y1="398" x2="301" y2="398" stroke-opacity="0.6"/><line x1="249" y1="422" x2="301" y2="422" stroke-opacity="0.6"/>
+    <rect x="590" y="300" width="62" height="160"/><line x1="597" y1="324" x2="645" y2="324" stroke-opacity="0.6"/><line x1="597" y1="348" x2="645" y2="348" stroke-opacity="0.6"/><line x1="597" y1="372" x2="645" y2="372" stroke-opacity="0.6"/><line x1="597" y1="396" x2="645" y2="396" stroke-opacity="0.6"/><line x1="597" y1="420" x2="645" y2="420" stroke-opacity="0.6"/>
+    <rect x="660" y="352" width="56" height="108"/><line x1="667" y1="376" x2="709" y2="376" stroke-opacity="0.6"/><line x1="667" y1="400" x2="709" y2="400" stroke-opacity="0.6"/><line x1="667" y1="424" x2="709" y2="424" stroke-opacity="0.6"/>
+    <rect x="724" y="286" width="62" height="174"/><line x1="731" y1="310" x2="779" y2="310" stroke-opacity="0.6"/><line x1="731" y1="334" x2="779" y2="334" stroke-opacity="0.6"/><line x1="731" y1="358" x2="779" y2="358" stroke-opacity="0.6"/><line x1="731" y1="382" x2="779" y2="382" stroke-opacity="0.6"/><line x1="731" y1="406" x2="779" y2="406" stroke-opacity="0.6"/><line x1="731" y1="430" x2="779" y2="430" stroke-opacity="0.6"/>
+
+    <!-- Tháp chủ đạo: thân thon, sân đỗ trực thăng đua ra một bên -->
+    <path d="M340 460 V200 l32 -32 h96 v292 z"/>
+    <path d="M340 246 h128 M340 298 h128 M340 350 h128 M340 402 h128" stroke-opacity="0.6"/>
+    <ellipse cx="524" cy="232" rx="48" ry="12"/>
+    <path d="M476 232 h-8" stroke-opacity="0.8"/>
+    <path d="M372 168 v-36"/>
+
+    <!-- Tháp phụ mái vát -->
+    <path d="M496 460 V306 l28 -32 v186 z"/>
+    <path d="M496 348 h28 M496 398 h28" stroke-opacity="0.55"/>
+
+    <path d="M40 460 h720"/>
+  </g>
+
+  <!-- Thuyền buồm: cột + hai cánh buồm tam giác, gọn và đọc được ngay -->
+  <g fill="none" stroke="url(#vn-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <path d="M196 546 h164 l-22 26 h-120 z"/>
+    <path d="M278 520 V408"/>
+    <path d="M282 416 l58 104 h-58 z"/>
+    <path d="M274 442 l-46 78 h46 z"/>
+    <path d="M226 520 h128" stroke-opacity="0.55"/>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="599" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

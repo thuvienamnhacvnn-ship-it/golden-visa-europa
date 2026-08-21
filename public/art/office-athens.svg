@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="ath-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="ath-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="ath-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#ath-sky)"/>
+  <rect width="800" height="600" fill="url(#ath-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="48" y1="0" x2="48" y2="600"/><line x1="96" y1="0" x2="96" y2="600"/><line x1="144" y1="0" x2="144" y2="600"/><line x1="192" y1="0" x2="192" y2="600"/><line x1="240" y1="0" x2="240" y2="600"/><line x1="288" y1="0" x2="288" y2="600"/><line x1="336" y1="0" x2="336" y2="600"/><line x1="384" y1="0" x2="384" y2="600"/><line x1="432" y1="0" x2="432" y2="600"/><line x1="480" y1="0" x2="480" y2="600"/><line x1="528" y1="0" x2="528" y2="600"/><line x1="576" y1="0" x2="576" y2="600"/><line x1="624" y1="0" x2="624" y2="600"/><line x1="672" y1="0" x2="672" y2="600"/><line x1="720" y1="0" x2="720" y2="600"/><line x1="768" y1="0" x2="768" y2="600"/>
+  </g>
+  <g fill="none" stroke="url(#ath-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <path d="M206 300 L400 214 L594 300 Z"/>
+    <rect x="216" y="278" width="368" height="24"/>
+    <rect x="236" y="300" width="26" height="150"/>
+      <line x1="244" y1="310" x2="244" y2="442"/>
+      <line x1="253" y1="310" x2="253" y2="442"/>
+      <rect x="278" y="300" width="26" height="150"/>
+      <line x1="286" y1="310" x2="286" y2="442"/>
+      <line x1="295" y1="310" x2="295" y2="442"/>
+      <rect x="320" y="300" width="26" height="150"/>
+      <line x1="328" y1="310" x2="328" y2="442"/>
+      <line x1="337" y1="310" x2="337" y2="442"/>
+      <rect x="362" y="300" width="26" height="150"/>
+      <line x1="370" y1="310" x2="370" y2="442"/>
+      <line x1="379" y1="310" x2="379" y2="442"/>
+      <rect x="404" y="300" width="26" height="150"/>
+      <line x1="412" y1="310" x2="412" y2="442"/>
+      <line x1="421" y1="310" x2="421" y2="442"/>
+      <rect x="446" y="300" width="26" height="150"/>
+      <line x1="454" y1="310" x2="454" y2="442"/>
+      <line x1="463" y1="310" x2="463" y2="442"/>
+      <rect x="488" y="300" width="26" height="150"/>
+      <line x1="496" y1="310" x2="496" y2="442"/>
+      <line x1="505" y1="310" x2="505" y2="442"/>
+      <rect x="530" y="300" width="26" height="150"/>
+      <line x1="538" y1="310" x2="538" y2="442"/>
+      <line x1="547" y1="310" x2="547" y2="442"/>
+    <rect x="206" y="450" width="388" height="18"/>
+    <rect x="188" y="468" width="424" height="14"/>
+    <path d="M60 520 L740 520"/>
+    <!-- Cây bách: hình dễ đọc hơn tán tròn, và đúng chất Địa Trung Hải -->
+    <path d="M118 520 v-30"/>
+    <path d="M118 490 c-22 0 -30 -26 -24 -58 c5 -27 16 -50 24 -62 c8 12 19 35 24 62 c6 32 -2 58 -24 58 Z"/>
+    <path d="M118 400 v86" stroke-opacity="0.4"/>
+    <path d="M672 520 v-26"/>
+    <path d="M672 494 c-18 0 -25 -22 -20 -48 c4 -22 13 -41 20 -51 c7 10 16 29 20 51 c5 26 -2 48 -20 48 Z"/>
+    <path d="M672 414 v72" stroke-opacity="0.4"/>
+    <path d="M0 560 h800" stroke-opacity="0.5"/>
+  </g>
+  <g fill="#C8A44D" fill-opacity="0.5">
+    <circle cx="576" cy="156" r="4"/><circle cx="642" cy="120" r="3"/><circle cx="700" cy="176" r="2.5"/>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="599" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

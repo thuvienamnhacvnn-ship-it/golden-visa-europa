@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img">
+  <defs>
+    <linearGradient id="sv5-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="sv5-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="sv5-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="480">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#sv5-sky)"/>
+  <rect width="640" height="480" fill="url(#sv5-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="480"/><line x1="48" y1="0" x2="48" y2="480"/><line x1="96" y1="0" x2="96" y2="480"/><line x1="144" y1="0" x2="144" y2="480"/><line x1="192" y1="0" x2="192" y2="480"/><line x1="240" y1="0" x2="240" y2="480"/><line x1="288" y1="0" x2="288" y2="480"/><line x1="336" y1="0" x2="336" y2="480"/><line x1="384" y1="0" x2="384" y2="480"/><line x1="432" y1="0" x2="432" y2="480"/><line x1="480" y1="0" x2="480" y2="480"/><line x1="528" y1="0" x2="528" y2="480"/><line x1="576" y1="0" x2="576" y2="480"/><line x1="624" y1="0" x2="624" y2="480"/>
+  </g>
+  <g fill="none" stroke="url(#sv5-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <path d="M164 260 L320 148 L476 260"/>
+    <path d="M186 246 V392 h268 V246"/>
+    <rect x="222" y="290" width="72" height="60"/>
+    <path d="M258 290 v60 M222 320 h72" stroke-opacity="0.5"/>
+    <rect x="352" y="290" width="66" height="102"/>
+    <circle cx="404" cy="344" r="4" fill="#C8A44D" stroke="none"/>
+    <path d="M140 392 h360"/>
+    <!-- bay trát -->
+    <path d="M498 212 l70 30 -15 32 -70 -30 z"/>
+    <path d="M492 252 l-30 46 a13 13 0 0 0 22 14 l28 -46" stroke-opacity="0.75"/>
+    <!-- con lăn sơn -->
+    <rect x="86" y="184" width="74" height="30" rx="9"/>
+    <path d="M96 184 v30 M110 184 v30 M136 184 v30 M150 184 v30" stroke-opacity="0.45"/>
+    <path d="M123 214 v28 h-30 v58"/>
+    <path d="M82 300 h22 v28 h-22 z"/>
+  </g>
+  <g stroke="#C8A44D" stroke-opacity="0.3" stroke-dasharray="6 8" stroke-width="1.4" fill="none">
+    <path d="M186 246 h268"/>
+  </g>
+  <rect x="0.5" y="0.5" width="639" height="479" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

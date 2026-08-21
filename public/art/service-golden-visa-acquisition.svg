@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img">
+  <defs>
+    <linearGradient id="sv1-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="sv1-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="sv1-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="480">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#sv1-sky)"/>
+  <rect width="640" height="480" fill="url(#sv1-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="480"/><line x1="48" y1="0" x2="48" y2="480"/><line x1="96" y1="0" x2="96" y2="480"/><line x1="144" y1="0" x2="144" y2="480"/><line x1="192" y1="0" x2="192" y2="480"/><line x1="240" y1="0" x2="240" y2="480"/><line x1="288" y1="0" x2="288" y2="480"/><line x1="336" y1="0" x2="336" y2="480"/><line x1="384" y1="0" x2="384" y2="480"/><line x1="432" y1="0" x2="432" y2="480"/><line x1="480" y1="0" x2="480" y2="480"/><line x1="528" y1="0" x2="528" y2="480"/><line x1="576" y1="0" x2="576" y2="480"/><line x1="624" y1="0" x2="624" y2="480"/>
+  </g>
+  <g fill="none" stroke="url(#sv1-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <rect x="238" y="150" width="164" height="216" rx="8"/>
+    <path d="M238 186 h164" stroke-opacity="0.5"/>
+    <circle cx="320" cy="256" r="42"/>
+    <path d="M278 256 h84 M320 214 a56 42 0 0 1 0 84 a56 42 0 0 1 0 -84" stroke-opacity="0.6"/>
+    <path d="M272 330 h96 M272 348 h64" stroke-opacity="0.6"/>
+    <rect x="392" y="286" width="96" height="72" rx="4" transform="rotate(-12 440 322)"/>
+    <path d="M410 316 h60 M410 334 h40" stroke-opacity="0.55" transform="rotate(-12 440 322)"/>
+  </g>
+  <g><circle cx="320.0" cy="146.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="372.0" cy="159.9" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="410.1" cy="198.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="424.0" cy="250.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="410.1" cy="302.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="372.0" cy="340.1" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="320.0" cy="354.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="268.0" cy="340.1" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="229.9" cy="302.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="216.0" cy="250.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="229.9" cy="198.0" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/>
+    <circle cx="268.0" cy="159.9" r="4.5" fill="#C8A44D" fill-opacity="0.75" stroke="none"/></g>
+  <rect x="0.5" y="0.5" width="639" height="479" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

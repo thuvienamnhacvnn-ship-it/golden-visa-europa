@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" role="img">
+  <defs>
+    <linearGradient id="sv2-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="sv2-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="sv2-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="480">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="480" fill="url(#sv2-sky)"/>
+  <rect width="640" height="480" fill="url(#sv2-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="480"/><line x1="48" y1="0" x2="48" y2="480"/><line x1="96" y1="0" x2="96" y2="480"/><line x1="144" y1="0" x2="144" y2="480"/><line x1="192" y1="0" x2="192" y2="480"/><line x1="240" y1="0" x2="240" y2="480"/><line x1="288" y1="0" x2="288" y2="480"/><line x1="336" y1="0" x2="336" y2="480"/><line x1="384" y1="0" x2="384" y2="480"/><line x1="432" y1="0" x2="432" y2="480"/><line x1="480" y1="0" x2="480" y2="480"/><line x1="528" y1="0" x2="528" y2="480"/><line x1="576" y1="0" x2="576" y2="480"/><line x1="624" y1="0" x2="624" y2="480"/>
+  </g>
+  <g fill="none" stroke="url(#sv2-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <path d="M188 212 L320 148 L452 212 Z"/>
+    <rect x="196" y="192" width="248" height="20"/>
+    <rect x="216" y="212" width="24" height="128"/><line x1="224" y1="222" x2="224" y2="330" stroke-opacity="0.5"/><rect x="260" y="212" width="24" height="128"/><line x1="268" y1="222" x2="268" y2="330" stroke-opacity="0.5"/><rect x="304" y="212" width="24" height="128"/><line x1="312" y1="222" x2="312" y2="330" stroke-opacity="0.5"/><rect x="348" y="212" width="24" height="128"/><line x1="356" y1="222" x2="356" y2="330" stroke-opacity="0.5"/><rect x="392" y="212" width="24" height="128"/><line x1="400" y1="222" x2="400" y2="330" stroke-opacity="0.5"/>
+    <rect x="188" y="340" width="264" height="16"/>
+    <rect x="172" y="356" width="296" height="12"/>
+    <rect x="118" y="370" width="152" height="92" rx="8"/>
+    <path d="M118 398 h152" stroke-opacity="0.6"/>
+    <rect x="136" y="412" width="26" height="20" rx="3" stroke-opacity="0.7"/>
+    <path d="M136 446 h52 M200 446 h32" stroke-opacity="0.5"/>
+    <circle cx="470" cy="418" r="38"/>
+    <path d="M470 396 v44 M458 406 h20 a10 10 0 0 1 0 20 h-16 a10 10 0 0 0 0 20 h22" stroke-opacity="0.75"/>
+  </g>
+  <rect x="0.5" y="0.5" width="639" height="479" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>
