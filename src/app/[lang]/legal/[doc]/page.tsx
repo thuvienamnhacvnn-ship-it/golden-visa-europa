@@ -53,10 +53,10 @@ export default async function LegalPage({
     <>
       <PageHero title={content.title} lead={content.lead} />
 
-      <Section tone="cream">
+      <Section tone="base">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.18em] text-navy-900/40">
+            <p className="text-xs uppercase tracking-[0.18em] text-ink/40">
               {dict.legal.updated}: {site.legalUpdated}
             </p>
 
@@ -67,7 +67,7 @@ export default async function LegalPage({
                     <h2 className="text-[1.375rem] leading-snug sm:text-[1.625rem]">
                       {section.title}
                     </h2>
-                    <p className="mt-4 text-[1rem] leading-[1.85] text-navy-800/80">
+                    <p className="mt-4 text-[1rem] leading-[1.85] text-ink/80">
                       {section.body}
                     </p>
                   </section>

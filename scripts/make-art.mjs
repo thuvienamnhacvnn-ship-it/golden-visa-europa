@@ -381,3 +381,130 @@ for (const [name, svg] of Object.entries(art)) {
   console.log(`${name}.svg  ${(Buffer.byteLength(svg) / 1024).toFixed(1)} KB`);
 }
 console.log(`\n${Object.keys(art).length} tệp, tổng ${(total / 1024).toFixed(1)} KB → public/art/`);
+
+/* ── Băng ngang đầu trang: rộng 3:1, thấp ─────────────────────── */
+
+/**
+ * Banner phải đọc được ở dải rất thấp, nên bố cục là:
+ * đường chân trời + hoạ tiết lặp, KHÔNG phải một vật thể ở giữa.
+ */
+function banner(id, motif) {
+  const W = 2400, H = 800;
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">
+  <defs>
+    <linearGradient id="${id}-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="${C.navyMid}"/><stop offset="1" stop-color="${C.navyDeep}"/>
+    </linearGradient>
+    <linearGradient id="${id}-ln" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="${H}">
+      <stop offset="0" stop-color="${C.goldLight}" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="${C.gold}" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="${id}-sun" cx="0.78" cy="0.3" r="0.5">
+      <stop offset="0" stop-color="${C.gold}" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="${C.gold}" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="${id}-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="${C.navyDeep}" stop-opacity="0.92"/>
+      <stop offset="0.55" stop-color="${C.navyDeep}" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="${C.navyDeep}" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#${id}-bg)"/>
+  <rect width="${W}" height="${H}" fill="url(#${id}-sun)"/>
+  <g stroke="${C.gold}" stroke-opacity="0.09">
+    ${Array.from({ length: Math.ceil(W / 60) }, (_, i) => `<line x1="${i * 60}" y1="0" x2="${i * 60}" y2="${H}"/>`).join("")}
+  </g>
+${motif(id, W, H)}
+  <rect width="${W}" height="${H}" fill="url(#${id}-fade)"/>
+  <rect x="0.5" y="0.5" width="${W - 1}" height="${H - 1}" fill="none" stroke="${C.gold}" stroke-opacity="0.3"/>
+</svg>
+`;
+}
+
+const bStroke = (id) =>
+  `fill="none" stroke="url(#${id}-ln)" stroke-width="2" stroke-linejoin="round" stroke-linecap="square"`;
+
+// Hàng cột chạy suốt chiều ngang
+const motifColumns = (id, W, H) => `  <g ${bStroke(id)}>
+    ${Array.from({ length: 14 }, (_, i) => {
+      const x = 620 + i * 130;
+      return `<rect x="${x}" y="300" width="54" height="330"/>
+      <line x1="${x + 14}" y1="316" x2="${x + 14}" y2="614" stroke-opacity="0.5"/>
+      <line x1="${x + 27}" y1="316" x2="${x + 27}" y2="614" stroke-opacity="0.5"/>
+      <line x1="${x + 40}" y1="316" x2="${x + 40}" y2="614" stroke-opacity="0.5"/>
+      <rect x="${x - 10}" y="282" width="74" height="18"/>`;
+    }).join("\n    ")}
+    <rect x="600" y="248" width="1800" height="30"/>
+    <path d="M560 630 H2400"/>
+    <path d="M520 668 H2400" stroke-opacity="0.45"/>
+  </g>`;
+
+// Đường chân trời thành phố + mặt nước
+const motifSkyline = (id, W, H) => {
+  const b = [];
+  let x = 560;
+  const hs = [180, 300, 240, 380, 210, 330, 270, 420, 240, 310, 190, 350, 260, 300];
+  for (let i = 0; i < hs.length; i++) {
+    const w = 90 + ((i * 37) % 70);
+    b.push(`<rect x="${x}" y="${600 - hs[i]}" width="${w}" height="${hs[i]}"/>`);
+    for (let r = 1; r * 34 < hs[i] - 20; r++)
+      b.push(`<line x1="${x + 8}" y1="${600 - hs[i] + r * 34}" x2="${x + w - 8}" y2="${600 - hs[i] + r * 34}" stroke-opacity="0.35"/>`);
+    x += w + 30;
+  }
+  return `  <g ${bStroke(id)}>
+    ${b.join("\n    ")}
+    <path d="M480 600 H2400"/>
+  </g>
+  <g stroke="${C.gold}" stroke-opacity="0.22" stroke-width="2" stroke-linecap="round">
+    ${Array.from({ length: 16 }, (_, i) => {
+      const y = 630 + i * 10;
+      const len = 90 + ((i * 113) % 260);
+      const sx = 520 + ((i * 191) % 1500);
+      return `<line x1="${sx}" y1="${y}" x2="${sx + len}" y2="${y}"/>`;
+    }).join("\n    ")}
+  </g>`;
+};
+
+// Sóng biển + đường chân trời phẳng
+const motifSea = (id, W, H) => `  <g ${bStroke(id)}>
+    <path d="M420 470 H2400"/>
+    <path d="M1720 470 a120 120 0 0 1 240 0" stroke-opacity="0.7"/>
+    <path d="M1780 470 v-118 M1900 470 v-84" stroke-opacity="0.35"/>
+  </g>
+  <g stroke="${C.gold}" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round">
+    ${Array.from({ length: 22 }, (_, i) => {
+      const y = 508 + i * 13;
+      const len = 110 + ((i * 149) % 320);
+      const sx = 440 + ((i * 227) % 1600);
+      return `<line x1="${sx}" y1="${y}" x2="${sx + len}" y2="${y}"/>`;
+    }).join("\n    ")}
+  </g>`;
+
+// Diềm meander lặp suốt chiều ngang
+const motifMeander = (id, W, H) => `  <g ${bStroke(id)}>
+    <path d="M480 470 H2400"/>
+    ${Array.from({ length: 26 }, (_, i) => {
+      const x = 500 + i * 74;
+      return `<path d="M${x} 470 v-52 h52 v34 h-31 v-17 h13"/>`;
+    }).join("\n    ")}
+    <path d="M480 560 H2400" stroke-opacity="0.4"/>
+    <path d="M480 596 H2400" stroke-opacity="0.25"/>
+  </g>`;
+
+const banners = {
+  "banner-hero": banner("bh", motifColumns),
+  "banner-what-is": banner("bw", motifMeander),
+  "banner-services": banner("bs", motifColumns),
+  "banner-about": banner("ba", motifMeander),
+  "banner-why-us": banner("by", motifSea),
+  "banner-offices": banner("bo", motifSkyline),
+  "banner-contact": banner("bc", motifSea),
+};
+
+let bTotal = 0;
+for (const [name, svg] of Object.entries(banners)) {
+  writeFileSync(join(outDir, `${name}.svg`), svg, "utf8");
+  bTotal += Buffer.byteLength(svg);
+  console.log(`${name}.svg  ${(Buffer.byteLength(svg) / 1024).toFixed(1)} KB`);
+}
+console.log(`+ ${Object.keys(banners).length} banner, ${(bTotal / 1024).toFixed(1)} KB`);

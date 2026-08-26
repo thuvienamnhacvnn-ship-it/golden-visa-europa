@@ -28,6 +28,7 @@ export const vi: Dictionary = {
     menu: "Menu",
     close: "Đóng",
     language: "Ngôn ngữ",
+    theme: "Đổi nền sáng / tối",
     needsClientInput: "Đang chờ khách hàng cung cấp",
   },
 
@@ -150,16 +151,101 @@ export const vi: Dictionary = {
       "Lợi nhuận đầu tư và lãi vốn",
       "Ưu đãi về thuế",
       "Không hạn chế việc mua bất động sản",
-      "Được cho thuê chính bất động sản đã đầu tư",
+      "Được cho thuê dài hạn chính bất động sản đã đầu tư",
       "Đủ điều kiện xin quốc tịch sau một thời gian cư trú",
       "Được nắm giữ cổ phần và nhận cổ tức từ công ty đăng ký tại Hy Lạp",
     ],
     thresholds: {
       title: "Mức đầu tư tối thiểu",
-      body: "Hy Lạp đã điều chỉnh mức đầu tư tối thiểu của chương trình thẻ vàng, và số tiền đủ điều kiện hiện phụ thuộc vào khu vực cũng như loại bất động sản. Vì các con số này thay đổi theo luật, chúng tôi xác nhận bằng văn bản mức áp dụng cho đúng khu vực quý vị nhắm tới trước khi quý vị cam kết bất cứ điều gì.",
-      cta: "Hỏi mức đầu tư hiện hành",
+      body: "Số tiền đủ điều kiện phụ thuộc vào bất động sản nằm ở đâu và thuộc loại nào. Dưới đây là các mức đang có hiệu lực — chúng tôi xác nhận bằng văn bản con số chính xác cho đúng khu vực quý vị nhắm tới, trước khi quý vị cam kết bất cứ điều gì.",
+      cta: "Hỏi mức áp dụng cho khu vực của tôi",
       sourceNote:
-        "Số liệu do Bộ Di trú và Tị nạn Hy Lạp cùng Enterprise Greece công bố.",
+        "Luật 5100/2024, hiệu lực từ 05/04/2024, được làm rõ bởi Thông tư 1/2026 ngày 22/04/2026. Mức đầu tư do luật quy định và có thể thay đổi.",
+      verified: "Kiểm chứng ngày 23/08/2026",
+      tiers: [
+        {
+          amount: "800.000 €",
+          where: "Attica · vùng Thessaloniki · Mykonos · Santorini · các đảo trên 3.100 dân",
+          note: "Những vùng nhu cầu cao, gồm Athens và hầu hết các đảo nổi tiếng.",
+        },
+        {
+          amount: "400.000 €",
+          where: "Mọi khu vực còn lại của Hy Lạp",
+          note: "Phần lớn bán đảo Peloponnese, vùng đất liền, bắc Hy Lạp ngoài Thessaloniki, và các đảo nhỏ.",
+        },
+        {
+          amount: "250.000 €",
+          where: "Chỉ hai trường hợp đặc biệt, ở bất kỳ đâu",
+          note: "Bất động sản chuyển đổi từ thương mại sang nhà ở, việc chuyển đổi phải hoàn tất trước khi nộp hồ sơ; hoặc công trình được xếp hạng di sản, trùng tu xong trước lần gia hạn đầu tiên. Mỗi bất động sản chỉ áp dụng một lần.",
+        },
+      ],
+      sizeTitle: "Diện tích tối thiểu: 120 m²",
+      sizeBody:
+        "Phải là MỘT bất động sản duy nhất, diện tích chính từ 120 m² trở lên. Chỗ để xe và kho không được tính. Quy định này không áp dụng cho đất trống, và không áp dụng cho hai trường hợp 250.000 €.",
+      startupTitle: "Mới từ 2026: hướng đầu tư đổi mới sáng tạo",
+      startupBody:
+        "Từ năm 2026, chương trình chấp nhận thêm hình thức đầu tư từ 250.000 € vào các start-up và spin-off Hy Lạp đăng ký trên nền tảng quốc gia Elevate. Một giấy phép cho nhà đầu tư cá nhân, tối đa ba giấy phép nếu khoản đầu tư còn hỗ trợ nhân sự chủ chốt. Hỏi chúng tôi xem hướng này có hợp với quý vị hơn bất động sản không.",
+    },
+
+    rules: {
+      title: "Thẻ cho quý vị quyền gì và KHÔNG cho quyền gì",
+      lead: "Những điểm nhà đầu tư hay hiểu sai nhất. Nên đọc trước khi chọn bất động sản.",
+      items: [
+        {
+          title: "Năm năm, gia hạn không giới hạn",
+          body: "Thẻ có thời hạn năm năm và được gia hạn từng đợt năm năm, chừng nào quý vị còn sở hữu bất động sản. Gia hạn chứng minh bằng tờ khai tài sản hoặc trích lục địa chính.",
+        },
+        {
+          title: "Không bắt buộc cư trú",
+          body: "Quý vị không phải sang sống ở Hy Lạp. Thời gian ở ngoài Hy Lạp không phải là lý do từ chối gia hạn. Nếu mục tiêu của quý vị là quốc tịch chứ không phải thẻ cư trú thì quy định khác hẳn — hỏi chúng tôi.",
+        },
+        {
+          title: "Ba thế hệ trong một hồ sơ",
+          body: "Vợ/chồng hoặc bạn đời đăng ký, con chưa lập gia đình dưới 21 tuổi (có thể kéo dài tới 24), cùng cha mẹ và ông bà của cả hai vợ chồng đều hưởng quyền từ hồ sơ của quý vị.",
+        },
+        {
+          title: "CẤM cho thuê ngắn hạn",
+          body: "Bất động sản dùng để xin thẻ vàng KHÔNG được cho thuê ngắn hạn qua các nền tảng kiểu Airbnb, và không được cho thuê lại. Vi phạm thì bị thu hồi thẻ và phạt 50.000 €. Cho thuê dài hạn thì được, kể cả cho doanh nghiệp du lịch có cung cấp dịch vụ ngoài chỗ ở.",
+        },
+        {
+          title: "Thẻ này không phải giấy phép lao động",
+          body: "Thẻ không cho quyền đi làm thuê. Quý vị được lập công ty tại Hy Lạp, nắm cổ phần và nhận cổ tức, nhưng không được nhận việc làm dựa trên tấm thẻ này.",
+        },
+      ],
+    },
+
+    faq: {
+      title: "Những câu nhà đầu tư thật sự hỏi",
+      items: [
+        {
+          q: "Tôi cho thuê Airbnb để bù chi phí được không?",
+          a: "Không. Bất động sản dùng xin thẻ vàng bị cấm cho thuê ngắn hạn qua các nền tảng nghỉ dưỡng, và cấm cho thuê lại. Vi phạm thì mất thẻ và bị phạt 50.000 €. Cho thuê dài hạn thì được, và đó là cách chúng tôi thường thu xếp.",
+        },
+        {
+          q: "Tôi có phải chuyển sang Hy Lạp sống không?",
+          a: "Không. Không có yêu cầu cư trú tối thiểu, và việc vắng mặt khỏi Hy Lạp không phải lý do từ chối gia hạn. Phần lớn khách của chúng tôi hoàn tất toàn bộ quy trình mà chưa đặt chân tới Hy Lạp cho đến khi thẻ sẵn sàng.",
+        },
+        {
+          q: "Tôi mua hai căn rẻ hơn cho đủ mức được không?",
+          a: "Không. Khoản đầu tư phải là MỘT bất động sản duy nhất đạt mức của khu vực đó, và tối thiểu 120 m² diện tích chính đối với hai mức 800.000 € và 400.000 €.",
+        },
+        {
+          q: "Tôi được đưa ai vào hồ sơ?",
+          a: "Vợ/chồng hoặc bạn đời đăng ký, con chưa lập gia đình dưới 21 tuổi — có thể kéo dài tới 24 — cùng cha mẹ và ông bà của cả hai vợ chồng.",
+        },
+        {
+          q: "Có thẻ này rồi thì được quốc tịch Hy Lạp không?",
+          a: "Không tự động. Thẻ vàng là giấy phép cư trú. Việc nhập quốc tịch do luật khác điều chỉnh và đòi hỏi cư trú thực sự lâu dài tại Hy Lạp — điều mà thẻ vàng không bắt buộc quý vị phải làm. Chúng tôi nói thẳng trường hợp của quý vị cho phép tới đâu, chứ không vẽ ra một con đường không có thật.",
+        },
+        {
+          q: "Tôi được đi làm ở Hy Lạp không?",
+          a: "Không. Thẻ không cho quyền tiếp cận việc làm. Quý vị được lập công ty, nắm cổ phần và nhận cổ tức.",
+        },
+        {
+          q: "Mất bao lâu?",
+          a: "Sau khi hoàn tất giao dịch mua và hồ sơ đầy đủ, quý vị được cấp giấy tờ cho phép cư trú hợp pháp trong lúc cơ quan chức năng xử lý thẻ. Chúng tôi đưa mốc thời gian thực tế cho chính trường hợp của quý vị bằng văn bản — không đưa một con số chung áp cho tất cả mọi người.",
+        },
+      ],
     },
     eligibilityTitle: "Dành cho ai",
     eligibility: [
@@ -275,7 +361,7 @@ export const vi: Dictionary = {
           "Cảnh quan sân vườn",
           "Thiết kế nội thất",
           "Cải tạo bếp và phòng tắm",
-          "Hoàn thiện để cho thuê ngắn hạn",
+          "Hoàn thiện để cho thuê dài hạn",
         ],
         note: "",
       },
@@ -296,7 +382,7 @@ export const vi: Dictionary = {
           "Tuân thủ quy định và lưu trữ hồ sơ",
           "Bảo trì, sửa chữa và kiểm tra định kỳ",
           "Điện nước, thuế và phí toà nhà",
-          "Vận hành cho thuê ngắn hạn",
+          "Cho thuê dài hạn, kể cả cho doanh nghiệp du lịch",
         ],
         note: "",
       },
@@ -557,6 +643,31 @@ export const vi: Dictionary = {
     regNote: "Thông tin đăng ký doanh nghiệp sẽ do khách hàng cung cấp.",
     disclaimerShort:
       "Thông tin trên trang này mang tính chung và không phải tư vấn pháp lý hay tư vấn đầu tư. Giấy phép cư trú do cơ quan chức năng Hy Lạp cấp.",
+  },
+
+  assistant: {
+    open: "Hỏi trợ lý",
+    close: "Đóng khung chat",
+    title: "Trợ lý thẻ vàng",
+    subtitle: "Trả lời từ thông tin đã công bố, 24/7",
+    greeting:
+      "Xin chào. Quý vị có thể hỏi tôi về thẻ vàng Hy Lạp, dịch vụ hoặc văn phòng của chúng tôi. Việc gì liên quan tới hồ sơ riêng thì tôi chuyển sang chuyên viên.",
+    placeholder: "Nhập câu hỏi…",
+    send: "Gửi",
+    thinking: "Đang trả lời…",
+    suggestions: [
+      "Mức đầu tư hiện nay là bao nhiêu?",
+      "Tôi cho thuê Airbnb được không?",
+      "Tôi có phải sang Hy Lạp sống không?",
+      "Tôi được đưa ai vào hồ sơ?",
+    ],
+    offlineNote: "— trả lời lấy từ mục Hỏi đáp trên website.",
+    noAnswer:
+      "Thông tin đã công bố của chúng tôi chưa có nội dung đó. Chuyên viên sẽ trả lời chính xác hơn — quý vị dùng trang liên hệ hoặc gọi văn phòng Athens.",
+    humanCta: "Nói chuyện với người thật",
+    disclaimer:
+      "Trợ lý tự động. Chỉ là thông tin chung, không phải tư vấn pháp lý hay tư vấn đầu tư. Xin đừng gửi số hộ chiếu, tài khoản ngân hàng hay giấy tờ vào khung này.",
+    errorMsg: "Có lỗi xảy ra. Xin thử lại hoặc liên hệ trực tiếp với chúng tôi.",
   },
 
   notFound: {

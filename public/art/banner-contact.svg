@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 800" width="2400" height="800" role="img">
+  <defs>
+    <linearGradient id="bc-bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/><stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <linearGradient id="bc-ln" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="800">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.6"/>
+    </linearGradient>
+    <radialGradient id="bc-sun" cx="0.78" cy="0.3" r="0.5">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bc-fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#071B30" stop-opacity="0.92"/>
+      <stop offset="0.55" stop-color="#071B30" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#071B30" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="2400" height="800" fill="url(#bc-bg)"/>
+  <rect width="2400" height="800" fill="url(#bc-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.09">
+    <line x1="0" y1="0" x2="0" y2="800"/><line x1="60" y1="0" x2="60" y2="800"/><line x1="120" y1="0" x2="120" y2="800"/><line x1="180" y1="0" x2="180" y2="800"/><line x1="240" y1="0" x2="240" y2="800"/><line x1="300" y1="0" x2="300" y2="800"/><line x1="360" y1="0" x2="360" y2="800"/><line x1="420" y1="0" x2="420" y2="800"/><line x1="480" y1="0" x2="480" y2="800"/><line x1="540" y1="0" x2="540" y2="800"/><line x1="600" y1="0" x2="600" y2="800"/><line x1="660" y1="0" x2="660" y2="800"/><line x1="720" y1="0" x2="720" y2="800"/><line x1="780" y1="0" x2="780" y2="800"/><line x1="840" y1="0" x2="840" y2="800"/><line x1="900" y1="0" x2="900" y2="800"/><line x1="960" y1="0" x2="960" y2="800"/><line x1="1020" y1="0" x2="1020" y2="800"/><line x1="1080" y1="0" x2="1080" y2="800"/><line x1="1140" y1="0" x2="1140" y2="800"/><line x1="1200" y1="0" x2="1200" y2="800"/><line x1="1260" y1="0" x2="1260" y2="800"/><line x1="1320" y1="0" x2="1320" y2="800"/><line x1="1380" y1="0" x2="1380" y2="800"/><line x1="1440" y1="0" x2="1440" y2="800"/><line x1="1500" y1="0" x2="1500" y2="800"/><line x1="1560" y1="0" x2="1560" y2="800"/><line x1="1620" y1="0" x2="1620" y2="800"/><line x1="1680" y1="0" x2="1680" y2="800"/><line x1="1740" y1="0" x2="1740" y2="800"/><line x1="1800" y1="0" x2="1800" y2="800"/><line x1="1860" y1="0" x2="1860" y2="800"/><line x1="1920" y1="0" x2="1920" y2="800"/><line x1="1980" y1="0" x2="1980" y2="800"/><line x1="2040" y1="0" x2="2040" y2="800"/><line x1="2100" y1="0" x2="2100" y2="800"/><line x1="2160" y1="0" x2="2160" y2="800"/><line x1="2220" y1="0" x2="2220" y2="800"/><line x1="2280" y1="0" x2="2280" y2="800"/><line x1="2340" y1="0" x2="2340" y2="800"/>
+  </g>
+  <g fill="none" stroke="url(#bc-ln)" stroke-width="2" stroke-linejoin="round" stroke-linecap="square">
+    <path d="M420 470 H2400"/>
+    <path d="M1720 470 a120 120 0 0 1 240 0" stroke-opacity="0.7"/>
+    <path d="M1780 470 v-118 M1900 470 v-84" stroke-opacity="0.35"/>
+  </g>
+  <g stroke="#C8A44D" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round">
+    <line x1="440" y1="508" x2="550" y2="508"/>
+    <line x1="667" y1="521" x2="926" y2="521"/>
+    <line x1="894" y1="534" x2="1302" y2="534"/>
+    <line x1="1121" y1="547" x2="1358" y2="547"/>
+    <line x1="1348" y1="560" x2="1734" y2="560"/>
+    <line x1="1575" y1="573" x2="1790" y2="573"/>
+    <line x1="1802" y1="586" x2="2166" y2="586"/>
+    <line x1="2029" y1="599" x2="2222" y2="599"/>
+    <line x1="656" y1="612" x2="998" y2="612"/>
+    <line x1="883" y1="625" x2="1054" y2="625"/>
+    <line x1="1110" y1="638" x2="1430" y2="638"/>
+    <line x1="1337" y1="651" x2="1486" y2="651"/>
+    <line x1="1564" y1="664" x2="1862" y2="664"/>
+    <line x1="1791" y1="677" x2="1918" y2="677"/>
+    <line x1="2018" y1="690" x2="2294" y2="690"/>
+    <line x1="645" y1="703" x2="1070" y2="703"/>
+    <line x1="872" y1="716" x2="1126" y2="716"/>
+    <line x1="1099" y1="729" x2="1502" y2="729"/>
+    <line x1="1326" y1="742" x2="1558" y2="742"/>
+    <line x1="1553" y1="755" x2="1934" y2="755"/>
+    <line x1="1780" y1="768" x2="1990" y2="768"/>
+    <line x1="2007" y1="781" x2="2366" y2="781"/>
+  </g>
+  <rect width="2400" height="800" fill="url(#bc-fade)"/>
+  <rect x="0.5" y="0.5" width="2399" height="799" fill="none" stroke="#C8A44D" stroke-opacity="0.3"/>
+</svg>

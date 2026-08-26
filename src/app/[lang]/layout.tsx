@@ -6,6 +6,8 @@ import "../globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
+import { Assistant } from "@/components/Assistant";
+import { themeInitScript } from "@/components/ThemeToggle";
 import { FloatingContact } from "@/components/FloatingContact";
 import { getDictionary, isLocale, locales, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
@@ -73,11 +75,19 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale);
 
   return (
-    <html lang={dict.meta.htmlLang} className={`${playfair.variable} ${inter.variable}`}>
+    <html
+      lang={dict.meta.htmlLang}
+      className={`${playfair.variable} ${inter.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        {/* Chạy trước khi trang vẽ, nếu không sẽ nháy trắng một nhịp rồi mới sang tối */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body className="flex min-h-screen flex-col">
         <a
           href="#main"
-          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:bg-navy-900 focus:px-5 focus:py-3 focus:text-sm focus:text-cream-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[70] focus:bg-deep focus:px-5 focus:py-3 focus:text-sm focus:text-on-deep"
         >
           {dict.common.skipToContent}
         </a>
@@ -90,6 +100,7 @@ export default async function LocaleLayout({
             language: dict.common.language,
             menu: dict.common.menu,
             close: dict.common.close,
+            theme: dict.common.theme,
           }}
         />
         <main id="main" className="flex-1">
@@ -97,6 +108,11 @@ export default async function LocaleLayout({
         </main>
         <Footer locale={locale} dict={dict} />
 
+        <Assistant
+          locale={locale}
+          t={dict.assistant}
+          contactLabel={dict.common.getInTouch}
+        />
         <FloatingContact callLabel={dict.common.talkToUs} />
         <CookieBanner locale={locale} t={{ ...dict.cookie, link: dict.legal.privacy.title }} />
 

@@ -35,6 +35,21 @@ export const site = {
   },
 
   legalUpdated: "2026-08-21",
+
+  /**
+   * Kênh mạng xã hội.
+   * Facebook là link THẬT do khách đưa. Các kênh còn lại đặt `url: ""`
+   * cho tới khi khách xác nhận — link rỗng thì không hiện trên web,
+   * cố ý không trỏ bừa vào trang của người khác.
+   */
+  social: [
+    { id: "facebook", label: "Facebook", url: "https://www.facebook.com/GoldenVisaEU" },
+    { id: "instagram", label: "Instagram", url: "" },
+    { id: "linkedin", label: "LinkedIn", url: "" },
+    { id: "youtube", label: "YouTube", url: "" },
+    { id: "tiktok", label: "TikTok", url: "" },
+    { id: "zalo", label: "Zalo", url: "" },
+  ] as { id: string; label: string; url: string }[],
 } as const;
 
 export const officeCityKeys = ["athens", "thessaloniki", "vietnam", "turkiye"] as const;

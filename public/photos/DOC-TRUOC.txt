@@ -1,0 +1,5 @@
+Tha anh vao thu muc nay, dat DUNG TEN trong file
+E:\Works\itw\Golden-anh-khach-gui\YEU-CAU-ANH.md
+roi chay lai: npm run build
+
+Anh nao chua co thi web tu dung tranh SVG thay the, khong vo layout.

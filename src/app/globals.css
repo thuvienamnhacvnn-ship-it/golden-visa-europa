@@ -2,43 +2,91 @@
    Thư mục home là một git repo nên nếu không có nó Tailwind sẽ quét cả C:\Users\admin và treo. */
 @import "tailwindcss" source("../");
 
-@theme {
-  --color-navy-950: #071b30;
-  --color-navy-900: #0e2a47;
-  --color-navy-800: #163758;
-  --color-navy-700: #1f4a72;
-  --color-navy-100: #dbe4ee;
+/* Bật biến thể dark: theo thuộc tính data-theme trên <html>, không theo class */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
+@theme {
+  /* ── Bảng màu gốc, không đổi theo theme ─────────────────── */
+  --color-gold-700: #8d6f2c;
   --color-gold-600: #a8863a;
   --color-gold-500: #c8a44d;
   --color-gold-400: #d9bd77;
+  --color-gold-300: #e6d1a0;
   --color-gold-100: #f2e8d1;
 
-  --color-cream-50: #faf9f6;
-  --color-cream-100: #f3f1ea;
-  --color-cream-200: #e7e3d8;
+  /* ── Token ngữ nghĩa: đổi giá trị khi sang theme tối ─────── */
+  /* mặt phẳng sáng (nội dung chính) */
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-ink: var(--ink);
+  --color-line: var(--line);
+
+  /* mảng tối cố định (hero, dải CTA, footer) — tối ở CẢ hai theme */
+  --color-deep: var(--deep);
+  --color-deep-2: var(--deep-2);
+  --color-deep-3: var(--deep-3);
+  --color-on-deep: var(--on-deep);
+  --color-on-deep-2: var(--on-deep-2);
 
   --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-
-  --tracking-widest2: 0.22em;
 }
 
-@layer base {
-  :root {
-    color-scheme: light;
-  }
+/* ── Theme sáng (mặc định) ─────────────────────────────────── */
+:root {
+  --surface: #faf9f6;
+  --surface-2: #f3f1ea;
+  --surface-3: #ffffff;
+  --ink: #0e2a47;
+  --line: #0e2a47;
 
+  --deep: #0e2a47;
+  --deep-2: #071b30;
+  --deep-3: #1f4a72;   /* = navy-700 cũ: màu hover của nút, phải khớp bản gốc */
+  --on-deep: #faf9f6;
+  --on-deep-2: #dbe4ee;
+
+  --glow: rgba(31, 74, 114, 0.85);
+  color-scheme: light;
+}
+
+/* ── Theme tối ─────────────────────────────────────────────── */
+:root[data-theme="dark"] {
+  --surface: #0b1420;
+  --surface-2: #101d2d;
+  --surface-3: #14243a;
+  --ink: #e7eef7;
+  --line: #a8c4e4;
+
+  /* mảng tối phải tối hơn nền để vẫn tách lớp được */
+  --deep: #060f1a;
+  --deep-2: #030910;
+  --deep-3: #0e1f33;
+  --on-deep: #f2f6fb;
+  --on-deep-2: #b9cbe0;
+
+  --glow: rgba(60, 116, 170, 0.55);
+  color-scheme: dark;
+}
+
+/* Cố ý KHÔNG dùng @media (prefers-color-scheme: dark).
+   Mặc định là theme sáng; chỉ đổi khi người xem tự bấm nút. */
+
+@layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    background-color: var(--color-cream-50);
-    color: var(--color-navy-900);
+    background-color: var(--surface);
+    color: var(--ink);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    transition:
+      background-color 0.35s ease,
+      color 0.35s ease;
   }
 
   h1,
@@ -52,21 +100,20 @@
 
   ::selection {
     background-color: var(--color-gold-500);
-    color: #fff;
+    color: #06121f;
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-gold-600);
+    outline: 2px solid var(--color-gold-500);
     outline-offset: 3px;
   }
 }
 
 @layer components {
-  /* Nhãn nhỏ chữ hoa giãn cách — dùng trên đầu mỗi section */
   .eyebrow {
     font-size: 0.6875rem;
     font-weight: 600;
-    letter-spacing: var(--tracking-widest2);
+    letter-spacing: 0.22em;
     text-transform: uppercase;
   }
 
@@ -83,9 +130,34 @@
   .prose-lux p:last-child {
     margin-bottom: 0;
   }
+
+  /* Thẻ nổi nhẹ khi rê chuột — dùng cho lưới dịch vụ, văn phòng */
+  .lift {
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px -24px var(--glow);
+  }
+
+  /* Gạch chân chạy từ trái sang khi rê chuột */
+  .underline-sweep {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .underline-sweep:hover {
+    background-size: 100% 1px;
+  }
 }
 
-/* Hiện dần khi cuộn tới — tiết chế, không parallax */
+/* ── Chuyển động ───────────────────────────────────────────── */
+
+/* Hiện dần khi cuộn tới */
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -99,13 +171,59 @@
   transform: none;
 }
 
+/* Tiêu đề hiện lên theo từng chữ */
+.word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.5em);
+  animation: word-rise 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+@keyframes word-rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Vạch vàng kéo dài ra */
+.rule-grow {
+  animation: rule-grow 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+  transform-origin: left center;
+}
+@keyframes rule-grow {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* Số liệu đếm lên — chỉ là hiệu ứng mờ dần, số do JS đổi */
+.stat-pop {
+  animation: stat-pop 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes stat-pop {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
-  .reveal {
-    opacity: 1;
+  .reveal,
+  .word,
+  .rule-grow,
+  .stat-pop {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+  .lift:hover {
     transform: none;
-    transition: none;
   }
 }

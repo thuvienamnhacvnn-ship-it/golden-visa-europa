@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
+import { ThemeToggle } from "./ThemeToggle";
 import { locales, localePath, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
 
@@ -13,6 +14,7 @@ export type HeaderStrings = {
   language: string;
   menu: string;
   close: string;
+  theme: string;
 };
 
 export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
@@ -57,8 +59,8 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
     <header
       className={`sticky top-0 z-50 transition-colors duration-300 ${
         scrolled
-          ? "border-b border-navy-900/10 bg-cream-50/95 backdrop-blur-sm"
-          : "border-b border-transparent bg-cream-50"
+          ? "border-b border-ink/10 bg-surface/95 backdrop-blur-sm"
+          : "border-b border-transparent bg-surface"
       }`}
     >
       <div className="mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between px-5 sm:px-8 lg:px-12">
@@ -74,7 +76,7 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
               className={`text-[0.8125rem] font-medium tracking-wide transition-colors ${
                 isActive(item.href)
                   ? "text-gold-600"
-                  : "text-navy-900/75 hover:text-navy-900"
+                  : "text-ink/75 hover:text-ink"
               }`}
             >
               {item.label}
@@ -84,9 +86,10 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
 
         <div className="hidden items-center gap-6 lg:flex">
           <LangSwitch locale={locale} swapLocale={swapLocale} label={t.language} />
+          <ThemeToggle label={t.theme} />
           <Link
             href={localePath(locale, "contact")}
-            className="bg-navy-900 px-6 py-3 text-[0.8125rem] font-medium tracking-wide text-cream-50 transition-colors hover:bg-navy-700"
+            className="bg-deep px-6 py-3 text-[0.8125rem] font-medium tracking-wide text-on-deep transition-colors hover:bg-deep-3"
           >
             {t.bookConsultation}
           </Link>
@@ -95,23 +98,23 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
-          className="flex h-11 w-11 items-center justify-center border border-navy-900/15 lg:hidden"
+          className="flex h-11 w-11 items-center justify-center border border-ink/15 lg:hidden"
           aria-expanded={open}
           aria-label={open ? t.close : t.menu}
         >
           <span className="relative block h-3.5 w-5">
             <span
-              className={`absolute left-0 block h-px w-full bg-navy-900 transition-transform duration-200 ${
+              className={`absolute left-0 block h-px w-full bg-deep transition-transform duration-200 ${
                 open ? "top-1.5 rotate-45" : "top-0"
               }`}
             />
             <span
-              className={`absolute left-0 top-1.5 block h-px w-full bg-navy-900 transition-opacity duration-200 ${
+              className={`absolute left-0 top-1.5 block h-px w-full bg-deep transition-opacity duration-200 ${
                 open ? "opacity-0" : "opacity-100"
               }`}
             />
             <span
-              className={`absolute left-0 block h-px w-full bg-navy-900 transition-transform duration-200 ${
+              className={`absolute left-0 block h-px w-full bg-deep transition-transform duration-200 ${
                 open ? "top-1.5 -rotate-45" : "top-3"
               }`}
             />
@@ -120,15 +123,15 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
       </div>
 
       {open ? (
-        <div className="border-t border-navy-900/10 bg-cream-50 lg:hidden">
+        <div className="border-t border-ink/10 bg-surface lg:hidden">
           <nav className="mx-auto max-w-[1200px] px-5 py-6 sm:px-8" aria-label="Mobile">
             <ul className="flex flex-col">
               {nav.map((item) => (
-                <li key={item.href} className="border-b border-navy-900/8">
+                <li key={item.href} className="border-b border-ink/8">
                   <Link
                     href={item.href}
                     className={`block py-4 font-serif text-xl ${
-                      isActive(item.href) ? "text-gold-600" : "text-navy-900"
+                      isActive(item.href) ? "text-gold-600" : "text-ink"
                     }`}
                   >
                     {item.label}
@@ -139,13 +142,14 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
 
             <Link
               href={localePath(locale, "contact")}
-              className="mt-6 block bg-navy-900 px-6 py-4 text-center text-sm font-medium text-cream-50"
+              className="mt-6 block bg-deep px-6 py-4 text-center text-sm font-medium text-on-deep"
             >
               {t.bookConsultation}
             </Link>
 
             <div className="mt-6 flex items-center gap-3">
-              <span className="eyebrow text-navy-900/40">{t.language}</span>
+              <ThemeToggle label={t.theme} />
+              <span className="eyebrow text-ink/40">{t.language}</span>
               <div className="flex gap-2">
                 {locales.map((l) => (
                   <Link
@@ -155,7 +159,7 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
                     className={`border px-3 py-1.5 text-xs font-semibold uppercase tracking-widest ${
                       l === locale
                         ? "border-gold-500 text-gold-600"
-                        : "border-navy-900/15 text-navy-900/60"
+                        : "border-ink/15 text-ink/60"
                     }`}
                   >
                     {l}
@@ -183,13 +187,13 @@ function LangSwitch({
     <div className="flex items-center gap-1" role="group" aria-label={label}>
       {locales.map((l, i) => (
         <span key={l} className="flex items-center">
-          {i > 0 ? <span className="px-1 text-navy-900/20">/</span> : null}
+          {i > 0 ? <span className="px-1 text-ink/20">/</span> : null}
           <Link
             href={swapLocale(l)}
             hrefLang={l}
             aria-current={l === locale ? "true" : undefined}
             className={`text-[0.6875rem] font-semibold uppercase tracking-[0.18em] transition-colors ${
-              l === locale ? "text-gold-600" : "text-navy-900/45 hover:text-navy-900"
+              l === locale ? "text-gold-600" : "text-ink/45 hover:text-ink"
             }`}
           >
             {l}

@@ -27,7 +27,7 @@ export function FloatingContact({ callLabel }: { callLabel: string }) {
         href={`https://wa.me/${site.whatsapp.replace(/[^\d]/g, "")}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center justify-center rounded-full bg-navy-900 text-cream-50 shadow-lg transition-colors hover:bg-navy-700"
+        className="flex items-center justify-center rounded-full bg-deep text-on-deep shadow-lg transition-colors hover:bg-deep-3"
         style={{ height: "3.25rem", width: "3.25rem" }}
         aria-label="WhatsApp"
       >
@@ -38,7 +38,7 @@ export function FloatingContact({ callLabel }: { callLabel: string }) {
 
       <a
         href={`tel:${site.headOffice.phoneHref}`}
-        className="flex items-center justify-center rounded-full bg-gold-500 text-navy-950 shadow-lg transition-colors hover:bg-gold-400"
+        className="flex items-center justify-center rounded-full bg-gold-500 text-deep-2 shadow-lg transition-colors hover:bg-gold-400"
         style={{ height: "3.25rem", width: "3.25rem" }}
         aria-label={callLabel}
       >

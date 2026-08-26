@@ -18,19 +18,19 @@ export function Container({
 export function Section({
   children,
   className = "",
-  tone = "cream",
+  tone = "base",
   id,
 }: {
   children: ReactNode;
   className?: string;
-  tone?: "cream" | "white" | "navy" | "cream-alt";
+  tone?: "base" | "raised" | "deep" | "alt";
   id?: string;
 }) {
   const tones = {
-    cream: "bg-cream-50 text-navy-900",
-    "cream-alt": "bg-cream-100 text-navy-900",
-    white: "bg-white text-navy-900",
-    navy: "bg-navy-900 text-cream-50",
+    base: "bg-surface text-ink",
+    alt: "bg-surface-2 text-ink",
+    raised: "bg-surface-3 text-ink",
+    deep: "bg-deep text-on-deep",
   } as const;
 
   return (
@@ -80,7 +80,7 @@ export function SectionHeading({
       <Rule className={`mt-4 mb-6 ${centered ? "mx-auto" : ""}`} />
       <Tag
         className={`text-[2rem] leading-[1.15] sm:text-[2.6rem] lg:text-[3.1rem] ${
-          tone === "light" ? "text-cream-50" : "text-navy-900"
+          tone === "light" ? "text-on-deep" : "text-ink"
         }`}
       >
         {title}
@@ -88,7 +88,7 @@ export function SectionHeading({
       {lead ? (
         <p
           className={`mt-5 text-[1.0625rem] leading-[1.8] ${
-            tone === "light" ? "text-navy-100" : "text-navy-800/80"
+            tone === "light" ? "text-on-deep-2" : "text-ink/80"
           }`}
         >
           {lead}
@@ -109,10 +109,10 @@ export function ButtonLink({ href, children, variant = "solid", className = "" }
   const base =
     "inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-medium tracking-wide transition-colors duration-200";
   const variants = {
-    solid: "bg-navy-900 text-cream-50 hover:bg-navy-700",
-    outline: "border border-navy-900/25 text-navy-900 hover:border-gold-500 hover:text-gold-600",
-    light: "bg-gold-500 text-navy-950 hover:bg-gold-400",
-    ghost: "border border-cream-50/30 text-cream-50 hover:border-gold-400 hover:text-gold-400",
+    solid: "bg-deep text-on-deep hover:bg-deep-3",
+    outline: "border border-ink/25 text-ink hover:border-gold-500 hover:text-gold-600",
+    light: "bg-gold-500 text-deep-2 hover:bg-gold-400",
+    ghost: "border border-on-deep/30 text-on-deep hover:border-gold-400 hover:text-gold-400",
   } as const;
 
   return (
@@ -151,7 +151,7 @@ export function TextLink({
     <Link
       href={href}
       className={`group inline-flex items-center gap-2 text-sm font-medium transition-colors ${
-        tone === "light" ? "text-gold-400 hover:text-gold-100" : "text-gold-600 hover:text-navy-900"
+        tone === "light" ? "text-gold-400 hover:text-gold-100" : "text-gold-600 hover:text-ink"
       }`}
     >
       {children}
@@ -172,12 +172,12 @@ export function PlaceholderFrame({
 }) {
   return (
     <div
-      className={`relative flex items-center justify-center border border-dashed border-navy-900/20 bg-cream-100 ${className}`}
+      className={`relative flex items-center justify-center border border-dashed border-ink/20 bg-surface-2 ${className}`}
       style={{ aspectRatio: ratio }}
     >
       <div className="px-6 text-center">
         <svg
-          className="mx-auto h-8 w-8 text-navy-900/25"
+          className="mx-auto h-8 w-8 text-ink/25"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -188,7 +188,7 @@ export function PlaceholderFrame({
           <circle cx="8.5" cy="9.5" r="1.5" />
           <path d="m3 17 5-5 4 4 3-3 6 6" />
         </svg>
-        <p className="mt-3 text-[0.6875rem] uppercase tracking-[0.18em] text-navy-900/40">
+        <p className="mt-3 text-[0.6875rem] uppercase tracking-[0.18em] text-ink/40">
           {label}
         </p>
       </div>
@@ -196,7 +196,7 @@ export function PlaceholderFrame({
   );
 }
 
-/** Đầu trang con: nền navy, tiêu đề lớn, breadcrumb tuỳ chọn. */
+/** Đầu trang con: nền navy, tiêu đề lớn. Bố cục gốc, giữ nguyên. */
 export function PageHero({
   eyebrow,
   title,
@@ -209,7 +209,7 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-navy-900 py-20 text-cream-50 md:py-28">
+    <section className="relative overflow-hidden bg-deep py-20 text-on-deep md:py-28">
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.16]"
         aria-hidden="true"
@@ -221,14 +221,37 @@ export function PageHero({
       <Container className="relative">
         <div className="max-w-3xl">
           {eyebrow ? <Eyebrow tone="light">{eyebrow}</Eyebrow> : null}
-          <Rule className="mt-4 mb-7" />
-          <h1 className="text-[2.4rem] leading-[1.1] sm:text-[3.1rem] lg:text-[3.5rem]">{title}</h1>
+          <Rule className="rule-grow mt-4 mb-7" />
+          <h1 className="text-[2.4rem] leading-[1.1] sm:text-[3.1rem] lg:text-[3.5rem]">
+            <Words text={title} />
+          </h1>
           {lead ? (
-            <p className="mt-6 text-[1.0625rem] leading-[1.85] text-navy-100/80">{lead}</p>
+            <p className="mt-6 text-[1.0625rem] leading-[1.85] text-on-deep-2/80">{lead}</p>
           ) : null}
           {children}
         </div>
       </Container>
     </section>
+  );
+}
+
+/**
+ * Tiêu đề hiện lên theo từng chữ.
+ * Dấu cách phải nằm NGOÀI thẻ span và là dấu cách thường — bản trước dùng
+ * dấu cách không ngắt bên trong span nên tiêu đề không xuống dòng được nữa.
+ */
+export function Words({ text, delay = 0 }: { text: string; delay?: number }) {
+  const words = text.split(" ");
+  return (
+    <>
+      {words.map((w, i) => (
+        <span key={`${w}-${i}`}>
+          {i > 0 ? " " : null}
+          <span className="word" style={{ animationDelay: `${delay + i * 55}ms` }}>
+            {w}
+          </span>
+        </span>
+      ))}
+    </>
   );
 }

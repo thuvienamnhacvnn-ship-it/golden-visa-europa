@@ -27,6 +27,7 @@ export const en = {
     menu: "Menu",
     close: "Close",
     language: "Language",
+    theme: "Switch light / dark",
     needsClientInput: "Awaiting client material",
   },
 
@@ -149,16 +150,101 @@ export const en = {
       "Return on investment and capital gains",
       "Tax benefits",
       "No property purchase restrictions",
-      "Opportunity to rent out the investment property",
+      "Opportunity to let the investment property on a long-term lease",
       "Eligibility to apply for citizenship after a period of residence",
       "Ability to hold shares and receive income from the dividends of a company registered in Greece",
     ],
     thresholds: {
       title: "Investment thresholds",
-      body: "Greece revised its Golden Visa investment thresholds, and the qualifying amount now depends on the region and the type of property. Because these figures change by legislation, we confirm the current threshold for your specific target area in writing before you commit to anything.",
-      cta: "Ask us for the current thresholds",
+      body: "The qualifying amount depends on where the property is and what kind of property it is. These are the tiers in force today — we confirm the exact figure for your target area in writing before you commit to anything.",
+      cta: "Ask us about your target area",
       sourceNote:
-        "Figures are published by the Greek Ministry of Migration and Asylum and Enterprise Greece.",
+        "Law 5100/2024, in force since 5 April 2024, as clarified by Circular 1/2026 of 22 April 2026. Thresholds are set by legislation and can change.",
+      verified: "Verified 23 August 2026",
+      tiers: [
+        {
+          amount: "€ 800,000",
+          where: "Attica · Thessaloniki regional unit · Mykonos · Santorini · islands with more than 3,100 inhabitants",
+          note: "The high-demand zones, including Athens and most of the well-known islands.",
+        },
+        {
+          amount: "€ 400,000",
+          where: "Every other region of Greece",
+          note: "Most of the Peloponnese, inland mainland, northern Greece outside Thessaloniki, and smaller islands.",
+        },
+        {
+          amount: "€ 250,000",
+          where: "Two special cases only, anywhere in Greece",
+          note: "A property converted from commercial to residential use, with the conversion completed before you apply; or a listed building fully restored before your first renewal. Available once per property.",
+        },
+      ],
+      sizeTitle: "Minimum size: 120 m²",
+      sizeBody:
+        "The property must be a single property of at least 120 m² of main areas. Parking and storage do not count. The rule does not apply to undeveloped plots, or to the € 250,000 conversion and restoration routes.",
+      startupTitle: "New in 2026: the innovation route",
+      startupBody:
+        "Since 2026 the programme also accepts investment from € 250,000 into Greek start-ups and spin-offs registered on the national Elevate platform. One permit for an individual investor, and up to three where the investment also supports key executives. Ask us if this fits you better than property.",
+    },
+
+    rules: {
+      title: "What the permit does and does not give you",
+      lead: "The points investors most often get wrong. Worth reading before you choose a property.",
+      items: [
+        {
+          title: "Five years, renewed indefinitely",
+          body: "The permit runs for five years and is renewed for the same period each time, for as long as you still own the property. Renewal is proved with your property declaration or cadastral extract.",
+        },
+        {
+          title: "No minimum stay",
+          body: "You are not required to live in Greece. Time spent outside the country is not a reason to refuse renewal. If your aim is citizenship rather than residency, the rules are different — ask us.",
+        },
+        {
+          title: "Three generations in one application",
+          body: "Your spouse or civil partner, unmarried children under 21 (extendable to 24), and the parents and grandparents of both you and your spouse derive their permit from yours.",
+        },
+        {
+          title: "Short-term letting is not allowed",
+          body: "A property held for a Golden Visa may not be let short-term through holiday-rental platforms, and may not be sublet. The penalty is revocation of the permit and a € 50,000 fine. Long-term leases are fine, including to a tourism business that provides services beyond accommodation.",
+        },
+        {
+          title: "The permit is not a work permit",
+          body: "It does not grant access to employment. You may own a Greek company and hold shares and receive dividends, but not take a job on the strength of this permit.",
+        },
+      ],
+    },
+
+    faq: {
+      title: "Questions investors actually ask",
+      items: [
+        {
+          q: "Can I rent the property out on Airbnb to cover the costs?",
+          a: "No. Short-term letting through holiday-rental platforms is prohibited for property held under a Golden Visa, and so is subletting. Breaching this costs you the permit and a € 50,000 fine. A long-term lease is permitted and is what we normally arrange.",
+        },
+        {
+          q: "Do I have to move to Greece?",
+          a: "No. There is no minimum stay and absence from Greece is not a ground to refuse renewal. Most of our clients complete the whole process without setting foot in Greece until the permit is ready.",
+        },
+        {
+          q: "Can I buy two cheaper properties to reach the threshold?",
+          a: "No. The investment must be a single property meeting the threshold for its area, and at least 120 m² of main areas in the € 800,000 and € 400,000 tiers.",
+        },
+        {
+          q: "Who can I include in the application?",
+          a: "Your spouse or civil partner, unmarried children under 21 — extendable to 24 — and the parents and grandparents of both you and your spouse.",
+        },
+        {
+          q: "Does the permit lead to Greek citizenship?",
+          a: "Not automatically. The Golden Visa is a residence permit. Naturalisation is governed by separate law and requires genuine long-term residence in Greece, which the Golden Visa does not oblige you to have. We will tell you plainly what your situation allows rather than imply a path that does not exist.",
+        },
+        {
+          q: "Can I work in Greece with it?",
+          a: "No. It gives no right of access to employment. You may establish a company, hold shares and receive dividends.",
+        },
+        {
+          q: "How long does it take?",
+          a: "Once your purchase completes and your file is in order, you are issued documentation that allows you to reside legally while the authorities process the permit itself. We give you a realistic timeline for your own case in writing — we do not quote a single number that suits everyone.",
+        },
+      ],
     },
     eligibilityTitle: "Who it is for",
     eligibility: [
@@ -274,7 +360,7 @@ export const en = {
           "Landscaping",
           "Interior design",
           "Kitchen and bathroom renovation",
-          "Fit-out for short-term letting",
+          "Fit-out for long-term letting",
         ],
         note: "",
       },
@@ -295,7 +381,7 @@ export const en = {
           "Regulatory compliance and record keeping",
           "Maintenance, repairs and inspections",
           "Utilities, taxes and building charges",
-          "Short-term letting operations",
+          "Long-term leases, including to tourism operators",
         ],
         note: "",
       },
@@ -556,6 +642,31 @@ export const en = {
     regNote: "Company registration details to be supplied by the client.",
     disclaimerShort:
       "Information on this site is general and does not constitute legal or investment advice. Residence permits are granted by the Greek authorities.",
+  },
+
+  assistant: {
+    open: "Ask our assistant",
+    close: "Close chat",
+    title: "Golden Visa assistant",
+    subtitle: "Answers from our published information, 24/7",
+    greeting:
+      "Hello. Ask me about the Greek Golden Visa, our services or our offices. For anything about your own case, I'll put you through to an advisor.",
+    placeholder: "Type your question…",
+    send: "Send",
+    thinking: "Typing…",
+    suggestions: [
+      "What are the current investment thresholds?",
+      "Can I rent the property on Airbnb?",
+      "Do I have to live in Greece?",
+      "Who can I include in my application?",
+    ],
+    offlineNote: "— answered from our published FAQ.",
+    noAnswer:
+      "I don't have that in our published information. An advisor can answer it properly — use the contact page or call the Athens office.",
+    humanCta: "Talk to a person",
+    disclaimer:
+      "Automated assistant. General information only — not legal or investment advice. Please don't send passport, bank or document details here.",
+    errorMsg: "Something went wrong. Please try again, or contact us directly.",
   },
 
   notFound: {

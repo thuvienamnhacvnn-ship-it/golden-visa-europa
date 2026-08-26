@@ -68,7 +68,7 @@ export function ContactForm({
 
   if (status === "sent") {
     return (
-      <div className="border border-gold-500/40 bg-cream-100 p-8 sm:p-10">
+      <div className="border border-gold-500/40 bg-surface-2 p-8 sm:p-10">
         <svg
           className="h-9 w-9 text-gold-600"
           viewBox="0 0 24 24"
@@ -81,7 +81,7 @@ export function ContactForm({
           <path d="m8 12.5 2.5 2.5L16 9.5" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
         <h3 className="mt-5 text-2xl">{f.successTitle}</h3>
-        <p className="mt-3 text-[0.9375rem] leading-7 text-navy-800/75">{f.successBody}</p>
+        <p className="mt-3 text-[0.9375rem] leading-7 text-ink/75">{f.successBody}</p>
       </div>
     );
   }
@@ -115,7 +115,7 @@ export function ContactForm({
       </div>
 
       <div>
-        <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-navy-800/80">
+        <label className="flex cursor-pointer items-start gap-3 text-sm leading-6 text-ink/80">
           <input
             type="checkbox"
             name="consent"
@@ -145,7 +145,7 @@ export function ContactForm({
         <button
           type="submit"
           disabled={status === "sending"}
-          className="inline-flex items-center justify-center bg-navy-900 px-8 py-4 text-sm font-medium tracking-wide text-cream-50 transition-colors hover:bg-navy-700 disabled:cursor-not-allowed disabled:opacity-60"
+          className="inline-flex items-center justify-center bg-deep px-8 py-4 text-sm font-medium tracking-wide text-on-deep transition-colors hover:bg-deep-3 disabled:cursor-not-allowed disabled:opacity-60"
         >
           {status === "sending" ? f.sending : f.submit}
         </button>
@@ -172,10 +172,10 @@ function Field({
   autoComplete?: string;
 }) {
   const cls =
-    "w-full border border-navy-900/20 bg-white px-4 py-3.5 text-[0.9375rem] text-navy-900 outline-none transition-colors placeholder:text-navy-900/30 focus:border-gold-500";
+    "w-full border border-ink/20 bg-surface-3 px-4 py-3.5 text-[0.9375rem] text-ink outline-none transition-colors placeholder:text-ink/30 focus:border-gold-500";
   return (
     <label className={textarea ? "block" : "block"}>
-      <span className="eyebrow block text-navy-900/50">
+      <span className="eyebrow block text-ink/50">
         {label}
         {required ? <span className="text-gold-600"> *</span> : null}
       </span>
@@ -202,12 +202,12 @@ function Select({
 }) {
   return (
     <label className="block">
-      <span className="eyebrow block text-navy-900/50">{label}</span>
+      <span className="eyebrow block text-ink/50">{label}</span>
       <span className="mt-2 block">
         <select
           name={name}
           defaultValue={options[0]}
-          className="w-full appearance-none border border-navy-900/20 bg-white px-4 py-3.5 text-[0.9375rem] text-navy-900 outline-none transition-colors focus:border-gold-500"
+          className="w-full appearance-none border border-ink/20 bg-surface-3 px-4 py-3.5 text-[0.9375rem] text-ink outline-none transition-colors focus:border-gold-500"
         >
           {options.map((o) => (
             <option key={o} value={o}>

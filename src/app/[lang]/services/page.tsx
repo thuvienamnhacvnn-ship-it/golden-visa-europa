@@ -52,7 +52,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
         lead={dict.services.lead}
       />
 
-      <Section tone="cream">
+      <Section tone="base">
         <Container>
           <ul className="flex flex-col">
             {serviceSlugs.map((slug, i) => {
@@ -61,7 +61,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                 <Reveal as="li" key={slug} delay={(i % 2) * 80}>
                   <Link
                     href={localePath(locale, `services/${slug}`)}
-                    className="group grid gap-6 border-b border-navy-900/12 py-10 transition-colors hover:bg-cream-100 md:grid-cols-[200px_1fr_auto] md:items-center md:gap-10 md:px-4"
+                    className="group grid gap-6 border-b border-ink/12 py-10 transition-colors hover:bg-surface-2 md:grid-cols-[200px_1fr_auto] md:items-center md:gap-10 md:px-4"
                   >
                     <Artwork
                       src={serviceArtSrc(slug)}
@@ -74,10 +74,10 @@ export default async function ServicesPage({ params }: { params: Promise<{ lang:
                       <span className="block font-serif text-sm text-gold-600">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <span className="mt-2 block font-serif text-[1.625rem] leading-snug text-navy-900 sm:text-[2rem]">
+                      <span className="mt-2 block font-serif text-[1.625rem] leading-snug text-ink sm:text-[2rem]">
                         {service.name}
                       </span>
-                      <span className="mt-3 block max-w-2xl text-[0.9375rem] leading-7 text-navy-800/70">
+                      <span className="mt-3 block max-w-2xl text-[0.9375rem] leading-7 text-ink/70">
                         {service.tagline}
                       </span>
                     </span>

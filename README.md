@@ -64,6 +64,47 @@ thân minaret, đường chân đất. Phải dùng `gradientUnits="userSpaceOnU
 Ảnh **người thật** thì vẫn để khung nét đứt "đang chờ khách hàng cung cấp": không bịa mặt
 người có thật, không dùng ảnh stock, không phủ mờ.
 
+## Theme sáng / tối
+
+Token ngữ nghĩa trong `globals.css`: `surface / surface-2 / surface-3 / ink / line` cho mặt phẳng
+nội dung, và `deep / deep-2 / deep-3 / on-deep / on-deep-2` cho các mảng tối cố định (hero, dải CTA,
+footer) — mảng tối phải tối ở CẢ hai theme nên tách riêng, không dùng chung với `surface`.
+
+Theme chọn theo `data-theme` trên `<html>`; chưa chọn thì theo hệ điều hành. Script trong `<head>`
+(`themeInitScript`) chạy trước khi trang vẽ để không nháy trắng. Lựa chọn lưu ở localStorage.
+
+**Đừng dùng lại `bg-cream-*`, `text-navy-*`** — chúng không lật theme.
+
+## Ảnh và banner
+
+Sổ đăng ký duy nhất: `src/lib/media.ts`. Thả tệp đúng tên vào `public/photos/` rồi build là ảnh
+tự thay tranh SVG. File yêu cầu gửi khách **sinh ra từ chính sổ đó**:
+
+```bash
+node scripts/make-art.mjs         # 11 tranh + 7 banner SVG -> public/art/
+node scripts/make-image-brief.mjs # -> E:WorksitwGolden-anh-khach-guiYEU-CAU-ANH.md
+```
+
+Banner là **3:1 (2400×800)** — rộng và thấp — và chừa 1/3 bên trái tối cho chữ tiêu đề.
+
+Video WebM nền trong suốt đè lên hero: `public/video/hero-overlay.webm`. Chưa có tệp thì
+component không vẽ gì. Xuất **bắt buộc** `-auto-alt-ref 0`, thiếu là mất kênh alpha.
+
+## Trợ lý AI 24/7
+
+`POST /api/assistant` — có `ANTHROPIC_API_KEY` thì gọi **claude-opus-5** (streaming, adaptive
+thinking, effort low, prompt caching phần tư liệu). Không có khoá thì rơi về chế độ dự phòng:
+khớp câu hỏi với mục Hỏi đáp theo tỉ lệ phủ, và **nói thẳng là không biết** khi không đủ khớp.
+
+Tư liệu dựng TỪ CHÍNH từ điển (`src/lib/assistant-knowledge.ts`) nên trợ lý không bao giờ nói
+khác website. System prompt cấm hứa đỗ visa, bắt buộc nêu lệnh cấm cho thuê ngắn hạn, và cấm
+nhận thông tin nhạy cảm.
+
+Bật AI thật: đặt `ANTHROPIC_API_KEY` trong `.env.local`.
+
+**Bẫy đã gặp:** regex lọc dấu tiếng Việt phải viết bằng escape `̀-ͯ`, và cần thêm
+`đ` → `d` vì NFD **không** tách chữ `đ` — thiếu nó thì "đầu" bị cắt còn "au" rồi bị loại.
+
 ## Form liên hệ
 
 `POST /api/enquiry` ghi vào `data/enquiries.jsonl` (đã gitignore). Nếu đặt biến môi trường
@@ -85,10 +126,17 @@ Chưa nối email vì khách chưa cung cấp SMTP và email theo tên miền.
 
 ## Ràng buộc nội dung — đừng phá
 
-- **Không nêu mức đầu tư tối thiểu bằng con số.** Ngưỡng Golden Visa Hy Lạp đã đổi từ 2024
-  (3 mức theo vùng và loại BĐS). Trang `what-is-golden-visa` cố ý chỉ nói "tuỳ khu vực,
-  chúng tôi xác nhận bằng văn bản". Muốn thêm số thì phải tra migration.gov.gr
-  và ghi ngày cập nhật cạnh bảng.
+- **Mức đầu tư đã có số, kiểm chứng 23/08/2026** — căn cứ Luật 5100/2024 (hiệu lực 05/04/2024)
+  và Thông tư 1/2026 (22/04/2026): **800.000 €** (Attica, vùng Thessaloniki, Mykonos, Santorini,
+  đảo trên 3.100 dân) · **400.000 €** (phần còn lại) · **250.000 €** (chỉ 2 trường hợp: chuyển đổi
+  thương mại→nhà ở hoàn tất trước khi nộp, hoặc trùng tu công trình di sản xong trước lần gia hạn đầu).
+  Kèm quy định **tối thiểu 120 m²** diện tích chính cho hai mức trên. Từ 2026 có thêm hướng
+  đầu tư start-up từ 250.000 € qua nền tảng Elevate.
+  Số nằm ở `whatIs.thresholds.tiers`, ngày kiểm chứng ở `whatIs.thresholds.verified` —
+  **đổi số thì phải đổi luôn ngày đó.**
+- **CẤM cho thuê ngắn hạn.** BĐS dùng xin thẻ vàng không được cho thuê kiểu Airbnb và không được
+  cho thuê lại; vi phạm bị thu hồi thẻ + phạt 50.000 €. Đã sửa 3 chỗ trong nội dung từng quảng cáo
+  ngược lại (mục lợi ích, dịch vụ cải tạo, dịch vụ quản lý). **Đừng thêm lại "short-term letting".**
 - "Approval within 90 days" và "100% Free" là cam kết của khách — luôn đi kèm điều kiện
   *"as long as you meet the eligibility criteria"*, không tách rời.
 - Không hứa chắc chắn đỗ visa / có quốc tịch / sinh lời. Trang Disclaimer nói rõ cả ba.

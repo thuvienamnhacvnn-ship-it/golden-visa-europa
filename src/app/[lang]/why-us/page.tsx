@@ -41,23 +41,23 @@ export default async function WhyUsPage({ params }: { params: Promise<{ lang: st
     <>
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
 
-      <Section tone="cream">
+      <Section tone="base">
         <Container>
           <Reveal>
-            <div className="prose-lux mx-auto max-w-3xl text-[1.0625rem] text-navy-800/85">
+            <div className="prose-lux mx-auto max-w-3xl text-[1.0625rem] text-ink/85">
               {t.body.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
           </Reveal>
 
-          <ul className="mt-16 grid gap-px border border-navy-900/10 bg-navy-900/10 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-16 grid gap-px border border-ink/10 bg-deep/10 sm:grid-cols-2 lg:grid-cols-3">
             {t.points.map((point, i) => (
-              <Reveal as="li" key={point.title} delay={(i % 3) * 80} className="bg-cream-50">
+              <Reveal as="li" key={point.title} delay={(i % 3) * 80} className="bg-surface">
                 <div className="h-full p-8 lg:p-10">
                   <Seal className="h-8 w-8 text-gold-600" />
                   <h2 className="mt-6 text-[1.25rem] leading-snug">{point.title}</h2>
-                  <p className="mt-4 text-[0.9375rem] leading-7 text-navy-800/70">{point.body}</p>
+                  <p className="mt-4 text-[0.9375rem] leading-7 text-ink/70">{point.body}</p>
                 </div>
               </Reveal>
             ))}

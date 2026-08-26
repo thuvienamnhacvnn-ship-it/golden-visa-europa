@@ -1,0 +1,9 @@
+Video WebM nen trong suot dat de len banner.
+
+Ten tep mac dinh: hero-overlay.webm
+
+Lenh tach nen ra WebM co kenh alpha:
+  ffmpeg -i nguon.mov -c:v libvpx-vp9 -pix_fmt yuva420p -b:v 0 -crf 30 \
+         -an -auto-alt-ref 0 hero-overlay.webm
+
+BAT BUOC co -auto-alt-ref 0, thieu no la mat kenh trong suot.

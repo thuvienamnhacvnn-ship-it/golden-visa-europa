@@ -28,6 +28,7 @@ export const tr: Dictionary = {
     menu: "Menü",
     close: "Kapat",
     language: "Dil",
+    theme: "Açık / koyu tema",
     needsClientInput: "Müşteri materyali bekleniyor",
   },
 
@@ -149,16 +150,101 @@ export const tr: Dictionary = {
       "Yatırım getirisi ve sermaye kazancı",
       "Vergi avantajları",
       "Gayrimenkul alımında kısıtlama bulunmaması",
-      "Yatırım yapılan gayrimenkulü kiraya verebilme",
+      "Yatırım yapılan gayrimenkulü uzun dönem kiraya verebilme",
       "Belirli bir ikamet süresinden sonra vatandaşlığa başvurabilme",
       "Yunanistan'da kayıtlı bir şirkette hisse tutabilme ve temettü geliri elde edebilme",
     ],
     thresholds: {
       title: "Yatırım eşikleri",
-      body: "Yunanistan Golden Visa yatırım eşiklerini güncelledi; uygun tutar artık bölgeye ve gayrimenkul türüne göre değişiyor. Bu rakamlar mevzuatla değiştiği için, herhangi bir taahhütte bulunmadan önce hedeflediğiniz bölge için geçerli eşiği yazılı olarak teyit ediyoruz.",
-      cta: "Güncel eşikleri bize sorun",
+      body: "Uygun tutar, gayrimenkulün nerede olduğuna ve türüne bağlıdır. Aşağıdakiler bugün yürürlükte olan kademelerdir — herhangi bir taahhütte bulunmadan önce hedeflediğiniz bölge için kesin rakamı yazılı olarak teyit ediyoruz.",
+      cta: "Hedef bölgeniz için bize sorun",
       sourceNote:
-        "Rakamlar Yunanistan Göç ve İltica Bakanlığı ile Enterprise Greece tarafından yayımlanır.",
+        "5100/2024 sayılı Kanun, 5 Nisan 2024'ten beri yürürlükte; 22 Nisan 2026 tarihli 1/2026 sayılı Genelge ile açıklığa kavuşturulmuştur. Eşikler mevzuatla belirlenir ve değişebilir.",
+      verified: "23 Ağustos 2026 tarihinde doğrulandı",
+      tiers: [
+        {
+          amount: "800.000 €",
+          where: "Attika · Selanik bölgesi · Mikonos · Santorini · nüfusu 3.100'ün üzerindeki adalar",
+          note: "Atina ve tanınmış adaların çoğu dâhil, talebin yüksek olduğu bölgeler.",
+        },
+        {
+          amount: "400.000 €",
+          where: "Yunanistan'ın diğer tüm bölgeleri",
+          note: "Mora Yarımadası'nın büyük kısmı, iç kesimler, Selanik dışındaki kuzey Yunanistan ve küçük adalar.",
+        },
+        {
+          amount: "250.000 €",
+          where: "Yalnızca iki özel durum, ülkenin her yerinde",
+          note: "Ticari kullanımdan konuta dönüştürülmüş ve dönüşümü başvurudan önce tamamlanmış gayrimenkul; veya ilk yenilemeden önce tamamen restore edilen tescilli yapı. Gayrimenkul başına bir kez geçerlidir.",
+        },
+      ],
+      sizeTitle: "Asgari büyüklük: 120 m²",
+      sizeBody:
+        "Yatırım, ana alanı en az 120 m² olan TEK bir gayrimenkul olmalıdır. Otopark ve depo sayılmaz. Bu kural boş arsalara ve 250.000 € dönüşüm/restorasyon yollarına uygulanmaz.",
+      startupTitle: "2026'da yeni: inovasyon yolu",
+      startupBody:
+        "2026'dan itibaren program, ulusal Elevate platformuna kayıtlı Yunan start-up ve spin-off şirketlerine 250.000 €'dan başlayan yatırımları da kabul ediyor. Bireysel yatırımcı için bir izin, yatırımın kilit yöneticileri de desteklediği durumlarda üç ize kadar. Bunun size gayrimenkulden daha uygun olup olmadığını bize sorun.",
+    },
+
+    rules: {
+      title: "İzin size ne verir, ne vermez",
+      lead: "Yatırımcıların en sık yanlış bildiği noktalar. Gayrimenkul seçmeden önce okumaya değer.",
+      items: [
+        {
+          title: "Beş yıl, süresiz yenilenir",
+          body: "İzin beş yıl geçerlidir ve gayrimenkul sizin mülkiyetinizde kaldığı sürece her defasında aynı süreyle yenilenir. Yenileme, gayrimenkul beyanı veya kadastro kaydıyla kanıtlanır.",
+        },
+        {
+          title: "Asgari kalış şartı yok",
+          body: "Yunanistan'da yaşamak zorunda değilsiniz. Ülke dışında geçirilen süre yenilemeyi reddetmek için gerekçe değildir. Amacınız oturum değil vatandaşlıksa kurallar farklıdır — bize sorun.",
+        },
+        {
+          title: "Tek başvuruda üç kuşak",
+          body: "Eşiniz veya kayıtlı partneriniz, 21 yaşın altındaki bekâr çocuklarınız (24'e kadar uzatılabilir) ve hem sizin hem eşinizin anne-babası ile büyükanne-büyükbabası iznini sizinkinden alır.",
+        },
+        {
+          title: "Kısa dönem kiralama yasak",
+          body: "Golden Visa için tutulan gayrimenkul, tatil kiralama platformları üzerinden kısa dönem kiralanamaz ve alt kiraya verilemez. Cezası iznin iptali ve 50.000 € para cezasıdır. Uzun dönem kiralama serbesttir; konaklamanın ötesinde hizmet sunan turizm işletmelerine kiralamak da dâhil.",
+        },
+        {
+          title: "Bu izin çalışma izni değildir",
+          body: "İstihdama erişim hakkı vermez. Yunan şirketi kurabilir, hisse tutabilir ve temettü alabilirsiniz; ancak bu izne dayanarak işe giremezsiniz.",
+        },
+      ],
+    },
+
+    faq: {
+      title: "Yatırımcıların gerçekten sorduğu sorular",
+      items: [
+        {
+          q: "Masrafları karşılamak için Airbnb'de kiraya verebilir miyim?",
+          a: "Hayır. Golden Visa kapsamındaki gayrimenkulün tatil kiralama platformlarında kısa dönem kiralanması ve alt kiraya verilmesi yasaktır. İhlal, izninize ve 50.000 € para cezasına mal olur. Uzun dönem kiralama serbesttir ve normalde bizim düzenlediğimiz yol budur.",
+        },
+        {
+          q: "Yunanistan'a taşınmam gerekir mi?",
+          a: "Hayır. Asgari kalış şartı yoktur ve ülke dışında bulunmak yenilemeyi reddetmek için gerekçe değildir. Müşterilerimizin çoğu, izin hazır olana kadar Yunanistan'a ayak basmadan tüm süreci tamamlar.",
+        },
+        {
+          q: "Eşiği tutturmak için iki ucuz gayrimenkul alabilir miyim?",
+          a: "Hayır. Yatırım, bulunduğu bölgenin eşiğini karşılayan TEK bir gayrimenkul olmalıdır; 800.000 € ve 400.000 € kademelerinde ana alanı en az 120 m² olmalıdır.",
+        },
+        {
+          q: "Başvuruya kimleri dâhil edebilirim?",
+          a: "Eşinizi veya kayıtlı partnerinizi, 21 yaşın altındaki bekâr çocuklarınızı — 24'e kadar uzatılabilir — ve hem sizin hem eşinizin anne-babası ile büyükanne-büyükbabasını.",
+        },
+        {
+          q: "İzin Yunan vatandaşlığına götürür mü?",
+          a: "Otomatik olarak değil. Golden Visa bir oturma iznidir. Vatandaşlığa kabul ayrı bir kanunla düzenlenir ve Yunanistan'da gerçek anlamda uzun süreli ikamet gerektirir; Golden Visa sizi buna zorunlu tutmaz. Var olmayan bir yol ima etmek yerine durumunuzun neye izin verdiğini açıkça söyleriz.",
+        },
+        {
+          q: "Bu izinle Yunanistan'da çalışabilir miyim?",
+          a: "Hayır. İstihdama erişim hakkı vermez. Şirket kurabilir, hisse tutabilir ve temettü alabilirsiniz.",
+        },
+        {
+          q: "Ne kadar sürer?",
+          a: "Alımınız tamamlanıp dosyanız düzene girdiğinde, makamlar izni işleme koyarken yasal olarak ikamet etmenizi sağlayan belge düzenlenir. Kendi durumunuz için gerçekçi bir takvimi yazılı veririz — herkese uyan tek bir rakam söylemeyiz.",
+        },
+      ],
     },
     eligibilityTitle: "Kimler için",
     eligibility: [
@@ -274,7 +360,7 @@ export const tr: Dictionary = {
           "Peyzaj düzenlemesi",
           "İç mimari",
           "Mutfak ve banyo tadilatı",
-          "Kısa dönem kiralamaya yönelik donatım",
+          "Uzun dönem kiralamaya yönelik donatım",
         ],
         note: "",
       },
@@ -295,7 +381,7 @@ export const tr: Dictionary = {
           "Mevzuata uyum ve kayıt tutma",
           "Bakım, onarım ve denetimler",
           "Faturalar, vergiler ve aidatlar",
-          "Kısa dönem kiralama operasyonu",
+          "Uzun dönem kiralama, turizm işletmelerine kiralama dâhil",
         ],
         note: "",
       },
@@ -556,6 +642,31 @@ export const tr: Dictionary = {
     regNote: "Şirket tescil bilgileri müşteri tarafından sağlanacaktır.",
     disclaimerShort:
       "Bu sitedeki bilgiler geneldir ve hukuki veya yatırım tavsiyesi teşkil etmez. Oturma izinleri Yunan makamlarınca verilir.",
+  },
+
+  assistant: {
+    open: "Asistana sorun",
+    close: "Sohbeti kapat",
+    title: "Golden Visa asistanı",
+    subtitle: "Yayımlanmış bilgilerimizden yanıt, 7/24",
+    greeting:
+      "Merhaba. Yunanistan Golden Visa, hizmetlerimiz veya ofislerimiz hakkında sorabilirsiniz. Kendi dosyanızla ilgili her şey için sizi bir danışmana yönlendiririm.",
+    placeholder: "Sorunuzu yazın…",
+    send: "Gönder",
+    thinking: "Yazıyor…",
+    suggestions: [
+      "Güncel yatırım eşikleri nedir?",
+      "Gayrimenkulü Airbnb'de kiralayabilir miyim?",
+      "Yunanistan'da yaşamam gerekir mi?",
+      "Başvuruma kimleri dâhil edebilirim?",
+    ],
+    offlineNote: "— yanıt, yayımlanmış SSS bölümümüzden alındı.",
+    noAnswer:
+      "Yayımlanmış bilgilerimizde bu yok. Bir danışman doğru yanıtı verebilir — iletişim sayfasını kullanın veya Atina ofisini arayın.",
+    humanCta: "Bir insanla görüşün",
+    disclaimer:
+      "Otomatik asistan. Yalnızca genel bilgi — hukuki veya yatırım tavsiyesi değildir. Lütfen pasaport, banka veya belge bilgilerinizi buraya yazmayın.",
+    errorMsg: "Bir sorun oluştu. Lütfen tekrar deneyin veya doğrudan bize ulaşın.",
   },
 
   notFound: {

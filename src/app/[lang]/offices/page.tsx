@@ -42,12 +42,12 @@ export default async function OfficesPage({ params }: { params: Promise<{ lang: 
     <>
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
 
-      <Section tone="cream">
+      <Section tone="base">
         <Container>
           <ul className="flex flex-col gap-16">
             {t.items.map((office, i) => (
               <Reveal as="li" key={office.city} delay={(i % 2) * 80}>
-                <div className="grid gap-8 border-t border-navy-900/12 pt-10 md:grid-cols-[0.55fr_1fr] md:gap-14">
+                <div className="grid gap-8 border-t border-ink/12 pt-10 md:grid-cols-[0.55fr_1fr] md:gap-14">
                   <Artwork
                     src={cityArtSrc(office.city)}
                     alt={`${office.city}, ${office.country}`}
@@ -61,31 +61,31 @@ export default async function OfficesPage({ params }: { params: Promise<{ lang: 
                     <h2 className="text-[1.875rem] leading-tight sm:text-[2.25rem]">
                       {office.city}
                     </h2>
-                    <p className="mt-4 text-sm leading-7 text-navy-800/60">{office.role}</p>
+                    <p className="mt-4 text-sm leading-7 text-ink/60">{office.role}</p>
 
                     {office.confirmed ? (
                       <div className="mt-8">
-                        <address className="not-italic text-[0.9375rem] leading-8 text-navy-800/85">
+                        <address className="not-italic text-[0.9375rem] leading-8 text-ink/85">
                           {office.address}
                         </address>
                         {office.phone ? (
                           <a
                             href={`tel:${office.phone.replace(/[^\d+]/g, "")}`}
-                            className="mt-3 inline-block text-[0.9375rem] text-gold-600 transition-colors hover:text-navy-900"
+                            className="mt-3 inline-block text-[0.9375rem] text-gold-600 transition-colors hover:text-ink"
                           >
                             {office.phone}
                           </a>
                         ) : null}
                       </div>
                     ) : (
-                      <div className="mt-8 border border-dashed border-navy-900/25 bg-cream-100 p-6">
-                        <p className="eyebrow text-navy-900/45">{t.pendingLabel}</p>
-                        <p className="mt-3 text-[0.875rem] leading-7 text-navy-800/70">
+                      <div className="mt-8 border border-dashed border-ink/25 bg-surface-2 p-6">
+                        <p className="eyebrow text-ink/45">{t.pendingLabel}</p>
+                        <p className="mt-3 text-[0.875rem] leading-7 text-ink/70">
                           {t.pendingNote}
                         </p>
                         <a
                           href={`tel:${site.headOffice.phoneHref}`}
-                          className="mt-4 inline-block text-[0.9375rem] text-gold-600 transition-colors hover:text-navy-900"
+                          className="mt-4 inline-block text-[0.9375rem] text-gold-600 transition-colors hover:text-ink"
                         >
                           {site.headOffice.phone}
                         </a>

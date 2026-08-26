@@ -42,7 +42,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
     <>
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
 
-      <Section tone="cream">
+      <Section tone="base">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1fr_0.6fr] lg:gap-20">
             <Reveal>
@@ -54,14 +54,14 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="border border-navy-900/12 bg-white p-8">
+              <div className="border border-ink/12 bg-surface-3 p-8">
                 <Eyebrow>{t.directTitle}</Eyebrow>
                 <Rule className="mt-4 mb-6" />
 
-                <p className="text-xs uppercase tracking-[0.18em] text-navy-900/45">
+                <p className="text-xs uppercase tracking-[0.18em] text-ink/45">
                   {t.headOffice}
                 </p>
-                <address className="mt-3 not-italic text-[0.9375rem] leading-8 text-navy-800/85">
+                <address className="mt-3 not-italic text-[0.9375rem] leading-8 text-ink/85">
                   {site.name}
                   <br />
                   {site.headOffice.street}
@@ -73,14 +73,14 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
 
                 <a
                   href={`tel:${site.headOffice.phoneHref}`}
-                  className="mt-5 inline-block text-[1.0625rem] text-gold-600 transition-colors hover:text-navy-900"
+                  className="mt-5 inline-block text-[1.0625rem] text-gold-600 transition-colors hover:text-ink"
                 >
                   {site.headOffice.phone}
                 </a>
 
-                <div className="mt-8 border-t border-navy-900/10 pt-6">
-                  <p className="text-[0.875rem] leading-7 text-navy-800/70">{t.hours}</p>
-                  <p className="mt-2 text-[0.875rem] leading-7 text-navy-800/70">
+                <div className="mt-8 border-t border-ink/10 pt-6">
+                  <p className="text-[0.875rem] leading-7 text-ink/70">{t.hours}</p>
+                  <p className="mt-2 text-[0.875rem] leading-7 text-ink/70">
                     {t.responseNote}
                   </p>
                 </div>

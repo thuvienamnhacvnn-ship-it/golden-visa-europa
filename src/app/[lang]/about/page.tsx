@@ -42,10 +42,10 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
     <>
       <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
 
-      <Section tone="cream">
+      <Section tone="base">
         <Container>
           <Reveal>
-            <div className="prose-lux mx-auto max-w-3xl text-[1.0625rem] text-navy-800/85">
+            <div className="prose-lux mx-auto max-w-3xl text-[1.0625rem] text-ink/85">
               {t.intro.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
@@ -55,27 +55,27 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
       </Section>
 
       {/* Người sáng lập + CV */}
-      <Section tone="white">
+      <Section tone="raised">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.65fr_1fr] lg:gap-20">
             <Reveal>
-              <Artwork src={crestSrc} alt={t.founder.name} ratio="4 / 5" className="bg-navy-900" />
-              <p className="mt-4 text-xs leading-6 text-navy-800/45">{t.portraitPending}</p>
+              <Artwork src={crestSrc} alt={t.founder.name} ratio="4 / 5" className="bg-deep" />
+              <p className="mt-4 text-xs leading-6 text-ink/45">{t.portraitPending}</p>
             </Reveal>
 
             <Reveal delay={120}>
               <Eyebrow>{t.founder.role}</Eyebrow>
               <Rule className="mt-4 mb-6" />
               <h2 className="text-[2rem] leading-tight sm:text-[2.5rem]">{t.founder.name}</h2>
-              <p className="mt-7 max-w-2xl text-[1.0625rem] leading-[1.85] text-navy-800/85">
+              <p className="mt-7 max-w-2xl text-[1.0625rem] leading-[1.85] text-ink/85">
                 {t.founder.body}
               </p>
 
-              <ul className="mt-10 grid gap-px bg-navy-900/10 sm:grid-cols-2">
+              <ul className="mt-10 grid gap-px bg-deep/10 sm:grid-cols-2">
                 {t.founder.credentials.map((credential) => (
-                  <li key={credential} className="bg-white p-6">
+                  <li key={credential} className="bg-surface-3 p-6">
                     <Seal className="h-6 w-6 text-gold-600" />
-                    <p className="mt-4 text-[0.875rem] leading-6 text-navy-800/80">{credential}</p>
+                    <p className="mt-4 text-[0.875rem] leading-6 text-ink/80">{credential}</p>
                   </li>
                 ))}
               </ul>
@@ -85,13 +85,13 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
       </Section>
 
       {/* Đội ngũ */}
-      <Section tone="cream-alt">
+      <Section tone="alt">
         <Container>
           <div className="max-w-3xl">
             <Eyebrow>{t.eyebrow}</Eyebrow>
             <Rule className="mt-4 mb-6" />
             <h2 className="text-[2rem] leading-tight sm:text-[2.5rem]">{t.teamTitle}</h2>
-            <p className="mt-5 text-[1.0625rem] leading-[1.8] text-navy-800/80">{t.teamLead}</p>
+            <p className="mt-5 text-[1.0625rem] leading-[1.8] text-ink/80">{t.teamLead}</p>
           </div>
 
           <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
@@ -101,21 +101,21 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </Reveal>
             ))}
           </ul>
-          <p className="mt-6 text-xs leading-6 text-navy-800/45">{t.placeholderTeam}</p>
+          <p className="mt-6 text-xs leading-6 text-ink/45">{t.placeholderTeam}</p>
         </Container>
       </Section>
 
       {/* Luật sư & công chứng */}
-      <Section tone="navy">
+      <Section tone="deep">
         <Container>
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
               <Eyebrow tone="light">{dict.nav.about}</Eyebrow>
               <Rule className="mx-auto mt-4 mb-7" />
-              <h2 className="text-[1.875rem] leading-tight text-cream-50 sm:text-[2.4rem]">
+              <h2 className="text-[1.875rem] leading-tight text-on-deep sm:text-[2.4rem]">
                 {t.legalTitle}
               </h2>
-              <p className="mt-6 text-[1.0625rem] leading-[1.85] text-navy-100/80">
+              <p className="mt-6 text-[1.0625rem] leading-[1.85] text-on-deep-2/80">
                 {t.legalBody}
               </p>
             </div>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { MeanderRule } from "./Ornament";
+import { Social } from "./Social";
 import { localePath, serviceSlugs, type Dictionary, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
 
@@ -21,14 +22,15 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   ];
 
   return (
-    <footer className="bg-navy-950 text-cream-50">
+    <footer className="bg-deep-2 text-on-deep">
       <div className="mx-auto w-full max-w-[1200px] px-5 py-16 sm:px-8 lg:px-12 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
           <div>
             <Logo tone="light" />
-            <p className="mt-6 max-w-xs text-sm leading-7 text-navy-100/70">
+            <p className="mt-6 max-w-xs text-sm leading-7 text-on-deep-2/70">
               {dict.footer.tagline}
             </p>
+            <Social tone="light" className="mt-7" />
             <MeanderRule className="mt-8 h-4 w-36 text-gold-500/40" />
           </div>
 
@@ -49,7 +51,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </FooterCol>
 
           <FooterCol title={dict.footer.contactCol}>
-            <li className="text-sm leading-7 text-navy-100/70">
+            <li className="text-sm leading-7 text-on-deep-2/70">
               {site.headOffice.street}
               <br />
               {site.headOffice.city} {site.headOffice.postalCode}
@@ -59,7 +61,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <li>
               <a
                 href={`tel:${site.headOffice.phoneHref}`}
-                className="text-sm text-navy-100/70 transition-colors hover:text-gold-400"
+                className="text-sm text-on-deep-2/70 transition-colors hover:text-gold-400"
               >
                 {site.headOffice.phone}
               </a>
@@ -67,7 +69,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <li className="pt-2">
               <Link
                 href={localePath(locale, "contact")}
-                className="inline-flex border border-cream-50/25 px-5 py-2.5 text-xs font-medium tracking-wide transition-colors hover:border-gold-400 hover:text-gold-400"
+                className="inline-flex border border-on-deep/25 px-5 py-2.5 text-xs font-medium tracking-wide transition-colors hover:border-gold-400 hover:text-gold-400"
               >
                 {dict.common.getInTouch}
               </Link>
@@ -75,11 +77,11 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           </FooterCol>
         </div>
 
-        <div className="mt-14 border-t border-cream-50/10 pt-8">
-          <p className="max-w-3xl text-xs leading-6 text-navy-100/45">
+        <div className="mt-14 border-t border-on-deep/10 pt-8">
+          <p className="max-w-3xl text-xs leading-6 text-on-deep-2/45">
             {dict.footer.disclaimerShort}
           </p>
-          <div className="mt-6 flex flex-col gap-4 text-xs text-navy-100/45 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-6 flex flex-col gap-4 text-xs text-on-deep-2/45 sm:flex-row sm:items-center sm:justify-between">
             <p>
               © {year} {site.legalName}. {dict.footer.rights}
             </p>
@@ -113,7 +115,7 @@ function FooterLink({ href, children }: { href: string; children: React.ReactNod
     <li>
       <Link
         href={href}
-        className="text-sm text-navy-100/70 transition-colors hover:text-gold-400"
+        className="text-sm text-on-deep-2/70 transition-colors hover:text-gold-400"
       >
         {children}
       </Link>

@@ -86,7 +86,7 @@ export default async function ServicePage({
         </div>
       </PageHero>
 
-      <Section tone="cream">
+      <Section tone="base">
         <Container>
           <div className="grid gap-14 lg:grid-cols-[1fr_0.75fr] lg:gap-20">
             <Reveal>
@@ -97,37 +97,37 @@ export default async function ServicePage({
                 className="mb-12 w-full"
                 priority
               />
-              <div className="prose-lux max-w-2xl text-[1.0625rem] text-navy-800/85">
+              <div className="prose-lux max-w-2xl text-[1.0625rem] text-ink/85">
                 {service.body.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
 
               {service.note ? (
-                <p className="mt-10 border-l-2 border-gold-500 py-2 pl-6 font-serif text-[1.25rem] leading-[1.6] text-navy-900">
+                <p className="mt-10 border-l-2 border-gold-500 py-2 pl-6 font-serif text-[1.25rem] leading-[1.6] text-ink">
                   {service.note}
                 </p>
               ) : null}
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="bg-navy-900 p-8 text-cream-50">
+              <div className="bg-deep p-8 text-on-deep">
                 <Eyebrow tone="light">{service.highlight.label}</Eyebrow>
                 <Rule className="mt-4 mb-5" />
-                <p className="text-[0.9375rem] leading-7 text-navy-100/85">
+                <p className="text-[0.9375rem] leading-7 text-on-deep-2/85">
                   {service.highlight.text}
                 </p>
               </div>
 
-              <div className="mt-8 border border-navy-900/12 bg-white p-8">
-                <p className="text-sm leading-7 text-navy-800/75">{dict.contact.lead}</p>
+              <div className="mt-8 border border-ink/12 bg-surface-3 p-8">
+                <p className="text-sm leading-7 text-ink/75">{dict.contact.lead}</p>
                 <div className="mt-6 flex flex-col gap-3">
                   <ButtonLink href={localePath(locale, "contact")} variant="solid">
                     {dict.common.bookConsultation}
                   </ButtonLink>
                   <a
                     href={`tel:${site.headOffice.phoneHref}`}
-                    className="inline-flex items-center justify-center border border-navy-900/25 px-7 py-3.5 text-sm font-medium tracking-wide text-navy-900 transition-colors hover:border-gold-500 hover:text-gold-600"
+                    className="inline-flex items-center justify-center border border-ink/25 px-7 py-3.5 text-sm font-medium tracking-wide text-ink transition-colors hover:border-gold-500 hover:text-gold-600"
                   >
                     {site.headOffice.phone}
                   </a>
@@ -139,7 +139,7 @@ export default async function ServicePage({
       </Section>
 
       {/* Danh sách hạng mục */}
-      <Section tone="white">
+      <Section tone="raised">
         <Container>
           <div className="max-w-3xl">
             <Eyebrow>{dict.common.ourServices}</Eyebrow>
@@ -150,9 +150,9 @@ export default async function ServicePage({
           <ul className="mt-12 grid gap-x-12 sm:grid-cols-2">
             {service.bullets.map((bullet, i) => (
               <Reveal as="li" key={bullet} delay={(i % 2) * 70}>
-                <div className="flex items-start gap-4 border-b border-navy-900/10 py-5">
+                <div className="flex items-start gap-4 border-b border-ink/10 py-5">
                   <span className="mt-2.5 block h-1 w-4 shrink-0 bg-gold-500" aria-hidden="true" />
-                  <span className="text-[0.9375rem] leading-7 text-navy-800/80">{bullet}</span>
+                  <span className="text-[0.9375rem] leading-7 text-ink/80">{bullet}</span>
                 </div>
               </Reveal>
             ))}
@@ -161,14 +161,14 @@ export default async function ServicePage({
       </Section>
 
       {/* Dịch vụ kế tiếp */}
-      <section className="bg-cream-100 py-16">
+      <section className="bg-surface-2 py-16">
         <Container>
           <Link
             href={localePath(locale, `services/${next}`)}
             className="group flex flex-col gap-3 sm:flex-row sm:items-baseline sm:justify-between"
           >
-            <span className="eyebrow text-navy-900/40">{dict.common.ourServices}</span>
-            <span className="flex items-center gap-4 font-serif text-[1.5rem] text-navy-900 transition-colors group-hover:text-gold-600 sm:text-[2rem]">
+            <span className="eyebrow text-ink/40">{dict.common.ourServices}</span>
+            <span className="flex items-center gap-4 font-serif text-[1.5rem] text-ink transition-colors group-hover:text-gold-600 sm:text-[2rem]">
               {nextService.name}
               <svg
                 className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1.5"
