@@ -7,7 +7,7 @@ const PUBLIC_FILE = /\.[^/]+$/;
  * Mọi URL đều phải có tiền tố ngôn ngữ. Đường dẫn thiếu tiền tố sẽ được
  * chuyển hướng 307 sang ngôn ngữ hợp nhất theo Accept-Language.
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   if (

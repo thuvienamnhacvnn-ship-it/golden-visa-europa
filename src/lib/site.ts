@@ -5,8 +5,9 @@
 export const site = {
   name: "N. Kakkos Estate",
   legalName: "N. Kakkos Estate",
-  // TODO(khách hàng): tên miền thật
-  url: "https://kakkosestate.com",
+  // Tên miền đang chạy trên Vercel. Đổi sang tên miền thật của khách khi có —
+  // giá trị này chi phối canonical, hreflang, sitemap và JSON-LD.
+  url: "https://golden-visa-tau.vercel.app",
   founded: "2014",
 
   // Địa chỉ trụ sở — lấy từ chữ ký email của khách, đã xác nhận.
