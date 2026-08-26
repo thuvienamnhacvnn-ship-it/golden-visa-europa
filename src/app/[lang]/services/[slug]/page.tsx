@@ -111,7 +111,7 @@ export default async function ServicePage({
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="bg-deep p-8 text-on-deep">
+              <div className="card-deep p-8 text-on-deep">
                 <Eyebrow tone="light">{service.highlight.label}</Eyebrow>
                 <Rule className="mt-4 mb-5" />
                 <p className="text-[0.9375rem] leading-7 text-on-deep-2/85">
@@ -119,7 +119,7 @@ export default async function ServicePage({
                 </p>
               </div>
 
-              <div className="mt-8 border border-ink/12 bg-surface-3 p-8">
+              <div className="card mt-8 p-8">
                 <p className="text-sm leading-7 text-ink/75">{dict.contact.lead}</p>
                 <div className="mt-6 flex flex-col gap-3">
                   <ButtonLink href={localePath(locale, "contact")} variant="solid">

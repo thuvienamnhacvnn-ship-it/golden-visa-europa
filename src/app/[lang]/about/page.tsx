@@ -71,9 +71,9 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
                 {t.founder.body}
               </p>
 
-              <ul className="mt-10 grid gap-px bg-deep/10 sm:grid-cols-2">
+              <ul className="mt-10 grid gap-4 sm:grid-cols-2">
                 {t.founder.credentials.map((credential) => (
-                  <li key={credential} className="bg-surface-3 p-6">
+                  <li key={credential} className="card p-6">
                     <Seal className="h-6 w-6 text-gold-600" />
                     <p className="mt-4 text-[0.875rem] leading-6 text-ink/80">{credential}</p>
                   </li>

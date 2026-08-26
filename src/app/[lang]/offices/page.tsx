@@ -47,12 +47,12 @@ export default async function OfficesPage({ params }: { params: Promise<{ lang: 
           <ul className="flex flex-col gap-16">
             {t.items.map((office, i) => (
               <Reveal as="li" key={office.city} delay={(i % 2) * 80}>
-                <div className="grid gap-8 border-t border-ink/12 pt-10 md:grid-cols-[0.55fr_1fr] md:gap-14">
+                <div className="grid gap-10 md:grid-cols-[0.55fr_1fr] md:gap-14">
                   <Artwork
                     src={cityArtSrc(office.city)}
                     alt={`${office.city}, ${office.country}`}
                     ratio="4 / 3"
-                    className="w-full"
+                    className="w-full shadow-[0_24px_60px_-40px_rgba(7,27,48,0.5)]"
                   />
 
                   <div>
@@ -78,7 +78,7 @@ export default async function OfficesPage({ params }: { params: Promise<{ lang: 
                         ) : null}
                       </div>
                     ) : (
-                      <div className="mt-8 border border-dashed border-ink/25 bg-surface-2 p-6">
+                      <div className="mt-8 rounded-[14px] border border-dashed border-ink/25 bg-surface-2 p-6">
                         <p className="eyebrow text-ink/45">{t.pendingLabel}</p>
                         <p className="mt-3 text-[0.875rem] leading-7 text-ink/70">
                           {t.pendingNote}

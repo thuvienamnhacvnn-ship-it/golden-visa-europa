@@ -34,9 +34,9 @@ export const tr: Dictionary = {
 
   home: {
     hero: {
-      eyebrow: "Yatırım yoluyla oturum · Yunanistan",
-      title: "Avrupa'da oturum,",
-      titleAccent: "baştan sona bizde.",
+      eyebrow: "Golden Visa",
+      title: "Avrupa'da oturum",
+      titleAccent: "YUNANİSTAN",
       lead: "Avrupa dışından gelen yatırımcılar ve aileleri için Golden Visa alıyor, Yunanistan'da banka hesabı açıyor ve üst segment gayrimenkulleri yönetiyoruz — ilk piyasa araştırmasından anahtarın elinize geçtiği güne kadar.",
       ctaPrimary: "Danışmanlık randevusu alın",
       ctaSecondary: "Golden Visa nedir?",

@@ -52,7 +52,7 @@ export function Artwork({
 }) {
   return (
     <div
-      className={`relative overflow-hidden border border-gold-500/25 bg-deep-2 ${className}`}
+      className={`media zoom-wrap relative bg-deep-2 ${className}`}
       style={{ aspectRatio: ratio }}
     >
       {/* eslint-disable-next-line @next/next/no-img-element */}

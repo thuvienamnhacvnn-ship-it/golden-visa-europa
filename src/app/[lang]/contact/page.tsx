@@ -54,7 +54,7 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="border border-ink/12 bg-surface-3 p-8">
+              <div className="card p-8">
                 <Eyebrow>{t.directTitle}</Eyebrow>
                 <Rule className="mt-4 mb-6" />
 

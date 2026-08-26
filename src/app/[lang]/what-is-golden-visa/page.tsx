@@ -57,7 +57,7 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="border border-ink/12 bg-surface-3 p-8">
+              <div className="card p-8">
                 <Eyebrow>{t.eligibilityTitle}</Eyebrow>
                 <Rule className="mt-4 mb-6" />
                 <ul className="flex flex-col gap-4">
@@ -115,11 +115,11 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
             </p>
           </div>
 
-          <ul className="mt-14 grid gap-px border border-ink/12 bg-deep/12 lg:grid-cols-3">
+          <ul className="mt-16 grid gap-5 lg:grid-cols-3">
             {t.thresholds.tiers.map((tier, i) => (
-              <Reveal as="li" key={tier.amount} delay={i * 90} className="bg-surface-3">
-                <div className="flex h-full flex-col p-8 lg:p-10">
-                  <span className="font-serif text-[2.25rem] leading-none text-gold-600">
+              <Reveal as="li" key={tier.amount} delay={i * 90}>
+                <div className="card card-hover flex h-full flex-col p-8 lg:p-10">
+                  <span className="display text-[2.6rem] text-gold-600">
                     {tier.amount}
                   </span>
                   <p className="mt-6 border-t border-ink/10 pt-5 text-[0.9375rem] font-medium leading-7 text-ink">
@@ -133,7 +133,7 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
 
           <div className="mt-10 grid gap-8 lg:grid-cols-2">
             <Reveal>
-              <div className="h-full border-l-2 border-gold-500 bg-surface-3 p-8">
+              <div className="card h-full border-l-2 border-l-gold-500 p-8">
                 <h3 className="text-[1.25rem] leading-snug">{t.thresholds.sizeTitle}</h3>
                 <p className="mt-4 text-[0.9375rem] leading-7 text-ink/80">
                   {t.thresholds.sizeBody}
@@ -141,7 +141,7 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
               </div>
             </Reveal>
             <Reveal delay={100}>
-              <div className="h-full border-l-2 border-gold-500 bg-surface-3 p-8">
+              <div className="card h-full border-l-2 border-l-gold-500 p-8">
                 <h3 className="text-[1.25rem] leading-snug">{t.thresholds.startupTitle}</h3>
                 <p className="mt-4 text-[0.9375rem] leading-7 text-ink/80">
                   {t.thresholds.startupBody}

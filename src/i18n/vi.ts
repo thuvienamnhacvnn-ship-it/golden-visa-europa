@@ -34,9 +34,9 @@ export const vi: Dictionary = {
 
   home: {
     hero: {
-      eyebrow: "Định cư qua đầu tư · Hy Lạp",
-      title: "Thường trú châu Âu,",
-      titleAccent: "lo trọn gói từ đầu đến cuối.",
+      eyebrow: "Golden Visa",
+      title: "Định cư châu Âu",
+      titleAccent: "HY LẠP",
       lead: "Chúng tôi làm thẻ vàng, mở tài khoản ngân hàng Hy Lạp và quản lý bất động sản cao cấp cho nhà đầu tư ngoài châu Âu cùng gia đình — từ bản nghiên cứu thị trường đầu tiên đến lúc chìa khoá nằm trong tay quý vị.",
       ctaPrimary: "Đặt lịch tư vấn",
       ctaSecondary: "Thẻ vàng là gì?",

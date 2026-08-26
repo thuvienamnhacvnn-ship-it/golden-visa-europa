@@ -103,7 +103,10 @@ export default async function LocaleLayout({
             theme: dict.common.theme,
           }}
         />
-        <main id="main" className="flex-1">
+        {/* -mt-20 cho phần nội dung chui lên dưới header trong suốt.
+            Trang nào cũng mở đầu bằng một mảng tối (hero hoặc PageHero)
+            nên phần bị che luôn là nền tối, không lộ nền kem. */}
+        <main id="main" className="-mt-20 flex-1">
           {children}
         </main>
         <Footer locale={locale} dict={dict} />

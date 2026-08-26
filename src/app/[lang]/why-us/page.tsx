@@ -51,10 +51,10 @@ export default async function WhyUsPage({ params }: { params: Promise<{ lang: st
             </div>
           </Reveal>
 
-          <ul className="mt-16 grid gap-px border border-ink/10 bg-deep/10 sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {t.points.map((point, i) => (
-              <Reveal as="li" key={point.title} delay={(i % 3) * 80} className="bg-surface">
-                <div className="h-full p-8 lg:p-10">
+              <Reveal as="li" key={point.title} delay={(i % 3) * 80}>
+                <div className="card card-hover h-full p-8 lg:p-10">
                   <Seal className="h-8 w-8 text-gold-600" />
                   <h2 className="mt-6 text-[1.25rem] leading-snug">{point.title}</h2>
                   <p className="mt-4 text-[0.9375rem] leading-7 text-ink/70">{point.body}</p>

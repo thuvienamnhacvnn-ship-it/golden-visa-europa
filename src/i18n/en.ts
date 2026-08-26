@@ -33,9 +33,9 @@ export const en = {
 
   home: {
     hero: {
-      eyebrow: "Residence by investment · Greece",
-      title: "European residency,",
-      titleAccent: "handled end to end.",
+      eyebrow: "Golden Visa",
+      title: "European residency",
+      titleAccent: "GREECE",
       lead: "We acquire Golden Visas, open Greek bank accounts and manage high-end real estate for non-European investors and their families — from the first market study to the keys in your hand.",
       ctaPrimary: "Book a consultation",
       ctaSecondary: "What is a Golden Visa?",

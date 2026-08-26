@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { localePath, type Dictionary, type Locale } from "@/i18n";
+import { Sparks, BookIcon } from "./Sparks";
 
 type Turn = { role: "user" | "assistant"; content: string };
 export type AssistantStrings = Dictionary["assistant"];
@@ -87,31 +88,42 @@ export function Assistant({
 
   return (
     <>
-      {/* Nút mở */}
+      {/* Nút mở: khung vuông bo góc, viền vàng, nền trong suốt, sao lấp lánh */}
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={open ? t.close : t.open}
-        className="fixed bottom-6 left-5 z-50 flex items-center gap-2.5 rounded-full bg-gold-500 py-3 pl-3.5 pr-5 text-deep-2 shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:bg-gold-400 sm:left-8"
+        className="gold-box fixed bottom-6 left-5 z-50 flex w-[104px] flex-col items-center gap-2 px-3 py-4 sm:left-8"
       >
-        <span className="relative flex h-6 w-6 items-center justify-center">
+        <Sparks count={11} seed={3} />
+
+        {/* Biểu tượng cuốn sách ở giữa */}
+        <span className="gold-soft relative z-10">
           {open ? (
-            <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+            <svg
+              className="h-7 w-7"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.6"
+              aria-hidden="true"
+            >
               <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
             </svg>
           ) : (
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
-              <path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.5 9.5 0 0 1-2.9-.4L4 21l1.4-4a8.2 8.2 0 0 1-1.4-4.6 8.4 8.4 0 0 1 9-8.4 8.4 8.4 0 0 1 8 7.5Z" strokeLinejoin="round" />
-              <path d="M8.5 11.5h.01M12 11.5h.01M15.5 11.5h.01" strokeLinecap="round" />
-            </svg>
+            <BookIcon className="h-7 w-7" />
           )}
         </span>
-        <span className="text-[0.8125rem] font-semibold tracking-wide">{t.open}</span>
-        {/* chấm 24/7 nhấp nháy nhẹ */}
-        <span className="relative flex h-2 w-2">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-deep-2/40" />
-          <span className="relative inline-flex h-2 w-2 rounded-full bg-deep-2/70" />
+
+        <span className="gold-soft relative z-10 text-center text-[0.6875rem] font-semibold leading-tight tracking-wide">
+          {t.open}
+        </span>
+
+        {/* Chấm 24/7 */}
+        <span className="absolute right-2.5 top-2.5 z-10 flex h-1.5 w-1.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold-400/70" />
+          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold-400" />
         </span>
       </button>
 

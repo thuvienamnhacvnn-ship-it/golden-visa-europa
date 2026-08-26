@@ -76,10 +76,20 @@ export function SectionHeading({
   const centered = align === "center";
   return (
     <div className={`max-w-3xl ${centered ? "mx-auto text-center" : ""}`}>
-      {eyebrow ? <Eyebrow tone={tone === "light" ? "light" : "gold"}>{eyebrow}</Eyebrow> : null}
-      <Rule className={`mt-4 mb-6 ${centered ? "mx-auto" : ""}`} />
+      {eyebrow ? (
+        <span
+          className={`eyebrow inline-flex items-center gap-2 rounded-full border px-3.5 py-1.5 ${
+            tone === "light"
+              ? "border-gold-400/35 text-gold-400"
+              : "border-gold-500/40 text-gold-600"
+          }`}
+        >
+          <span className="inline-block h-1 w-1 rounded-full bg-current" />
+          {eyebrow}
+        </span>
+      ) : null}
       <Tag
-        className={`text-[2rem] leading-[1.15] sm:text-[2.6rem] lg:text-[3.1rem] ${
+        className={`display mt-6 text-[2.4rem] sm:text-[3.2rem] lg:text-[3.9rem] ${
           tone === "light" ? "text-on-deep" : "text-ink"
         }`}
       >
@@ -107,12 +117,13 @@ type ButtonProps = {
 
 export function ButtonLink({ href, children, variant = "solid", className = "" }: ButtonProps) {
   const base =
-    "inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-medium tracking-wide transition-colors duration-200";
+    "btn inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium tracking-wide";
   const variants = {
-    solid: "bg-deep text-on-deep hover:bg-deep-3",
-    outline: "border border-ink/25 text-ink hover:border-gold-500 hover:text-gold-600",
-    light: "bg-gold-500 text-deep-2 hover:bg-gold-400",
-    ghost: "border border-on-deep/30 text-on-deep hover:border-gold-400 hover:text-gold-400",
+    solid: "bg-deep text-on-deep shadow-[0_10px_30px_-14px_rgba(7,27,48,0.65)] hover:bg-deep-3",
+    outline: "border border-ink/20 text-ink hover:border-gold-500 hover:text-gold-600 hover:shadow-[0_10px_30px_-16px_rgba(7,27,48,0.4)]",
+    light:
+      "bg-gold-500 text-deep-2 shadow-[0_12px_34px_-14px_rgba(200,164,77,0.75)] hover:bg-gold-400",
+    ghost: "border border-on-deep/25 text-on-deep hover:border-gold-400 hover:text-gold-400",
   } as const;
 
   return (
@@ -172,7 +183,7 @@ export function PlaceholderFrame({
 }) {
   return (
     <div
-      className={`relative flex items-center justify-center border border-dashed border-ink/20 bg-surface-2 ${className}`}
+      className={`media relative flex items-center justify-center border border-dashed border-ink/20 bg-surface-2 ${className}`}
       style={{ aspectRatio: ratio }}
     >
       <div className="px-6 text-center">
@@ -209,20 +220,32 @@ export function PageHero({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden bg-deep py-20 text-on-deep md:py-28">
+    <section className="grain relative overflow-hidden bg-deep pb-24 pt-36 text-on-deep md:pb-32 md:pt-44">
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.16]"
+        className="pointer-events-none absolute inset-0 opacity-[0.12]"
         aria-hidden="true"
         style={{
           backgroundImage:
             "repeating-linear-gradient(90deg, transparent 0 79px, #C8A44D 79px 80px)",
         }}
       />
+      <div
+        className="pointer-events-none absolute inset-0"
+        aria-hidden="true"
+        style={{
+          background:
+            "radial-gradient(70% 120% at 78% 8%, color-mix(in srgb, #C8A44D 18%, transparent), transparent 62%)",
+        }}
+      />
       <Container className="relative">
         <div className="max-w-3xl">
-          {eyebrow ? <Eyebrow tone="light">{eyebrow}</Eyebrow> : null}
-          <Rule className="rule-grow mt-4 mb-7" />
-          <h1 className="text-[2.4rem] leading-[1.1] sm:text-[3.1rem] lg:text-[3.5rem]">
+          {eyebrow ? (
+            <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-gold-400/35 px-3.5 py-1.5 text-gold-400">
+              <span className="inline-block h-1 w-1 rounded-full bg-current" />
+              {eyebrow}
+            </span>
+          ) : null}
+          <h1 className="display mt-7 text-[2.8rem] sm:text-[3.8rem] lg:text-[4.4rem]">
             <Words text={title} />
           </h1>
           {lead ? (
