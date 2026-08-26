@@ -8,6 +8,7 @@ export const vi: Dictionary = {
   },
 
   nav: {
+    home: "Trang chủ",
     whatIs: "Thẻ vàng",
     services: "Dịch vụ",
     about: "Về chúng tôi",
@@ -26,6 +27,7 @@ export const vi: Dictionary = {
     getInTouch: "Liên hệ",
     skipToContent: "Bỏ qua, vào nội dung chính",
     menu: "Menu",
+    more: "Thêm",
     close: "Đóng",
     language: "Ngôn ngữ",
     theme: "Đổi nền sáng / tối",

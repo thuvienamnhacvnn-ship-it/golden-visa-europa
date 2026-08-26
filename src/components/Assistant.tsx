@@ -2,22 +2,43 @@
 
 import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { localePath, type Dictionary, type Locale } from "@/i18n";
+import { localePath, locales, type Dictionary, type Locale } from "@/i18n";
+import { ThemeToggle } from "./ThemeToggle";
+import { usePathname } from "next/navigation";
 import { Sparks, BookIcon } from "./Sparks";
 import { site } from "@/lib/site";
 
 type Turn = { role: "user" | "assistant"; content: string };
 export type AssistantStrings = Dictionary["assistant"];
 
+export type NavStrings = {
+  home: string;
+  whatIs: string;
+  services: string;
+  offices: string;
+  about: string;
+  whyUs: string;
+  contact: string;
+  more: string;
+  close: string;
+  book: string;
+  language: string;
+  theme: string;
+};
+
 export function Assistant({
   locale,
   t,
   contactLabel,
+  nav,
 }: {
   locale: Locale;
   t: AssistantStrings;
   contactLabel: string;
+  nav: NavStrings;
 }) {
+  const [sheet, setSheet] = useState(false);
+  const pathname = usePathname() || `/${locale}`;
   const [open, setOpen] = useState(false);
   const [turns, setTurns] = useState<Turn[]>([]);
   const [draft, setDraft] = useState("");
@@ -90,7 +111,7 @@ export function Assistant({
   return (
     <>
       {/* Thanh biểu tượng dọc, cố định bên trái: trợ lý · WhatsApp · Facebook · hotline */}
-      <div className="fixed left-3 top-1/2 z-50 flex -translate-y-1/2 flex-col gap-3 sm:left-5">
+      <div className="fixed left-5 top-1/2 z-50 hidden -translate-y-1/2 flex-col gap-3 lg:flex">
         {/* Trợ lý — cuốn sách trong đường tròn */}
         <button
           type="button"
@@ -146,12 +167,143 @@ export function Assistant({
         </RailLink>
       </div>
 
+      {/* ── Thanh menu dưới đáy, chỉ trên mobile — kiểu ứng dụng ── */}
+      <nav
+        className="fixed inset-x-0 bottom-0 z-50 border-t border-gold-500/30 bg-surface/95 backdrop-blur-md lg:hidden"
+        style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+        aria-label={nav.more}
+      >
+        <div className="line-shimmer absolute inset-x-0 top-0" aria-hidden="true" />
+        <ul className="relative grid grid-cols-5 items-end">
+          <TabItem href={localePath(locale)} label={nav.home}>
+            <path d="M4 11.5 12 4l8 7.5V20a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z" />
+          </TabItem>
+          <TabItem href={localePath(locale, "what-is-golden-visa")} label={nav.whatIs}>
+            <path d="M4.5 5.5h15v13h-15z" />
+            <path d="M8 9.5h8M8 13h5" />
+          </TabItem>
+
+          {/* Nút to ở giữa: mở trợ lý */}
+          <li className="flex justify-center">
+            <button
+              type="button"
+              onClick={() => setOpen((v) => !v)}
+              aria-expanded={open}
+              aria-label={open ? t.close : t.open}
+              className="gold-box relative -mt-7 flex h-16 w-16 items-center justify-center rounded-full bg-surface shadow-[0_10px_28px_-12px_rgba(200,164,77,0.6)]"
+            >
+              <Sparks count={8} seed={11} />
+              <span className="gold-icon relative z-10">
+                {open ? (
+                  <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
+                    <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+                  </svg>
+                ) : (
+                  <BookIcon className="h-9 w-9" />
+                )}
+              </span>
+              <span className="absolute right-2 top-2 z-10 flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold-400/70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-gold-400" />
+              </span>
+            </button>
+          </li>
+
+          <TabItem href={localePath(locale, "services")} label={nav.services}>
+            <path d="M4 7h16M4 12h16M4 17h10" />
+          </TabItem>
+
+          <li>
+            <button
+              type="button"
+              onClick={() => setSheet(true)}
+              className="flex w-full flex-col items-center gap-1 px-1 pb-2 pt-2.5"
+              aria-haspopup="dialog"
+            >
+              <svg className="gold-icon h-[22px] w-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
+                <path d="M5 7h14M5 12h14M5 17h14" />
+              </svg>
+              <span className="text-[0.5625rem] font-medium leading-tight text-ink/70">{nav.more}</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      {/* Bảng menu đầy đủ, trượt lên từ đáy */}
+      <div
+        role="dialog"
+        aria-label={nav.more}
+        aria-hidden={!sheet}
+        className={`fixed inset-0 z-[60] lg:hidden ${sheet ? "pointer-events-auto" : "pointer-events-none"}`}
+      >
+        <button
+          type="button"
+          aria-label={nav.close}
+          onClick={() => setSheet(false)}
+          className={`absolute inset-0 bg-deep-2/70 backdrop-blur-sm transition-opacity duration-300 ${sheet ? "opacity-100" : "opacity-0"}`}
+        />
+        <div
+          className={`absolute inset-x-0 bottom-0 rounded-t-[26px] border-t border-gold-500/35 bg-surface px-6 pb-8 pt-3 transition-transform duration-300 ${sheet ? "translate-y-0" : "translate-y-full"}`}
+          style={{ paddingBottom: "calc(2rem + env(safe-area-inset-bottom))" }}
+        >
+          <div className="mx-auto mb-6 h-1 w-10 rounded-full bg-ink/20" />
+          <ul className="grid grid-cols-2 gap-2.5">
+            {[
+              { href: localePath(locale, "about"), label: nav.about },
+              { href: localePath(locale, "why-us"), label: nav.whyUs },
+              { href: localePath(locale, "offices"), label: nav.offices },
+              { href: localePath(locale, "contact"), label: nav.contact },
+            ].map((l) => (
+              <li key={l.href}>
+                <Link
+                  href={l.href}
+                  onClick={() => setSheet(false)}
+                  className="card card-sweep block px-4 py-3.5 text-center text-[0.875rem] font-medium text-ink"
+                >
+                  {l.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <Link
+            href={localePath(locale, "contact")}
+            onClick={() => setSheet(false)}
+            className="btn mt-4 flex items-center justify-center bg-deep px-6 py-3.5 text-[0.875rem] font-medium text-on-deep"
+          >
+            {nav.book}
+          </Link>
+
+          {/* Đổi ngôn ngữ và sáng/tối — hai thứ này trước nằm trong hamburger */}
+          <div className="mt-6 flex items-center justify-between border-t border-ink/10 pt-5">
+            <div className="flex items-center gap-2" role="group" aria-label={nav.language}>
+              {locales.map((l) => (
+                <Link
+                  key={l}
+                  href={localePath(l, pathname.split("/").slice(2).join("/"))}
+                  hrefLang={l}
+                  onClick={() => setSheet(false)}
+                  aria-current={l === locale ? "true" : undefined}
+                  className={`rounded-full border px-3.5 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] ${
+                    l === locale
+                      ? "border-gold-500 text-gold-600"
+                      : "border-ink/15 text-ink/50"
+                  }`}
+                >
+                  {l}
+                </Link>
+              ))}
+            </div>
+            <ThemeToggle label={nav.theme} />
+          </div>
+        </div>
+      </div>
+
       {/* Khung chat */}
       <div
         role="dialog"
         aria-label={t.title}
         aria-hidden={!open}
-        className={`card fixed bottom-6 left-3 z-50 flex w-[min(26rem,calc(100vw-1.5rem))] flex-col shadow-2xl transition-all duration-300 sm:bottom-8 sm:left-[5.5rem] ${
+        className={`card fixed bottom-24 left-3 right-3 z-[55] flex flex-col shadow-2xl transition-all duration-300 lg:bottom-8 lg:left-[6.5rem] lg:right-auto lg:w-[26rem] ${
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
@@ -257,6 +409,37 @@ export function Assistant({
 }
 
 /** Nhãn hiện ra khi rê chuột, nằm bên phải biểu tượng. */
+/** Một mục trên thanh menu dưới đáy. */
+function TabItem({
+  href,
+  label,
+  children,
+}: {
+  href: string;
+  label: string;
+  children: React.ReactNode;
+}) {
+  return (
+    <li>
+      <Link href={href} className="flex flex-col items-center gap-1 px-1 pb-2 pt-2.5">
+        <svg
+          className="gold-icon h-[22px] w-[22px]"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="1.6"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          aria-hidden="true"
+        >
+          {children}
+        </svg>
+        <span className="text-[0.5625rem] font-medium leading-tight text-ink/70">{label}</span>
+      </Link>
+    </li>
+  );
+}
+
 function RailLabel({ children }: { children: React.ReactNode }) {
   return (
     <span className="pointer-events-none absolute left-full ml-3 hidden whitespace-nowrap rounded-full border border-gold-500/40 bg-deep/95 px-3 py-1.5 text-[0.6875rem] font-medium text-gold-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100 lg:block">

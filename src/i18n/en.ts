@@ -7,6 +7,7 @@ export const en = {
   },
 
   nav: {
+    home: "Home",
     whatIs: "Golden Visa",
     services: "Services",
     about: "About us",
@@ -25,6 +26,7 @@ export const en = {
     getInTouch: "Get in touch",
     skipToContent: "Skip to content",
     menu: "Menu",
+    more: "More",
     close: "Close",
     language: "Language",
     theme: "Switch light / dark",

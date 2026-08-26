@@ -10,6 +10,7 @@ import { GoldTitle } from "@/components/GoldTitle";
 import { Sparks } from "@/components/Sparks";
 import { properties } from "@/lib/properties";
 import { Words } from "@/components/ui";
+import { Logo } from "@/components/Logo";
 import { Reveal } from "@/components/Reveal";
 import { getDictionary, isLocale, localePath, serviceSlugs, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
@@ -53,7 +54,10 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         />
 
         <Container className="relative">
-          <div className="flex min-h-[100svh] max-w-2xl flex-col justify-center pb-24 pt-36 lg:pb-32 lg:pt-40">
+          <div className="flex min-h-[100svh] max-w-2xl flex-col items-center justify-center pb-28 pt-32 text-center lg:items-start lg:pb-32 lg:pt-40 lg:text-left">
+            {/* Logo lặp lại giữa hero trên mobile — header chỉ còn một dải mỏng */}
+            <Logo tone="light" className="mb-7 lg:hidden" />
+
             <p className="gold-soft text-[0.85rem] font-semibold uppercase tracking-[0.32em] sm:text-[0.95rem]">
               {t.hero.eyebrow}
             </p>
@@ -69,11 +73,11 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               </span>
             </h1>
 
-            <div className="gold-divider mt-6 max-w-xs" aria-hidden="true">
+            <div className="gold-divider mt-6 w-full max-w-xs" aria-hidden="true">
               <span className="gold-divider__gem" />
             </div>
 
-            <div className="mt-7 flex flex-wrap gap-3.5">
+            <div className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-3.5">
               <ButtonLink href={localePath(locale, "contact")} variant="light">
                 {t.hero.ctaPrimary}
               </ButtonLink>

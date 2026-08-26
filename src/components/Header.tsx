@@ -63,7 +63,7 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
           : "bg-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between px-5 sm:px-8 lg:px-12">
+      <div className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-center px-5 sm:px-8 lg:h-20 lg:justify-between lg:px-12">
         <Link href={localePath(locale)} aria-label={site.name}>
           <Logo tone={scrolled ? "dark" : "light"} />
         </Link>
@@ -101,84 +101,11 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
           </Link>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setOpen((v) => !v)}
-          className={`flex h-11 w-11 items-center justify-center rounded-full border lg:hidden ${scrolled ? "border-ink/15" : "border-gold-500/40"}`}
-          aria-expanded={open}
-          aria-label={open ? t.close : t.menu}
-        >
-          <span className="relative block h-3.5 w-5">
-            <span
-              className={`absolute left-0 block h-px w-full bg-deep transition-transform duration-200 ${
-                open ? "top-1.5 rotate-45" : "top-0"
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-1.5 block h-px w-full bg-deep transition-opacity duration-200 ${
-                open ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute left-0 block h-px w-full bg-deep transition-transform duration-200 ${
-                open ? "top-1.5 -rotate-45" : "top-3"
-              }`}
-            />
-          </span>
-        </button>
       </div>
 
       {/* Đường vàng dưới header, có vệt sáng chạy qua liên tục */}
       <div className="line-shimmer absolute inset-x-0 bottom-0" aria-hidden="true" />
 
-      {open ? (
-        <div className="border-t border-ink/10 bg-surface lg:hidden">
-          <nav className="mx-auto max-w-[1200px] px-5 py-6 sm:px-8" aria-label="Mobile">
-            <ul className="flex flex-col">
-              {nav.map((item) => (
-                <li key={item.href} className="border-b border-ink/8">
-                  <Link
-                    href={item.href}
-                    className={`block py-4 font-serif text-xl ${
-                      isActive(item.href) ? "text-gold-600" : "text-ink"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <Link
-              href={localePath(locale, "contact")}
-              className="mt-6 block bg-deep px-6 py-4 text-center text-sm font-medium text-on-deep"
-            >
-              {t.bookConsultation}
-            </Link>
-
-            <div className="mt-6 flex items-center gap-3">
-              <ThemeToggle label={t.theme} />
-              <span className="eyebrow text-ink/40">{t.language}</span>
-              <div className="flex gap-2">
-                {locales.map((l) => (
-                  <Link
-                    key={l}
-                    href={swapLocale(l)}
-                    hrefLang={l}
-                    className={`border px-3 py-1.5 text-xs font-semibold uppercase tracking-widest ${
-                      l === locale
-                        ? "border-gold-500 text-gold-600"
-                        : "border-ink/15 text-ink/60"
-                    }`}
-                  >
-                    {l}
-                  </Link>
-                ))}
-              </div>
-            </div>
-          </nav>
-        </div>
-      ) : null}
     </header>
   );
 }

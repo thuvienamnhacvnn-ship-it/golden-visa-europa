@@ -8,6 +8,7 @@ export const tr: Dictionary = {
   },
 
   nav: {
+    home: "Ana sayfa",
     whatIs: "Golden Visa",
     services: "Hizmetler",
     about: "Hakkımızda",
@@ -26,6 +27,7 @@ export const tr: Dictionary = {
     getInTouch: "İletişime geçin",
     skipToContent: "İçeriğe geç",
     menu: "Menü",
+    more: "Daha fazla",
     close: "Kapat",
     language: "Dil",
     theme: "Açık / koyu tema",

@@ -105,7 +105,7 @@ export default async function LocaleLayout({
         {/* -mt-20 cho phần nội dung chui lên dưới header trong suốt.
             Trang nào cũng mở đầu bằng một mảng tối (hero hoặc PageHero)
             nên phần bị che luôn là nền tối, không lộ nền kem. */}
-        <main id="main" className="-mt-20 flex-1">
+        <main id="main" className="-mt-20 flex-1 pb-24 lg:pb-0">
           {children}
         </main>
         <Footer locale={locale} dict={dict} />
@@ -114,6 +114,20 @@ export default async function LocaleLayout({
           locale={locale}
           t={dict.assistant}
           contactLabel={dict.common.getInTouch}
+          nav={{
+            home: dict.nav.home,
+            whatIs: dict.nav.whatIs,
+            services: dict.nav.services,
+            offices: dict.nav.offices,
+            about: dict.nav.about,
+            whyUs: dict.nav.whyUs,
+            contact: dict.nav.contact,
+            more: dict.common.more,
+            close: dict.common.close,
+            book: dict.common.bookConsultation,
+            language: dict.common.language,
+            theme: dict.common.theme,
+          }}
         />
         <CookieBanner locale={locale} t={{ ...dict.cookie, link: dict.legal.privacy.title }} />
 
