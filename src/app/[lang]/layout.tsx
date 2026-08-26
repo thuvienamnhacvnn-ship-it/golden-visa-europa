@@ -8,7 +8,6 @@ import { Footer } from "@/components/Footer";
 import { CookieBanner } from "@/components/CookieBanner";
 import { Assistant } from "@/components/Assistant";
 import { themeInitScript } from "@/components/ThemeToggle";
-import { FloatingContact } from "@/components/FloatingContact";
 import { getDictionary, isLocale, locales, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
 import { organizationJsonLd } from "@/lib/jsonld";
@@ -116,7 +115,6 @@ export default async function LocaleLayout({
           t={dict.assistant}
           contactLabel={dict.common.getInTouch}
         />
-        <FloatingContact callLabel={dict.common.talkToUs} />
         <CookieBanner locale={locale} t={{ ...dict.cookie, link: dict.legal.privacy.title }} />
 
         <script

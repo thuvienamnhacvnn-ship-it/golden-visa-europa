@@ -387,7 +387,7 @@
 
 /* Bản nhẹ hơn cho dòng chữ nhỏ */
 .gold-soft {
-  background-image: linear-gradient(180deg, #f6d183 0%, #eec168 40%, #dca94c 70%, #c68d31 100%);
+  background-image: linear-gradient(180deg, #fffbe2 0%, #ffefa8 38%, #ffdd7c 70%, #f5c651 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -420,49 +420,55 @@
    ══════════════════════════════════════════════════════════════ */
 
 .gold-3d {
-  /* Dải màu LẤY MẪU TRỰC TIẾP từ ảnh mẫu khách gửi.
-     Điều tôi làm sai trước đó: dùng các điểm gần trắng và tương phản gắt.
-     Vàng thật ở đây tương phản THẤP (biên độ độ sáng chỉ 64) và chuyển
-     mượt từ vàng ấm phía trên xuống hổ phách sẫm phía dưới. */
+  /* Dải màu chốt sau khi dựng thử và đặt CẠNH ẢNH MẪU để so.
+     Ba lỗi đã sửa:
+       1. Mặt chữ quá tối — bản trước chỉ 145–205, mẫu thật sáng tới 245.
+       2. background-size 190% chỉ hiện MỘT LÁT dải màu nên càng bệt.
+       3. Lấy "điểm sáng nhất mỗi hàng" chỉ bắt được vệt phản quang,
+          làm mất hẳn phần hổ phách sẫm ở chân chữ. */
   background-image: linear-gradient(
     180deg,
-    #f9d78d 0%,
-    #f4cc7a 8%,
-    #f3cb74 20%,
-    #efc168 32%,
-    #e7b55b 45%,
-    #e1ac51 58%,
-    #d1993d 70%,
-    #c68d31 82%,
-    #c48a2e 92%,
-    #bd8228 100%
+    #fffdf0 0%,
+    #fff6c4 10%,
+    #ffe995 22%,
+    #ffdc78 34%,
+    #fffbdc 45%,
+    #ffe58c 53%,
+    #f7c85c 65%,
+    #eeb544 77%,
+    #e5a836 89%,
+    #d99a2c 100%
   );
-  background-size: 100% 190%;
-  background-position: 0 18%;
+  background-size: 100% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 
-  /* Bề dày khối: cạnh dựng màu ĐỒNG SẪM. Mẫu cho thấy mép dưới chữ
-     xuống tới #572203, nên viền phải tối chứ không phải vàng nhạt. */
   text-shadow:
-    0 1px 0 #8a5c14,
-    0 2px 0 #7a5010,
-    0 3px 0 #6a440d,
-    0 4px 0 #5a380a,
-    0 5px 0 #4a2d07,
-    0 6px 0 #3a2205,
-    0 7px 1px rgba(0, 0, 0, 0.45),
-    0 12px 22px rgba(0, 0, 0, 0.55);
+    /* viền sẫm sát chữ cho nét gọn */
+    -1px 0 0 #96671a,
+    1px 0 0 #96671a,
+    0 -1px 0 #96671a,
+    /* cạnh vát tạo bề dày khối */
+    0 2px 0 #b8801f,
+    0 3px 0 #a5711a,
+    0 4px 0 #916115,
+    0 5px 0 #7d5210,
+    0 6px 0 #68420c,
+    0 7px 0 #543308,
+    0 9px 2px rgba(0, 0, 0, 0.5),
+    0 16px 28px rgba(0, 0, 0, 0.55);
 
-  transition: background-position 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: filter 0.6s ease;
 }
+
+
 
 
 /* Rê chuột: vệt sáng chạy dọc qua mặt kim loại */
 .gold-title:hover .gold-3d,
 .gold-title:focus-visible .gold-3d {
-  background-position: 0 72%;
+  filter: brightness(1.12) saturate(1.06);
 }
 
 /* ── Ánh sao ──────────────────────────────────────────────── */
@@ -508,7 +514,7 @@
 @media (prefers-reduced-motion: reduce) {
   .gold-title:hover .gold-3d,
   .gold-title:focus-visible .gold-3d {
-    background-position: 0 18%;
+    filter: none;
   }
   .gold-title:hover .spark,
   .gold-title:focus-visible .spark {
@@ -564,5 +570,247 @@
   }
   .gold-box:hover {
     transform: none;
+  }
+}
+
+/* ── Hỏi đáp dạng gấp mở (dùng <details>, không cần JavaScript) ── */
+.faq-item {
+  border-bottom: 1px solid var(--hairline);
+}
+.faq-item > summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.35rem 3rem 1.35rem 0;
+  position: relative;
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  transition: color 0.25s ease;
+}
+.faq-item > summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item > summary:hover {
+  color: var(--color-gold-600);
+}
+/* Dấu cộng, xoay thành dấu trừ khi mở */
+.faq-item > summary::after,
+.faq-item > summary::before {
+  content: "";
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  width: 14px;
+  height: 1.5px;
+  background: var(--color-gold-500);
+  transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.faq-item > summary::before {
+  transform: translateY(-50%) rotate(90deg);
+}
+.faq-item > summary::after {
+  transform: translateY(-50%);
+}
+.faq-item[open] > summary::before {
+  transform: translateY(-50%) rotate(0deg);
+}
+.faq-item[open] > summary {
+  color: var(--color-gold-600);
+}
+.faq-item > div {
+  padding: 0 3rem 1.5rem 0;
+  animation: faq-open 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@keyframes faq-open {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-item > div {
+    animation: none;
+  }
+}
+
+/* Màu vàng cho BIỂU TƯỢNG.
+   Không dùng .gold-soft cho icon: lớp đó đặt color:transparent để tô chữ
+   bằng gradient, mà icon SVG lại vẽ theo currentColor nên sẽ tàng hình. */
+.gold-icon {
+  color: #f2c94f;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+  transition: color 0.25s ease, filter 0.25s ease;
+}
+a:hover > .gold-icon,
+button:hover > .gold-icon,
+a:hover .gold-icon,
+button:hover .gold-icon {
+  color: #ffe08a;
+  filter: drop-shadow(0 0 6px rgba(242, 201, 79, 0.45));
+}
+
+/* ══════════════════════════════════════════════════════════════
+   ĐƯỜNG VÀNG CÓ ÁNH SÁNG LƯỚT QUA
+   ══════════════════════════════════════════════════════════════ */
+
+/* Đường kẻ vàng, một vệt sáng chạy dọc theo nó liên tục */
+.line-shimmer {
+  position: relative;
+  height: 2px;                 /* dày lên gấp đôi cho đậm */
+  background: linear-gradient(
+    90deg,
+    transparent,
+    color-mix(in srgb, var(--color-gold-500) 80%, transparent) 12%,
+    color-mix(in srgb, var(--color-gold-500) 80%, transparent) 88%,
+    transparent
+  );
+  overflow: hidden;
+}
+
+/* Quầng sáng chạy cùng nhịp, làm vệt sáng dày và rõ hơn */
+.line-shimmer::before {
+  content: "";
+  position: absolute;
+  inset: -3px 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 30%,
+    rgba(255, 224, 138, 0.55) 44%,
+    rgba(255, 246, 208, 0.85) 50%,
+    rgba(255, 224, 138, 0.55) 56%,
+    transparent 70%,
+    transparent 100%
+  );
+  filter: blur(3px);
+  transform: translateX(-100%);
+  animation: line-sweep 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+.line-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 32%,
+    #ffe9a8 42%,
+    #fffdf0 50%,
+    #ffe9a8 58%,
+    transparent 68%,
+    transparent 100%
+  );
+  transform: translateX(-100%);
+  animation: line-sweep 7s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+/* Chạy hết chiều ngang trong 62% chu kỳ rồi nghỉ — không chạy liên hồi */
+@keyframes line-sweep {
+  0% {
+    transform: translateX(-100%);
+  }
+  62%,
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Vạch vàng ngắn (rule-gold) cũng có vệt sáng lướt */
+.rule-gold.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.rule-gold.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, #fff6d0, transparent);
+  transform: translateX(-100%);
+  animation: line-sweep 6s ease-in-out infinite;
+}
+
+/* ── Thẻ: đường vàng chạy quanh viền khi rê chuột ── */
+.card-sweep {
+  position: relative;
+}
+.card-sweep::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--sweep-angle, 0deg),
+    transparent 0deg,
+    transparent 250deg,
+    color-mix(in srgb, var(--color-gold-500) 30%, transparent) 300deg,
+    #ffe08a 340deg,
+    #fff6d0 352deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.card-sweep:hover::before {
+  opacity: 1;
+  animation: sweep-around 2.4s linear infinite;
+}
+
+@property --sweep-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes sweep-around {
+  to {
+    --sweep-angle: 360deg;
+  }
+}
+
+/* Vệt sáng chạy ngang mép trên thẻ khi rê chuột — bản dự phòng cho
+   trình duyệt không hỗ trợ @property, và cũng dùng chồng cho đẹp */
+.card-sweep::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ffe08a, #fff6d0, #ffe08a, transparent);
+  background-size: 55% 100%;
+  background-repeat: no-repeat;
+  background-position: -60% 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+.card-sweep:hover::after {
+  opacity: 1;
+  animation: top-sweep 1.6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes top-sweep {
+  to {
+    background-position: 160% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .line-shimmer::before,
+  .line-shimmer::after,
+  .rule-gold.shimmer::after,
+  .card-sweep:hover::before,
+  .card-sweep:hover::after {
+    animation: none;
   }
 }

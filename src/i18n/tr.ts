@@ -644,6 +644,26 @@ export const tr: Dictionary = {
       "Bu sitedeki bilgiler geneldir ve hukuki veya yatırım tavsiyesi teşkil etmez. Oturma izinleri Yunan makamlarınca verilir.",
   },
 
+  properties: {
+    eyebrow: "Gayrimenkul",
+    title: "Atina'da elimizdeki dairelerden birkaçı",
+    lead: "Atina Peristeri'de baştan sona yenilenmiş dört daire. Siz karar vermeden önce hukuki belgeleriyle birlikte tam dosyayı gönderiyoruz.",
+    priceLabel: "Satış fiyatı",
+    rentLabel: "Uzun dönem kira",
+    bedsLabel: "Yatak odası",
+    bathsLabel: "Banyo",
+    sizeLabel: "Alan",
+    sizePending: "Teyit ediliyor",
+    cta: "Tam dosyayı isteyin",
+    note: "Fiyatlar ve durum 26 Ağustos 2026 itibarıyladır ve değişebilir. Bir gayrimenkulün Golden Visa'ya uygun olup olmadığı bölgesine ve türüne bağlıdır — her daire için taahhütte bulunmadan önce yazılı olarak teyit ederiz.",
+    commitTitle: "Her daireye dâhil",
+    commitments: [
+      "Baştan sona yenilenmiş durumda",
+      "Teslim aldıktan sonra uygun kirayla geri kiralama",
+      "Sürdürülebilir işletme ve dairenin bakımı",
+    ],
+  },
+
   assistant: {
     open: "Asistana sorun",
     close: "Sohbeti kapat",

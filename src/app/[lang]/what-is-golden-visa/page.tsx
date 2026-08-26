@@ -118,7 +118,7 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
           <ul className="mt-16 grid gap-5 lg:grid-cols-3">
             {t.thresholds.tiers.map((tier, i) => (
               <Reveal as="li" key={tier.amount} delay={i * 90}>
-                <div className="card card-hover flex h-full flex-col p-8 lg:p-10">
+                <div className="card card-hover card-sweep flex h-full flex-col p-8 lg:p-10">
                   <span className="display text-[2.6rem] text-gold-600">
                     {tier.amount}
                   </span>
@@ -166,12 +166,18 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
       <Section tone="raised">
         <Container>
           <SectionHeading eyebrow={t.eyebrow} title={t.rules.title} lead={t.rules.lead} />
-          <ul className="mt-14 grid gap-x-14 sm:grid-cols-2">
+          {/* 5 mục — để hàng ngang chứ không xếp lưới 2 cột, tránh mục thứ 5 lẻ loi */}
+          <ul className="mt-14 divide-y divide-ink/10 border-y border-ink/10">
             {t.rules.items.map((item, i) => (
-              <Reveal as="li" key={item.title} delay={(i % 2) * 80}>
-                <div className="border-t border-ink/12 py-7">
-                  <h3 className="text-[1.1875rem] leading-snug">{item.title}</h3>
-                  <p className="mt-3 text-[0.9375rem] leading-7 text-ink/75">{item.body}</p>
+              <Reveal as="li" key={item.title} delay={(i % 3) * 70}>
+                <div className="grid gap-3 py-7 md:grid-cols-[0.42fr_1fr] md:gap-10">
+                  <h3 className="flex items-start gap-3 text-[1.1875rem] leading-snug">
+                    <span className="mt-1 font-serif text-sm text-gold-600">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    {item.title}
+                  </h3>
+                  <p className="text-[0.9375rem] leading-7 text-ink/75">{item.body}</p>
                 </div>
               </Reveal>
             ))}
@@ -184,20 +190,14 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
         <Container>
           <div className="mx-auto max-w-3xl">
             <SectionHeading eyebrow={t.eyebrow} title={t.faq.title} align="center" />
-            <dl className="mt-14">
-              {t.faq.items.map((item, i) => (
-                <Reveal key={item.q} delay={(i % 3) * 70}>
-                  <div className="border-b border-ink/12 py-7">
-                    <dt className="font-serif text-[1.1875rem] leading-snug text-ink">
-                      {item.q}
-                    </dt>
-                    <dd className="mt-3 text-[0.9375rem] leading-[1.8] text-ink/75">
-                      {item.a}
-                    </dd>
-                  </div>
-                </Reveal>
+            <div className="mt-14 border-t border-ink/10">
+              {t.faq.items.map((item) => (
+                <details key={item.q} className="faq-item">
+                  <summary>{item.q}</summary>
+                  <div className="text-[0.9375rem] leading-[1.85] text-ink/75">{item.a}</div>
+                </details>
               ))}
-            </dl>
+            </div>
           </div>
         </Container>
       </Section>

@@ -50,3 +50,35 @@ export function HeroVideo({
     </video>
   );
 }
+
+/**
+ * Video nền cho banner. Autoplay chỉ chạy khi có ĐỦ muted + playsInline —
+ * thiếu một trong hai là trình duyệt chặn. Chưa có tệp thì trả về null để
+ * trang rơi về ảnh tĩnh, không thủng lỗ.
+ */
+export function BannerVideo({
+  src = "banner.mp4",
+  poster,
+  className = "",
+}: {
+  src?: string;
+  poster?: string;
+  className?: string;
+}) {
+  if (!hasHeroVideo(src)) return null;
+  return (
+    <video
+      className={`absolute inset-0 h-full w-full object-cover object-right ${className}`}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="auto"
+      poster={poster}
+      aria-hidden="true"
+      tabIndex={-1}
+    >
+      <source src={`/video/${src}`} type="video/mp4" />
+    </video>
+  );
+}

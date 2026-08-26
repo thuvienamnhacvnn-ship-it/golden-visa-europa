@@ -645,6 +645,26 @@ export const vi: Dictionary = {
       "Thông tin trên trang này mang tính chung và không phải tư vấn pháp lý hay tư vấn đầu tư. Giấy phép cư trú do cơ quan chức năng Hy Lạp cấp.",
   },
 
+  properties: {
+    eyebrow: "Bất động sản",
+    title: "Một số căn đang có tại Athens",
+    lead: "Bốn căn hộ tại Peristeri, Athens, đã cải tạo mới hoàn toàn. Chúng tôi gửi hồ sơ đầy đủ kèm giấy tờ pháp lý trước khi quý vị quyết định bất cứ điều gì.",
+    priceLabel: "Giá mua",
+    rentLabel: "Cho thuê dài hạn",
+    bedsLabel: "Phòng ngủ",
+    bathsLabel: "Phòng tắm",
+    sizeLabel: "Diện tích",
+    sizePending: "Đang xác nhận",
+    cta: "Hỏi hồ sơ chi tiết",
+    note: "Giá và tình trạng cập nhật tại thời điểm 26/08/2026, có thể thay đổi. Mức đầu tư đủ điều kiện thẻ vàng phụ thuộc khu vực và loại bất động sản — chúng tôi xác nhận bằng văn bản cho từng căn trước khi quý vị cam kết.",
+    commitTitle: "Cam kết đi kèm mỗi căn",
+    commitments: [
+      "Căn hộ được cải tạo mới 100%",
+      "Thuê lại với giá tốt sau khi chủ nhà nhận nhà",
+      "Vận hành bền vững và giữ gìn tình trạng căn hộ",
+    ],
+  },
+
   assistant: {
     open: "Hỏi trợ lý",
     close: "Đóng khung chat",

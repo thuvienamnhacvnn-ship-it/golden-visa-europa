@@ -8,6 +8,7 @@ import { HeroVideo } from "@/components/HeroMedia";
 import { pick } from "@/lib/media";
 import { GoldTitle } from "@/components/GoldTitle";
 import { Sparks } from "@/components/Sparks";
+import { properties } from "@/lib/properties";
 import { Words } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { getDictionary, isLocale, localePath, serviceSlugs, type Locale } from "@/i18n";
@@ -26,6 +27,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="grain relative overflow-hidden bg-deep-2 text-on-deep">
         {/* Ảnh bìa khách gửi — chữ in sẵn đã được xoá, chỉ còn phần hình */}
+        {/* Dùng ảnh tĩnh. Video vẫn nằm ở public/video/banner.mp4 nếu cần bật lại. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={hero.src}
@@ -52,30 +54,26 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
         <Container className="relative">
           <div className="flex min-h-[100svh] max-w-2xl flex-col justify-center pb-24 pt-36 lg:pb-32 lg:pt-40">
-            <p className="gold-soft text-[0.9375rem] font-semibold uppercase tracking-[0.34em] sm:text-[1.0625rem]">
+            <p className="gold-soft text-[0.85rem] font-semibold uppercase tracking-[0.32em] sm:text-[0.95rem]">
               {t.hero.eyebrow}
             </p>
 
-            <h1 className="display mt-4 leading-[0.92]">
+            <h1 className="display mt-3.5 leading-[0.92]">
               {/* Dòng vàng lớn — nổi khối, rê chuột thì loé ánh sao */}
               <GoldTitle
                 text={t.hero.titleAccent}
-                className="text-[4rem] tracking-[0.01em] sm:text-[6rem] lg:text-[7.4rem]"
+                className="text-[3.6rem] tracking-[0.01em] sm:text-[5.4rem] lg:text-[6.65rem]"
               />
-              <span className="mt-4 block text-[1.5rem] font-normal tracking-[0.04em] text-on-deep/85 sm:text-[2rem] lg:text-[2.3rem]">
+              <span className="mt-3 block text-[1.35rem] font-normal tracking-[0.04em] text-on-deep/85 sm:text-[1.8rem] lg:text-[2.05rem]">
                 <Words text={t.hero.title} delay={200} />
               </span>
             </h1>
 
-            <div className="gold-divider mt-8 max-w-sm" aria-hidden="true">
+            <div className="gold-divider mt-6 max-w-xs" aria-hidden="true">
               <span className="gold-divider__gem" />
             </div>
 
-            <p className="mt-8 max-w-xl text-[1.0625rem] leading-[1.85] text-on-deep-2/85">
-              {t.hero.lead}
-            </p>
-
-            <div className="mt-11 flex flex-wrap gap-4">
+            <div className="mt-7 flex flex-wrap gap-3.5">
               <ButtonLink href={localePath(locale, "contact")} variant="light">
                 {t.hero.ctaPrimary}
               </ButtonLink>
@@ -84,7 +82,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               </ButtonLink>
             </div>
 
-            <p className="mt-12 text-[0.6875rem] uppercase tracking-[0.22em] text-on-deep-2/45">
+            <p className="mt-9 text-[0.625rem] uppercase tracking-[0.22em] text-on-deep-2/45">
               {t.hero.note}
             </p>
           </div>
@@ -114,7 +112,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <Reveal as="li" key={tier.amount} delay={i * 110}>
                 <div className="gold-box relative h-full p-8 lg:p-9">
                   <Sparks count={7} seed={i * 5} />
-                  <p className="gold-3d relative z-10 font-serif text-[2.4rem] leading-none lg:text-[2.9rem]">
+                  <p className="gold-soft relative z-10 font-serif text-[2.4rem] leading-none lg:text-[2.9rem]">
                     {tier.amount}
                   </p>
                   <p className="relative z-10 mt-6 border-t border-gold-500/20 pt-5 text-[0.9375rem] font-medium leading-7 text-on-deep">
@@ -152,7 +150,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             </Reveal>
 
             <Reveal delay={120}>
-              <div className="card relative p-8 lg:mt-16 lg:p-10">
+              <div className="card card-sweep relative p-8 lg:p-10">
                 <span
                   className="numeral pointer-events-none absolute -top-6 right-6 text-[6rem] lg:text-[7.5rem]"
                   aria-hidden="true"
@@ -192,33 +190,23 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           <ul className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {serviceSlugs.map((slug, i) => {
               const service = dict.services.items[slug];
-              const feature = i === 0; // ô đầu chiếm hai cột — phá thế lưới đều tăm tắp
               return (
-                <Reveal
-                  as="li"
-                  key={slug}
-                  delay={(i % 3) * 90}
-                  className={feature ? "sm:col-span-2" : ""}
-                >
+                <Reveal as="li" key={slug} delay={(i % 3) * 90}>
                   <Link
                     href={localePath(locale, `services/${slug}`)}
-                    className="card card-hover zoom-wrap group flex h-full flex-col"
+                    className="card card-hover card-sweep zoom-wrap group flex h-full flex-col"
                   >
                     <Artwork
                       src={serviceArtSrc(slug)}
                       alt={service.name}
-                      ratio={feature ? "21 / 9" : "4 / 3"}
+                      ratio="4 / 3"
                       className="!rounded-none"
                     />
                     <div className="flex flex-1 flex-col p-7 lg:p-9">
                       <span className="font-serif text-sm text-gold-600">
                         {String(i + 1).padStart(2, "0")}
                       </span>
-                      <h3
-                        className={`mt-4 leading-snug ${feature ? "text-[1.75rem] lg:text-[2.1rem]" : "text-[1.3rem]"}`}
-                      >
-                        {service.name}
-                      </h3>
+                      <h3 className="mt-4 text-[1.3rem] leading-snug">{service.name}</h3>
                       <p className="mt-3.5 flex-1 text-[0.9375rem] leading-7 text-ink/65">
                         {service.tagline}
                       </p>
@@ -264,7 +252,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
                   "linear-gradient(90deg, transparent, color-mix(in srgb, #C8A44D 55%, transparent) 10%, color-mix(in srgb, #C8A44D 55%, transparent) 90%, transparent)",
               }}
             />
-            <ol className="grid gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-5">
+            <ol className="grid gap-x-8 gap-y-12 lg:grid-cols-5">
               {t.process.steps.map((step, i) => (
                 <Reveal as="li" key={step.n} delay={i * 90}>
                   <span
@@ -287,14 +275,12 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         <Container>
           <div className="grid items-center gap-14 lg:grid-cols-[0.68fr_1fr] lg:gap-24">
             <Reveal>
-              <div className="lg:-mb-16 lg:translate-y-8">
-                <Artwork
-                  src={crestSrc}
-                  alt={t.founder.title}
-                  ratio="4 / 5"
-                  className="bg-deep shadow-[0_30px_70px_-40px_rgba(7,27,48,0.55)]"
-                />
-              </div>
+              <Artwork
+                src={crestSrc}
+                alt={t.founder.title}
+                ratio="4 / 5"
+                className="bg-deep shadow-[0_30px_70px_-40px_rgba(7,27,48,0.55)]"
+              />
             </Reveal>
 
             <Reveal delay={120}>
@@ -340,8 +326,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             <ul className="grid gap-5 sm:grid-cols-2">
               {t.whyUs.points.map((point, i) => (
                 <Reveal as="li" key={point.title} delay={i * 80}>
-                  <div className={`card card-hover h-full p-7 lg:p-8 ${i % 2 === 1 ? "sm:mt-10" : ""}`}>
-                    <Seal className="h-8 w-8 text-gold-600" />
+                  <div className="card card-hover card-sweep h-full p-7 lg:p-8">
+                    <Seal className="gold-icon h-8 w-8" />
                     <h3 className="mt-6 text-[1.0625rem] leading-snug">{point.title}</h3>
                     <p className="mt-3 text-[0.875rem] leading-7 text-ink/65">{point.body}</p>
                   </div>
@@ -364,7 +350,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {dict.offices.items.map((office, i) => (
               <Reveal as="li" key={office.city} delay={i * 80}>
-                <div className="card card-hover zoom-wrap flex h-full flex-col">
+                <div className="card card-hover card-sweep zoom-wrap flex h-full flex-col">
                   <Artwork
                     src={cityArtSrc(office.city)}
                     alt={`${office.city}, ${office.country}`}
@@ -390,6 +376,98 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
           <div className="mt-10">
             <TextLink href={localePath(locale, "offices")}>{dict.offices.title}</TextLink>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── Bất động sản: 4 căn thật từ hồ sơ khách gửi ── */}
+      <Section tone="raised">
+        <Container>
+          <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <SectionHeading
+              eyebrow={dict.properties.eyebrow}
+              title={dict.properties.title}
+              lead={dict.properties.lead}
+            />
+            <ButtonLink href={localePath(locale, "contact")} variant="outline" className="shrink-0">
+              {dict.properties.cta}
+            </ButtonLink>
+          </div>
+
+          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {properties.map((prop, i) => (
+              <Reveal as="li" key={prop.id} delay={(i % 4) * 80}>
+                <article className="card card-hover card-sweep zoom-wrap flex h-full flex-col">
+                  <Artwork src={prop.photo} alt={prop.code} ratio="4 / 3" className="!rounded-none" />
+                  <div className="flex flex-1 flex-col p-6">
+                    <p className="eyebrow text-gold-600">{prop.area}</p>
+                    <p className="display mt-3 text-[1.75rem] text-ink">{prop.price}</p>
+                    <dl className="mt-5 flex-1 space-y-2 border-t border-ink/10 pt-4 text-[0.8125rem] text-ink/70">
+                      <div className="flex justify-between gap-3">
+                        <dt>{dict.properties.rentLabel}</dt>
+                        <dd className="font-medium text-ink">{prop.rent}</dd>
+                      </div>
+                      <div className="flex justify-between gap-3">
+                        <dt>{dict.properties.bedsLabel}</dt>
+                        <dd className="font-medium text-ink">{prop.beds}</dd>
+                      </div>
+                      <div className="flex justify-between gap-3">
+                        <dt>{dict.properties.bathsLabel}</dt>
+                        <dd className="font-medium text-ink">{prop.baths}</dd>
+                      </div>
+                      <div className="flex justify-between gap-3">
+                        <dt>{dict.properties.sizeLabel}</dt>
+                        <dd className="italic text-ink/45">
+                          {prop.size ?? dict.properties.sizePending}
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </ul>
+
+          <div className="mt-10 grid gap-8 border-t border-ink/10 pt-8 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
+            <div>
+              <h3 className="text-[1.125rem]">{dict.properties.commitTitle}</h3>
+              <ul className="mt-4 space-y-2.5">
+                {dict.properties.commitments.map((c) => (
+                  <li key={c} className="flex items-start gap-3 text-[0.9375rem] leading-7 text-ink/75">
+                    <span className="mt-2 block h-1.5 w-1.5 shrink-0 rounded-full bg-gold-500" />
+                    {c}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <p className="text-xs leading-6 text-ink/50">{dict.properties.note}</p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* ── Hỏi đáp: dạng gấp mở, một cột nên không bao giờ lẻ hàng ── */}
+      <Section tone="alt">
+        <Container>
+          <div className="mx-auto max-w-3xl">
+            <SectionHeading
+              eyebrow={dict.whatIs.eyebrow}
+              title={dict.whatIs.faq.title}
+              align="center"
+            />
+            <div className="mt-12 border-t border-ink/10">
+              {dict.whatIs.faq.items.slice(0, 5).map((item) => (
+                <details key={item.q} className="faq-item">
+                  <summary>{item.q}</summary>
+                  <div className="text-[0.9375rem] leading-[1.85] text-ink/70">{item.a}</div>
+                </details>
+              ))}
+            </div>
+            <div className="mt-10 flex flex-col items-center gap-4 text-center">
+              <p className="max-w-xl text-xs leading-6 text-ink/45">{dict.whatIs.disclaimer}</p>
+              <TextLink href={localePath(locale, "what-is-golden-visa")}>
+                {dict.whatIs.rules.title}
+              </TextLink>
+            </div>
           </div>
         </Container>
       </Section>

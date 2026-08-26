@@ -644,6 +644,26 @@ export const en = {
       "Information on this site is general and does not constitute legal or investment advice. Residence permits are granted by the Greek authorities.",
   },
 
+  properties: {
+    eyebrow: "Property",
+    title: "A few of the apartments we hold in Athens",
+    lead: "Four fully renovated apartments in Peristeri, Athens. We send the complete file with legal documentation before you decide anything.",
+    priceLabel: "Purchase price",
+    rentLabel: "Long-term rent",
+    bedsLabel: "Bedrooms",
+    bathsLabel: "Bathrooms",
+    sizeLabel: "Floor area",
+    sizePending: "Being confirmed",
+    cta: "Request the full file",
+    note: "Prices and availability as at 26 August 2026 and subject to change. Whether a property qualifies for the Golden Visa depends on its area and type — we confirm this in writing for each apartment before you commit.",
+    commitTitle: "Included with every apartment",
+    commitments: [
+      "Renovated to new condition throughout",
+      "Leaseback at a fair rent once you take possession",
+      "Sustained operation and upkeep of the apartment",
+    ],
+  },
+
   assistant: {
     open: "Ask our assistant",
     close: "Close chat",

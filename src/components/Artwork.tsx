@@ -1,4 +1,35 @@
+import { existsSync } from "node:fs";
+import path from "node:path";
 import type { ServiceSlug } from "@/i18n";
+
+/** Có ảnh thật trong public/photos thì dùng, chưa có thì dùng tranh SVG. */
+function real(file: string, fallback: string): string {
+  try {
+    if (existsSync(path.join(process.cwd(), "public", "photos", file))) {
+      return `/photos/${file}`;
+    }
+  } catch {
+    /* bỏ qua */
+  }
+  return fallback;
+}
+
+const servicePhoto: Record<ServiceSlug, string> = {
+  "golden-visa-acquisition": "dv-the-vang.jpg",
+  "bank-account-acquisition": "dv-ngan-hang.jpg",
+  "real-estate-advisory": "dv-tu-van-bds.jpg",
+  "real-estate-research": "dv-nghien-cuu-bds.jpg",
+  renovation: "dv-cai-tao.jpg",
+  "property-management": "dv-quan-ly-bds.jpg",
+};
+
+const cityPhoto: Record<string, string> = {
+  athens: "tp-athens.jpg", atina: "tp-athens.jpg",
+  thessaloniki: "tp-thessaloniki.jpg", selanik: "tp-thessaloniki.jpg",
+  vietnam: "tp-vietnam.jpg", "việt nam": "tp-vietnam.jpg",
+  turkiye: "tp-tho-nhi-ky.jpg", "türkiye": "tp-tho-nhi-ky.jpg",
+  "thổ nhĩ kỳ": "tp-tho-nhi-ky.jpg",
+};
 
 /**
  * Tranh minh hoạ gốc, sinh bằng `node scripts/make-art.mjs`.
@@ -27,12 +58,13 @@ const cityArt: Record<string, string> = {
 };
 
 export function serviceArtSrc(slug: ServiceSlug) {
-  return serviceArt[slug];
+  return real(servicePhoto[slug], serviceArt[slug]);
 }
 
 /** Tên thành phố khác nhau theo ngôn ngữ nên tra bằng bản đã chuẩn hoá. */
 export function cityArtSrc(city: string) {
-  return cityArt[city.trim().toLowerCase()] ?? "/art/office-athens.svg";
+  const key = city.trim().toLowerCase();
+  return real(cityPhoto[key] ?? "", cityArt[key] ?? "/art/office-athens.svg");
 }
 
 export const crestSrc = "/art/crest.svg";

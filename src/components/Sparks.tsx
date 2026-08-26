@@ -32,23 +32,24 @@ export function Sparks({ count = 10, seed = 0 }: { count?: number; seed?: number
   );
 }
 
-/** Biểu tượng cuốn sách đang mở. */
+/** Cuốn sách mở, nằm gọn trong đường tròn. */
 export function BookIcon({ className = "" }: { className?: string }) {
   return (
     <svg
       className={className}
-      viewBox="0 0 24 24"
+      viewBox="0 0 32 32"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.4"
+      strokeWidth="1.3"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
     >
-      <path d="M12 6.2C10.4 4.9 8.3 4.3 5.6 4.3c-.9 0-1.6.1-2.1.2v13.2c.5-.1 1.2-.2 2.1-.2 2.7 0 4.8.6 6.4 1.9" />
-      <path d="M12 6.2c1.6-1.3 3.7-1.9 6.4-1.9.9 0 1.6.1 2.1.2v13.2c-.5-.1-1.2-.2-2.1-.2-2.7 0-4.8.6-6.4 1.9" />
-      <path d="M12 6.2v13.2" />
-      <path d="M6.2 8.6h2.6M6.2 11.4h2.6M15.2 8.6h2.6M15.2 11.4h2.6" strokeWidth="1.1" opacity="0.7" />
+      <circle cx="16" cy="16" r="14.2" strokeWidth="1.1" />
+      <path d="M16 11.4c-1.5-1.2-3.4-1.8-5.7-1.8-.7 0-1.3.05-1.8.15v11.5c.5-.1 1.1-.15 1.8-.15 2.3 0 4.2.6 5.7 1.8" />
+      <path d="M16 11.4c1.5-1.2 3.4-1.8 5.7-1.8.7 0 1.3.05 1.8.15v11.5c-.5-.1-1.1-.15-1.8-.15-2.3 0-4.2.6-5.7 1.8" />
+      <path d="M16 11.4v11.5" />
+      <path d="M11 13.4h2.4M11 15.8h2.4M18.6 13.4H21M18.6 15.8H21" strokeWidth="1" opacity="0.65" />
     </svg>
   );
 }

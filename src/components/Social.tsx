@@ -26,10 +26,11 @@ export function Social({
   const active = site.social.filter((s) => s.url);
   if (!active.length) return null;
 
+  // Icon luôn màu vàng, chỉ viền đổi theo nền sáng/tối
   const color =
     tone === "light"
-      ? "border-on-deep/20 text-on-deep-2/70 hover:border-gold-400 hover:text-gold-400"
-      : "border-ink/15 text-ink/55 hover:border-gold-500 hover:text-gold-600";
+      ? "border-gold-500/35 hover:border-gold-400"
+      : "border-gold-500/40 hover:border-gold-500";
 
   return (
     <ul className={`flex flex-wrap gap-3 ${className}`}>
@@ -41,9 +42,9 @@ export function Social({
             rel="noopener noreferrer"
             aria-label={s.label}
             title={s.label}
-            className={`flex h-10 w-10 items-center justify-center border transition-all duration-200 hover:-translate-y-0.5 ${color}`}
+            className={`flex h-10 w-10 items-center justify-center rounded-full border transition-all duration-200 hover:-translate-y-0.5 ${color}`}
           >
-            <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <svg className="gold-icon h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
               {ICONS[s.id]}
             </svg>
           </a>

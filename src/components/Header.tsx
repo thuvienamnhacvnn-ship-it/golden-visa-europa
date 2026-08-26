@@ -59,8 +59,8 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "border-b border-ink/10 bg-surface/92 shadow-[0_10px_30px_-24px_rgba(7,27,48,0.6)] backdrop-blur-md"
-          : "border-b border-gold-500/20 bg-transparent"
+          ? "bg-surface/92 shadow-[0_10px_30px_-24px_rgba(7,27,48,0.6)] backdrop-blur-md"
+          : "bg-transparent"
       }`}
     >
       <div className="mx-auto flex h-20 w-full max-w-[1200px] items-center justify-between px-5 sm:px-8 lg:px-12">
@@ -127,6 +127,9 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
           </span>
         </button>
       </div>
+
+      {/* Đường vàng dưới header, có vệt sáng chạy qua liên tục */}
+      <div className="line-shimmer absolute inset-x-0 bottom-0" aria-hidden="true" />
 
       {open ? (
         <div className="border-t border-ink/10 bg-surface lg:hidden">

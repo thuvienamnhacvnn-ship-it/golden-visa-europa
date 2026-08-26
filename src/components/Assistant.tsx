@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import { localePath, type Dictionary, type Locale } from "@/i18n";
 import { Sparks, BookIcon } from "./Sparks";
+import { site } from "@/lib/site";
 
 type Turn = { role: "user" | "assistant"; content: string };
 export type AssistantStrings = Dictionary["assistant"];
@@ -88,51 +89,69 @@ export function Assistant({
 
   return (
     <>
-      {/* Nút mở: khung vuông bo góc, viền vàng, nền trong suốt, sao lấp lánh */}
-      <button
-        type="button"
-        onClick={() => setOpen((v) => !v)}
-        aria-expanded={open}
-        aria-label={open ? t.close : t.open}
-        className="gold-box fixed bottom-6 left-5 z-50 flex w-[104px] flex-col items-center gap-2 px-3 py-4 sm:left-8"
-      >
-        <Sparks count={11} seed={3} />
+      {/* Thanh biểu tượng dọc, cố định bên trái: trợ lý · WhatsApp · Facebook · hotline */}
+      <div className="fixed left-3 top-1/2 z-50 flex -translate-y-1/2 flex-col gap-3 sm:left-5">
+        {/* Trợ lý — cuốn sách trong đường tròn */}
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-label={open ? t.close : t.open}
+          title={t.open}
+          className="gold-box group relative flex h-12 w-12 items-center justify-center rounded-full sm:h-[52px] sm:w-[52px]"
+        >
+          <Sparks count={7} seed={3} />
+          <span className="gold-icon relative z-10">
+            {open ? (
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+              </svg>
+            ) : (
+              <BookIcon className="h-7 w-7" />
+            )}
+          </span>
+          <span className="absolute right-1.5 top-1.5 z-10 flex h-1.5 w-1.5">
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold-400/70" />
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold-400" />
+          </span>
+          <RailLabel>{t.open}</RailLabel>
+        </button>
 
-        {/* Biểu tượng cuốn sách ở giữa */}
-        <span className="gold-soft relative z-10">
-          {open ? (
-            <svg
-              className="h-7 w-7"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.6"
-              aria-hidden="true"
-            >
-              <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
+        <RailLink
+          href={`https://wa.me/${site.whatsapp.replace(/[^d]/g, "")}`}
+          label="WhatsApp"
+          external
+        >
+          <svg className="h-[22px] w-[22px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 5L2 22l5.16-1.35a9.9 9.9 0 0 0 4.88 1.25h.01c5.5 0 9.96-4.46 9.96-9.96 0-2.66-1.04-5.16-2.92-7.04A9.88 9.88 0 0 0 12.04 2Zm0 18.14h-.01a8.24 8.24 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.22 8.22 0 0 1-1.26-4.4c0-4.56 3.71-8.27 8.27-8.27 2.21 0 4.28.86 5.84 2.42a8.2 8.2 0 0 1 2.42 5.85c0 4.56-3.71 8.26-8.27 8.26Zm4.53-6.19c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.78.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.4-.42-.56-.43h-.47c-.17 0-.43.06-.66.31-.22.25-.87.85-.87 2.07 0 1.22.89 2.4 1.02 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.6.19 1.14.16 1.57.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.22-.17-.47-.29Z" />
+          </svg>
+        </RailLink>
+
+        {site.social.find((s) => s.id === "facebook")?.url ? (
+          <RailLink
+            href={site.social.find((s) => s.id === "facebook")!.url}
+            label="Facebook"
+            external
+          >
+            <svg className="h-[22px] w-[22px]" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M14 8.5h2.2V5.6c-.4-.05-1.7-.17-3.2-.17-3.2 0-5.3 1.95-5.3 5.53V13H5v3.3h2.7V24h3.3v-7.7h2.7l.4-3.3h-3.1v-2.4c0-.95.26-1.6 1.6-1.6Z" />
             </svg>
-          ) : (
-            <BookIcon className="h-7 w-7" />
-          )}
-        </span>
+          </RailLink>
+        ) : null}
 
-        <span className="gold-soft relative z-10 text-center text-[0.6875rem] font-semibold leading-tight tracking-wide">
-          {t.open}
-        </span>
-
-        {/* Chấm 24/7 */}
-        <span className="absolute right-2.5 top-2.5 z-10 flex h-1.5 w-1.5">
-          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-gold-400/70" />
-          <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-gold-400" />
-        </span>
-      </button>
+        <RailLink href={`tel:${site.headOffice.phoneHref}`} label={site.headOffice.phone}>
+          <svg className="h-[21px] w-[21px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" aria-hidden="true">
+            <path d="M6.5 3h2l1.5 4-2 1.4a12 12 0 0 0 5.6 5.6L15 12l4 1.5v2a2.5 2.5 0 0 1-2.7 2.5A15.5 15.5 0 0 1 4 5.7 2.5 2.5 0 0 1 6.5 3Z" strokeLinejoin="round" />
+          </svg>
+        </RailLink>
+      </div>
 
       {/* Khung chat */}
       <div
         role="dialog"
         aria-label={t.title}
         aria-hidden={!open}
-        className={`fixed bottom-24 left-4 z-50 flex w-[min(26rem,calc(100vw-2rem))] flex-col border border-ink/15 bg-surface shadow-2xl transition-all duration-300 sm:left-8 ${
+        className={`card fixed bottom-6 left-3 z-50 flex w-[min(26rem,calc(100vw-1.5rem))] flex-col shadow-2xl transition-all duration-300 sm:bottom-8 sm:left-[5.5rem] ${
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none translate-y-4 opacity-0"
@@ -234,6 +253,40 @@ export function Assistant({
         </form>
       </div>
     </>
+  );
+}
+
+/** Nhãn hiện ra khi rê chuột, nằm bên phải biểu tượng. */
+function RailLabel({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="pointer-events-none absolute left-full ml-3 hidden whitespace-nowrap rounded-full border border-gold-500/40 bg-deep/95 px-3 py-1.5 text-[0.6875rem] font-medium text-gold-400 opacity-0 transition-opacity duration-200 group-hover:opacity-100 lg:block">
+      {children}
+    </span>
+  );
+}
+
+function RailLink({
+  href,
+  label,
+  external,
+  children,
+}: {
+  href: string;
+  label: string;
+  external?: boolean;
+  children: React.ReactNode;
+}) {
+  return (
+    <a
+      href={href}
+      aria-label={label}
+      title={label}
+      {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+      className="gold-box group relative flex h-12 w-12 items-center justify-center rounded-full sm:h-[52px] sm:w-[52px]"
+    >
+      <span className="gold-icon relative z-10">{children}</span>
+      <RailLabel>{label}</RailLabel>
+    </a>
   );
 }
 

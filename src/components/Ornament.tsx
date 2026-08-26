@@ -103,13 +103,13 @@ export function MeanderRule({ className = "" }: { className?: string }) {
 export function Seal({ className = "" }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 64 64" fill="none" aria-hidden="true">
-      <circle cx="32" cy="32" r="30" stroke="currentColor" strokeOpacity="0.35" />
-      <circle cx="32" cy="32" r="24" stroke="currentColor" strokeOpacity="0.2" />
+      <circle cx="32" cy="32" r="30" stroke="currentColor" strokeOpacity="0.75" strokeWidth="1.3" />
+      <circle cx="32" cy="32" r="24" stroke="currentColor" strokeOpacity="0.45" />
       <path
         d="M32 15l4.2 10.6L47 27.4l-7.9 7.4 2 11L32 40.6l-9.1 5.2 2-11-7.9-7.4 10.8-1.8z"
         stroke="currentColor"
-        strokeOpacity="0.5"
-        strokeWidth="1.1"
+        strokeOpacity="1"
+        strokeWidth="1.6"
         strokeLinejoin="round"
       />
     </svg>

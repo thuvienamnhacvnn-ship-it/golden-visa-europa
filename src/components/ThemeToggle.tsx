@@ -45,7 +45,7 @@ export function ThemeToggle({ label }: { label: string }) {
       aria-label={label}
       aria-pressed={theme === "dark"}
       title={label}
-      className="relative flex h-9 w-9 items-center justify-center rounded-full border border-ink/15 text-ink/60 transition-colors hover:border-gold-500 hover:text-gold-600"
+      className="gold-icon relative flex h-9 w-9 items-center justify-center rounded-full border border-gold-500/35 transition-colors hover:border-gold-400"
     >
       {/* Hai biểu tượng chồng nhau, đổi bằng xoay + mờ dần */}
       <span
