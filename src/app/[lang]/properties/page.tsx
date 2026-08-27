@@ -68,34 +68,36 @@ export default async function PropertiesPage({ params }: { params: Promise<{ lan
         </Container>
       </Section>
 
-      {/* ── Bốn hồ sơ căn hộ: chọn bằng thẻ, chi tiết đổi tại chỗ ── */}
-      <Section tone="alt">
+      {/* ── Bốn hồ sơ căn hộ: chọn bằng thẻ, chi tiết đổi tại chỗ ──
+           Nền TỐI vì sơ đồ mặt bằng là bản vẽ trên giấy trắng: đặt trên
+           nền sáng thì tờ giấy tan vào nền, không thấy mép bản vẽ. */}
+      <Section tone="deep">
         <Container>
           <PropertyPicker t={t} />
         </Container>
       </Section>
 
       {/* ── Điều kiện pháp lý phải nói rõ trước khi khách cân nhắc ── */}
-      <Section tone="deep">
+      <Section tone="alt">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <Eyebrow tone="light">{t.eligibilityTitle}</Eyebrow>
+            <Eyebrow>{t.eligibilityTitle}</Eyebrow>
             <Rule className="mt-4 mb-8" />
             <ul className="space-y-6">
               {t.eligibility.map((e, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <span className="display mt-0.5 shrink-0 text-[1.125rem] text-gold-400">
+                  <span className="display mt-0.5 shrink-0 text-[1.125rem] text-gold-600">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-[0.9375rem] leading-8 text-on-deep-2">{e}</p>
+                  <p className="text-[0.9375rem] leading-8 text-ink/75">{e}</p>
                 </li>
               ))}
             </ul>
-            <p className="mt-10 border-t border-white/10 pt-6 text-xs leading-6 text-on-deep-2/70">
+            <p className="mt-10 border-t border-ink/10 pt-6 text-xs leading-6 text-ink/55">
               {t.note}
             </p>
             <div className="mt-10">
-              <ButtonLink href={localePath(locale, "contact")} variant="light">
+              <ButtonLink href={localePath(locale, "contact")} variant="solid">
                 {t.cta}
               </ButtonLink>
             </div>
