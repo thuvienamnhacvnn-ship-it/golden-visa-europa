@@ -40,7 +40,7 @@ export function buildKnowledge(locale: Locale): string {
 ${d.footer.tagline}
 Trụ sở: ${site.headOffice.street}, ${site.headOffice.city} ${site.headOffice.postalCode}, ${site.headOffice.country}
 Điện thoại: ${site.headOffice.phone}
-Nhà sáng lập: ${site.founder.name}, ${site.founder.honorific}. ${d.about.founder.body}
+Đối tác tại Athens: ${site.athensPartner.name}, ${site.athensPartner.honorific}. ${d.about.founder.body}
 
 ## Golden Visa là gì
 ${d.whatIs.intro.join(" ")}

@@ -9,11 +9,6 @@ export function organizationJsonLd(locale: Locale, dict: Dictionary) {
     url: `${site.url}${localePath(locale)}`,
     description: dict.footer.tagline,
     foundingDate: site.founded,
-    founder: {
-      "@type": "Person",
-      name: site.founder.name,
-      honorificSuffix: site.founder.honorific,
-    },
     address: {
       "@type": "PostalAddress",
       streetAddress: site.headOffice.street,

@@ -67,7 +67,12 @@ export const site = {
   whatsapp: "+4915206968888",
   whatsappConfirmed: true,
 
-  founder: {
+  /**
+   * Không còn là "người sáng lập": khách đã bỏ N. KAKKOS khỏi tên công ty,
+   * nên ông xuất hiện với tư cách đối tác tại Athens, không phải sáng lập viên
+   * của NIBELC GROUP. Đã bỏ khỏi dữ liệu có cấu trúc của tổ chức.
+   */
+  athensPartner: {
     name: "Nikolaos T. Kakkos",
     honorific: "M.B.A., C.F.A.",
   },
