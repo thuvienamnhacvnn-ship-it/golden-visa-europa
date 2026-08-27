@@ -55,7 +55,7 @@ export default async function LegalPage({
 
       <Section tone="base">
         <Container>
-          <div className="mx-auto max-w-3xl">
+          <div className="max-w-3xl">
             <p className="text-xs uppercase tracking-[0.18em] text-ink/40">
               {dict.legal.updated}: {site.legalUpdated}
             </p>

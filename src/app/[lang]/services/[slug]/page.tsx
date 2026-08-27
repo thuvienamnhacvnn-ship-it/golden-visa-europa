@@ -148,9 +148,12 @@ export default async function ServicePage({
             <h2 className="text-[1.75rem] leading-tight sm:text-[2.25rem]">{service.name}</h2>
           </div>
 
-          <ul className="mt-12 grid gap-x-12 sm:grid-cols-2">
+          {/* Cột dòng chảy chứ không phải lưới: số gạch đầu dòng của mỗi dịch vụ
+              là 4–9, lưới 2 cột thì mục cuối trơ ra một mình. Cột dòng chảy tự
+              chia đôi theo chiều cao nên hàng cuối luôn kín. */}
+          <ul className="mt-12 sm:columns-2 sm:gap-x-12">
             {service.bullets.map((bullet, i) => (
-              <Reveal as="li" key={bullet} delay={(i % 2) * 70}>
+              <Reveal as="li" key={bullet} delay={(i % 2) * 70} className="break-inside-avoid">
                 <div className="flex items-start gap-4 border-b border-ink/10 py-5">
                   <span className="mt-2.5 block h-1 w-4 shrink-0 bg-gold-500" aria-hidden="true" />
                   <span className="text-[0.9375rem] leading-7 text-ink/80">{bullet}</span>

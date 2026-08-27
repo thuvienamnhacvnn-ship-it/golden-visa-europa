@@ -255,8 +255,9 @@ export function Assistant({
               { href: localePath(locale, "properties"), label: nav.properties },
               { href: localePath(locale, "offices"), label: nav.offices },
               { href: localePath(locale, "contact"), label: nav.contact },
-            ].map((l) => (
-              <li key={l.href}>
+            ].map((l, i, arr) => (
+              // Lẻ mục: cho mục cuối chiếm cả hàng thay vì trơ ra một nửa
+              <li key={l.href} className={i === arr.length - 1 && arr.length % 2 === 1 ? "col-span-2" : ""}>
                 <Link
                   href={l.href}
                   onClick={() => setSheet(false)}
@@ -277,7 +278,7 @@ export function Assistant({
 
           {/* Đổi ngôn ngữ và sáng/tối — hai thứ này trước nằm trong hamburger */}
           <div className="mt-6 flex items-center justify-between border-t border-ink/10 pt-5">
-            <div className="flex items-center gap-2" role="group" aria-label={nav.language}>
+            <div className="flex flex-wrap items-center gap-1.5" role="group" aria-label={nav.language}>
               {locales.map((l) => (
                 <Link
                   key={l}
@@ -285,7 +286,7 @@ export function Assistant({
                   hrefLang={l}
                   onClick={() => setSheet(false)}
                   aria-current={l === locale ? "true" : undefined}
-                  className={`rounded-full border px-3.5 py-1.5 text-[0.6875rem] font-semibold uppercase tracking-[0.14em] ${
+                  className={`rounded-full border px-3 py-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.12em] ${
                     l === locale
                       ? "border-gold-500 text-gold-600"
                       : "border-ink/15 text-ink/50"

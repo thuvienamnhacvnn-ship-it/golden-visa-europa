@@ -46,7 +46,7 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
       <Section tone="base">
         <Container>
           <Reveal>
-            <div className="prose-lux mx-auto max-w-3xl text-[1.0625rem] text-ink/85">
+            <div className="prose-lux max-w-3xl text-[1.0625rem] text-ink/85">
               {t.intro.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
