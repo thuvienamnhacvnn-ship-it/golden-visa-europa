@@ -8,7 +8,9 @@ export const site = {
   shortName: "NIBELC",
   // Tên miền đang chạy trên Vercel. Đổi sang tên miền thật của khách khi có —
   // giá trị này chi phối canonical, hreflang, sitemap và JSON-LD.
-  url: "https://golden-visa-europa.vercel.app",
+  /** Tên miền thật. Dùng cho canonical, sitemap và dữ liệu có cấu trúc —
+      để địa chỉ .vercel.app ở đây là Google lập chỉ mục nhầm bản đó. */
+  url: "https://golden-visa-europa.com",
   founded: "2014",
 
   // Địa chỉ trụ sở — lấy từ chữ ký email của khách, đã xác nhận.

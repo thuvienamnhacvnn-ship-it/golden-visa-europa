@@ -3,12 +3,29 @@ import { locales, defaultLocale } from "@/i18n";
 
 const PUBLIC_FILE = /\.[^/]+$/;
 
+/** Địa chỉ .vercel.app đưa về đây, để chỉ một tên miền lên công cụ tìm kiếm. */
+const CANONICAL_HOST = "golden-visa-europa.com";
+
 /**
- * Mọi URL đều phải có tiền tố ngôn ngữ. Đường dẫn thiếu tiền tố sẽ được
- * chuyển hướng 307 sang ngôn ngữ hợp nhất theo Accept-Language.
+ * Hai việc:
+ *  1. Đưa truy cập qua địa chỉ .vercel.app của bản chính thức về tên miền
+ *     thật bằng 301. Không đụng bản xem thử (tên có đuôi ngẫu nhiên) để còn
+ *     kiểm tra được trước khi phát hành.
+ *  2. Mọi URL đều phải có tiền tố ngôn ngữ. Thiếu thì chuyển 307 sang TIẾNG
+ *     ANH — cố ý không đoán theo Accept-Language, khách hàng muốn ai vào
+ *     cũng thấy bản tiếng Anh trước rồi tự chọn ngôn ngữ ở header.
  */
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  const host = request.headers.get("host") ?? "";
+  if (host === "golden-visa-europa.vercel.app" || host === "golden-visa.vercel.app") {
+    const canonical = request.nextUrl.clone();
+    canonical.host = CANONICAL_HOST;
+    canonical.protocol = "https";
+    canonical.port = "";
+    return NextResponse.redirect(canonical, 301);
+  }
 
   if (
     pathname.startsWith("/api") ||
