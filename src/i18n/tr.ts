@@ -48,7 +48,7 @@ export const tr: Dictionary = {
     stats: [
       { value: "2014", label: "Golden Visa alanında çalıştığımız yıl" },
       { value: "4", label: "Üç kıtada ofis" },
-      { value: "3", label: "Dosyanızın işlendiği dil" },
+      { value: "5", label: "Dosyanızın işlendiği dil" },
       { value: "90", label: "Alım tamamlandıktan sonra onaya kadar geçen gün" },
     ],
     statsNote:
@@ -447,8 +447,8 @@ export const tr: Dictionary = {
         body: "Getiri, piyasa koşulları, imar durumu ve yeniden satış potansiyeli, gayrimenkul size gösterilmeden önce değerlendirilir.",
       },
       {
-        title: "Üç dil",
-        body: "Dosyanız İngilizce, Türkçe ve Vietnamca olarak, bu dilleri ana dili gibi konuşan kişilerce yürütülür.",
+        title: "Beş dil",
+        body: "Dosyanız İngilizce, Vietnamca, Yunanca, Letonca ve Türkçe olarak, bu dilleri ana dili gibi konuşan kişilerce yürütülür.",
       },
       {
         title: "Dört pazarda varlık",
@@ -542,7 +542,7 @@ export const tr: Dictionary = {
     directTitle: "Doğrudan iletişim",
     headOffice: "Merkez ofis",
     hours: "Pazartesi – Cuma, 09:00 – 18:00 (Doğu Avrupa Saati)",
-    responseNote: "İngilizce, Türkçe ve Vietnamca yanıt veriyoruz.",
+    responseNote: "İngilizce, Vietnamca, Yunanca, Letonca ve Türkçe yanıt veriyoruz.",
   },
 
   legal: {

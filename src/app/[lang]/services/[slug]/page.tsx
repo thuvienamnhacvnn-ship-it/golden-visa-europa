@@ -3,7 +3,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Container, Section, PageHero, ButtonLink, Eyebrow, Rule } from "@/components/ui";
-import { Artwork, serviceArtSrc } from "@/components/Artwork";
+import { Artwork } from "@/components/Artwork";
+import { serviceArtSrc } from "@/lib/art";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import {

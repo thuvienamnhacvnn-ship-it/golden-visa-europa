@@ -27,28 +27,8 @@ export function proxy(request: NextRequest) {
   if (hasLocale) return NextResponse.next();
 
   const url = request.nextUrl.clone();
-  url.pathname = `/${pickLocale(request)}${pathname === "/" ? "" : pathname}`;
+  url.pathname = `/${defaultLocale}${pathname === "/" ? "" : pathname}`;
   return NextResponse.redirect(url, 307);
-}
-
-function pickLocale(request: NextRequest): string {
-  const header = request.headers.get("accept-language");
-  if (!header) return defaultLocale;
-
-  const ranked = header
-    .split(",")
-    .map((part) => {
-      const [tag, q] = part.trim().split(";q=");
-      return { tag: tag.toLowerCase(), q: q ? Number(q) : 1 };
-    })
-    .sort((a, b) => b.q - a.q);
-
-  for (const { tag } of ranked) {
-    const base = tag.split("-")[0];
-    const hit = locales.find((l) => l === base);
-    if (hit) return hit;
-  }
-  return defaultLocale;
 }
 
 export const config = {

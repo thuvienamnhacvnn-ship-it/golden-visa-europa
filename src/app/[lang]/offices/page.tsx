@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Container, Section, PageHero, Eyebrow, Rule } from "@/components/ui";
-import { Artwork, cityArtSrc } from "@/components/Artwork";
+import { Artwork } from "@/components/Artwork";
+import { cityArtSrc } from "@/lib/art";
 import { Reveal } from "@/components/Reveal";
 import { JsonLd } from "@/components/JsonLd";
 import { getDictionary, isLocale, localePath, locales, type Locale } from "@/i18n";

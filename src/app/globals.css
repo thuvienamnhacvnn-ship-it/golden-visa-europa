@@ -814,3 +814,15 @@ button:hover .gold-icon {
     animation: none;
   }
 }
+
+/* Đổi căn hộ trong bảng chọn: hiện lên nhẹ, không nhảy giật. */
+.fade-swap {
+  animation: fade-swap 0.42s ease both;
+}
+@keyframes fade-swap {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-swap { animation: none; }
+}

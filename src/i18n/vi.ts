@@ -48,7 +48,7 @@ export const vi: Dictionary = {
     stats: [
       { value: "2014", label: "Làm dịch vụ thẻ vàng từ năm" },
       { value: "4", label: "Văn phòng trên ba châu lục" },
-      { value: "3", label: "Ngôn ngữ xử lý hồ sơ của quý vị" },
+      { value: "5", label: "Ngôn ngữ xử lý hồ sơ của quý vị" },
       { value: "90", label: "Ngày có kết quả sau khi hoàn tất mua nhà" },
     ],
     statsNote:
@@ -448,8 +448,8 @@ export const vi: Dictionary = {
         body: "Lợi suất, tình hình thị trường, quy hoạch và khả năng bán lại đều được đánh giá trước khi bất động sản được đưa ra cho quý vị xem.",
       },
       {
-        title: "Ba ngôn ngữ",
-        body: "Hồ sơ của quý vị được xử lý bằng tiếng Anh, tiếng Thổ Nhĩ Kỳ và tiếng Việt, bởi những người nói chính ngôn ngữ đó.",
+        title: "Năm ngôn ngữ",
+        body: "Hồ sơ của quý vị được xử lý bằng tiếng Anh, tiếng Việt, tiếng Hy Lạp, tiếng Latvia và tiếng Thổ Nhĩ Kỳ, bởi những người nói chính ngôn ngữ đó.",
       },
       {
         title: "Có mặt ở bốn thị trường",
@@ -543,7 +543,7 @@ export const vi: Dictionary = {
     directTitle: "Liên hệ trực tiếp",
     headOffice: "Trụ sở chính",
     hours: "Thứ Hai đến thứ Sáu, 09:00 – 18:00 (giờ Đông Âu)",
-    responseNote: "Chúng tôi trả lời bằng tiếng Anh, tiếng Thổ Nhĩ Kỳ và tiếng Việt.",
+    responseNote: "Chúng tôi trả lời bằng tiếng Anh, tiếng Việt, tiếng Hy Lạp, tiếng Latvia và tiếng Thổ Nhĩ Kỳ.",
   },
 
   legal: {

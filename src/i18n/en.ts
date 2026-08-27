@@ -47,7 +47,7 @@ export const en = {
     stats: [
       { value: "2014", label: "Working in Golden Visa acquisition since" },
       { value: "4", label: "Offices across three continents" },
-      { value: "3", label: "Languages your file is handled in" },
+      { value: "5", label: "Languages your file is handled in" },
       { value: "90", label: "Days to approval after your purchase completes" },
     ],
     statsNote:
@@ -447,8 +447,8 @@ export const en = {
         body: "Yield, market conditions, zoning and resale potential are assessed before the property is ever shown to you.",
       },
       {
-        title: "Three languages",
-        body: "Your file is handled in English, Turkish and Vietnamese, by people who speak your language natively.",
+        title: "Five languages",
+        body: "Your file is handled in English, Vietnamese, Greek, Latvian and Turkish, by people who speak your language natively.",
       },
       {
         title: "Present in four markets",
@@ -542,7 +542,7 @@ export const en = {
     directTitle: "Direct contact",
     headOffice: "Head office",
     hours: "Monday to Friday, 09:00 – 18:00 (EET)",
-    responseNote: "We reply in English, Turkish and Vietnamese.",
+    responseNote: "We reply in English, Vietnamese, Greek, Latvian and Turkish.",
   },
 
   legal: {

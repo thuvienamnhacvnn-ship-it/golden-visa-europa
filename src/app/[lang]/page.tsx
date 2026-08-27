@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { Container, Section, SectionHeading, Eyebrow, Rule, ButtonLink, TextLink } from "@/components/ui";
-import { Artwork, serviceArtSrc, cityArtSrc, crestSrc } from "@/components/Artwork";
+import { Artwork } from "@/components/Artwork";
+import { serviceArtSrc, cityArtSrc, crestSrc } from "@/lib/art";
 import { MeanderRule, Seal } from "@/components/Ornament";
 import { HeroVideo } from "@/components/HeroMedia";
 import { pick } from "@/lib/media";

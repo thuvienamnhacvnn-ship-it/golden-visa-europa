@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Container, Section, PageHero, PlaceholderFrame, Eyebrow, Rule } from "@/components/ui";
-import { Artwork, crestSrc } from "@/components/Artwork";
+import { Artwork } from "@/components/Artwork";
+import { crestSrc } from "@/lib/art";
 import { Reveal } from "@/components/Reveal";
 import { Seal } from "@/components/Ornament";
 import { JsonLd } from "@/components/JsonLd";
