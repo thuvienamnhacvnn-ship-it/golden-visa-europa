@@ -14,6 +14,7 @@ export const tr: Dictionary = {
     about: "Hakkımızda",
     whyUs: "Neden biz",
     offices: "Ofisler",
+    properties: "Gayrimenkul",
     contact: "İletişim",
   },
 
@@ -98,7 +99,7 @@ export const tr: Dictionary = {
     founder: {
       eyebrow: "Yönetim",
       title: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Kurucu, N. Kakkos Estate",
+      role: "Atina'daki ortak",
       quote: "Yanınızda duruyor ve işiniz tamamlanana kadar sizin için çalışıyoruz.",
       body: "2014'ten bu yana Golden Visa alanında çalışan ve bir ev yönetimi şirketinin sahibi olan Yunan girişimci. New York Adelphi Üniversitesi'nden M.B.A. derecesine ve New York Üniversitesi'nden Finansal Analiz sertifikasına sahiptir.",
       cta: "Ekiple tanışın",
@@ -392,7 +393,7 @@ export const tr: Dictionary = {
 
   about: {
     eyebrow: "Hakkımızda",
-    title: "N. Kakkos Estate",
+    title: "NIBELC GROUP",
     lead: "2014'ten bu yana Avrupa dışı yatırımcılarla çalışan bir Yunan gayrimenkul ve yatırım yoluyla oturum firması.",
     intro: [
       "Genellikle ayrı şirketlerde duran üç işin kesişiminde çalışıyoruz: oturma izni, gayrimenkul ve sonrasında varlığı üretken tutan her şey. Üçünü tek ekipte tutmamız, sorularınızı başka yere yönlendirmek yerine takvim taahhüdü verebilmemizi sağlıyor.",
@@ -400,7 +401,7 @@ export const tr: Dictionary = {
     ],
     founder: {
       name: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Kurucu",
+      role: "Ortak, Atina",
       body: "Nikolaos Kakkos, 2014'ten bu yana Golden Visa alanında çalışan ve bir ev yönetimi şirketinin sahibi olan başarılı bir Yunan girişimcidir. New York Adelphi Üniversitesi'nden M.B.A. derecesine sahiptir ve New York Üniversitesi tarafından Finansal Analiz alanında sertifikalandırılmıştır.",
       credentials: [
         "M.B.A., Adelphi Üniversitesi, New York",
@@ -416,7 +417,7 @@ export const tr: Dictionary = {
     legalBody:
       "Dosyanız üzerinde bir avukat çalışır ve ücretini biz öderiz. İşlemin gerektirdiği durumlarda ayrıca bir noter devreye girer. Sizin adınıza kimin, hangi sıfatla hareket ettiği önceden bildirilir.",
     portraitPending:
-      "Geçici arma. Müşteri fotoğraf gönderdiğinde Sn. Kakkos'un portresiyle değiştirilecek.",
+      "Geçici arma. Müşteri fotoğraf gönderdiğinde Sn. Nikolaos'un portresiyle değiştirilecek.",
     placeholderTeam:
       "Ekip fotoğrafları ve tam özgeçmişler, yayına girmeden önce müşteri tarafından sağlanacaktır.",
   },
@@ -464,7 +465,7 @@ export const tr: Dictionary = {
       {
         city: "Atina",
         country: "Yunanistan",
-        address: "1 Pigasou Street, Kifisia 14564, Yunanistan",
+        address: "Filippou 28, Perea 57019, Yunanistan",
         phone: "+30 697 300 8000",
         role: "Merkez ofis · Golden Visa, hukuk ve finans ekibi",
         confirmed: true,
@@ -552,7 +553,7 @@ export const tr: Dictionary = {
       sections: [
         {
           title: "Biz kimiz",
-          body: "1 Pigasou Street, Kifisia 14564, Yunanistan adresindeki N. Kakkos Estate, bu web sitesi aracılığıyla toplanan kişisel verilerin veri sorumlusudur.",
+          body: "Filippou 28, Perea 57019, Yunanistan adresindeki NIBELC GROUP, bu web sitesi aracılığıyla toplanan kişisel verilerin veri sorumlusudur.",
         },
         {
           title: "Neleri topluyoruz",
@@ -582,7 +583,7 @@ export const tr: Dictionary = {
       sections: [
         {
           title: "Sitenin amacı",
-          body: "Bu web sitesi N. Kakkos Estate'in hizmetlerini tanıtır. Bir teklif, fiyat teklifi veya sözleşme değil, hizmetlere bir giriştir.",
+          body: "Bu web sitesi NIBELC GROUP'in hizmetlerini tanıtır. Bir teklif, fiyat teklifi veya sözleşme değil, hizmetlere bir giriştir.",
         },
         {
           title: "Doğruluk",
@@ -590,7 +591,7 @@ export const tr: Dictionary = {
         },
         {
           title: "Fikrî mülkiyet",
-          body: "Bu sitedeki metin, görsel ve tasarım N. Kakkos Estate'e aittir veya izinle kullanılmaktadır. Yazılı onay olmadan çoğaltılamaz.",
+          body: "Bu sitedeki metin, görsel ve tasarım NIBELC GROUP'e aittir veya izinle kullanılmaktadır. Yazılı onay olmadan çoğaltılamaz.",
         },
         {
           title: "Dış bağlantılar",
@@ -648,22 +649,61 @@ export const tr: Dictionary = {
 
   properties: {
     eyebrow: "Gayrimenkul",
-    title: "Atina'da elimizdeki dairelerden birkaçı",
-    lead: "Atina Peristeri'de baştan sona yenilenmiş dört daire. Siz karar vermeden önce hukuki belgeleriyle birlikte tam dosyayı gönderiyoruz.",
+    title: "Peristeri, Atina'da dört daire",
+    lead: "Tamamen yenilenmiş dört daire. Aşağıda geliştiricinin verdiği dosyanın tamamı var: tanıtım, satış fiyatı, tahmini kira, kat planları ve iç mekân görselleri.",
+    linkLabel: "Dört dairenin dosyasını görün",
+    backLabel: "Ana sayfaya dön",
     priceLabel: "Satış fiyatı",
     rentLabel: "Uzun dönem kira",
     bedsLabel: "Yatak odası",
     bathsLabel: "Banyo",
     sizeLabel: "Alan",
     sizePending: "Teyit ediliyor",
-    cta: "Tam dosyayı isteyin",
-    note: "Fiyatlar ve durum 26 Ağustos 2026 itibarıyladır ve değişebilir. Bir gayrimenkulün Golden Visa'ya uygun olup olmadığı bölgesine ve türüne bağlıdır — her daire için taahhütte bulunmadan önce yazılı olarak teyit ederiz.",
-    commitTitle: "Her daireye dâhil",
-    commitments: [
-      "Baştan sona yenilenmiş durumda",
-      "Teslim aldıktan sonra uygun kirayla geri kiralama",
-      "Sürdürülebilir işletme ve dairenin bakımı",
+    typeLabel: "Tür",
+    typeValue: "Daire",
+    capacityLabel: "Tasarım kapasitesi",
+    introTitle: "Tanıtım",
+    intro: "Daireler Peristeri, Atina'da yer alıyor. Gerçek yaşam için tasarlandı — derli toplu, kullanışlı; küçük bir aile, tek kişi ya da uzun dönem ikamet için uygun. İç mekân modern ve nötr, kişiselleştirmesi kolay.",
+    planTitle: "Kat planı",
+    layoutTitle: "Daire kurgusu",
+    galleryTitle: "İç mekân görselleri",
+    galleryNote: "Görseller geliştirici tarafından verildi ve dört dairenin tamamı için ortak. Kat planları ise her daireye özel.",
+    cta: "Ayrıntılı dosyayı isteyin",
+    note: "Fiyatlar ve durum 26 Ağustos 2026 itibarıyladır, değişebilir. Bir yatırımın Golden Visa için yeterli olup olmadığı bölgeye ve gayrimenkul türüne bağlıdır — her daire için bunu siz karar vermeden önce yazılı olarak teyit ediyoruz.",
+    eligibilityTitle: "Değerlendirmeden önce bilinmesi gerekenler",
+    eligibility: [
+      "Peristeri, Attika bölgesindedir. 2024'ten bu yana Attika'da gayrimenkul yolu için eşik 800.000 €'dur. 250.000–270.000 € fiyatıyla bu daireler Golden Visa için otomatik olarak YETERLİ DEĞİLDİR; yalnızca ticari yapının konuta dönüştürülmesi veya tescilli yapının restorasyonu kapsamında yeterli olur.",
+      "Geliştiricinin dosyasında alan “XXX m²” olarak yazıyor — gerçek rakam henüz yok. Kanun 400.000 € ve 800.000 € eşiklerinde en az 120 m² istiyor; dolayısıyla bu bilgi karardan önce şarttır.",
+      "Golden Visa için kullanılan gayrimenkul Airbnb tarzı kısa dönem kiralanamaz: ihlali oturum izninin iptaline ve 50.000 €'ya kadar para cezasına yol açar. Bu daireler yalnızca uzun dönem kiralanmalıdır.",
     ],
+    commitTitle: "Her daireyle birlikte verilen taahhütler",
+    commitments: [
+      "Daire %100 yeni olarak yenilendi",
+      "Ev sahibi teslim aldıktan sonra iyi bir bedelle geri kiralama",
+      "Sürdürülebilir işletme ve dairenin durumunun korunması",
+    ],
+    items: {
+      "apt-1": {
+        name: "Daire 1",
+        capacity: "yaklaşık 10 kişi",
+        layout: "Plan ortak konaklama modeline göre kurgulanmış; merkezî yatma alanında alanı en verimli kullanmak için iki yanda ranzalar var. Ortak yaşam alanı ve dolaplar ön tarafta, açık mutfak ve uzun yemek masasıyla doğrudan bağlantılı. Tuvalet ve banyo grubu tek bir tarafta toplanmış ve ayrılmış, böylece aynı anda birkaç kişi kullanabiliyor. Bütünde plan ferah ve bölgeleri net.",
+      },
+      "apt-2": {
+        name: "Daire 2",
+        capacity: "en fazla 8 kişi",
+        layout: "Daire grup konaklama modeline göre tasarlanmış. Yatma alanı ranzalarla merkezîleştirilmiş ve iki adet ebeveyn banyosu içeriyor. Açık mutfağın ortak yaşam alanıyla birleşmesi daireyi ferah tutuyor, yemek yapmayı ve bir araya gelmeyi kolaylaştırıyor. Binanın ortak merdivenine doğrudan bağlanan bir geçiş var; bu da dolaşımı ve yönetimi kolaylaştırıyor.",
+      },
+      "apt-3": {
+        name: "Daire 3",
+        capacity: "en fazla 8 kişi",
+        layout: "Birleştirilmiş bir daire (Apartment 03 & 04): tek bir büyük daireye dönüştürülmüş, kalabalık aileler için uygun. İçinde iki ayrı yatma alanı, iki ortak yaşam alanı, iki açık mutfak, eksiksiz dolap sistemi ve her bölgenin mahremiyetini koruyacak biçimde yerleştirilmiş çok sayıda banyo ile tuvalet var. İki girişi (ana ve tali) bulunuyor; plan esnek ve ihtiyaca göre kolayca uyarlanabiliyor.",
+      },
+      "apt-4": {
+        name: "Daire 4",
+        capacity: "en fazla 10 kişi",
+        layout: "Daire grup konaklama modeline göre tasarlanmış. İçinde ranzalı merkezî bir yatma alanı, çok sayıda banyo ile ayrı tuvaletler, geniş bir ortak yaşam alanıyla birleşen açık mutfak ve kullanışlı bir depolama bölümü var. Plan verimli ve aynı anda birkaç kişinin kullanımına elverişli.",
+      },
+    },
   },
 
   assistant: {

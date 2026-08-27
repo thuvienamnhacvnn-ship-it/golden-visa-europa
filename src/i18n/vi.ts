@@ -14,6 +14,7 @@ export const vi: Dictionary = {
     about: "Về chúng tôi",
     whyUs: "Vì sao chọn chúng tôi",
     offices: "Văn phòng",
+    properties: "Bất động sản",
     contact: "Liên hệ",
   },
 
@@ -98,7 +99,7 @@ export const vi: Dictionary = {
     founder: {
       eyebrow: "Người dẫn dắt",
       title: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Nhà sáng lập, N. Kakkos Estate",
+      role: "Đối tác tại Athens",
       quote:
         "Chúng tôi đứng cạnh quý vị và làm việc cho quý vị cho đến khi công việc hoàn tất.",
       body: "Doanh nhân Hy Lạp, làm dịch vụ thẻ vàng và sở hữu một công ty quản lý nhà ở từ năm 2014. Ông có bằng M.B.A. của Đại học Adelphi (New York) và chứng chỉ Phân tích Tài chính do Đại học New York cấp.",
@@ -393,7 +394,7 @@ export const vi: Dictionary = {
 
   about: {
     eyebrow: "Về chúng tôi",
-    title: "N. Kakkos Estate",
+    title: "NIBELC GROUP",
     lead: "Công ty bất động sản và định cư qua đầu tư của Hy Lạp, làm việc với nhà đầu tư ngoài châu Âu từ năm 2014.",
     intro: [
       "Chúng tôi làm ở điểm giao của ba việc mà bình thường nằm ở ba công ty khác nhau: giấy phép cư trú, bất động sản, và tất cả những gì giữ cho tài sản sinh lời về sau. Chính việc giữ cả ba trong một đội ngũ cho phép chúng tôi cam kết về tiến độ thay vì chuyển tiếp câu hỏi của quý vị đi nơi khác.",
@@ -401,7 +402,7 @@ export const vi: Dictionary = {
     ],
     founder: {
       name: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Nhà sáng lập",
+      role: "Đối tác tại Athens",
       body: "Nikolaos Kakkos là một doanh nhân Hy Lạp thành đạt, làm dịch vụ thẻ vàng và sở hữu một công ty quản lý nhà ở từ năm 2014. Ông có bằng M.B.A. của Đại học Adelphi (New York) và chứng chỉ Phân tích Tài chính do Đại học New York cấp.",
       credentials: [
         "M.B.A., Đại học Adelphi, New York",
@@ -417,7 +418,7 @@ export const vi: Dictionary = {
     legalBody:
       "Có luật sư làm hồ sơ cho quý vị và chi phí do chúng tôi trả. Khi giao dịch đòi hỏi, chúng tôi mời thêm công chứng viên. Quý vị luôn được cho biết trước ai đang làm việc cho mình và với tư cách gì.",
     portraitPending:
-      "Huy hiệu tạm. Sẽ thay bằng ảnh chân dung ông Kakkos khi khách hàng gửi ảnh.",
+      "Huy hiệu tạm. Sẽ thay bằng ảnh chân dung ông Nikolaos khi khách hàng gửi ảnh.",
     placeholderTeam:
       "Ảnh đội ngũ và CV đầy đủ sẽ do khách hàng cung cấp trước khi phát hành.",
   },
@@ -465,7 +466,7 @@ export const vi: Dictionary = {
       {
         city: "Athens",
         country: "Hy Lạp",
-        address: "1 Pigasou Street, Kifisia 14564, Hy Lạp",
+        address: "Filippou 28, Perea 57019, Hy Lạp",
         phone: "+30 697 300 8000",
         role: "Trụ sở chính · Đội thẻ vàng, pháp lý và tài chính",
         confirmed: true,
@@ -553,7 +554,7 @@ export const vi: Dictionary = {
       sections: [
         {
           title: "Chúng tôi là ai",
-          body: "N. Kakkos Estate, 1 Pigasou Street, Kifisia 14564, Hy Lạp, là bên kiểm soát dữ liệu cá nhân thu thập qua website này.",
+          body: "NIBELC GROUP, Filippou 28, Perea 57019, Hy Lạp, là bên kiểm soát dữ liệu cá nhân thu thập qua website này.",
         },
         {
           title: "Chúng tôi thu thập gì",
@@ -583,7 +584,7 @@ export const vi: Dictionary = {
       sections: [
         {
           title: "Mục đích của trang",
-          body: "Website này giới thiệu dịch vụ của N. Kakkos Estate. Đây là phần giới thiệu dịch vụ, không phải một lời chào giá, một bản báo giá hay một hợp đồng.",
+          body: "Website này giới thiệu dịch vụ của NIBELC GROUP. Đây là phần giới thiệu dịch vụ, không phải một lời chào giá, một bản báo giá hay một hợp đồng.",
         },
         {
           title: "Tính chính xác",
@@ -591,7 +592,7 @@ export const vi: Dictionary = {
         },
         {
           title: "Sở hữu trí tuệ",
-          body: "Nội dung chữ, hình ảnh và thiết kế của trang này thuộc về N. Kakkos Estate hoặc được sử dụng có sự cho phép. Không được sao chép nếu chưa có đồng ý bằng văn bản.",
+          body: "Nội dung chữ, hình ảnh và thiết kế của trang này thuộc về NIBELC GROUP hoặc được sử dụng có sự cho phép. Không được sao chép nếu chưa có đồng ý bằng văn bản.",
         },
         {
           title: "Liên kết ngoài",
@@ -649,22 +650,61 @@ export const vi: Dictionary = {
 
   properties: {
     eyebrow: "Bất động sản",
-    title: "Một số căn đang có tại Athens",
-    lead: "Bốn căn hộ tại Peristeri, Athens, đã cải tạo mới hoàn toàn. Chúng tôi gửi hồ sơ đầy đủ kèm giấy tờ pháp lý trước khi quý vị quyết định bất cứ điều gì.",
+    title: "Bốn căn hộ tại Peristeri, Athens",
+    lead: "Bốn căn hộ đã cải tạo mới hoàn toàn. Dưới đây là toàn bộ hồ sơ chủ đầu tư cung cấp: giới thiệu, giá bán, giá cho thuê tham khảo, sơ đồ mặt bằng và phối cảnh nội thất.",
+    linkLabel: "Xem hồ sơ 4 căn hộ",
+    backLabel: "Về trang chủ",
     priceLabel: "Giá mua",
     rentLabel: "Cho thuê dài hạn",
     bedsLabel: "Phòng ngủ",
     bathsLabel: "Phòng tắm",
     sizeLabel: "Diện tích",
     sizePending: "Đang xác nhận",
+    typeLabel: "Loại hình",
+    typeValue: "Căn hộ",
+    capacityLabel: "Sức chứa thiết kế",
+    introTitle: "Giới thiệu",
+    intro: "Căn hộ toạ lạc tại Peristeri, Athens, không gian thiết kế theo hướng ở thực — gọn gàng, dễ sử dụng; phù hợp cho sinh hoạt gia đình nhỏ, cá nhân hoặc cư trú dài hạn. Phong cách nội thất hiện đại, trung tính, dễ cá nhân hoá.",
+    planTitle: "Sơ đồ mặt bằng",
+    layoutTitle: "Bố cục căn hộ",
+    galleryTitle: "Phối cảnh nội thất",
+    galleryNote: "Ảnh phối cảnh do chủ đầu tư cung cấp, dùng chung cho cả bốn căn. Sơ đồ mặt bằng thì mỗi căn một bản riêng.",
     cta: "Hỏi hồ sơ chi tiết",
-    note: "Giá và tình trạng cập nhật tại thời điểm 26/08/2026, có thể thay đổi. Mức đầu tư đủ điều kiện thẻ vàng phụ thuộc khu vực và loại bất động sản — chúng tôi xác nhận bằng văn bản cho từng căn trước khi quý vị cam kết.",
+    note: "Giá và tình trạng cập nhật ngày 26/08/2026, có thể thay đổi. Mức đầu tư đủ điều kiện thẻ vàng phụ thuộc khu vực và loại bất động sản — chúng tôi xác nhận bằng văn bản cho từng căn trước khi quý vị cam kết.",
+    eligibilityTitle: "Cần biết trước khi cân nhắc",
+    eligibility: [
+      "Peristeri thuộc vùng Attica. Từ 2024 Attica áp mức đầu tư 800.000 € cho diện mua bất động sản. Giá 250.000–270.000 € của các căn này KHÔNG tự động đủ điều kiện thẻ vàng; chỉ đủ nếu thuộc diện chuyển đổi công trình thương mại sang nhà ở hoặc trùng tu công trình di sản.",
+      "Hồ sơ gốc ghi diện tích là “XXX m²” — chưa có số thật. Luật đòi tối thiểu 120 m² cho mức 400.000 € và 800.000 €, nên đây là thông tin bắt buộc phải có trước khi quyết định.",
+      "Bất động sản dùng để xin thẻ vàng bị cấm cho thuê ngắn hạn kiểu Airbnb: vi phạm bị thu hồi thẻ và phạt tới 50.000 €. Các căn này chỉ nên cho thuê dài hạn.",
+    ],
     commitTitle: "Cam kết đi kèm mỗi căn",
     commitments: [
       "Căn hộ được cải tạo mới 100%",
       "Thuê lại với giá tốt sau khi chủ nhà nhận nhà",
       "Vận hành bền vững và giữ gìn tình trạng căn hộ",
     ],
+    items: {
+      "apt-1": {
+        name: "Căn hộ 1",
+        capacity: "khoảng 10 người",
+        layout: "Mặt bằng bố trí theo mô hình lưu trú tập thể, khu ngủ trung tâm dùng giường tầng hai bên để tối ưu diện tích. Khu sinh hoạt chung và tủ lưu trữ đặt phía trước, kết nối trực tiếp với bếp mở và bàn ăn dài. Cụm khu vệ sinh – phòng tắm gom về một phía, tách biệt, thuận tiện sử dụng đồng thời. Tổng thể thông thoáng, phân khu rõ ràng.",
+      },
+      "apt-2": {
+        name: "Căn hộ 2",
+        capacity: "tối đa 8 người",
+        layout: "Căn hộ thiết kế theo mô hình lưu trú nhóm. Khu ngủ tập trung dùng giường tầng, gồm 02 phòng tắm khép kín. Bếp mở kết hợp không gian sinh hoạt chung tạo cảm giác thoáng đãng, thuận tiện cho nấu ăn và giao lưu. Căn hộ có lối đi kết nối trực tiếp với khu vực cầu thang chung, thuận lợi cho việc di chuyển và quản lý.",
+      },
+      "apt-3": {
+        name: "Căn hộ 3",
+        capacity: "tối đa 8 người",
+        layout: "Căn hộ gộp (Apartment 03 & 04) hợp nhất thành một căn diện tích lớn, phù hợp cho gia đình đông người. Không gian gồm 02 khu ngủ riêng biệt, 02 khu sinh hoạt chung, 02 bếp mở, hệ tủ lưu trữ đầy đủ và nhiều phòng tắm – khu vệ sinh bố trí khoa học, bảo đảm riêng tư cho từng khu chức năng. Căn hộ có hai lối vào (lối chính và lối phụ), bố cục linh hoạt, dễ cải tạo theo nhu cầu.",
+      },
+      "apt-4": {
+        name: "Căn hộ 4",
+        capacity: "tối đa 10 người",
+        layout: "Căn hộ thiết kế theo mô hình lưu trú nhóm. Không gian gồm khu ngủ tập trung với hệ giường tầng, nhiều phòng tắm và khu vệ sinh riêng biệt, bếp mở kết hợp khu sinh hoạt chung rộng rãi và khu lưu trữ tiện lợi. Bố cục khoa học, tối ưu khả năng sử dụng cho nhiều người cùng lúc.",
+      },
+    },
   },
 
   assistant: {

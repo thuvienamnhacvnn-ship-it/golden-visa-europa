@@ -393,8 +393,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               title={dict.properties.title}
               lead={dict.properties.lead}
             />
-            <ButtonLink href={localePath(locale, "contact")} variant="outline" className="shrink-0">
-              {dict.properties.cta}
+            <ButtonLink href={localePath(locale, "properties")} variant="outline" className="shrink-0">
+              {dict.properties.linkLabel}
             </ButtonLink>
           </div>
 
@@ -402,9 +402,14 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             {properties.map((prop, i) => (
               <Reveal as="li" key={prop.id} delay={(i % 4) * 80}>
                 <article className="card card-hover card-sweep zoom-wrap flex h-full flex-col">
-                  <Artwork src={prop.photo} alt={prop.code} ratio="4 / 3" className="!rounded-none" />
+                  <Artwork
+                    src={prop.photo}
+                    alt={dict.properties.items[prop.id].name}
+                    ratio="4 / 3"
+                    className="!rounded-none"
+                  />
                   <div className="flex flex-1 flex-col p-6">
-                    <p className="eyebrow text-gold-600">{prop.area}</p>
+                    <p className="eyebrow text-gold-600">{dict.properties.items[prop.id].name}</p>
                     <p className="display mt-3 text-[1.75rem] text-ink">{prop.price}</p>
                     <dl className="mt-5 flex-1 space-y-2 border-t border-ink/10 pt-4 text-[0.8125rem] text-ink/70">
                       <div className="flex justify-between gap-3">

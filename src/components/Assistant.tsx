@@ -13,6 +13,7 @@ export type AssistantStrings = Dictionary["assistant"];
 
 export type NavStrings = {
   home: string;
+  properties: string;
   whatIs: string;
   services: string;
   offices: string;
@@ -251,6 +252,7 @@ export function Assistant({
             {[
               { href: localePath(locale, "about"), label: nav.about },
               { href: localePath(locale, "why-us"), label: nav.whyUs },
+              { href: localePath(locale, "properties"), label: nav.properties },
               { href: localePath(locale, "offices"), label: nav.offices },
               { href: localePath(locale, "contact"), label: nav.contact },
             ].map((l) => (

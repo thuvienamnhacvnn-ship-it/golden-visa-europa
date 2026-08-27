@@ -67,13 +67,20 @@ Website đối tác Việt Nam: ${site.partnerSite}
 ## Văn phòng
 ${offices}
 
-## Bất động sản tiêu biểu đang có (cập nhật 26/08/2026)
+## Bất động sản đang có — xem đầy đủ tại /${locale}/properties (cập nhật 27/08/2026)
+${d.properties.intro}
 ${properties
-  .map(
-    (p) =>
-      `- ${p.code} — ${p.area}. Giá mua ${p.price}. Cho thuê dài hạn ${p.rent}/tháng. ${p.beds} phòng ngủ, ${p.baths} phòng tắm. Diện tích: ${p.size ?? "chưa xác nhận"}.`,
-  )
-  .join("\n")}
+  .map((p) => {
+    const it = d.properties.items[p.id];
+    return [
+      `### ${it.name} — ${p.area}`,
+      `Giá mua ${p.price}. Cho thuê dài hạn ${p.rent}/tháng.`,
+      `${p.beds} phòng ngủ, ${p.baths} phòng tắm. Diện tích: ${p.size ?? "chưa xác nhận"}.`,
+      `Sức chứa thiết kế: ${it.capacity}.`,
+      `Bố cục: ${it.layout}`,
+    ].join("\n");
+  })
+  .join("\n\n")}
 Cam kết đi kèm mỗi căn: ${d.properties.commitments.join("; ")}.
 LƯU Ý BẮT BUỘC KHI TƯ VẤN VỀ CÁC CĂN NÀY:
 - Diện tích chưa được xác nhận, mà luật đòi tối thiểu 120 m² cho mức 400.000 € và 800.000 €.
@@ -155,7 +162,7 @@ export function offlineAnswer(locale: Locale, question: string): string {
       a: [
         ...properties.map(
           (p) =>
-            `${p.code} — ${p.area}: ${p.price}, cho thuê ${p.rent}/tháng, ${p.beds} phòng ngủ, ${p.baths} phòng tắm.`,
+            `${d.properties.items[p.id].name} — ${p.area}: ${p.price}, cho thuê ${p.rent}/tháng, ${p.beds} phòng ngủ, ${p.baths} phòng tắm. ${d.properties.items[p.id].capacity}.`,
         ),
         "",
         d.properties.note,

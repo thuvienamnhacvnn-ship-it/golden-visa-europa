@@ -75,12 +75,15 @@ export function Artwork({
   ratio = "4 / 3",
   className = "",
   priority = false,
+  fit = "cover",
 }: {
   src: string;
   alt: string;
   ratio?: string;
   className?: string;
   priority?: boolean;
+  /** "contain" cho bản vẽ kỹ thuật: cắt mất một mẩu là mất thông tin. */
+  fit?: "cover" | "contain";
 }) {
   return (
     <div
@@ -93,7 +96,7 @@ export function Artwork({
         alt={alt}
         loading={priority ? "eager" : "lazy"}
         decoding="async"
-        className="h-full w-full object-cover"
+        className={`h-full w-full ${fit === "contain" ? "object-contain" : "object-cover"}`}
       />
     </div>
   );

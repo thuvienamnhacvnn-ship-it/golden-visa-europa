@@ -9,7 +9,14 @@ import { locales, localePath, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
 
 export type HeaderStrings = {
-  nav: { whatIs: string; services: string; about: string; whyUs: string; offices: string };
+  nav: {
+    whatIs: string;
+    services: string;
+    about: string;
+    whyUs: string;
+    properties: string;
+    offices: string;
+  };
   bookConsultation: string;
   language: string;
   menu: string;
@@ -44,6 +51,7 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
     { href: localePath(locale, "services"), label: t.nav.services },
     { href: localePath(locale, "about"), label: t.nav.about },
     { href: localePath(locale, "why-us"), label: t.nav.whyUs },
+    { href: localePath(locale, "properties"), label: t.nav.properties },
     { href: localePath(locale, "offices"), label: t.nav.offices },
   ];
 
@@ -65,7 +73,7 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
     >
       <div className="mx-auto flex h-16 w-full max-w-[1200px] items-center justify-center px-5 sm:px-8 lg:h-20 lg:justify-between lg:px-12">
         <Link href={localePath(locale)} aria-label={site.name}>
-          <Logo tone={scrolled ? "dark" : "light"} />
+          <Logo tone={scrolled ? "auto" : "light"} />
         </Link>
 
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Primary">

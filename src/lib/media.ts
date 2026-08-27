@@ -254,7 +254,7 @@ export const slots = {
     h: 1500,
     ratio: "4 / 5",
     where: "Mục người sáng lập ở trang chủ và trang /about",
-    title: "Chân dung ông Nikolaos T. Kakkos",
+    title: "Chân dung ông Nikolaos T. Kakkos, đối tác tại Athens",
     prompt:
       "ẢNH THẬT. Chân dung doanh nhân, nền tối trung tính hoặc văn phòng, ánh sáng dịu, nhìn thẳng ống kính, trang phục công sở.",
     group: "people",

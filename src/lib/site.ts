@@ -3,9 +3,9 @@
  * chưa cung cấp — không được bịa, phải xin trước khi phát hành.
  */
 export const site = {
-  name: "NIBELC GROUP – N. KAKKOS ESTATE",
-  legalName: "NIBELC GROUP – N. KAKKOS ESTATE",
-  shortName: "NIBELC · N. KAKKOS ESTATE",
+  name: "NIBELC GROUP",
+  legalName: "NIBELC GROUP",
+  shortName: "NIBELC",
   // Tên miền đang chạy trên Vercel. Đổi sang tên miền thật của khách khi có —
   // giá trị này chi phối canonical, hreflang, sitemap và JSON-LD.
   url: "https://golden-visa-europa.vercel.app",
@@ -13,13 +13,13 @@ export const site = {
 
   // Địa chỉ trụ sở — lấy từ chữ ký email của khách, đã xác nhận.
   headOffice: {
-    street: "1 Pigasou Street",
-    city: "Kifisia",
-    postalCode: "14564",
+    street: "Filippou 28",
+    city: "Perea",
+    postalCode: "57019",
     country: "Greece",
     countryCode: "GR",
-    phone: "+30 697 300 8000",
-    phoneHref: "+306973008000",
+    phone: "+49 152 0696 8888",
+    phoneHref: "+4915206968888",
   },
 
   // TODO(khách hàng): email theo tên miền công ty.
@@ -36,7 +36,7 @@ export const site = {
   contacts: [
     {
       name: "Mr. Nikolaos T. Kakkos",
-      role: "N. Kakkos Estate · Athens",
+      role: "Đối tác tại Athens",
       phone: "+30 697 300 8000",
       href: "+306973008000",
       channels: ["Phone"],

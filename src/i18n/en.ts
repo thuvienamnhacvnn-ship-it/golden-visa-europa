@@ -13,6 +13,7 @@ export const en = {
     about: "About us",
     whyUs: "Why us",
     offices: "Offices",
+    properties: "Property",
     contact: "Contact",
   },
 
@@ -97,7 +98,7 @@ export const en = {
     founder: {
       eyebrow: "Leadership",
       title: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Founder, N. Kakkos Estate",
+      role: "Partner in Athens",
       quote:
         "We stand by your side and we work for you until your task is completed.",
       body: "A Greek entrepreneur working in Golden Visa acquisition and running a home management firm since 2014. He holds an M.B.A. from Adelphi University of New York and is certified in Financial Analysis by New York University.",
@@ -392,7 +393,7 @@ export const en = {
 
   about: {
     eyebrow: "About us",
-    title: "N. Kakkos Estate",
+    title: "NIBELC GROUP",
     lead: "A Greek real estate and residence-by-investment firm working with non-European investors since 2014.",
     intro: [
       "We work at the intersection of three things that usually sit in separate companies: the residence permit, the real estate, and everything that keeps the asset productive afterwards. Holding all three in one team is what lets us commit to timelines instead of forwarding your questions elsewhere.",
@@ -400,7 +401,7 @@ export const en = {
     ],
     founder: {
       name: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Founder",
+      role: "Partner, Athens",
       body: "Nikolaos Kakkos is a successful Greek entrepreneur, working in Golden Visa acquisition and owning a home management firm since 2014. He holds an M.B.A. degree from Adelphi University of New York and is certified in Financial Analysis by New York University.",
       credentials: [
         "M.B.A., Adelphi University, New York",
@@ -416,7 +417,7 @@ export const en = {
     legalBody:
       "A lawyer works on your file and is paid by us. Where a transaction requires it, a notary is engaged as well. You are told in advance who is acting for you and in what capacity.",
     portraitPending:
-      "Placeholder crest. A photograph of Mr. Kakkos will replace it once the client supplies one.",
+      "Placeholder crest. A photograph of Mr. Nikolaos will replace it once the client supplies one.",
     placeholderTeam:
       "Team photographs and full CVs to be supplied by the client before launch.",
   },
@@ -464,7 +465,7 @@ export const en = {
       {
         city: "Athens",
         country: "Greece",
-        address: "1 Pigasou Street, Kifisia 14564, Greece",
+        address: "Filippou 28, Perea 57019, Greece",
         phone: "+30 697 300 8000",
         role: "Head office · Golden Visa, legal and financial team",
         confirmed: true,
@@ -552,7 +553,7 @@ export const en = {
       sections: [
         {
           title: "Who we are",
-          body: "N. Kakkos Estate, 1 Pigasou Street, Kifisia 14564, Greece, is the controller of the personal data collected through this website.",
+          body: "NIBELC GROUP, Filippou 28, Perea 57019, Greece, is the controller of the personal data collected through this website.",
         },
         {
           title: "What we collect",
@@ -582,7 +583,7 @@ export const en = {
       sections: [
         {
           title: "Purpose of this site",
-          body: "This website presents the services of N. Kakkos Estate. It is an introduction to those services, not an offer, a quotation, or a contract.",
+          body: "This website presents the services of NIBELC GROUP. It is an introduction to those services, not an offer, a quotation, or a contract.",
         },
         {
           title: "Accuracy",
@@ -590,7 +591,7 @@ export const en = {
         },
         {
           title: "Intellectual property",
-          body: "The text, images and design of this site belong to N. Kakkos Estate or are used with permission. They may not be reproduced without written consent.",
+          body: "The text, images and design of this site belong to NIBELC GROUP or are used with permission. They may not be reproduced without written consent.",
         },
         {
           title: "External links",
@@ -648,22 +649,61 @@ export const en = {
 
   properties: {
     eyebrow: "Property",
-    title: "A few of the apartments we hold in Athens",
-    lead: "Four fully renovated apartments in Peristeri, Athens. We send the complete file with legal documentation before you decide anything.",
+    title: "Four apartments in Peristeri, Athens",
+    lead: "Four fully renovated apartments. Below is the complete file the developer supplied: overview, purchase price, indicative rent, floor plans and interior renders.",
+    linkLabel: "View the four apartment files",
+    backLabel: "Back to home",
     priceLabel: "Purchase price",
     rentLabel: "Long-term rent",
     bedsLabel: "Bedrooms",
     bathsLabel: "Bathrooms",
     sizeLabel: "Floor area",
     sizePending: "Being confirmed",
+    typeLabel: "Type",
+    typeValue: "Apartment",
+    capacityLabel: "Designed capacity",
+    introTitle: "Overview",
+    intro: "The apartments sit in Peristeri, Athens. They are designed for real living — orderly, easy to use — and suit a small family, a single occupant or long-term residence. The interiors are modern and neutral, easy to make your own.",
+    planTitle: "Floor plan",
+    layoutTitle: "Layout",
+    galleryTitle: "Interior renders",
+    galleryNote: "Renders supplied by the developer and shared across all four apartments. The floor plans are specific to each one.",
     cta: "Request the full file",
-    note: "Prices and availability as at 26 August 2026 and subject to change. Whether a property qualifies for the Golden Visa depends on its area and type — we confirm this in writing for each apartment before you commit.",
-    commitTitle: "Included with every apartment",
-    commitments: [
-      "Renovated to new condition throughout",
-      "Leaseback at a fair rent once you take possession",
-      "Sustained operation and upkeep of the apartment",
+    note: "Prices and availability as at 26 August 2026 and subject to change. Whether an investment qualifies for the Golden Visa depends on the area and the type of property — we confirm this in writing for each apartment before you commit.",
+    eligibilityTitle: "What to know before you consider these",
+    eligibility: [
+      "Peristeri is in Attica. Since 2024 Attica carries the 800,000 € threshold for the property route. At 250,000–270,000 € these apartments do NOT automatically qualify for the Golden Visa; they qualify only under the commercial-to-residential conversion route or the listed-building restoration route.",
+      "The developer's file states the floor area as “XXX m²” — no real figure yet. The law requires a minimum of 120 m² at the 400,000 € and 800,000 € thresholds, so this figure is essential before any decision.",
+      "Property used for a Golden Visa may not be let short-term in the Airbnb sense: breaching this costs the permit and carries a fine of up to 50,000 €. These apartments should be let long-term only.",
     ],
+    commitTitle: "Committed with every apartment",
+    commitments: [
+      "Apartment renovated 100% new",
+      "Leased back at a good rate once the owner takes possession",
+      "Sustainable operation and upkeep of the apartment",
+    ],
+    items: {
+      "apt-1": {
+        name: "Apartment 1",
+        capacity: "around 10 people",
+        layout: "The plan follows a shared-occupancy model, with a central sleeping area using bunk beds on both sides to make the most of the floor area. The communal living space and storage sit at the front, connecting directly to the open kitchen and long dining table. The washrooms and bathroom are grouped to one side, separated, so several people can use them at once. The whole plan is open and clearly zoned.",
+      },
+      "apt-2": {
+        name: "Apartment 2",
+        capacity: "up to 8 people",
+        layout: "The apartment follows a group-occupancy model. The sleeping area is centralised with bunk beds and includes two en-suite bathrooms. An open kitchen combined with the communal living space keeps the flat airy and makes cooking and socialising easy. A passage connects directly to the building's common stairwell, which helps with movement and management.",
+      },
+      "apt-3": {
+        name: "Apartment 3",
+        capacity: "up to 8 people",
+        layout: "A combined unit (Apartments 03 & 04) merged into one large apartment, suited to a larger family. It holds two separate sleeping areas, two communal living areas, two open kitchens, full storage, and several bathrooms and washrooms laid out to keep each zone private. There are two entrances (main and secondary), and the plan is flexible and easy to adapt.",
+      },
+      "apt-4": {
+        name: "Apartment 4",
+        capacity: "up to 10 people",
+        layout: "The apartment follows a group-occupancy model. It holds a centralised sleeping area with bunk beds, several bathrooms and separate washrooms, an open kitchen combined with a generous communal living space, and convenient storage. The plan is efficient and works well for several people at once.",
+      },
+    },
   },
 
   assistant: {
