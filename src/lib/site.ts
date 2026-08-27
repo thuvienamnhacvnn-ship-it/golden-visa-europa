@@ -3,8 +3,9 @@
  * chưa cung cấp — không được bịa, phải xin trước khi phát hành.
  */
 export const site = {
-  name: "N. Kakkos Estate",
-  legalName: "N. Kakkos Estate",
+  name: "NIBELC GROUP – N. KAKKOS ESTATE",
+  legalName: "NIBELC GROUP – N. KAKKOS ESTATE",
+  shortName: "NIBELC · N. KAKKOS ESTATE",
   // Tên miền đang chạy trên Vercel. Đổi sang tên miền thật của khách khi có —
   // giá trị này chi phối canonical, hreflang, sitemap và JSON-LD.
   url: "https://golden-visa-europa.vercel.app",
@@ -23,12 +24,48 @@ export const site = {
 
   // TODO(khách hàng): email theo tên miền công ty.
   // KHÔNG dùng email cá nhân trong tài liệu gốc.
-  email: "info@kakkosestate.com",
+  email: "info@nibelc.com.vn",
   emailConfirmed: false,
+  partnerSite: "www.nibelc.com.vn",
+
+  /**
+   * Ba đầu mối liên hệ, lấy từ tài liệu khách gửi (E:Worksitwpdf).
+   * Nikolaos: chữ ký email gốc. Tony và Stella: trang LIÊN HỆ của hai
+   * tài liệu tiếng Việt.
+   */
+  contacts: [
+    {
+      name: "Mr. Nikolaos T. Kakkos",
+      role: "N. Kakkos Estate · Athens",
+      phone: "+30 697 300 8000",
+      href: "+306973008000",
+      channels: ["Phone"],
+    },
+    {
+      name: "Mr. Phan Tony",
+      role: "NIBELC Group",
+      phone: "+49 152 0696 8888",
+      href: "+4915206968888",
+      channels: ["WhatsApp", "Viber", "Zalo"],
+    },
+    {
+      name: "Ms. Stella Nguyen",
+      role: "NIBELC Group",
+      phone: "+36 303 109 009",
+      href: "+36303109009",
+      channels: ["WhatsApp", "Viber", "Zalo"],
+    },
+  ] as {
+    name: string;
+    role: string;
+    phone: string;
+    href: string;
+    channels: string[];
+  }[],
 
   // TODO(khách hàng): số WhatsApp/Zalo chính thức cho từng thị trường.
-  whatsapp: "+306973008000",
-  whatsappConfirmed: false,
+  whatsapp: "+4915206968888",
+  whatsappConfirmed: true,
 
   founder: {
     name: "Nikolaos T. Kakkos",

@@ -473,10 +473,10 @@ export const vi: Dictionary = {
       {
         city: "Thessaloniki",
         country: "Hy Lạp",
-        address: "",
+        address: "Filippou 28, Perea, 57019, Hy Lạp",
         phone: "",
-        role: "Bắc Hy Lạp · nghiên cứu bất động sản và cải tạo",
-        confirmed: false,
+        role: "Văn phòng NIBELC · Bắc Hy Lạp",
+        confirmed: true,
       },
       {
         city: "Việt Nam",

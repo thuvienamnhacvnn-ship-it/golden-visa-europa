@@ -25,6 +25,10 @@ export function buildKnowledge(locale: Locale): string {
 
   const faq = d.whatIs.faq.items.map((f) => `Hỏi: ${f.q}\nĐáp: ${f.a}`).join("\n\n");
 
+  const contacts = site.contacts
+    .map((c) => `- ${c.name} (${c.role}): ${c.phone} — ${c.channels.join(", ")}`)
+    .join("\n");
+
   const offices = d.offices.items
     .map(
       (o) =>
@@ -55,6 +59,10 @@ ${rules}
 
 ## Dịch vụ
 ${services}
+
+## Đầu mối liên hệ
+${contacts}
+Website đối tác Việt Nam: ${site.partnerSite}
 
 ## Văn phòng
 ${offices}

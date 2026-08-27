@@ -472,10 +472,10 @@ export const tr: Dictionary = {
       {
         city: "Selanik",
         country: "Yunanistan",
-        address: "",
+        address: "Filippou 28, Perea, 57019, Yunanistan",
         phone: "",
-        role: "Kuzey Yunanistan · gayrimenkul araştırması ve tadilat",
-        confirmed: false,
+        role: "NIBELC ofisi · Kuzey Yunanistan",
+        confirmed: true,
       },
       {
         city: "Vietnam",

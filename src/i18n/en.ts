@@ -472,10 +472,10 @@ export const en = {
       {
         city: "Thessaloniki",
         country: "Greece",
-        address: "",
+        address: "Filippou 28, Perea, 57019, Greece",
         phone: "",
-        role: "Northern Greece · property research and renovation",
-        confirmed: false,
+        role: "NIBELC office · Northern Greece",
+        confirmed: true,
       },
       {
         city: "Vietnam",

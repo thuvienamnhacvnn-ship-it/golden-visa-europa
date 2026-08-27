@@ -71,12 +71,24 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                   {site.headOffice.country}
                 </address>
 
-                <a
-                  href={`tel:${site.headOffice.phoneHref}`}
-                  className="mt-5 inline-block text-[1.0625rem] text-gold-600 transition-colors hover:text-ink"
-                >
-                  {site.headOffice.phone}
-                </a>
+                {/* Ba đầu mối: Nikolaos (Athens), Tony và Stella (NIBELC) */}
+                <ul className="mt-6 flex flex-col divide-y divide-ink/10 border-t border-ink/10">
+                  {site.contacts.map((c) => (
+                    <li key={c.href} className="py-4">
+                      <p className="text-[0.9375rem] font-medium text-ink">{c.name}</p>
+                      <p className="mt-0.5 text-xs text-ink/55">{c.role}</p>
+                      <a
+                        href={`tel:${c.href}`}
+                        className="mt-2 inline-block text-[1.0625rem] font-medium text-gold-600 transition-colors hover:text-ink"
+                      >
+                        {c.phone}
+                      </a>
+                      <p className="mt-1 text-[0.6875rem] uppercase tracking-[0.14em] text-ink/40">
+                        {c.channels.join(" · ")}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
 
                 <div className="mt-8 border-t border-ink/10 pt-6">
                   <p className="text-[0.875rem] leading-7 text-ink/70">{t.hours}</p>
