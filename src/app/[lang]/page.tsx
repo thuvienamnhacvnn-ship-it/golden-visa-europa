@@ -66,7 +66,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               {/* Dòng vàng lớn — nổi khối, rê chuột thì loé ánh sao */}
               <GoldTitle
                 text={t.hero.titleAccent}
-                className="text-[3.6rem] tracking-[0.01em] sm:text-[5.4rem] lg:text-[6.65rem]"
+                className="tracking-[0.01em]"
               />
               <span className="mt-3 block text-[1.35rem] font-normal tracking-[0.04em] text-on-deep/85 sm:text-[1.8rem] lg:text-[2.05rem]">
                 <Words text={t.hero.title} delay={200} />

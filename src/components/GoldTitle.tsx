@@ -17,6 +17,19 @@ function Star({ size }: { size: number }) {
   );
 }
 
+/**
+ * Cỡ chữ tính theo ĐỘ DÀI chữ, không đặt cứng.
+ * "HY LẠP" 5 ký tự và "YUNANİSTAN" 10 ký tự mà dùng chung một cỡ thì
+ * bản tiếng Thổ tràn khỏi cột. Chữ sans đậm rộng khoảng 0.62em mỗi ký tự.
+ */
+function sizeFor(text: string) {
+  const ch = text.replace(/s/g, "").length;
+  const max = ch <= 6 ? 6.65 : ch <= 8 ? 5.5 : ch <= 10 ? 4.6 : 4;
+  const vw = (52 / Math.max(ch, 1)).toFixed(2);
+  const min = (max * 0.55).toFixed(2);
+  return `clamp(${min}rem, ${vw}vw, ${max}rem)`;
+}
+
 export function GoldTitle({
   text,
   className = "",
@@ -34,7 +47,11 @@ export function GoldTitle({
   });
 
   return (
-    <span className={`gold-title ${className}`} tabIndex={0}>
+    <span
+      className={`gold-title ${className}`}
+      style={{ fontSize: sizeFor(text) }}
+      tabIndex={0}
+    >
       {/* Ảnh mẫu dùng SANS đậm chứ không phải serif — đó là lý do bản trước
           nhìn không giống. font-sans + 900 + chữ hoa cho khớp. */}
       <span className="gold-3d relative z-10 font-sans font-black uppercase tracking-[-0.02em]">
