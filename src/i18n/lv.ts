@@ -465,6 +465,7 @@ export const lv: Dictionary = {
     lead: "Četri biroji trijos kontinentos. Jūsu lietu kārto valodā un laika joslā, kas jums ir ērta.",
     items: [
       {
+        slug: "athens",
         city: "Atēnas",
         country: "Grieķija",
         address: "Filippou 28, Perea 57019, Grieķija",
@@ -473,6 +474,7 @@ export const lv: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "thessaloniki",
         city: "Saloniki",
         country: "Grieķija",
         address: "Filippou 28, Perea, 57019, Grieķija",
@@ -481,6 +483,7 @@ export const lv: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "vietnam",
         city: "Vjetnama",
         country: "Vjetnama",
         address: "",
@@ -489,6 +492,7 @@ export const lv: Dictionary = {
         confirmed: false,
       },
       {
+        slug: "turkiye",
         city: "Turcija",
         country: "Turcija",
         address: "",

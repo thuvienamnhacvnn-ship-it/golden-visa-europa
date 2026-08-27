@@ -465,6 +465,7 @@ export const el: Dictionary = {
     lead: "Τέσσερα γραφεία σε τρεις ηπείρους. Ο φάκελός σας διεκπεραιώνεται στη γλώσσα και τη ζώνη ώρας που σας βολεύει.",
     items: [
       {
+        slug: "athens",
         city: "Αθήνα",
         country: "Ελλάδα",
         address: "Φιλίππου 28, Περαία 57019, Ελλάδα",
@@ -473,6 +474,7 @@ export const el: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "thessaloniki",
         city: "Θεσσαλονίκη",
         country: "Ελλάδα",
         address: "Φιλίππου 28, Περαία, 57019, Ελλάδα",
@@ -481,6 +483,7 @@ export const el: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "vietnam",
         city: "Βιετνάμ",
         country: "Βιετνάμ",
         address: "",
@@ -489,6 +492,7 @@ export const el: Dictionary = {
         confirmed: false,
       },
       {
+        slug: "turkiye",
         city: "Τουρκία",
         country: "Τουρκία",
         address: "",

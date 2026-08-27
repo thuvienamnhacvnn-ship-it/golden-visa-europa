@@ -464,6 +464,7 @@ export const vi: Dictionary = {
     lead: "Bốn văn phòng trên ba châu lục. Hồ sơ của quý vị được xử lý bằng ngôn ngữ và theo múi giờ thuận tiện cho quý vị.",
     items: [
       {
+        slug: "athens",
         city: "Athens",
         country: "Hy Lạp",
         address: "Filippou 28, Perea 57019, Hy Lạp",
@@ -472,6 +473,7 @@ export const vi: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "thessaloniki",
         city: "Thessaloniki",
         country: "Hy Lạp",
         address: "Filippou 28, Perea, 57019, Hy Lạp",
@@ -480,6 +482,7 @@ export const vi: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "vietnam",
         city: "Việt Nam",
         country: "Việt Nam",
         address: "",
@@ -488,6 +491,7 @@ export const vi: Dictionary = {
         confirmed: false,
       },
       {
+        slug: "turkiye",
         city: "Thổ Nhĩ Kỳ",
         country: "Thổ Nhĩ Kỳ",
         address: "",

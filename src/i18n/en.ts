@@ -463,6 +463,7 @@ export const en = {
     lead: "Four offices across three continents. Your file is handled in the language and time zone that suits you.",
     items: [
       {
+        slug: "athens" as const,
         city: "Athens",
         country: "Greece",
         address: "Filippou 28, Perea 57019, Greece",
@@ -471,6 +472,7 @@ export const en = {
         confirmed: true,
       },
       {
+        slug: "thessaloniki" as const,
         city: "Thessaloniki",
         country: "Greece",
         address: "Filippou 28, Perea, 57019, Greece",
@@ -479,6 +481,7 @@ export const en = {
         confirmed: true,
       },
       {
+        slug: "vietnam" as const,
         city: "Vietnam",
         country: "Vietnam",
         address: "",
@@ -487,6 +490,7 @@ export const en = {
         confirmed: false,
       },
       {
+        slug: "turkiye" as const,
         city: "Türkiye",
         country: "Türkiye",
         address: "",

@@ -463,6 +463,7 @@ export const tr: Dictionary = {
     lead: "Üç kıtada dört ofis. Dosyanız size uyan dilde ve saat diliminde yürütülür.",
     items: [
       {
+        slug: "athens",
         city: "Atina",
         country: "Yunanistan",
         address: "Filippou 28, Perea 57019, Yunanistan",
@@ -471,6 +472,7 @@ export const tr: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "thessaloniki",
         city: "Selanik",
         country: "Yunanistan",
         address: "Filippou 28, Perea, 57019, Yunanistan",
@@ -479,6 +481,7 @@ export const tr: Dictionary = {
         confirmed: true,
       },
       {
+        slug: "vietnam",
         city: "Vietnam",
         country: "Vietnam",
         address: "",
@@ -487,6 +490,7 @@ export const tr: Dictionary = {
         confirmed: false,
       },
       {
+        slug: "turkiye",
         city: "Türkiye",
         country: "Türkiye",
         address: "",

@@ -354,10 +354,10 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
           <ul className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {dict.offices.items.map((office, i) => (
-              <Reveal as="li" key={office.city} delay={i * 80}>
+              <Reveal as="li" key={office.slug} delay={i * 80}>
                 <div className="card card-hover card-sweep zoom-wrap flex h-full flex-col">
                   <Artwork
-                    src={cityArtSrc(office.city)}
+                    src={cityArtSrc(office.slug)}
                     alt={`${office.city}, ${office.country}`}
                     ratio="4 / 3"
                     className="!rounded-none"

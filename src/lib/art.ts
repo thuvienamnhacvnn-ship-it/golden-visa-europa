@@ -29,12 +29,18 @@ const servicePhoto: Record<ServiceSlug, string> = {
   "property-management": "dv-quan-ly-bds.jpg",
 };
 
-const cityPhoto: Record<string, string> = {
-  athens: "tp-athens.jpg", atina: "tp-athens.jpg",
-  thessaloniki: "tp-thessaloniki.jpg", selanik: "tp-thessaloniki.jpg",
-  vietnam: "tp-vietnam.jpg", "việt nam": "tp-vietnam.jpg",
-  turkiye: "tp-tho-nhi-ky.jpg", "türkiye": "tp-tho-nhi-ky.jpg",
-  "thổ nhĩ kỳ": "tp-tho-nhi-ky.jpg",
+/**
+ * Ảnh và tranh minh hoạ văn phòng tra bằng MÃ CỐ ĐỊNH, không bằng tên thành
+ * phố. Tên thành phố đổi theo ngôn ngữ ("Athens" / "Αθήνα" / "Atēnas") nên
+ * dùng làm khoá thì mọi ngôn ngữ ngoài tiếng Anh đều tra trượt.
+ */
+export type OfficeSlug = "athens" | "thessaloniki" | "vietnam" | "turkiye";
+
+const cityPhoto: Record<OfficeSlug, string> = {
+  athens: "tp-athens.jpg",
+  thessaloniki: "tp-thessaloniki.jpg",
+  vietnam: "tp-vietnam.jpg",
+  turkiye: "tp-tho-nhi-ky.jpg",
 };
 
 /**
@@ -51,26 +57,19 @@ const serviceArt: Record<ServiceSlug, string> = {
   "property-management": "/art/service-property-management.svg",
 };
 
-const cityArt: Record<string, string> = {
+const cityArt: Record<OfficeSlug, string> = {
   athens: "/art/office-athens.svg",
-  atina: "/art/office-athens.svg",
   thessaloniki: "/art/office-thessaloniki.svg",
-  selanik: "/art/office-thessaloniki.svg",
   vietnam: "/art/office-vietnam.svg",
-  "việt nam": "/art/office-vietnam.svg",
   turkiye: "/art/office-turkiye.svg",
-  "türkiye": "/art/office-turkiye.svg",
-  "thổ nhĩ kỳ": "/art/office-turkiye.svg",
 };
 
 export function serviceArtSrc(slug: ServiceSlug) {
   return real(servicePhoto[slug], serviceArt[slug]);
 }
 
-/** Tên thành phố khác nhau theo ngôn ngữ nên tra bằng bản đã chuẩn hoá. */
-export function cityArtSrc(city: string) {
-  const key = city.trim().toLowerCase();
-  return real(cityPhoto[key] ?? "", cityArt[key] ?? "/art/office-athens.svg");
+export function cityArtSrc(slug: OfficeSlug) {
+  return real(cityPhoto[slug], cityArt[slug]);
 }
 
 export const crestSrc = "/art/crest.svg";

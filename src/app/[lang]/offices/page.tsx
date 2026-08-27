@@ -47,10 +47,10 @@ export default async function OfficesPage({ params }: { params: Promise<{ lang: 
         <Container>
           <ul className="flex flex-col gap-16">
             {t.items.map((office, i) => (
-              <Reveal as="li" key={office.city} delay={(i % 2) * 80}>
+              <Reveal as="li" key={office.slug} delay={(i % 2) * 80}>
                 <div className="grid gap-10 md:grid-cols-[0.55fr_1fr] md:gap-14">
                   <Artwork
-                    src={cityArtSrc(office.city)}
+                    src={cityArtSrc(office.slug)}
                     alt={`${office.city}, ${office.country}`}
                     ratio="4 / 3"
                     className="w-full shadow-[0_24px_60px_-40px_rgba(7,27,48,0.5)]"
