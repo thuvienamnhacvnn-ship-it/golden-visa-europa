@@ -11,7 +11,6 @@ import { GoldTitle } from "@/components/GoldTitle";
 import { Sparks } from "@/components/Sparks";
 import { properties } from "@/lib/properties";
 import { Words } from "@/components/ui";
-import { Logo } from "@/components/Logo";
 import { Reveal } from "@/components/Reveal";
 import { getDictionary, isLocale, localePath, serviceSlugs, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
@@ -56,9 +55,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
 
         <Container className="relative">
           <div className="flex min-h-[100svh] max-w-2xl flex-col items-center justify-center pb-28 pt-32 text-center lg:items-start lg:pb-32 lg:pt-40 lg:text-left">
-            {/* Logo lặp lại giữa hero trên mobile — header chỉ còn một dải mỏng */}
-            <Logo tone="light" className="mb-7 lg:hidden" />
-
             <p className="gold-soft text-[0.85rem] font-semibold uppercase tracking-[0.32em] sm:text-[0.95rem]">
               {t.hero.eyebrow}
             </p>

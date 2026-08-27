@@ -420,44 +420,56 @@
    ══════════════════════════════════════════════════════════════ */
 
 .gold-3d {
-  /* Dải màu chốt sau khi dựng thử và đặt CẠNH ẢNH MẪU để so.
-     Ba lỗi đã sửa:
-       1. Mặt chữ quá tối — bản trước chỉ 145–205, mẫu thật sáng tới 245.
-       2. background-size 190% chỉ hiện MỘT LÁT dải màu nên càng bệt.
-       3. Lấy "điểm sáng nhất mỗi hàng" chỉ bắt được vệt phản quang,
-          làm mất hẳn phần hổ phách sẫm ở chân chữ. */
+  /* Dải màu vàng kim: SÁNG và BÃO HOÀ.
+     Bản trước lấy mẫu từ ảnh nên đỉnh chữ gần như trắng kem (#fffdf0) —
+     sáng thật nhưng mất sắc vàng, nhìn ra bạc ngả kem chứ không ra gold.
+     Bản này giữ độ sáng nhưng kéo bão hoà lên: chỗ sáng nhất vẫn là vàng
+     nhạt chứ không phải trắng, và thân chữ dùng vàng đậm thay vì vàng nhạt.
+     Hai vệt phản quang (28% và 46%) tạo cảm giác mặt kim loại cong. */
+  /* Các mốc bị NÉN vào khoảng 20%–80% chứ không trải đều 0–100%.
+     Lý do: hộp dòng của chữ cao hơn thân chữ. Đo trên trình duyệt với
+     "HY LẠP" cỡ 106px: nét chữ chỉ chiếm từ 19% tới 80% chiều cao hộp.
+     Trải đều 0–100% thì hai đầu sáng nhất và sẫm nhất rơi ra ngoài nét,
+     phần nhìn thấy chỉ còn khúc giữa nên chữ bệt một màu vàng lửng.
+     Nén lại thì cả dải nằm gọn trong thân chữ. Phần ngoài 20/80 vẫn giữ
+     màu đầu và cuối, nên dấu phụ phía trên ăn màu sáng và dấu nặng phía
+     dưới ăn màu sẫm — đúng như khối vàng thật. */
   background-image: linear-gradient(
     180deg,
-    #fffdf0 0%,
-    #fff6c4 10%,
-    #ffe995 22%,
-    #ffdc78 34%,
-    #fffbdc 45%,
-    #ffe58c 53%,
-    #f7c85c 65%,
-    #eeb544 77%,
-    #e5a836 89%,
-    #d99a2c 100%
+    #fff0a8 0%,
+    #fff0a8 20%,
+    #ffe368 24.8%,
+    #ffd22e 30.8%,
+    #ffc70f 36.2%,
+    #fff8cf 41%,
+    #ffe775 46.4%,
+    #ffd12b 52.4%,
+    #f9bb0d 59.6%,
+    #ffd943 66.8%,
+    #f5b711 74%,
+    #d9930a 80%,
+    #d9930a 100%
   );
   background-size: 100% 100%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 
-  text-shadow:
-    /* viền sẫm sát chữ cho nét gọn */
-    -1px 0 0 #96671a,
-    1px 0 0 #96671a,
-    0 -1px 0 #96671a,
-    /* cạnh vát tạo bề dày khối */
-    0 2px 0 #b8801f,
-    0 3px 0 #a5711a,
-    0 4px 0 #916115,
-    0 5px 0 #7d5210,
-    0 6px 0 #68420c,
-    0 7px 0 #543308,
-    0 9px 2px rgba(0, 0, 0, 0.5),
-    0 16px 28px rgba(0, 0, 0, 0.55);
+  /* Đổ khối bằng filter chứ KHÔNG phải text-shadow.
+     Thứ tự vẽ của trình duyệt là: nền → text-shadow → chữ. Mặt vàng ở đây
+     chính là NỀN được cắt theo hình chữ (background-clip: text), nên mọi
+     text-shadow đều nằm ĐÈ LÊN nó. Bản trước đổ khối bằng bảy lớp
+     text-shadow đặc lệch xuống 2–7px, tức là phủ kín gần hết mặt chữ —
+     đó là lý do chữ ra một màu nâu vàng bệt dù dải màu rất sáng.
+     filter: drop-shadow vẽ phía SAU phần tử nên giữ nguyên mặt vàng.
+     Xâu nhiều drop-shadow 1px chồng lên nhau để dựng bề dày khối. */
+  --extrude:
+    drop-shadow(0 1px 0 #c4881a) drop-shadow(0 1px 0 #b8801a)
+    drop-shadow(0 1px 0 #a87316) drop-shadow(0 1px 0 #966412)
+    drop-shadow(0 1px 0 #83530d) drop-shadow(0 1px 0 #6c4209)
+    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 12px 22px rgba(0, 0, 0, 0.5));
+  filter: var(--extrude);
 
   transition: filter 0.6s ease;
 }
@@ -468,7 +480,7 @@
 /* Rê chuột: vệt sáng chạy dọc qua mặt kim loại */
 .gold-title:hover .gold-3d,
 .gold-title:focus-visible .gold-3d {
-  filter: brightness(1.12) saturate(1.06);
+  filter: brightness(1.1) saturate(1.05) var(--extrude);
 }
 
 /* ── Ánh sao ──────────────────────────────────────────────── */
