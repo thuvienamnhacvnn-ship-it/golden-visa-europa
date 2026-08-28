@@ -147,6 +147,9 @@ export const site = {
    * cố ý không trỏ bừa vào trang của người khác.
    */
   social: [
+    // Khách gửi link chia sẻ facebook.com/share/18t23whsGn/ — theo chuyển hướng
+    // 302 thì nó về đúng địa chỉ này. Lưu địa chỉ gốc chứ không lưu link chia
+    // sẻ: link chia sẻ kèm tham số theo dõi và có thể hết hạn.
     { id: "facebook", label: "Facebook", url: "https://www.facebook.com/GoldenVisaEU" },
     { id: "instagram", label: "Instagram", url: "" },
     { id: "linkedin", label: "LinkedIn", url: "" },

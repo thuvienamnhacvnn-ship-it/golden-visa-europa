@@ -17,6 +17,9 @@ export function organizationJsonLd(locale: Locale, dict: Dictionary) {
       addressCountry: site.headOffice.countryCode,
     },
     telephone: site.headOffice.phone,
+    // Khai báo trang mạng xã hội chính chủ để công cụ tìm kiếm gắn đúng
+    // trang Facebook với doanh nghiệp. Chỉ lấy kênh đã có địa chỉ thật.
+    sameAs: site.social.filter((s) => s.url).map((s) => s.url),
     areaServed: ["GR", "VN", "TR"],
     availableLanguage: ["en", "tr", "vi"],
     knowsLanguage: ["en", "tr", "vi"],
