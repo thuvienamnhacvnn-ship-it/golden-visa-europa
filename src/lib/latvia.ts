@@ -33,3 +33,17 @@ export const latviaSources = [
     url: "https://www.pmlp.gov.lv/en/updated-information-amendments-immigration-law",
   },
 ] as const;
+
+/**
+ * Ảnh Latvia bóc từ chính tài liệu khách gửi, không dùng ảnh kho.
+ * Chú thích ảnh nằm ở từ điển để dịch được; ở đây chỉ giữ đường dẫn.
+ */
+export const latviaPhotos = {
+  flag: "/photos/latvia/riga-co-latvia.jpg",
+  sunset: "/photos/latvia/riga-hoang-hon.jpg",
+  roofs: "/photos/latvia/riga-mai-nha.jpg",
+  modern: "/photos/latvia/kien-truc-hien-dai.jpg",
+  skyline: "/photos/latvia/riga-toan-canh.jpg",
+  /** Ảnh ngang rộng, dùng làm nền banner đầu trang. */
+  panorama: "/photos/latvia/riga-toan-canh-rong.jpg",
+} as const;

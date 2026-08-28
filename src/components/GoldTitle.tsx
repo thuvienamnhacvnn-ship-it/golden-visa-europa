@@ -19,14 +19,20 @@ function Star({ size }: { size: number }) {
 
 /**
  * Cỡ chữ tính theo ĐỘ DÀI chữ, không đặt cứng.
- * "HY LẠP" 5 ký tự và "YUNANİSTAN" 10 ký tự mà dùng chung một cỡ thì
- * bản tiếng Thổ tràn khỏi cột. Chữ sans đậm rộng khoảng 0.62em mỗi ký tự.
+ * "HY LẠP" 5 ký tự và "YUNANİSTAN – LETONYA" 18 ký tự mà dùng chung một cỡ
+ * thì bản dài tràn khỏi cột. Chữ sans đậm rộng khoảng 0.62em mỗi ký tự.
  */
 function sizeFor(text: string) {
-  const ch = text.replace(/s/g, "").length;
-  const max = ch <= 6 ? 6.65 : ch <= 8 ? 5.5 : ch <= 10 ? 4.6 : 4;
+  // Phải là \s. Bản trước viết /s/g nên nó xoá chữ cái "s" chứ không xoá
+  // khoảng trắng — đếm sai độ dài với mọi tiêu đề có chữ s.
+  const ch = text.replace(/\s/g, "").length;
+  const max = ch <= 6 ? 6.65 : ch <= 8 ? 5.5 : ch <= 10 ? 4.6 : ch <= 14 ? 4.2 : 3.6;
+  // Cỡ nhỏ nhất phải vừa màn hình hẹp nhất: điện thoại 390px, trừ lề còn ~350px.
+  // Không tính theo max mà tính theo chỗ thực có, nếu không tiêu đề dài sẽ
+  // xuống dòng và banner thành bốn hàng thay vì ba.
+  const fitRem = 350 / (ch * 0.62) / 16;
+  const min = Math.min(max * 0.55, fitRem).toFixed(2);
   const vw = (52 / Math.max(ch, 1)).toFixed(2);
-  const min = (max * 0.55).toFixed(2);
   return `clamp(${min}rem, ${vw}vw, ${max}rem)`;
 }
 

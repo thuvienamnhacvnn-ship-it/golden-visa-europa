@@ -54,7 +54,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         />
 
         <Container className="relative">
-          <div className="flex min-h-[100svh] max-w-2xl flex-col items-center justify-center pb-28 pt-32 text-center lg:items-start lg:pb-32 lg:pt-40 lg:text-left">
+          <div className="flex min-h-[100svh] max-w-2xl flex-col items-center justify-center pb-24 pt-28 text-center lg:items-start lg:pb-32 lg:pt-40 lg:text-left">
             <p className="gold-soft text-[0.85rem] font-semibold uppercase tracking-[0.32em] sm:text-[0.95rem]">
               {t.hero.eyebrow}
             </p>
@@ -74,25 +74,30 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <span className="gold-divider__gem" />
             </div>
 
-            {/* Điện thoại: hai nút nằm ngang và tự co theo chữ, đặt thấp hơn
-                hẳn so với tiêu đề. flex-wrap để ngôn ngữ có nhãn dài (Hy Lạp,
-                Latvia) xuống dòng thay vì tràn ra ngoài màn hình. */}
-            <div className="mt-14 flex w-full flex-wrap items-center justify-center gap-3 sm:mt-7 sm:w-auto sm:gap-3.5 lg:justify-start">
-              <ButtonLink href={localePath(locale, "contact")} variant="light" size="sm">
-                {t.hero.ctaPrimary}
-              </ButtonLink>
-              <ButtonLink
-                href={localePath(locale, "what-is-golden-visa")}
-                variant="ghost"
-                size="sm"
-              >
-                {t.hero.ctaSecondary}
-              </ButtonLink>
-            </div>
+            {/* Điện thoại: mt-auto nuốt hết chỗ trống còn lại nên cụm nút và
+                dòng ghi chú tụt hẳn xuống đáy banner, nằm ngay trên thanh menu.
+                Từ breakpoint lg trở lên bỏ mt-auto để bố cục ngang giữ nguyên. */}
+            <div className="mt-auto w-full lg:mt-0">
+              {/* Hai nút nằm ngang và tự co theo chữ. flex-wrap để ngôn ngữ có
+                  nhãn dài (Anh, Hy Lạp, Latvia) xuống dòng thay vì tràn ra
+                  ngoài màn hình. */}
+              <div className="flex w-full flex-wrap items-center justify-center gap-3 pt-10 sm:w-auto sm:gap-3.5 lg:justify-start lg:pt-7">
+                <ButtonLink href={localePath(locale, "contact")} variant="light" size="sm">
+                  {t.hero.ctaPrimary}
+                </ButtonLink>
+                <ButtonLink
+                  href={localePath(locale, "what-is-golden-visa")}
+                  variant="ghost"
+                  size="sm"
+                >
+                  {t.hero.ctaSecondary}
+                </ButtonLink>
+              </div>
 
-            <p className="mt-7 text-[0.625rem] uppercase tracking-[0.22em] text-on-deep-2/45 sm:mt-9">
-              {t.hero.note}
-            </p>
+              <p className="mt-6 text-[0.625rem] uppercase tracking-[0.22em] text-on-deep-2/45 sm:mt-9">
+                {t.hero.note}
+              </p>
+            </div>
           </div>
         </Container>
       </section>

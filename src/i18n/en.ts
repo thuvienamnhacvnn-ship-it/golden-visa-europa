@@ -39,7 +39,7 @@ export const en = {
     hero: {
       eyebrow: "Golden Visa",
       title: "European residency",
-      titleAccent: "GREECE",
+      titleAccent: "GREECE – LATVIA",
       lead: "We acquire Golden Visas, open Greek bank accounts and manage high-end real estate for non-European investors and their families — from the first market study to the keys in your hand.",
       ctaPrimary: "Book a consultation",
       ctaSecondary: "What is a Golden Visa?",
@@ -690,6 +690,13 @@ export const en = {
     eyebrow: "Latvia",
     title: "Latvian residence through a business investment",
     lead: "The programme gives an investor and their family European residence through a direct investment in a Latvian company, with a route to permanent residence and citizenship if the conditions are met.",
+    photoAlt: [
+      "The House of the Blackheads square, Riga",
+      "Riga on the Daugava at sunset",
+      "Rooftops of the old town, Riga",
+      "Modern glass architecture in Riga",
+      "Riga skyline",
+    ],
     countryTitle: "The country",
     country: [
       "In northern Europe on the Baltic Sea — the gateway between the Nordic countries and central and eastern Europe.",

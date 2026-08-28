@@ -41,7 +41,7 @@ export const lv: Dictionary = {
     hero: {
       eyebrow: "Golden Visa",
       title: "Uzturēšanās Eiropā",
-      titleAccent: "GRIEĶIJA",
+      titleAccent: "GRIEĶIJA – LATVIJA",
       lead: "Mēs kārtojam Golden Visa iegūšanu, atveram Grieķijas bankas kontu un pārvaldām augstas klases nekustamo īpašumu ieguldītājiem no ārpus Eiropas un viņu ģimenēm — no pirmā tirgus pētījuma līdz atslēgām jūsu rokā.",
       ctaPrimary: "Pieteikt konsultāciju",
       ctaSecondary: "Kas ir Golden Visa?",
@@ -692,6 +692,13 @@ export const lv: Dictionary = {
     eyebrow: "Latvija",
     title: "Uzturēšanās Latvijā ar ieguldījumu uzņēmumā",
     lead: "Programma ieguldītājam un viņa ģimenei dod uzturēšanās tiesības Eiropā, tieši ieguldot Latvijas uzņēmumā, ar ceļu uz pastāvīgo uzturēšanos un pilsonību, ja nosacījumi ir izpildīti.",
+    photoAlt: [
+      "Melngalvju nama laukums, Rīga",
+      "Rīga pie Daugavas saulrietā",
+      "Vecrīgas jumti",
+      "Mūsdienīga stikla arhitektūra Rīgā",
+      "Rīgas panorāma",
+    ],
     countryTitle: "Valsts",
     country: [
       "In northern Europe on the Baltic Sea — the gateway between the Nordic countries and central and eastern Europe.",

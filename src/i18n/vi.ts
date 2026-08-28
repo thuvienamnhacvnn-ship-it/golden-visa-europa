@@ -40,7 +40,7 @@ export const vi: Dictionary = {
     hero: {
       eyebrow: "Golden Visa",
       title: "Định cư châu Âu",
-      titleAccent: "HY LẠP",
+      titleAccent: "HY LẠP – LATVIA",
       lead: "Chúng tôi làm thẻ vàng, mở tài khoản ngân hàng Hy Lạp và quản lý bất động sản cao cấp cho nhà đầu tư ngoài châu Âu cùng gia đình — từ bản nghiên cứu thị trường đầu tiên đến lúc chìa khoá nằm trong tay quý vị.",
       ctaPrimary: "Đặt lịch tư vấn",
       ctaSecondary: "Thẻ vàng là gì?",
@@ -691,6 +691,13 @@ export const vi: Dictionary = {
     eyebrow: "Latvia",
     title: "Định cư Latvia qua đầu tư doanh nghiệp",
     lead: "Chương trình cho phép nhà đầu tư và gia đình có quyền cư trú châu Âu thông qua đầu tư trực tiếp vào doanh nghiệp tại Latvia, kèm lộ trình lên thường trú và quốc tịch nếu đáp ứng điều kiện.",
+    photoAlt: [
+      "Quảng trường Nhà Hắc Đầu ở Riga",
+      "Riga bên sông Daugava lúc hoàng hôn",
+      "Mái nhà phố cổ Riga",
+      "Kiến trúc kính hiện đại tại Riga",
+      "Toàn cảnh Riga",
+    ],
     countryTitle: "Đất nước Latvia",
     country: [
       "Nằm ở Bắc Âu, tiếp giáp biển Baltic — cửa ngõ nối các nước Bắc Âu với Đông và Trung Âu.",

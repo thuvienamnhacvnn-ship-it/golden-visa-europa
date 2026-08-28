@@ -40,7 +40,7 @@ export const tr: Dictionary = {
     hero: {
       eyebrow: "Golden Visa",
       title: "Avrupa'da oturum",
-      titleAccent: "YUNANİSTAN",
+      titleAccent: "YUNANİSTAN – LETONYA",
       lead: "Avrupa dışından gelen yatırımcılar ve aileleri için Golden Visa alıyor, Yunanistan'da banka hesabı açıyor ve üst segment gayrimenkulleri yönetiyoruz — ilk piyasa araştırmasından anahtarın elinize geçtiği güne kadar.",
       ctaPrimary: "Danışmanlık randevusu alın",
       ctaSecondary: "Golden Visa nedir?",
@@ -690,6 +690,13 @@ export const tr: Dictionary = {
     eyebrow: "Letonya",
     title: "Şirket yatırımıyla Letonya'da oturum",
     lead: "Program, yatırımcıya ve ailesine bir Letonya şirketine doğrudan yatırım yoluyla Avrupa'da oturum hakkı verir; koşullar sağlanırsa daimi oturuma ve vatandaşlığa giden bir yol da açar.",
+    photoAlt: [
+      "Riga'da Kara Kafalar Evi meydanı",
+      "Gün batımında Daugava kıyısında Riga",
+      "Riga eski şehir çatıları",
+      "Riga'da modern cam mimari",
+      "Riga silüeti",
+    ],
     countryTitle: "Ülke",
     country: [
       "In northern Europe on the Baltic Sea — the gateway between the Nordic countries and central and eastern Europe.",
