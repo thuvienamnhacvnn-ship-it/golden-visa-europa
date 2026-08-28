@@ -100,7 +100,7 @@ export const lv: Dictionary = {
     founder: {
       eyebrow: "Vadība",
       title: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Partneris Atēnās",
+      role: "Dibinātājs · N. Kakkos Estate",
       quote:
         "Mēs esam jums līdzās un strādājam jūsu labā, līdz uzdevums ir izpildīts.",
       body: "Grieķu uzņēmējs, kas kopš 2014. gada darbojas Golden Visa iegūšanā un vada mājokļu pārvaldības uzņēmumu. Viņam ir M.B.A. grāds no Ņujorkas Adelphi universitātes un finanšu analīzes sertifikāts no Ņujorkas universitātes.",
@@ -403,7 +403,7 @@ export const lv: Dictionary = {
     ],
     founder: {
       name: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Partneris, Atēnas",
+      role: "Dibinātājs, N. Kakkos Estate",
       body: "Nikolaos Kakkos ir veiksmīgs grieķu uzņēmējs, kas kopš 2014. gada darbojas Golden Visa iegūšanā un ir mājokļu pārvaldības uzņēmuma īpašnieks. Viņam ir M.B.A. grāds no Ņujorkas Adelphi universitātes un finanšu analīzes sertifikāts no Ņujorkas universitātes.",
       credentials: [
         "M.B.A., Adelphi universitāte, Ņujorka",

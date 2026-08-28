@@ -98,7 +98,7 @@ export const site = {
   contacts: [
     {
       name: "Mr. Nikolaos T. Kakkos",
-      role: "N. Kakkos Estate · Athens",
+      role: "Nhà sáng lập · N. Kakkos Estate, Athens",
       phone: "+30 697 300 8000",
       href: "+306973008000",
       channels: ["Phone"],

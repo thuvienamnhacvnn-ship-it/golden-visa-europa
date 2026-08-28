@@ -98,7 +98,7 @@ export const en = {
     founder: {
       eyebrow: "Leadership",
       title: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Partner in Athens",
+      role: "Founder · N. Kakkos Estate",
       quote:
         "We stand by your side and we work for you until your task is completed.",
       body: "A Greek entrepreneur working in Golden Visa acquisition and running a home management firm since 2014. He holds an M.B.A. from Adelphi University of New York and is certified in Financial Analysis by New York University.",
@@ -401,7 +401,7 @@ export const en = {
     ],
     founder: {
       name: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Partner, Athens",
+      role: "Founder, N. Kakkos Estate",
       body: "Nikolaos Kakkos is a successful Greek entrepreneur, working in Golden Visa acquisition and owning a home management firm since 2014. He holds an M.B.A. degree from Adelphi University of New York and is certified in Financial Analysis by New York University.",
       credentials: [
         "M.B.A., Adelphi University, New York",

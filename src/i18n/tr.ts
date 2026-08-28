@@ -99,7 +99,7 @@ export const tr: Dictionary = {
     founder: {
       eyebrow: "Yönetim",
       title: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Atina'daki ortak",
+      role: "Kurucu · N. Kakkos Estate",
       quote: "Yanınızda duruyor ve işiniz tamamlanana kadar sizin için çalışıyoruz.",
       body: "2014'ten bu yana Golden Visa alanında çalışan ve bir ev yönetimi şirketinin sahibi olan Yunan girişimci. New York Adelphi Üniversitesi'nden M.B.A. derecesine ve New York Üniversitesi'nden Finansal Analiz sertifikasına sahiptir.",
       cta: "Ekiple tanışın",
@@ -401,7 +401,7 @@ export const tr: Dictionary = {
     ],
     founder: {
       name: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Ortak, Atina",
+      role: "Kurucu, N. Kakkos Estate",
       body: "Nikolaos Kakkos, 2014'ten bu yana Golden Visa alanında çalışan ve bir ev yönetimi şirketinin sahibi olan başarılı bir Yunan girişimcidir. New York Adelphi Üniversitesi'nden M.B.A. derecesine sahiptir ve New York Üniversitesi tarafından Finansal Analiz alanında sertifikalandırılmıştır.",
       credentials: [
         "M.B.A., Adelphi Üniversitesi, New York",

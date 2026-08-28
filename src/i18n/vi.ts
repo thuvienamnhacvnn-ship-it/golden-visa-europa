@@ -99,7 +99,7 @@ export const vi: Dictionary = {
     founder: {
       eyebrow: "Người dẫn dắt",
       title: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Đối tác tại Athens",
+      role: "Nhà sáng lập · N. Kakkos Estate",
       quote:
         "Chúng tôi đứng cạnh quý vị và làm việc cho quý vị cho đến khi công việc hoàn tất.",
       body: "Doanh nhân Hy Lạp, làm dịch vụ thẻ vàng và sở hữu một công ty quản lý nhà ở từ năm 2014. Ông có bằng M.B.A. của Đại học Adelphi (New York) và chứng chỉ Phân tích Tài chính do Đại học New York cấp.",
@@ -402,7 +402,7 @@ export const vi: Dictionary = {
     ],
     founder: {
       name: "Nikolaos T. Kakkos, M.B.A., C.F.A.",
-      role: "Đối tác tại Athens",
+      role: "Nhà sáng lập · N. Kakkos Estate",
       body: "Nikolaos Kakkos là một doanh nhân Hy Lạp thành đạt, làm dịch vụ thẻ vàng và sở hữu một công ty quản lý nhà ở từ năm 2014. Ông có bằng M.B.A. của Đại học Adelphi (New York) và chứng chỉ Phân tích Tài chính do Đại học New York cấp.",
       credentials: [
         "M.B.A., Đại học Adelphi, New York",
