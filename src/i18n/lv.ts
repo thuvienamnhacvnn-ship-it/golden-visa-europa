@@ -395,7 +395,7 @@ export const lv: Dictionary = {
 
   about: {
     eyebrow: "Par mums",
-    title: "NIBELC GROUP",
+    title: "Par NIBELC Group",
     lead: "Grieķijas nekustamā īpašuma un uzturēšanās-caur-ieguldījumu uzņēmums, kas kopš 2014. gada strādā ar ieguldītājiem no ārpus Eiropas.",
     intro: [
       "Mēs strādājam krustpunktā trim lietām, kas parasti atrodas atsevišķos uzņēmumos: uzturēšanās atļauja, nekustamais īpašums un viss, kas pēc tam uztur īpašumu ienesīgu. Tieši tas, ka visas trīs turam vienā komandā, ļauj mums apņemties par termiņiem, nevis pārsūtīt jūsu jautājumus citur.",
@@ -412,16 +412,43 @@ export const lv: Dictionary = {
         "Mājokļu pārvaldības uzņēmuma dibinātājs",
       ],
     },
+    /** Ba người khách xác nhận. Bằng cấp giữ nguyên văn khách gửi. */
+    team: [
+      {
+        name: "Nikolaos T. Kakkos",
+        honorific: "M.B.A., C.F.A.",
+        role: "Dibinātājs · N. Kakkos Estate, Atēnas",
+        credentials: [
+          "M.B.A., Adelphi University, New York",
+          "Certified in Financial Analysis, New York University",
+        ],
+      },
+      {
+        name: "Tony Phan",
+        honorific: "LL.M., M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Tiesību zinātņu maģistrs",
+          "Nekustamā īpašuma investīciju maģistrs (Londona, Lielbritānija)",
+        ],
+      },
+      {
+        name: "Stella Nguyen",
+        honorific: "M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Ekonomikas maģistrs (Bekingema, Lielbritānija)",
+        ],
+      },
+    ],
     teamTitle: "Komanda",
-    teamLead:
-      "Juridiskie, finanšu, pētniecības un renovācijas speciālisti strādā pie vienas lietas.",
+    teamLead: "Juridiskie, finanšu, pētniecības un renovācijas speciālisti strādā pie vienas lietas. Zemāk ir trīs cilvēki, kas vada darbu.",
     legalTitle: "Juridiskais un notariālais atbalsts",
     legalBody:
       "Ar jūsu lietu strādā jurists, un viņa darbu apmaksājam mēs. Ja darījums to prasa, tiek piesaistīts arī notārs. Jums iepriekš pasaka, kurš rīkojas jūsu vārdā un kādā statusā.",
     portraitPending:
       "Pagaidu ģerbonis. To aizstās ar Nikolaosa kunga fotogrāfiju, tiklīdz klients to atsūtīs.",
-    placeholderTeam:
-      "Komandas fotogrāfijas un pilnus CV klients iesniegs pirms publiskošanas.",
+    placeholderTeam: "Komandas fotogrāfijas iesniegs klients. Vārdi un kvalifikācijas ir apstiprinātas.",
   },
 
   whyUs: {
@@ -468,7 +495,7 @@ export const lv: Dictionary = {
         slug: "athens",
         city: "Atēnas",
         country: "Grieķija",
-        address: "Filippou 28, Perea 57019, Grieķija",
+        address: "1 Pigasou Street, Kifisia 14564, Grieķija",
         phone: "+30 697 300 8000",
         role: "Galvenais birojs · Golden Visa, juridiskā un finanšu komanda",
         confirmed: true,
@@ -477,8 +504,8 @@ export const lv: Dictionary = {
         slug: "thessaloniki",
         city: "Saloniki",
         country: "Grieķija",
-        address: "Filippou 28, Perea, 57019, Grieķija",
-        phone: "",
+        address: "Filippou 28, Perea 57019, Grieķija",
+        phone: "+49 152 0696 8888",
         role: "NIBELC birojs · Ziemeļgrieķija",
         confirmed: true,
       },
@@ -547,6 +574,7 @@ export const lv: Dictionary = {
     },
     directTitle: "Tieša saziņa",
     headOffice: "Galvenais birojs",
+    directions: "Norādes",
     hours: "No pirmdienas līdz piektdienai, 09:00 – 18:00 (EET)",
     responseNote: "Atbildam angļu, vjetnamiešu, grieķu, latviešu un turku valodā.",
   },
@@ -559,7 +587,7 @@ export const lv: Dictionary = {
       sections: [
         {
           title: "Kas mēs esam",
-          body: "NIBELC GROUP, Filippou 28, Perea 57019, Grieķija, ir šajā tīmekļa vietnē savākto personas datu pārzinis.",
+          body: "NIBELC GROUP – N. KAKKOS ESTATE, Filippou 28, Perea 57019, Grieķija, ir šajā tīmekļa vietnē savākto personas datu pārzinis.",
         },
         {
           title: "Ko mēs vācam",
@@ -589,7 +617,7 @@ export const lv: Dictionary = {
       sections: [
         {
           title: "Vietnes mērķis",
-          body: "Šī tīmekļa vietne iepazīstina ar NIBELC GROUP pakalpojumiem. Tā ir ievads šajos pakalpojumos, nevis piedāvājums, cenu piedāvājums vai līgums.",
+          body: "Šī tīmekļa vietne iepazīstina ar NIBELC GROUP – N. KAKKOS ESTATE pakalpojumiem. Tā ir ievads šajos pakalpojumos, nevis piedāvājums, cenu piedāvājums vai līgums.",
         },
         {
           title: "Precizitāte",
@@ -597,7 +625,7 @@ export const lv: Dictionary = {
         },
         {
           title: "Intelektuālais īpašums",
-          body: "Šīs vietnes teksts, attēli un dizains pieder NIBELC GROUP vai tiek izmantoti ar atļauju. Tos nedrīkst pavairot bez rakstiskas piekrišanas.",
+          body: "Šīs vietnes teksts, attēli un dizains pieder NIBELC GROUP – N. KAKKOS ESTATE vai tiek izmantoti ar atļauju. Tos nedrīkst pavairot bez rakstiskas piekrišanas.",
         },
         {
           title: "Ārējās saites",

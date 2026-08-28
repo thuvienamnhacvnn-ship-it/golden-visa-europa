@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Logo } from "./Logo";
 import { Social } from "./Social";
+import { OfficeCard } from "./OfficeCard";
 import { localePath, serviceSlugs, type Dictionary, type Locale } from "@/i18n";
 import { site } from "@/lib/site";
 
@@ -71,21 +72,17 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           ))}
         </div>
 
-        {/* Dải liên hệ nằm ngang — không tốn thêm một cột, footer gọn lại */}
-        <div className="mt-12 flex flex-col gap-4 border-y border-on-deep/10 py-5 text-[0.8125rem] sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-8">
-          <address className="not-italic text-on-deep-2/65">
-            {site.headOffice.street}, {site.headOffice.city} {site.headOffice.postalCode},{" "}
-            {site.headOffice.country}
-          </address>
-          <a
-            href={`tel:${site.headOffice.phoneHref}`}
-            className="font-medium text-gold-400 transition-colors hover:text-gold-300"
-          >
-            {site.headOffice.phone}
-          </a>
+        {/* Hai văn phòng, mỗi thẻ có bản đồ nhỏ bấm ra Google Maps */}
+        <div className="mt-12 grid gap-6 border-t border-on-deep/10 pt-2 md:grid-cols-2 lg:gap-10">
+          {site.offices.map((o) => (
+            <OfficeCard key={o.id} office={o} directionsLabel={dict.contact.directions} />
+          ))}
+        </div>
+
+        <div className="mt-8 border-t border-on-deep/10 pt-5">
           <Link
             href={localePath(locale, "contact")}
-            className="btn inline-flex border border-gold-500/45 px-5 py-2 text-[0.75rem] font-medium text-gold-400 hover:border-gold-400 hover:bg-gold-500/10 sm:ml-auto"
+            className="btn inline-flex border border-gold-500/45 px-5 py-2 text-[0.75rem] font-medium text-gold-400 hover:border-gold-400 hover:bg-gold-500/10"
           >
             {dict.common.bookConsultation}
           </Link>

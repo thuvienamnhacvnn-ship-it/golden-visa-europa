@@ -393,7 +393,7 @@ export const en = {
 
   about: {
     eyebrow: "About us",
-    title: "NIBELC GROUP",
+    title: "About NIBELC Group",
     lead: "A Greek real estate and residence-by-investment firm working with non-European investors since 2014.",
     intro: [
       "We work at the intersection of three things that usually sit in separate companies: the residence permit, the real estate, and everything that keeps the asset productive afterwards. Holding all three in one team is what lets us commit to timelines instead of forwarding your questions elsewhere.",
@@ -410,16 +410,43 @@ export const en = {
         "Founder of a home management firm",
       ],
     },
+    /** Ba người khách xác nhận. Bằng cấp giữ nguyên văn khách gửi. */
+    team: [
+      {
+        name: "Nikolaos T. Kakkos",
+        honorific: "M.B.A., C.F.A.",
+        role: "Founder · N. Kakkos Estate, Athens",
+        credentials: [
+          "M.B.A., Adelphi University, New York",
+          "Certified in Financial Analysis, New York University",
+        ],
+      },
+      {
+        name: "Tony Phan",
+        honorific: "LL.M., M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Master of Law",
+          "Master of Real Estate Investment (London, UK)",
+        ],
+      },
+      {
+        name: "Stella Nguyen",
+        honorific: "M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Master of Economics (Buckingham, UK)",
+        ],
+      },
+    ],
     teamTitle: "The team",
-    teamLead:
-      "Legal, financial, research and renovation specialists working on the same file.",
+    teamLead: "Legal, financial, research and renovation specialists working on the same file. Below are the three people who lead the work.",
     legalTitle: "Legal and notarial support",
     legalBody:
       "A lawyer works on your file and is paid by us. Where a transaction requires it, a notary is engaged as well. You are told in advance who is acting for you and in what capacity.",
     portraitPending:
       "Placeholder crest. A photograph of Mr. Nikolaos will replace it once the client supplies one.",
-    placeholderTeam:
-      "Team photographs and full CVs to be supplied by the client before launch.",
+    placeholderTeam: "Team photographs to be supplied by the client. Names and qualifications are confirmed.",
   },
 
   whyUs: {
@@ -466,7 +493,7 @@ export const en = {
         slug: "athens" as const,
         city: "Athens",
         country: "Greece",
-        address: "Filippou 28, Perea 57019, Greece",
+        address: "1 Pigasou Street, Kifisia 14564, Greece",
         phone: "+30 697 300 8000",
         role: "Head office · Golden Visa, legal and financial team",
         confirmed: true,
@@ -475,8 +502,8 @@ export const en = {
         slug: "thessaloniki" as const,
         city: "Thessaloniki",
         country: "Greece",
-        address: "Filippou 28, Perea, 57019, Greece",
-        phone: "",
+        address: "Filippou 28, Perea 57019, Greece",
+        phone: "+49 152 0696 8888",
         role: "NIBELC office · Northern Greece",
         confirmed: true,
       },
@@ -545,6 +572,7 @@ export const en = {
     },
     directTitle: "Direct contact",
     headOffice: "Head office",
+    directions: "Directions",
     hours: "Monday to Friday, 09:00 – 18:00 (EET)",
     responseNote: "We reply in English, Vietnamese, Greek, Latvian and Turkish.",
   },
@@ -557,7 +585,7 @@ export const en = {
       sections: [
         {
           title: "Who we are",
-          body: "NIBELC GROUP, Filippou 28, Perea 57019, Greece, is the controller of the personal data collected through this website.",
+          body: "NIBELC GROUP – N. KAKKOS ESTATE, Filippou 28, Perea 57019, Greece, is the controller of the personal data collected through this website.",
         },
         {
           title: "What we collect",
@@ -587,7 +615,7 @@ export const en = {
       sections: [
         {
           title: "Purpose of this site",
-          body: "This website presents the services of NIBELC GROUP. It is an introduction to those services, not an offer, a quotation, or a contract.",
+          body: "This website presents the services of NIBELC GROUP – N. KAKKOS ESTATE. It is an introduction to those services, not an offer, a quotation, or a contract.",
         },
         {
           title: "Accuracy",
@@ -595,7 +623,7 @@ export const en = {
         },
         {
           title: "Intellectual property",
-          body: "The text, images and design of this site belong to NIBELC GROUP or are used with permission. They may not be reproduced without written consent.",
+          body: "The text, images and design of this site belong to NIBELC GROUP – N. KAKKOS ESTATE or are used with permission. They may not be reproduced without written consent.",
         },
         {
           title: "External links",

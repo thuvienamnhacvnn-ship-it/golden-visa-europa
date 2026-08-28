@@ -38,9 +38,9 @@ export function buildKnowledge(locale: Locale): string {
 
   return `# ${site.name}
 ${d.footer.tagline}
-Trụ sở: ${site.headOffice.street}, ${site.headOffice.city} ${site.headOffice.postalCode}, ${site.headOffice.country}
-Điện thoại: ${site.headOffice.phone}
-Đối tác tại Athens: ${site.athensPartner.name}, ${site.athensPartner.honorific}. ${d.about.founder.body}
+Văn phòng:
+${site.offices.map((o) => `- ${o.cityLabel} (${o.label}): ${o.street}, ${o.city} ${o.postalCode}, ${o.country} — ĐT ${o.phone} (${o.person})`).join("\n")}
+Nhà sáng lập: ${site.founder.name}, ${site.founder.honorific}. ${d.about.founder.body}
 
 ## Golden Visa là gì
 ${d.whatIs.intro.join(" ")}

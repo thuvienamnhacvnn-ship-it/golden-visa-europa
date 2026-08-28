@@ -393,7 +393,7 @@ export const tr: Dictionary = {
 
   about: {
     eyebrow: "Hakkımızda",
-    title: "NIBELC GROUP",
+    title: "NIBELC Group hakkında",
     lead: "2014'ten bu yana Avrupa dışı yatırımcılarla çalışan bir Yunan gayrimenkul ve yatırım yoluyla oturum firması.",
     intro: [
       "Genellikle ayrı şirketlerde duran üç işin kesişiminde çalışıyoruz: oturma izni, gayrimenkul ve sonrasında varlığı üretken tutan her şey. Üçünü tek ekipte tutmamız, sorularınızı başka yere yönlendirmek yerine takvim taahhüdü verebilmemizi sağlıyor.",
@@ -410,16 +410,43 @@ export const tr: Dictionary = {
         "Bir ev yönetimi şirketinin kurucusu",
       ],
     },
+    /** Ba người khách xác nhận. Bằng cấp giữ nguyên văn khách gửi. */
+    team: [
+      {
+        name: "Nikolaos T. Kakkos",
+        honorific: "M.B.A., C.F.A.",
+        role: "Kurucu · N. Kakkos Estate, Atina",
+        credentials: [
+          "M.B.A., Adelphi University, New York",
+          "Certified in Financial Analysis, New York University",
+        ],
+      },
+      {
+        name: "Tony Phan",
+        honorific: "LL.M., M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Hukuk Yüksek Lisansı",
+          "Gayrimenkul Yatırımı Yüksek Lisansı (Londra, Birleşik Krallık)",
+        ],
+      },
+      {
+        name: "Stella Nguyen",
+        honorific: "M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Ekonomi Yüksek Lisansı (Buckingham, Birleşik Krallık)",
+        ],
+      },
+    ],
     teamTitle: "Ekip",
-    teamLead:
-      "Aynı dosya üzerinde çalışan hukuk, finans, araştırma ve tadilat uzmanları.",
+    teamLead: "Hukuk, finans, araştırma ve tadilat uzmanları aynı dosya üzerinde çalışır. Aşağıda işi yürüten üç kişi var.",
     legalTitle: "Hukuki ve noterlik desteği",
     legalBody:
       "Dosyanız üzerinde bir avukat çalışır ve ücretini biz öderiz. İşlemin gerektirdiği durumlarda ayrıca bir noter devreye girer. Sizin adınıza kimin, hangi sıfatla hareket ettiği önceden bildirilir.",
     portraitPending:
       "Geçici arma. Müşteri fotoğraf gönderdiğinde Sn. Nikolaos'un portresiyle değiştirilecek.",
-    placeholderTeam:
-      "Ekip fotoğrafları ve tam özgeçmişler, yayına girmeden önce müşteri tarafından sağlanacaktır.",
+    placeholderTeam: "Ekip fotoğrafları müşteri tarafından verilecek. İsimler ve dereceler teyit edilmiştir.",
   },
 
   whyUs: {
@@ -466,7 +493,7 @@ export const tr: Dictionary = {
         slug: "athens",
         city: "Atina",
         country: "Yunanistan",
-        address: "Filippou 28, Perea 57019, Yunanistan",
+        address: "1 Pigasou Street, Kifisia 14564, Yunanistan",
         phone: "+30 697 300 8000",
         role: "Merkez ofis · Golden Visa, hukuk ve finans ekibi",
         confirmed: true,
@@ -475,8 +502,8 @@ export const tr: Dictionary = {
         slug: "thessaloniki",
         city: "Selanik",
         country: "Yunanistan",
-        address: "Filippou 28, Perea, 57019, Yunanistan",
-        phone: "",
+        address: "Filippou 28, Perea 57019, Yunanistan",
+        phone: "+49 152 0696 8888",
         role: "NIBELC ofisi · Kuzey Yunanistan",
         confirmed: true,
       },
@@ -545,6 +572,7 @@ export const tr: Dictionary = {
     },
     directTitle: "Doğrudan iletişim",
     headOffice: "Merkez ofis",
+    directions: "Yol tarifi",
     hours: "Pazartesi – Cuma, 09:00 – 18:00 (Doğu Avrupa Saati)",
     responseNote: "İngilizce, Vietnamca, Yunanca, Letonca ve Türkçe yanıt veriyoruz.",
   },
@@ -557,7 +585,7 @@ export const tr: Dictionary = {
       sections: [
         {
           title: "Biz kimiz",
-          body: "Filippou 28, Perea 57019, Yunanistan adresindeki NIBELC GROUP, bu web sitesi aracılığıyla toplanan kişisel verilerin veri sorumlusudur.",
+          body: "Filippou 28, Perea 57019, Yunanistan adresindeki NIBELC GROUP – N. KAKKOS ESTATE, bu web sitesi aracılığıyla toplanan kişisel verilerin veri sorumlusudur.",
         },
         {
           title: "Neleri topluyoruz",
@@ -587,7 +615,7 @@ export const tr: Dictionary = {
       sections: [
         {
           title: "Sitenin amacı",
-          body: "Bu web sitesi NIBELC GROUP'in hizmetlerini tanıtır. Bir teklif, fiyat teklifi veya sözleşme değil, hizmetlere bir giriştir.",
+          body: "Bu web sitesi NIBELC GROUP – N. KAKKOS ESTATE'in hizmetlerini tanıtır. Bir teklif, fiyat teklifi veya sözleşme değil, hizmetlere bir giriştir.",
         },
         {
           title: "Doğruluk",
@@ -595,7 +623,7 @@ export const tr: Dictionary = {
         },
         {
           title: "Fikrî mülkiyet",
-          body: "Bu sitedeki metin, görsel ve tasarım NIBELC GROUP'e aittir veya izinle kullanılmaktadır. Yazılı onay olmadan çoğaltılamaz.",
+          body: "Bu sitedeki metin, görsel ve tasarım NIBELC GROUP – N. KAKKOS ESTATE'e aittir veya izinle kullanılmaktadır. Yazılı onay olmadan çoğaltılamaz.",
         },
         {
           title: "Dış bağlantılar",

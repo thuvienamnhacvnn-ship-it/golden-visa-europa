@@ -2,10 +2,28 @@
  * Thông tin công ty. Những trường đánh dấu TODO là dữ liệu khách hàng
  * chưa cung cấp — không được bịa, phải xin trước khi phát hành.
  */
+export type Office = {
+  id: string;
+  label: string;
+  street: string;
+  city: string;
+  /** Thành phố lớn để khách dễ định vị: Kifisia thuộc Athens, Perea thuộc Thessaloniki. */
+  cityLabel: string;
+  /** Nhãn ngắn in trên bản đồ nhỏ — khung chỉ rộng 68px, tên dài bị cắt cụt. */
+  mapBadge: string;
+  postalCode: string;
+  country: string;
+  countryCode: string;
+  phone: string;
+  phoneHref: string;
+  person: string;
+  mapQuery: string;
+};
+
 export const site = {
-  name: "NIBELC GROUP",
-  legalName: "NIBELC GROUP",
-  shortName: "NIBELC",
+  name: "NIBELC GROUP – N. KAKKOS ESTATE",
+  legalName: "NIBELC GROUP – N. KAKKOS ESTATE",
+  shortName: "NIBELC GROUP",
   // Tên miền đang chạy trên Vercel. Đổi sang tên miền thật của khách khi có —
   // giá trị này chi phối canonical, hreflang, sitemap và JSON-LD.
   /** Tên miền thật. Dùng cho canonical, sitemap và dữ liệu có cấu trúc —
@@ -13,15 +31,57 @@ export const site = {
   url: "https://golden-visa-europa.com",
   founded: "2014",
 
-  // Địa chỉ trụ sở — lấy từ chữ ký email của khách, đã xác nhận.
-  headOffice: {
-    street: "Filippou 28",
-    city: "Perea",
-    postalCode: "57019",
-    country: "Greece",
-    countryCode: "GR",
-    phone: "+49 152 0696 8888",
-    phoneHref: "+4915206968888",
+  /**
+   * Hai văn phòng tại Hy Lạp, mỗi nơi một số điện thoại.
+   * Athens: bóc nguyên văn từ chữ ký trong tài liệu khách gửi
+   *   ("N.KAKKOS ESTATE / 1 PIGASOU STREET, KIFISIA 14564 GREECE /
+   *   TEL: +306973008000").
+   * Perea: trụ sở NIBELC, khách xác nhận trong trao đổi.
+   *
+   * `mapQuery` là chuỗi dùng cho liên kết chỉ đường Google Maps — viết
+   * riêng chứ không ghép từ các trường bên trên, vì Google tìm trúng hơn
+   * khi có tên thành phố lớn kèm theo.
+   */
+  offices: [
+    {
+      id: "athens",
+      label: "N. Kakkos Estate",
+      street: "1 Pigasou Street",
+      city: "Kifisia",
+      cityLabel: "Athens",
+      mapBadge: "Athens",
+      postalCode: "14564",
+      country: "Greece",
+      countryCode: "GR",
+      phone: "+30 697 300 8000",
+      phoneHref: "+306973008000",
+      person: "Mr. Nikolaos T. Kakkos",
+      mapQuery: "1 Pigasou Street, Kifisia 14564, Athens, Greece",
+    },
+    {
+      id: "thessaloniki",
+      label: "NIBELC Group",
+      street: "Filippou 28",
+      city: "Perea",
+      cityLabel: "Thessaloniki",
+      mapBadge: "Perea",
+      postalCode: "57019",
+      country: "Greece",
+      countryCode: "GR",
+      phone: "+49 152 0696 8888",
+      phoneHref: "+4915206968888",
+      person: "Mr. Tony Phan",
+      mapQuery: "Filippou 28, Perea 57019, Thessaloniki, Greece",
+    },
+  ] as Office[],
+
+  /**
+   * Bí danh cho những chỗ chỉ hiện MỘT địa chỉ (trang liên hệ, nút gọi,
+   * dữ liệu có cấu trúc). Trỏ vào văn phòng NIBELC ở Perea vì đó là pháp
+   * nhân vận hành website. Footer và trang Văn phòng hiện đủ cả hai.
+   */
+  get headOffice(): Office {
+    return this.offices[1];
   },
 
   // TODO(khách hàng): email theo tên miền công ty.
@@ -38,7 +98,7 @@ export const site = {
   contacts: [
     {
       name: "Mr. Nikolaos T. Kakkos",
-      role: "Đối tác tại Athens",
+      role: "N. Kakkos Estate · Athens",
       phone: "+30 697 300 8000",
       href: "+306973008000",
       channels: ["Phone"],
@@ -69,12 +129,11 @@ export const site = {
   whatsapp: "+4915206968888",
   whatsappConfirmed: true,
 
-  /**
-   * Không còn là "người sáng lập": khách đã bỏ N. KAKKOS khỏi tên công ty,
-   * nên ông xuất hiện với tư cách đối tác tại Athens, không phải sáng lập viên
-   * của NIBELC GROUP. Đã bỏ khỏi dữ liệu có cấu trúc của tổ chức.
+/**
+   * Khách đã lấy lại "N. KAKKOS ESTATE" vào tên công ty, nên ông trở lại
+   * đúng vai người sáng lập như tài liệu gốc ghi.
    */
-  athensPartner: {
+  founder: {
     name: "Nikolaos T. Kakkos",
     honorific: "M.B.A., C.F.A.",
   },

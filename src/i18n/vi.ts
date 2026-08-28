@@ -394,7 +394,7 @@ export const vi: Dictionary = {
 
   about: {
     eyebrow: "Về chúng tôi",
-    title: "NIBELC GROUP",
+    title: "Về NIBELC Group",
     lead: "Công ty bất động sản và định cư qua đầu tư của Hy Lạp, làm việc với nhà đầu tư ngoài châu Âu từ năm 2014.",
     intro: [
       "Chúng tôi làm ở điểm giao của ba việc mà bình thường nằm ở ba công ty khác nhau: giấy phép cư trú, bất động sản, và tất cả những gì giữ cho tài sản sinh lời về sau. Chính việc giữ cả ba trong một đội ngũ cho phép chúng tôi cam kết về tiến độ thay vì chuyển tiếp câu hỏi của quý vị đi nơi khác.",
@@ -411,16 +411,43 @@ export const vi: Dictionary = {
         "Nhà sáng lập một công ty quản lý nhà ở",
       ],
     },
+    /** Ba người khách xác nhận. Bằng cấp giữ nguyên văn khách gửi. */
+    team: [
+      {
+        name: "Nikolaos T. Kakkos",
+        honorific: "M.B.A., C.F.A.",
+        role: "Nhà sáng lập · N. Kakkos Estate, Athens",
+        credentials: [
+          "M.B.A., Adelphi University, New York",
+          "Certified in Financial Analysis, New York University",
+        ],
+      },
+      {
+        name: "Tony Phan",
+        honorific: "LL.M., M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Thạc sĩ Luật",
+          "Thạc sĩ Đầu tư Bất động sản (London, Anh)",
+        ],
+      },
+      {
+        name: "Stella Nguyen",
+        honorific: "M.Sc.",
+        role: "NIBELC Group",
+        credentials: [
+          "Thạc sĩ Kinh tế (Buckingham, Anh)",
+        ],
+      },
+    ],
     teamTitle: "Đội ngũ",
-    teamLead:
-      "Chuyên gia pháp lý, tài chính, nghiên cứu và cải tạo cùng làm trên một bộ hồ sơ.",
+    teamLead: "Chuyên gia pháp lý, tài chính, nghiên cứu và cải tạo cùng làm trên một bộ hồ sơ. Dưới đây là ba người dẫn dắt công việc.",
     legalTitle: "Hỗ trợ luật sư và công chứng",
     legalBody:
       "Có luật sư làm hồ sơ cho quý vị và chi phí do chúng tôi trả. Khi giao dịch đòi hỏi, chúng tôi mời thêm công chứng viên. Quý vị luôn được cho biết trước ai đang làm việc cho mình và với tư cách gì.",
     portraitPending:
       "Huy hiệu tạm. Sẽ thay bằng ảnh chân dung ông Nikolaos khi khách hàng gửi ảnh.",
-    placeholderTeam:
-      "Ảnh đội ngũ và CV đầy đủ sẽ do khách hàng cung cấp trước khi phát hành.",
+    placeholderTeam: "Ảnh chân dung đội ngũ sẽ do khách hàng cung cấp. Tên và bằng cấp đã xác nhận.",
   },
 
   whyUs: {
@@ -467,7 +494,7 @@ export const vi: Dictionary = {
         slug: "athens",
         city: "Athens",
         country: "Hy Lạp",
-        address: "Filippou 28, Perea 57019, Hy Lạp",
+        address: "1 Pigasou Street, Kifisia 14564, Hy Lạp",
         phone: "+30 697 300 8000",
         role: "Trụ sở chính · Đội thẻ vàng, pháp lý và tài chính",
         confirmed: true,
@@ -476,8 +503,8 @@ export const vi: Dictionary = {
         slug: "thessaloniki",
         city: "Thessaloniki",
         country: "Hy Lạp",
-        address: "Filippou 28, Perea, 57019, Hy Lạp",
-        phone: "",
+        address: "Filippou 28, Perea 57019, Hy Lạp",
+        phone: "+49 152 0696 8888",
         role: "Văn phòng NIBELC · Bắc Hy Lạp",
         confirmed: true,
       },
@@ -546,6 +573,7 @@ export const vi: Dictionary = {
     },
     directTitle: "Liên hệ trực tiếp",
     headOffice: "Trụ sở chính",
+    directions: "Chỉ đường",
     hours: "Thứ Hai đến thứ Sáu, 09:00 – 18:00 (giờ Đông Âu)",
     responseNote: "Chúng tôi trả lời bằng tiếng Anh, tiếng Việt, tiếng Hy Lạp, tiếng Latvia và tiếng Thổ Nhĩ Kỳ.",
   },
@@ -558,7 +586,7 @@ export const vi: Dictionary = {
       sections: [
         {
           title: "Chúng tôi là ai",
-          body: "NIBELC GROUP, Filippou 28, Perea 57019, Hy Lạp, là bên kiểm soát dữ liệu cá nhân thu thập qua website này.",
+          body: "NIBELC GROUP – N. KAKKOS ESTATE, Filippou 28, Perea 57019, Hy Lạp, là bên kiểm soát dữ liệu cá nhân thu thập qua website này.",
         },
         {
           title: "Chúng tôi thu thập gì",
@@ -588,7 +616,7 @@ export const vi: Dictionary = {
       sections: [
         {
           title: "Mục đích của trang",
-          body: "Website này giới thiệu dịch vụ của NIBELC GROUP. Đây là phần giới thiệu dịch vụ, không phải một lời chào giá, một bản báo giá hay một hợp đồng.",
+          body: "Website này giới thiệu dịch vụ của NIBELC GROUP – N. KAKKOS ESTATE. Đây là phần giới thiệu dịch vụ, không phải một lời chào giá, một bản báo giá hay một hợp đồng.",
         },
         {
           title: "Tính chính xác",
@@ -596,7 +624,7 @@ export const vi: Dictionary = {
         },
         {
           title: "Sở hữu trí tuệ",
-          body: "Nội dung chữ, hình ảnh và thiết kế của trang này thuộc về NIBELC GROUP hoặc được sử dụng có sự cho phép. Không được sao chép nếu chưa có đồng ý bằng văn bản.",
+          body: "Nội dung chữ, hình ảnh và thiết kế của trang này thuộc về NIBELC GROUP – N. KAKKOS ESTATE hoặc được sử dụng có sự cho phép. Không được sao chép nếu chưa có đồng ý bằng văn bản.",
         },
         {
           title: "Liên kết ngoài",
