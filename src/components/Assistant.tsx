@@ -195,7 +195,7 @@ export function Assistant({
               className="gold-box relative -mt-7 flex h-16 w-16 items-center justify-center rounded-full bg-surface shadow-[0_10px_28px_-12px_rgba(200,164,77,0.6)]"
             >
               <Sparks count={8} seed={11} />
-              <span className="gold-icon relative z-10">
+              <span className="gold-icon-bar relative z-10">
                 {open ? (
                   <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.9" aria-hidden="true">
                     <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
@@ -222,7 +222,7 @@ export function Assistant({
               className="flex w-full flex-col items-center gap-1 px-1 pb-2 pt-2.5"
               aria-haspopup="dialog"
             >
-              <svg className="gold-icon h-[22px] w-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
+              <svg className="gold-icon-bar h-[22px] w-[22px]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" aria-hidden="true">
                 <path d="M5 7h14M5 12h14M5 17h14" />
               </svg>
               <span className="text-[0.5625rem] font-medium leading-tight text-ink/70">{nav.more}</span>
@@ -428,7 +428,7 @@ function TabItem({
     <li>
       <Link href={href} className="flex flex-col items-center gap-1 px-1 pb-2 pt-2.5">
         <svg
-          className="gold-icon h-[22px] w-[22px]"
+          className="gold-icon-bar h-[22px] w-[22px]"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"

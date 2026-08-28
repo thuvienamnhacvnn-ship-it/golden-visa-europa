@@ -838,3 +838,29 @@ button:hover .gold-icon {
 @media (prefers-reduced-motion: reduce) {
   .fade-swap { animation: none; }
 }
+
+/* Biểu tượng trên thanh menu đáy của bản điện thoại.
+   Thanh đó lấy nền là --surface, tức gần TRẮNG ở giao diện sáng. Dùng chung
+   .gold-icon thì hỏng hai đường: vàng nhạt #f2c94f trên nền trắng gần như
+   không đọc được, mà lớp đổ bóng đen phía sau lại hiện thành vệt xám bẩn
+   quanh nét. Ở đây đổi sang vàng đậm và BỎ HẲN bóng; chỉ giao diện tối mới
+   quay lại vàng nhạt kèm bóng nhẹ vì lúc đó nền thực sự tối. */
+.gold-icon-bar {
+  color: #96751f;
+  filter: none;
+  transition: color 0.25s ease;
+}
+[data-theme="dark"] .gold-icon-bar {
+  color: #f2c94f;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+a:hover > .gold-icon-bar,
+button:hover > .gold-icon-bar,
+a:hover .gold-icon-bar,
+button:hover .gold-icon-bar {
+  color: #c8a44d;
+}
+[data-theme="dark"] a:hover .gold-icon-bar,
+[data-theme="dark"] button:hover .gold-icon-bar {
+  color: #ffe08a;
+}
