@@ -575,6 +575,7 @@ export const lv: Dictionary = {
     },
     directTitle: "Tieša saziņa",
     headOffice: "Galvenais birojs",
+    offices: "Mūsu biroji",
     directions: "Norādes",
     hours: "No pirmdienas līdz piektdienai, 09:00 – 18:00 (EET)",
     responseNote: "Atbildam angļu, vjetnamiešu, grieķu, latviešu un turku valodā.",

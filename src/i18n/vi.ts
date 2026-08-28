@@ -574,6 +574,7 @@ export const vi: Dictionary = {
     },
     directTitle: "Liên hệ trực tiếp",
     headOffice: "Trụ sở chính",
+    offices: "Văn phòng",
     directions: "Chỉ đường",
     hours: "Thứ Hai đến thứ Sáu, 09:00 – 18:00 (giờ Đông Âu)",
     responseNote: "Chúng tôi trả lời bằng tiếng Anh, tiếng Việt, tiếng Hy Lạp, tiếng Latvia và tiếng Thổ Nhĩ Kỳ.",

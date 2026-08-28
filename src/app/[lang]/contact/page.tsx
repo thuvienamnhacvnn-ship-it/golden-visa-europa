@@ -58,18 +58,38 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                 <Eyebrow>{t.directTitle}</Eyebrow>
                 <Rule className="mt-4 mb-6" />
 
-                <p className="text-xs uppercase tracking-[0.18em] text-ink/45">
-                  {t.headOffice}
-                </p>
-                <address className="mt-3 not-italic text-[0.9375rem] leading-8 text-ink/85">
-                  {site.name}
-                  <br />
-                  {site.headOffice.street}
-                  <br />
-                  {site.headOffice.city} {site.headOffice.postalCode}
-                  <br />
-                  {site.headOffice.country}
-                </address>
+                {/* Cả HAI văn phòng, không chỉ trụ sở. Trước đây chỉ hiện địa chỉ
+                    Perea nên khách không thấy văn phòng Athens ở đâu, dù ông
+                    Nikolaos ngay bên dưới lại ghi "Athens". */}
+                <p className="text-xs uppercase tracking-[0.18em] text-ink/45">{t.offices}</p>
+                <p className="mt-3 text-[0.9375rem] font-medium text-ink">{site.name}</p>
+
+                <ul className="mt-4 flex flex-col gap-5">
+                  {site.offices.map((o) => (
+                    <li key={o.id}>
+                      <p className="text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-gold-600">
+                        {o.cityLabel}
+                      </p>
+                      <address className="mt-1.5 not-italic text-[0.9375rem] leading-7 text-ink/80">
+                        {o.label}
+                        <br />
+                        {o.street}
+                        <br />
+                        {o.city} {o.postalCode}, {o.country}
+                      </address>
+                      <a
+                        href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
+                          o.mapQuery,
+                        )}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1.5 inline-block text-[0.6875rem] uppercase tracking-[0.14em] text-gold-600 transition-colors hover:text-ink"
+                      >
+                        {t.directions} ↗
+                      </a>
+                    </li>
+                  ))}
+                </ul>
 
                 {/* Ba đầu mối: Nikolaos (Athens), Tony và Stella (NIBELC) */}
                 <ul className="mt-6 flex flex-col divide-y divide-ink/10 border-t border-ink/10">

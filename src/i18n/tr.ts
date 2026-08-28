@@ -573,6 +573,7 @@ export const tr: Dictionary = {
     },
     directTitle: "Doğrudan iletişim",
     headOffice: "Merkez ofis",
+    offices: "Ofislerimiz",
     directions: "Yol tarifi",
     hours: "Pazartesi – Cuma, 09:00 – 18:00 (Doğu Avrupa Saati)",
     responseNote: "İngilizce, Vietnamca, Yunanca, Letonca ve Türkçe yanıt veriyoruz.",
