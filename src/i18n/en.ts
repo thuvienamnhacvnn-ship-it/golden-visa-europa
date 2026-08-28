@@ -14,6 +14,7 @@ export const en = {
     whyUs: "Why us",
     offices: "Offices",
     properties: "Property",
+    latvia: "Latvia",
     contact: "Contact",
   },
 
@@ -677,6 +678,63 @@ export const en = {
     regNote: "Company registration details to be supplied by the client.",
     disclaimerShort:
       "Information on this site is general and does not constitute legal or investment advice. Residence permits are granted by the Greek authorities.",
+  },
+
+  /**
+   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
+   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
+   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   */
+  latvia: {
+    eyebrow: "Latvia",
+    title: "Latvia: the programme is being rewritten",
+    lead: "Latvia's residence-by-investment routes are in the middle of a legislative overhaul. Here is exactly where it stands today — and why we are not quoting you a figure yet.",
+    statusTitle: "Where it stands",
+    statusBody: "A new Immigration Law has passed parliament but has not entered into force. Until it does, applications are processed under the current rules. We will publish the qualifying amounts once the law is settled, and not before.",
+    timelineTitle: "What has happened",
+    timeline: [
+      {
+        date: "11 June 2026",
+        title: "Parliament passes the new law",
+        body: "The Saeima adopted the new Immigration Law in its third and final reading.",
+      },
+      {
+        date: "19 June 2026",
+        title: "The President refuses to sign",
+        body: "President Edgars Rinkēvičs declined to promulgate the law and returned it to parliament for a second review, over the provisions deciding who may obtain residence through investment.",
+      },
+      {
+        date: "12 August 2026",
+        title: "Two proposals rejected in committee",
+        body: "The parliamentary committee rejected a proposal to grant residence for investment in alternative investment funds, and a separate proposal to link residence to real estate investment.",
+      },
+      {
+        date: "20 August 2026",
+        title: "Second review in parliament",
+        body: "The Saeima reviewed the law a second time and continued specifying its provisions. The investment-residence provisions had not been settled publicly at the time of writing.",
+      },
+    ],
+    meaningTitle: "What this means for an investor",
+    meaning: [
+      {
+        title: "The current rules still apply",
+        body: "The new law is not in force. Applications submitted and accepted before it enters into force are processed under the existing regime.",
+      },
+      {
+        title: "Two routes are proposed for removal",
+        body: "As passed in June, the new law drops the real estate route and the bank deposit route. Do not commit to either on the assumption it will still be there.",
+      },
+      {
+        title: "The company route is retained",
+        body: "Investment in the share capital of a Latvian company stays, but with a shorter permit period than today under the text passed in June.",
+      },
+    ],
+    stanceTitle: "Our position",
+    stanceBody: "We will not quote you a Latvian threshold while the law is being rewritten. Once the text is promulgated we confirm in writing what applies to your case and from what date. In the meantime our Greek programme is in force and unaffected.",
+    sourcesTitle: "Sources",
+    verified: "Checked 28 August 2026",
+    cta: "Ask us about Latvia",
+    note: "This page is general information about a pending legislative change, not legal advice. Immigration rules are set by the Latvian authorities and can change at any time.",
   },
 
   properties: {

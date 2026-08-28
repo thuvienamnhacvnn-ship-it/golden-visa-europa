@@ -34,6 +34,7 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
       title: dict.footer.legalCol,
       links: [
         { href: localePath(locale, "what-is-golden-visa"), label: dict.nav.whatIs },
+        { href: localePath(locale, "latvia"), label: dict.nav.latvia },
         { href: localePath(locale, "legal/privacy"), label: dict.legal.privacy.title },
         { href: localePath(locale, "legal/terms"), label: dict.legal.terms.title },
         { href: localePath(locale, "legal/disclaimer"), label: dict.legal.disclaimer.title },

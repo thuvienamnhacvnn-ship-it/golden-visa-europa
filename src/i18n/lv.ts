@@ -16,6 +16,7 @@ export const lv: Dictionary = {
     whyUs: "Kāpēc mēs",
     offices: "Biroji",
     properties: "Īpašumi",
+    latvia: "Latvija",
     contact: "Kontakti",
   },
 
@@ -679,6 +680,63 @@ export const lv: Dictionary = {
     regNote: "Uzņēmuma reģistrācijas datus iesniegs klients.",
     disclaimerShort:
       "Šajā vietnē sniegtā informācija ir vispārīga un nav juridiska vai ieguldījumu konsultācija. Uzturēšanās atļaujas piešķir Grieķijas iestādes.",
+  },
+
+  /**
+   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
+   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
+   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   */
+  latvia: {
+    eyebrow: "Latvija",
+    title: "Latvija: programma tiek pārrakstīta",
+    lead: "Latvijas uzturēšanās-caur-ieguldījumu ceļi ir likumdošanas pārskatīšanas vidū. Šeit ir precīzi tas, kur lietas stāv šodien — un kāpēc mēs vēl nenosaucam nevienu summu.",
+    statusTitle: "Kur lietas stāv",
+    statusBody: "Jaunais Imigrācijas likums ir izgājis cauri Saeimai, bet nav stājies spēkā. Kamēr tas nav noticis, pieteikumi tiek izskatīti pēc pašreizējiem noteikumiem. Kvalificējošās summas publicēsim tad, kad likums būs galīgs, ne agrāk.",
+    timelineTitle: "Kas ir noticis",
+    timeline: [
+      {
+        date: "2026. gada 11. jūnijs",
+        title: "Saeima pieņem jauno likumu",
+        body: "Saeima pieņēma jauno Imigrācijas likumu trešajā un galīgajā lasījumā.",
+      },
+      {
+        date: "2026. gada 19. jūnijs",
+        title: "Valsts prezidents atsakās izsludināt",
+        body: "Valsts prezidents Edgars Rinkēvičs atteicās izsludināt likumu un nodeva to Saeimai otrreizējai caurlūkošanai — tieši to normu dēļ, kas nosaka, kurš var iegūt uzturēšanos ieguldījuma ceļā.",
+      },
+      {
+        date: "2026. gada 12. augusts",
+        title: "Komisija noraida divus priekšlikumus",
+        body: "Saeimas komisija noraidīja priekšlikumu piešķirt uzturēšanos par ieguldījumu alternatīvo ieguldījumu fondos, kā arī atsevišķu priekšlikumu sasaistīt uzturēšanos ar ieguldījumu nekustamajā īpašumā.",
+      },
+      {
+        date: "2026. gada 20. augusts",
+        title: "Otrreizēja caurlūkošana Saeimā",
+        body: "Saeima caurlūkoja likumu otrreiz un turpināja precizēt tā normas. Šīs lapas tapšanas brīdī nebija publiski paziņots, ka ieguldījuma un uzturēšanās normas būtu galīgi nolemtas.",
+      },
+    ],
+    meaningTitle: "Ko tas nozīmē ieguldītājam",
+    meaning: [
+      {
+        title: "Pašreizējie noteikumi joprojām ir spēkā",
+        body: "Jaunais likums nav spēkā. Pieteikumi, kas iesniegti un pieņemti pirms tā spēkā stāšanās, tiek izskatīti pēc esošā režīma.",
+      },
+      {
+        title: "Divus ceļus piedāvāts atcelt",
+        body: "Jūnijā pieņemtajā redakcijā jaunais likums atceļ nekustamā īpašuma ceļu un bankas noguldījuma ceļu. Neuzņemieties saistības nevienā no tiem, pieņemot, ka tie paliks.",
+      },
+      {
+        title: "Uzņēmuma ceļš tiek saglabāts",
+        body: "Ieguldījums Latvijas uzņēmuma pamatkapitālā paliek, bet ar īsāku atļaujas termiņu nekā šodien — saskaņā ar jūnijā pieņemto tekstu.",
+      },
+    ],
+    stanceTitle: "Mūsu nostāja",
+    stanceBody: "Mēs nenosauksim jums Latvijas slieksni, kamēr likums tiek pārrakstīts. Tiklīdz teksts būs izsludināts, rakstiski apstiprināsim, kas attiecas uz jūsu gadījumu un no kura datuma. Pa to laiku mūsu Grieķijas programma ir spēkā un netiek skarta.",
+    sourcesTitle: "Avoti",
+    verified: "Pārbaudīts 2026. gada 28. augustā",
+    cta: "Jautājiet mums par Latviju",
+    note: "Šī lapa ir vispārīga informācija par gaidāmām likuma izmaiņām, nevis juridiska konsultācija. Imigrācijas noteikumus nosaka Latvijas iestādes, un tie var mainīties jebkurā brīdī.",
   },
 
   properties: {

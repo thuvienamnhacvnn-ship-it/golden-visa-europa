@@ -12,6 +12,7 @@ import { site } from "@/lib/site";
 export type HeaderStrings = {
   nav: {
     whatIs: string;
+    latvia: string;
     services: string;
     about: string;
     whyUs: string;
@@ -49,6 +50,7 @@ export function Header({ locale, t }: { locale: Locale; t: HeaderStrings }) {
 
   const nav = [
     { href: localePath(locale, "what-is-golden-visa"), label: t.nav.whatIs },
+    { href: localePath(locale, "latvia"), label: t.nav.latvia },
     { href: localePath(locale, "services"), label: t.nav.services },
     { href: localePath(locale, "about"), label: t.nav.about },
     { href: localePath(locale, "why-us"), label: t.nav.whyUs },

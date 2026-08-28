@@ -15,6 +15,7 @@ export const vi: Dictionary = {
     whyUs: "Vì sao chọn chúng tôi",
     offices: "Văn phòng",
     properties: "Bất động sản",
+    latvia: "Latvia",
     contact: "Liên hệ",
   },
 
@@ -678,6 +679,63 @@ export const vi: Dictionary = {
     regNote: "Thông tin đăng ký doanh nghiệp sẽ do khách hàng cung cấp.",
     disclaimerShort:
       "Thông tin trên trang này mang tính chung và không phải tư vấn pháp lý hay tư vấn đầu tư. Giấy phép cư trú do cơ quan chức năng Hy Lạp cấp.",
+  },
+
+  /**
+   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
+   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
+   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   */
+  latvia: {
+    eyebrow: "Latvia",
+    title: "Latvia: chương trình đang được viết lại",
+    lead: "Các diện đầu tư đổi cư trú của Latvia đang trong đợt sửa luật. Đây là tình hình đúng đến hôm nay — và lý do chúng tôi chưa đưa ra con số nào cho quý vị.",
+    statusTitle: "Tình hình hiện tại",
+    statusBody: "Luật Nhập cư mới đã qua Quốc hội nhưng chưa có hiệu lực. Chừng nào chưa có hiệu lực, hồ sơ vẫn xét theo quy định hiện hành. Chúng tôi sẽ công bố mức đầu tư khi luật ngã ngũ, không sớm hơn.",
+    timelineTitle: "Diễn biến",
+    timeline: [
+      {
+        date: "11/06/2026",
+        title: "Quốc hội thông qua luật mới",
+        body: "Quốc hội Latvia thông qua Luật Nhập cư mới ở lần đọc thứ ba, cũng là lần cuối.",
+      },
+      {
+        date: "19/06/2026",
+        title: "Tổng thống từ chối ký",
+        body: "Tổng thống Edgars Rinkēvičs không ký ban hành và trả luật về Quốc hội xem xét lần hai, đúng phần quy định ai được nhận cư trú qua đầu tư.",
+      },
+      {
+        date: "12/08/2026",
+        title: "Uỷ ban bác hai đề xuất",
+        body: "Uỷ ban Quốc hội bác đề xuất cấp cư trú cho người đầu tư vào quỹ đầu tư thay thế, và bác luôn đề xuất riêng gắn cư trú với đầu tư bất động sản.",
+      },
+      {
+        date: "20/08/2026",
+        title: "Quốc hội xem xét lần hai",
+        body: "Quốc hội xem xét luật lần hai và tiếp tục làm rõ các điều khoản. Phần đầu tư đổi cư trú chưa được công bố là đã chốt tại thời điểm viết trang này.",
+      },
+    ],
+    meaningTitle: "Điều này nghĩa gì với nhà đầu tư",
+    meaning: [
+      {
+        title: "Quy định hiện hành vẫn áp dụng",
+        body: "Luật mới chưa có hiệu lực. Hồ sơ nộp và được tiếp nhận trước ngày luật có hiệu lực vẫn xét theo quy định cũ.",
+      },
+      {
+        title: "Hai diện đang bị đề xuất bỏ",
+        body: "Theo bản thông qua hồi tháng 6, luật mới bỏ diện bất động sản và diện gửi tiền ngân hàng. Đừng cam kết theo hai diện này với giả định chúng còn tồn tại.",
+      },
+      {
+        title: "Diện góp vốn doanh nghiệp được giữ",
+        body: "Đầu tư vào vốn điều lệ công ty Latvia vẫn còn, nhưng thời hạn thẻ ngắn hơn hiện nay theo bản luật thông qua tháng 6.",
+      },
+    ],
+    stanceTitle: "Quan điểm của chúng tôi",
+    stanceBody: "Chúng tôi sẽ không báo mức đầu tư Latvia trong lúc luật đang được viết lại. Khi văn bản được ban hành, chúng tôi xác nhận bằng văn bản điều gì áp dụng cho trường hợp của quý vị và từ ngày nào. Trong thời gian đó, chương trình Hy Lạp của chúng tôi vẫn có hiệu lực và không bị ảnh hưởng.",
+    sourcesTitle: "Nguồn",
+    verified: "Kiểm chứng ngày 28/08/2026",
+    cta: "Hỏi chúng tôi về Latvia",
+    note: "Trang này là thông tin chung về một thay đổi pháp luật đang chờ, không phải tư vấn pháp lý. Quy định nhập cư do cơ quan chức năng Latvia đặt ra và có thể thay đổi bất cứ lúc nào.",
   },
 
   properties: {

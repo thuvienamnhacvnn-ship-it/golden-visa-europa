@@ -120,6 +120,7 @@ export default async function LocaleLayout({
             services: dict.nav.services,
             offices: dict.nav.offices,
             properties: dict.nav.properties,
+            latvia: dict.nav.latvia,
             about: dict.nav.about,
             whyUs: dict.nav.whyUs,
             contact: dict.nav.contact,

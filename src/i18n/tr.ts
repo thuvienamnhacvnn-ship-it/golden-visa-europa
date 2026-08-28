@@ -15,6 +15,7 @@ export const tr: Dictionary = {
     whyUs: "Neden biz",
     offices: "Ofisler",
     properties: "Gayrimenkul",
+    latvia: "Letonya",
     contact: "İletişim",
   },
 
@@ -677,6 +678,63 @@ export const tr: Dictionary = {
     regNote: "Şirket tescil bilgileri müşteri tarafından sağlanacaktır.",
     disclaimerShort:
       "Bu sitedeki bilgiler geneldir ve hukuki veya yatırım tavsiyesi teşkil etmez. Oturma izinleri Yunan makamlarınca verilir.",
+  },
+
+  /**
+   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
+   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
+   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   */
+  latvia: {
+    eyebrow: "Letonya",
+    title: "Letonya: program yeniden yazılıyor",
+    lead: "Letonya'nın yatırım yoluyla oturum seçenekleri kapsamlı bir yasa değişikliğinin ortasında. Bugün itibarıyla durumun tam olarak neresinde olduğunu ve neden henüz size bir rakam vermediğimizi burada anlatıyoruz.",
+    statusTitle: "Durum ne",
+    statusBody: "Yeni Göç Kanunu meclisten geçti ama yürürlüğe girmedi. Girene kadar başvurular mevcut kurallara göre işleniyor. Yeterli yatırım tutarlarını, ancak kanun kesinleştiğinde yayımlayacağız; öncesinde değil.",
+    timelineTitle: "Neler oldu",
+    timeline: [
+      {
+        date: "11 Haziran 2026",
+        title: "Meclis yeni kanunu kabul etti",
+        body: "Saeima, yeni Göç Kanunu'nu üçüncü ve son okumada kabul etti.",
+      },
+      {
+        date: "19 Haziran 2026",
+        title: "Cumhurbaşkanı imzalamadı",
+        body: "Cumhurbaşkanı Edgars Rinkēvičs kanunu ilan etmeyi reddetti ve yatırım yoluyla kimin oturum alabileceğini belirleyen hükümler nedeniyle ikinci görüşme için meclise iade etti.",
+      },
+      {
+        date: "12 Ağustos 2026",
+        title: "Komisyonda iki öneri reddedildi",
+        body: "Meclis komisyonu, alternatif yatırım fonlarına yatırım karşılığı oturum verilmesi önerisini ve oturumu gayrimenkul yatırımına bağlayan ayrı bir öneriyi reddetti.",
+      },
+      {
+        date: "20 Ağustos 2026",
+        title: "Mecliste ikinci görüşme",
+        body: "Saeima kanunu ikinci kez görüştü ve hükümleri netleştirmeye devam etti. Bu sayfa yazılırken yatırım–oturum hükümlerinin kesinleştiği kamuoyuna duyurulmamıştı.",
+      },
+    ],
+    meaningTitle: "Bu bir yatırımcı için ne anlama geliyor",
+    meaning: [
+      {
+        title: "Mevcut kurallar hâlâ geçerli",
+        body: "Yeni kanun yürürlükte değil. Yürürlüğe girmeden önce verilip kabul edilen başvurular mevcut rejime göre işleniyor.",
+      },
+      {
+        title: "İki yolun kaldırılması öneriliyor",
+        body: "Haziranda kabul edilen metinde yeni kanun, gayrimenkul yolunu ve banka mevduatı yolunu kaldırıyor. Bunların duracağını varsayarak taahhüde girmeyin.",
+      },
+      {
+        title: "Şirket yolu korunuyor",
+        body: "Bir Letonya şirketinin sermayesine yatırım kalıyor, ancak haziranda kabul edilen metne göre bugünkünden daha kısa bir izin süresiyle.",
+      },
+    ],
+    stanceTitle: "Bizim tutumumuz",
+    stanceBody: "Kanun yeniden yazılırken size bir Letonya eşiği söylemeyeceğiz. Metin ilan edildiğinde, sizin durumunuza neyin ve hangi tarihten itibaren uygulandığını yazılı olarak teyit ederiz. Bu arada Yunanistan programımız yürürlükte ve bu değişiklikten etkilenmiyor.",
+    sourcesTitle: "Kaynaklar",
+    verified: "28 Ağustos 2026'da kontrol edildi",
+    cta: "Letonya hakkında bize sorun",
+    note: "Bu sayfa, beklemede olan bir yasa değişikliği hakkında genel bilgidir; hukuki danışmanlık değildir. Göç kuralları Letonya makamlarınca belirlenir ve her an değişebilir.",
   },
 
   properties: {
