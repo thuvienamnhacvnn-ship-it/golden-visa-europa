@@ -1,5 +1,8 @@
 /**
- * Nguồn cho trang Latvia.
+ * Nguồn PHÁP LÝ cho trang Latvia — bổ sung cho hồ sơ chương trình của khách.
+ * Số liệu mức đầu tư, chi phí và quy trình lấy từ tài liệu khách gửi
+ * (CHƯƠNG TRÌNH VISA ĐẦU TƯ VÀ ĐỊNH CƯ LATVIA.pdf); mấy đường dẫn dưới đây
+ * chỉ để chứng minh tình hình sửa luật nêu trong mục cuối trang.
  *
  * Để riêng ở đây chứ không nhân bản vào 5 từ điển: đường dẫn giống nhau ở
  * mọi ngôn ngữ, nhân bản thì sửa một chỗ phải nhớ sửa năm chỗ.

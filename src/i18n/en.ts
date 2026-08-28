@@ -681,60 +681,90 @@ export const en = {
   },
 
   /**
-   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
-   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
-   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   * Số liệu lấy từ tài liệu khách gửi: CHƯƠNG TRÌNH VISA ĐẦU TƯ VÀ ĐỊNH CƯ
+   * LATVIA.pdf (10 trang). Diện dùng ở đây là GÓP VỐN DOANH NGHIỆP — đúng
+   * diện mà Luật Nhập cư mới giữ lại, không phải diện bất động sản hay gửi
+   * tiền ngân hàng đang bị đề xuất bỏ. `lawBody` nói rõ chỗ này.
    */
   latvia: {
     eyebrow: "Latvia",
-    title: "Latvia: the programme is being rewritten",
-    lead: "Latvia's residence-by-investment routes are in the middle of a legislative overhaul. Here is exactly where it stands today — and why we are not quoting you a figure yet.",
-    statusTitle: "Where it stands",
-    statusBody: "A new Immigration Law has passed parliament but has not entered into force. Until it does, applications are processed under the current rules. We will publish the qualifying amounts once the law is settled, and not before.",
-    timelineTitle: "What has happened",
-    timeline: [
-      {
-        date: "11 June 2026",
-        title: "Parliament passes the new law",
-        body: "The Saeima adopted the new Immigration Law in its third and final reading.",
-      },
-      {
-        date: "19 June 2026",
-        title: "The President refuses to sign",
-        body: "President Edgars Rinkēvičs declined to promulgate the law and returned it to parliament for a second review, over the provisions deciding who may obtain residence through investment.",
-      },
-      {
-        date: "12 August 2026",
-        title: "Two proposals rejected in committee",
-        body: "The parliamentary committee rejected a proposal to grant residence for investment in alternative investment funds, and a separate proposal to link residence to real estate investment.",
-      },
-      {
-        date: "20 August 2026",
-        title: "Second review in parliament",
-        body: "The Saeima reviewed the law a second time and continued specifying its provisions. The investment-residence provisions had not been settled publicly at the time of writing.",
-      },
+    title: "Latvian residence through a business investment",
+    lead: "The programme gives an investor and their family European residence through a direct investment in a Latvian company, with a route to permanent residence and citizenship if the conditions are met.",
+    countryTitle: "The country",
+    country: [
+      "In northern Europe on the Baltic Sea — the gateway between the Nordic countries and central and eastern Europe.",
+      "A population of about two million. The capital is Riga.",
+      "Joined the European Union in 2004 and the Schengen area in 2007.",
+      "Visa-free travel, residence and study across the 29 Schengen member states.",
+      "A major logistics hub, well placed for cross-border trade.",
+      "Modern technical infrastructure, with internet speeds among the fastest in the world.",
     ],
-    meaningTitle: "What this means for an investor",
-    meaning: [
-      {
-        title: "The current rules still apply",
-        body: "The new law is not in force. Applications submitted and accepted before it enters into force are processed under the existing regime.",
-      },
-      {
-        title: "Two routes are proposed for removal",
-        body: "As passed in June, the new law drops the real estate route and the bank deposit route. Do not commit to either on the assumption it will still be there.",
-      },
-      {
-        title: "The company route is retained",
-        body: "Investment in the share capital of a Latvian company stays, but with a shorter permit period than today under the text passed in June.",
-      },
+    benefitTitle: "What it gives you",
+    residencyTitle: "Residence",
+    residency: [
+      "Legal right of residence in Latvia",
+      "The right to live, study and invest in Latvia",
+      "Freedom of movement across the Schengen area",
+      "The ability to bring family members",
+      "A route to permanent residence and citizenship if the conditions are met",
     ],
-    stanceTitle: "Our position",
-    stanceBody: "We will not quote you a Latvian threshold while the law is being rewritten. Once the text is promulgated we confirm in writing what applies to your case and from what date. In the meantime our Greek programme is in force and unaffected.",
-    sourcesTitle: "Sources",
-    verified: "Checked 28 August 2026",
+    investTitle: "Investment",
+    invest: [
+      "You may own and run a business in Latvia",
+      "Access to the European market through that business",
+      "You may hold shares and receive dividends from a Latvian-registered company",
+      "Return on the investment and capital growth",
+    ],
+    condTitle: "Who qualifies",
+    basicTitle: "Basic conditions",
+    basic: [
+      "Over 18 and not a national of the EU, EEA or Switzerland",
+      "A clean criminal record, with no serious convictions",
+      "A valid passport and health insurance valid in the Schengen area",
+      "Proof of the lawful source of funds, under anti-money-laundering rules",
+      "The financial capacity to make the investment",
+    ],
+    amountTitle: "Investment required",
+    amount: [
+      "At least € 50,000 into the share capital of a commercial company.",
+      "Once the first permit is approved, a further € 10,000 is paid into the state budget.",
+      "The usual routes: incorporate a new company, invest in a local business, or buy shares in a trading company.",
+    ],
+    familyTitle: "Family members included",
+    family: [
+      "Spouse and children under 18",
+      "Children over 18 who are still studying and dependent",
+    ],
+    costTitle: "Indicative total cost",
+    costCols: ["Item", "Amount (€)"],
+    costs: [
+      { item: "Share capital investment", amount: "55,000" },
+      { item: "Residence permit fee", amount: "5,000" },
+      { item: "Other costs — state fees, insurance, medical (estimate)", amount: "500" },
+      { item: "Registration of a Latvian residential address (annual)", amount: "1,500" },
+      { item: "Payment into the state budget, after approval", amount: "10,000" },
+    ],
+    costTotalLabel: "Total",
+    costTotal: "72,000",
+    costNotes: [
+      "Translation costs may arise if documents are not in English, German or French.",
+      "Some smaller costs vary case by case.",
+      "The balance to be held in the Latvian account is around € 84,000, covering the investment and the required minimum living costs.",
+    ],
+    processTitle: "How it runs",
+    process: [
+      { title: "Prepare the file in your home country", body: "Passport valid for at least a year, 4×5 photographs on a white background, a criminal record certificate, consular-legalised documents, and proof of funds." },
+      { title: "Prepare the funds", body: "Put in place the balance required in the Latvian account, covering the investment and the required minimum living costs." },
+      { title: "File in Latvia", body: "Sign the power of attorney, open a Latvian bank account, transfer the funds to it, and file with the migration authority (OCMA)." },
+      { title: "Wait for the decision", body: "Fees by speed: 30 days € 160 per person, 10 days € 280, 5 days € 560. This is the time to a decision, which is not always the final outcome." },
+      { title: "Receive the outcome", body: "The file may be approved, refused, or returned for further documents — the last is common. It can take up to four months, and up to twelve in unusual cases." },
+      { title: "Make the investment", body: "Incorporate or invest in the Latvian company, complete the legal and operational steps, and keep the conditions met for renewal." },
+    ],
+    lawTitle: "One thing to know about the timing",
+    lawBody: "Latvia's Immigration Law is being revised. The text passed by parliament on 11 June 2026 removes the real estate route and the bank deposit route, but KEEPS the company investment route — the route this programme uses. The President returned the law for a second review on 19 June and parliament took it up again on 20 August; as at the date checked the law is not in force, so applications are processed under the current rules. We confirm in writing what applies to your case before you transfer any money.",
+    verified: "Figures from NIBELC's programme file · legal position checked 28 August 2026",
     cta: "Ask us about Latvia",
-    note: "This page is general information about a pending legislative change, not legal advice. Immigration rules are set by the Latvian authorities and can change at any time.",
+    note: "This page is general information about the programme, not legal or investment advice. Conditions, amounts and processing times are set by the Latvian authorities and can change.",
   },
 
   properties: {

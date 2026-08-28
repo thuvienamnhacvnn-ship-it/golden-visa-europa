@@ -683,60 +683,90 @@ export const el: Dictionary = {
   },
 
   /**
-   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
-   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
-   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   * Số liệu lấy từ tài liệu khách gửi: CHƯƠNG TRÌNH VISA ĐẦU TƯ VÀ ĐỊNH CƯ
+   * LATVIA.pdf (10 trang). Diện dùng ở đây là GÓP VỐN DOANH NGHIỆP — đúng
+   * diện mà Luật Nhập cư mới giữ lại, không phải diện bất động sản hay gửi
+   * tiền ngân hàng đang bị đề xuất bỏ. `lawBody` nói rõ chỗ này.
    */
   latvia: {
     eyebrow: "Λετονία",
-    title: "Λετονία: το πρόγραμμα ξαναγράφεται",
-    lead: "Οι δρόμοι διαμονής μέσω επένδυσης στη Λετονία βρίσκονται στη μέση μιας αναθεώρησης της νομοθεσίας. Εδώ είναι ακριβώς πού βρίσκεται σήμερα — και γιατί δεν σας δίνουμε ακόμη κάποιο ποσό.",
-    statusTitle: "Πού βρισκόμαστε",
-    statusBody: "Ο νέος Νόμος περί Μετανάστευσης ψηφίστηκε από τη βουλή αλλά δεν έχει τεθεί σε ισχύ. Μέχρι τότε, οι αιτήσεις εξετάζονται με τους ισχύοντες κανόνες. Θα δημοσιεύσουμε τα επιλέξιμα ποσά όταν ο νόμος οριστικοποιηθεί, όχι νωρίτερα.",
-    timelineTitle: "Τι έχει γίνει",
-    timeline: [
-      {
-        date: "11 Ιουνίου 2026",
-        title: "Η βουλή ψηφίζει τον νέο νόμο",
-        body: "Η Saeima ενέκρινε τον νέο Νόμο περί Μετανάστευσης στην τρίτη και τελευταία ανάγνωση.",
-      },
-      {
-        date: "19 Ιουνίου 2026",
-        title: "Ο Πρόεδρος αρνείται να υπογράψει",
-        body: "Ο Πρόεδρος Edgars Rinkēvičs αρνήθηκε να εκδώσει τον νόμο και τον επέστρεψε στη βουλή για δεύτερη εξέταση, λόγω των διατάξεων που ορίζουν ποιος μπορεί να αποκτήσει διαμονή μέσω επένδυσης.",
-      },
-      {
-        date: "12 Αυγούστου 2026",
-        title: "Δύο προτάσεις απορρίφθηκαν στην επιτροπή",
-        body: "Η κοινοβουλευτική επιτροπή απέρριψε πρόταση για χορήγηση διαμονής έναντι επένδυσης σε εναλλακτικά επενδυτικά κεφάλαια, καθώς και χωριστή πρόταση που συνέδεε τη διαμονή με επένδυση σε ακίνητα.",
-      },
-      {
-        date: "20 Αυγούστου 2026",
-        title: "Δεύτερη εξέταση στη βουλή",
-        body: "Η Saeima εξέτασε τον νόμο για δεύτερη φορά και συνέχισε να εξειδικεύει τις διατάξεις του. Οι διατάξεις για επένδυση και διαμονή δεν είχαν ανακοινωθεί ως οριστικοποιημένες όταν γράφτηκε αυτή η σελίδα.",
-      },
+    title: "Διαμονή στη Λετονία μέσω επένδυσης σε επιχείρηση",
+    lead: "Το πρόγραμμα δίνει στον επενδυτή και την οικογένειά του δικαίωμα διαμονής στην Ευρώπη μέσω άμεσης επένδυσης σε λετονική εταιρεία, με διαδρομή προς μόνιμη διαμονή και ιθαγένεια εφόσον πληρούνται οι προϋποθέσεις.",
+    countryTitle: "Η χώρα",
+    country: [
+      "In northern Europe on the Baltic Sea — the gateway between the Nordic countries and central and eastern Europe.",
+      "A population of about two million. The capital is Riga.",
+      "Joined the European Union in 2004 and the Schengen area in 2007.",
+      "Visa-free travel, residence and study across the 29 Schengen member states.",
+      "A major logistics hub, well placed for cross-border trade.",
+      "Modern technical infrastructure, with internet speeds among the fastest in the world.",
     ],
-    meaningTitle: "Τι σημαίνει αυτό για έναν επενδυτή",
-    meaning: [
-      {
-        title: "Οι ισχύοντες κανόνες εξακολουθούν να ισχύουν",
-        body: "Ο νέος νόμος δεν είναι σε ισχύ. Αιτήσεις που υποβλήθηκαν και έγιναν δεκτές πριν τεθεί σε ισχύ εξετάζονται με το υφιστάμενο καθεστώς.",
-      },
-      {
-        title: "Δύο δρόμοι προτείνονται προς κατάργηση",
-        body: "Όπως ψηφίστηκε τον Ιούνιο, ο νέος νόμος καταργεί τον δρόμο των ακινήτων και τον δρόμο της τραπεζικής κατάθεσης. Μη δεσμευτείτε σε κανέναν από τους δύο με την υπόθεση ότι θα εξακολουθεί να υπάρχει.",
-      },
-      {
-        title: "Ο δρόμος της εταιρείας διατηρείται",
-        body: "Η επένδυση στο μετοχικό κεφάλαιο λετονικής εταιρείας παραμένει, αλλά με μικρότερη διάρκεια άδειας από τη σημερινή, σύμφωνα με το κείμενο που ψηφίστηκε τον Ιούνιο.",
-      },
+    benefitTitle: "Τι σας δίνει",
+    residencyTitle: "Διαμονή",
+    residency: [
+      "Legal right of residence in Latvia",
+      "The right to live, study and invest in Latvia",
+      "Freedom of movement across the Schengen area",
+      "The ability to bring family members",
+      "A route to permanent residence and citizenship if the conditions are met",
     ],
-    stanceTitle: "Η θέση μας",
-    stanceBody: "Δεν θα σας αναφέρουμε λετονικό όριο όσο ο νόμος ξαναγράφεται. Μόλις το κείμενο εκδοθεί, επιβεβαιώνουμε γραπτώς τι ισχύει για τη δική σας περίπτωση και από ποια ημερομηνία. Στο μεταξύ, το ελληνικό μας πρόγραμμα είναι σε ισχύ και δεν επηρεάζεται.",
-    sourcesTitle: "Πηγές",
-    verified: "Ελέγχθηκε στις 28 Αυγούστου 2026",
+    investTitle: "Επένδυση",
+    invest: [
+      "You may own and run a business in Latvia",
+      "Access to the European market through that business",
+      "You may hold shares and receive dividends from a Latvian-registered company",
+      "Return on the investment and capital growth",
+    ],
+    condTitle: "Ποιοι πληρούν τις προϋποθέσεις",
+    basicTitle: "Βασικές προϋποθέσεις",
+    basic: [
+      "Over 18 and not a national of the EU, EEA or Switzerland",
+      "A clean criminal record, with no serious convictions",
+      "A valid passport and health insurance valid in the Schengen area",
+      "Proof of the lawful source of funds, under anti-money-laundering rules",
+      "The financial capacity to make the investment",
+    ],
+    amountTitle: "Απαιτούμενη επένδυση",
+    amount: [
+      "At least € 50,000 into the share capital of a commercial company.",
+      "Once the first permit is approved, a further € 10,000 is paid into the state budget.",
+      "The usual routes: incorporate a new company, invest in a local business, or buy shares in a trading company.",
+    ],
+    familyTitle: "Μέλη οικογένειας που καλύπτονται",
+    family: [
+      "Spouse and children under 18",
+      "Children over 18 who are still studying and dependent",
+    ],
+    costTitle: "Ενδεικτικό συνολικό κόστος",
+    costCols: ["Στοιχείο", "Ποσό (€)"],
+    costs: [
+      { item: "Share capital investment", amount: "55,000" },
+      { item: "Residence permit fee", amount: "5,000" },
+      { item: "Other costs — state fees, insurance, medical (estimate)", amount: "500" },
+      { item: "Registration of a Latvian residential address (annual)", amount: "1,500" },
+      { item: "Payment into the state budget, after approval", amount: "10,000" },
+    ],
+    costTotalLabel: "Σύνολο",
+    costTotal: "72,000",
+    costNotes: [
+      "Translation costs may arise if documents are not in English, German or French.",
+      "Some smaller costs vary case by case.",
+      "The balance to be held in the Latvian account is around € 84,000, covering the investment and the required minimum living costs.",
+    ],
+    processTitle: "Πώς εξελίσσεται",
+    process: [
+      { title: "Prepare the file in your home country", body: "Passport valid for at least a year, 4×5 photographs on a white background, a criminal record certificate, consular-legalised documents, and proof of funds." },
+      { title: "Prepare the funds", body: "Put in place the balance required in the Latvian account, covering the investment and the required minimum living costs." },
+      { title: "File in Latvia", body: "Sign the power of attorney, open a Latvian bank account, transfer the funds to it, and file with the migration authority (OCMA)." },
+      { title: "Wait for the decision", body: "Fees by speed: 30 days € 160 per person, 10 days € 280, 5 days € 560. This is the time to a decision, which is not always the final outcome." },
+      { title: "Receive the outcome", body: "The file may be approved, refused, or returned for further documents — the last is common. It can take up to four months, and up to twelve in unusual cases." },
+      { title: "Make the investment", body: "Incorporate or invest in the Latvian company, complete the legal and operational steps, and keep the conditions met for renewal." },
+    ],
+    lawTitle: "Κάτι που πρέπει να ξέρετε για τη συγκυρία",
+    lawBody: "Latvia's Immigration Law is being revised. The text passed by parliament on 11 June 2026 removes the real estate route and the bank deposit route, but KEEPS the company investment route — the route this programme uses. The President returned the law for a second review on 19 June and parliament took it up again on 20 August; as at the date checked the law is not in force, so applications are processed under the current rules. We confirm in writing what applies to your case before you transfer any money.",
+    verified: "Στοιχεία από τον φάκελο προγράμματος της NIBELC · νομικό καθεστώς ελεγμένο στις 28 Αυγούστου 2026",
     cta: "Ρωτήστε μας για τη Λετονία",
-    note: "Η σελίδα αυτή είναι γενική πληροφόρηση για μια εκκρεμή νομοθετική αλλαγή, όχι νομική συμβουλή. Οι κανόνες μετανάστευσης ορίζονται από τις λετονικές αρχές και μπορούν να αλλάξουν ανά πάσα στιγμή.",
+    note: "This page is general information about the programme, not legal or investment advice. Conditions, amounts and processing times are set by the Latvian authorities and can change.",
   },
 
   properties: {

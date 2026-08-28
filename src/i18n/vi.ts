@@ -682,60 +682,90 @@ export const vi: Dictionary = {
   },
 
   /**
-   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
-   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
-   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   * Số liệu lấy từ tài liệu khách gửi: CHƯƠNG TRÌNH VISA ĐẦU TƯ VÀ ĐỊNH CƯ
+   * LATVIA.pdf (10 trang). Diện dùng ở đây là GÓP VỐN DOANH NGHIỆP — đúng
+   * diện mà Luật Nhập cư mới giữ lại, không phải diện bất động sản hay gửi
+   * tiền ngân hàng đang bị đề xuất bỏ. `lawBody` nói rõ chỗ này.
    */
   latvia: {
     eyebrow: "Latvia",
-    title: "Latvia: chương trình đang được viết lại",
-    lead: "Các diện đầu tư đổi cư trú của Latvia đang trong đợt sửa luật. Đây là tình hình đúng đến hôm nay — và lý do chúng tôi chưa đưa ra con số nào cho quý vị.",
-    statusTitle: "Tình hình hiện tại",
-    statusBody: "Luật Nhập cư mới đã qua Quốc hội nhưng chưa có hiệu lực. Chừng nào chưa có hiệu lực, hồ sơ vẫn xét theo quy định hiện hành. Chúng tôi sẽ công bố mức đầu tư khi luật ngã ngũ, không sớm hơn.",
-    timelineTitle: "Diễn biến",
-    timeline: [
-      {
-        date: "11/06/2026",
-        title: "Quốc hội thông qua luật mới",
-        body: "Quốc hội Latvia thông qua Luật Nhập cư mới ở lần đọc thứ ba, cũng là lần cuối.",
-      },
-      {
-        date: "19/06/2026",
-        title: "Tổng thống từ chối ký",
-        body: "Tổng thống Edgars Rinkēvičs không ký ban hành và trả luật về Quốc hội xem xét lần hai, đúng phần quy định ai được nhận cư trú qua đầu tư.",
-      },
-      {
-        date: "12/08/2026",
-        title: "Uỷ ban bác hai đề xuất",
-        body: "Uỷ ban Quốc hội bác đề xuất cấp cư trú cho người đầu tư vào quỹ đầu tư thay thế, và bác luôn đề xuất riêng gắn cư trú với đầu tư bất động sản.",
-      },
-      {
-        date: "20/08/2026",
-        title: "Quốc hội xem xét lần hai",
-        body: "Quốc hội xem xét luật lần hai và tiếp tục làm rõ các điều khoản. Phần đầu tư đổi cư trú chưa được công bố là đã chốt tại thời điểm viết trang này.",
-      },
+    title: "Định cư Latvia qua đầu tư doanh nghiệp",
+    lead: "Chương trình cho phép nhà đầu tư và gia đình có quyền cư trú châu Âu thông qua đầu tư trực tiếp vào doanh nghiệp tại Latvia, kèm lộ trình lên thường trú và quốc tịch nếu đáp ứng điều kiện.",
+    countryTitle: "Đất nước Latvia",
+    country: [
+      "Nằm ở Bắc Âu, tiếp giáp biển Baltic — cửa ngõ nối các nước Bắc Âu với Đông và Trung Âu.",
+      "Dân số khoảng 2 triệu người. Thủ đô là Riga.",
+      "Gia nhập Liên minh châu Âu năm 2004 và khối Schengen năm 2007.",
+      "Miễn visa đi lại, sinh sống và học tập tại 29 quốc gia thành viên Schengen.",
+      "Trung tâm logistics trọng điểm, thuận lợi cho thương mại xuyên biên giới.",
+      "Hạ tầng công nghệ hiện đại, tốc độ Internet thuộc nhóm nhanh nhất thế giới.",
     ],
-    meaningTitle: "Điều này nghĩa gì với nhà đầu tư",
-    meaning: [
-      {
-        title: "Quy định hiện hành vẫn áp dụng",
-        body: "Luật mới chưa có hiệu lực. Hồ sơ nộp và được tiếp nhận trước ngày luật có hiệu lực vẫn xét theo quy định cũ.",
-      },
-      {
-        title: "Hai diện đang bị đề xuất bỏ",
-        body: "Theo bản thông qua hồi tháng 6, luật mới bỏ diện bất động sản và diện gửi tiền ngân hàng. Đừng cam kết theo hai diện này với giả định chúng còn tồn tại.",
-      },
-      {
-        title: "Diện góp vốn doanh nghiệp được giữ",
-        body: "Đầu tư vào vốn điều lệ công ty Latvia vẫn còn, nhưng thời hạn thẻ ngắn hơn hiện nay theo bản luật thông qua tháng 6.",
-      },
+    benefitTitle: "Quyền lợi",
+    residencyTitle: "Về cư trú",
+    residency: [
+      "Quyền cư trú hợp pháp tại Latvia",
+      "Có thể sinh sống, học tập và đầu tư tại Latvia",
+      "Tự do di chuyển trong khối Schengen",
+      "Có thể bảo lãnh người thân trong gia đình",
+      "Lộ trình lên thường trú và quốc tịch nếu đáp ứng điều kiện",
     ],
-    stanceTitle: "Quan điểm của chúng tôi",
-    stanceBody: "Chúng tôi sẽ không báo mức đầu tư Latvia trong lúc luật đang được viết lại. Khi văn bản được ban hành, chúng tôi xác nhận bằng văn bản điều gì áp dụng cho trường hợp của quý vị và từ ngày nào. Trong thời gian đó, chương trình Hy Lạp của chúng tôi vẫn có hiệu lực và không bị ảnh hưởng.",
-    sourcesTitle: "Nguồn",
-    verified: "Kiểm chứng ngày 28/08/2026",
+    investTitle: "Về đầu tư",
+    invest: [
+      "Có thể sở hữu và vận hành doanh nghiệp tại Latvia",
+      "Tiếp cận thị trường châu Âu thông qua doanh nghiệp",
+      "Nắm giữ cổ phần và nhận cổ tức từ công ty đăng ký tại Latvia",
+      "Sinh lời từ đầu tư và tăng trưởng vốn",
+    ],
+    condTitle: "Điều kiện tham gia",
+    basicTitle: "Điều kiện cơ bản",
+    basic: [
+      "Trên 18 tuổi, không phải công dân EU/EEA/Thụy Sĩ",
+      "Lý lịch tư pháp rõ ràng, không tiền án nghiêm trọng",
+      "Hộ chiếu hợp lệ và bảo hiểm y tế có hiệu lực tại Schengen",
+      "Chứng minh nguồn tiền hợp pháp theo quy định phòng chống rửa tiền",
+      "Có khả năng tài chính để thực hiện khoản đầu tư",
+    ],
+    amountTitle: "Mức đầu tư",
+    amount: [
+      "Tối thiểu 50.000 € vào vốn điều lệ của một công ty thương mại.",
+      "Sau khi có quyết định chấp thuận cấp thị thực lần đầu, nộp thêm 10.000 € vào ngân sách nhà nước.",
+      "Hình thức phổ biến: thành lập công ty mới, góp vốn vào doanh nghiệp bản địa, hoặc mua cổ phần doanh nghiệp đang hoạt động.",
+    ],
+    familyTitle: "Thành viên gia đình đi cùng",
+    family: [
+      "Vợ hoặc chồng và con dưới 18 tuổi",
+      "Con trên 18 tuổi đang đi học và còn phụ thuộc",
+    ],
+    costTitle: "Tổng khoản đầu tư dự kiến",
+    costCols: ["Hạng mục", "Thành tiền (€)"],
+    costs: [
+      { item: "Đầu tư vốn điều lệ công ty", amount: "55.000" },
+      { item: "Phí xin giấy phép cư trú", amount: "5.000" },
+      { item: "Chi phí khác — phí nhà nước, bảo hiểm, khám sức khoẻ (ước tính)", amount: "500" },
+      { item: "Đăng ký địa chỉ cư trú tại Latvia (hàng năm)", amount: "1.500" },
+      { item: "Nộp vào ngân sách nhà nước, sau khi được chấp thuận", amount: "10.000" },
+    ],
+    costTotalLabel: "Tổng",
+    costTotal: "72.000",
+    costNotes: [
+      "Có thể phát sinh chi phí dịch thuật nếu hồ sơ không phải tiếng Anh, Đức hoặc Pháp.",
+      "Một số chi phí nhỏ có thể thay đổi tuỳ từng trường hợp cụ thể.",
+      "Số dư cần có trong tài khoản tại Latvia khoảng 84.000 €, gồm vốn đầu tư và chi phí sinh hoạt tối thiểu theo yêu cầu.",
+    ],
+    processTitle: "Quy trình",
+    process: [
+      { title: "Chuẩn bị hồ sơ tại Việt Nam", body: "Hộ chiếu còn hạn từ một năm trở lên, ảnh 4×5 nền trắng, phiếu lý lịch tư pháp số 2, giấy tờ đã hợp pháp hoá lãnh sự, giấy tờ chứng minh tài chính." },
+      { title: "Chuẩn bị tài chính", body: "Chuẩn bị số dư cần có trong tài khoản tại Latvia, gồm vốn đầu tư và chi phí sinh hoạt tối thiểu theo yêu cầu." },
+      { title: "Xử lý hồ sơ tại Latvia", body: "Ký giấy uỷ quyền, mở tài khoản ngân hàng tại Latvia, chuyển tiền vào tài khoản mới lập, nộp hồ sơ tại Cơ quan Di trú OCMA." },
+      { title: "Chờ xét duyệt", body: "Phí xét theo tốc độ: 30 ngày 160 €/người, 10 ngày 280 €/người, 5 ngày 560 €/người. Đây là thời gian ra quyết định, chưa chắc đã là kết quả cuối cùng." },
+      { title: "Nhận kết quả", body: "Hồ sơ có thể được phê duyệt, bị từ chối, hoặc bị yêu cầu bổ sung — trường hợp yêu cầu bổ sung là phổ biến. Thời gian có thể kéo dài đến 4 tháng, tối đa 12 tháng với trường hợp đặc biệt." },
+      { title: "Thực hiện đầu tư", body: "Thành lập hoặc góp vốn vào công ty tại Latvia, hoàn tất thủ tục pháp lý và vận hành, duy trì điều kiện để gia hạn." },
+    ],
+    lawTitle: "Một điều cần biết về thời điểm này",
+    lawBody: "Luật Nhập cư Latvia đang được sửa. Bản Quốc hội thông qua ngày 11/06/2026 bỏ diện bất động sản và diện gửi tiền ngân hàng, nhưng GIỮ diện góp vốn doanh nghiệp — chính là diện của chương trình này. Tổng thống trả luật về xem xét lần hai ngày 19/06 và Quốc hội bàn lại ngày 20/08; đến thời điểm kiểm chứng, luật chưa có hiệu lực nên hồ sơ vẫn xét theo quy định hiện hành. Chúng tôi xác nhận bằng văn bản điều gì áp dụng cho trường hợp của quý vị trước khi quý vị chuyển bất kỳ khoản tiền nào.",
+    verified: "Số liệu theo hồ sơ chương trình của NIBELC · kiểm chứng pháp lý ngày 28/08/2026",
     cta: "Hỏi chúng tôi về Latvia",
-    note: "Trang này là thông tin chung về một thay đổi pháp luật đang chờ, không phải tư vấn pháp lý. Quy định nhập cư do cơ quan chức năng Latvia đặt ra và có thể thay đổi bất cứ lúc nào.",
+    note: "Trang này là thông tin chung về chương trình, không phải tư vấn pháp lý hay tư vấn đầu tư. Điều kiện, mức đầu tư và thời gian xử lý do cơ quan chức năng Latvia đặt ra và có thể thay đổi.",
   },
 
   properties: {

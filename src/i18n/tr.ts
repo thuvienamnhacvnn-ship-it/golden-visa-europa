@@ -681,60 +681,90 @@ export const tr: Dictionary = {
   },
 
   /**
-   * CỐ Ý KHÔNG có con số mức đầu tư: Luật Nhập cư Latvia đang được viết
-   * lại và phần đầu tư đổi cư trú chưa ngã ngũ. Đăng con số lúc này thì
-   * vài tuần nữa sai, mà sai kiểu đó với khách đầu tư định cư là hỏng việc.
+   * Số liệu lấy từ tài liệu khách gửi: CHƯƠNG TRÌNH VISA ĐẦU TƯ VÀ ĐỊNH CƯ
+   * LATVIA.pdf (10 trang). Diện dùng ở đây là GÓP VỐN DOANH NGHIỆP — đúng
+   * diện mà Luật Nhập cư mới giữ lại, không phải diện bất động sản hay gửi
+   * tiền ngân hàng đang bị đề xuất bỏ. `lawBody` nói rõ chỗ này.
    */
   latvia: {
     eyebrow: "Letonya",
-    title: "Letonya: program yeniden yazılıyor",
-    lead: "Letonya'nın yatırım yoluyla oturum seçenekleri kapsamlı bir yasa değişikliğinin ortasında. Bugün itibarıyla durumun tam olarak neresinde olduğunu ve neden henüz size bir rakam vermediğimizi burada anlatıyoruz.",
-    statusTitle: "Durum ne",
-    statusBody: "Yeni Göç Kanunu meclisten geçti ama yürürlüğe girmedi. Girene kadar başvurular mevcut kurallara göre işleniyor. Yeterli yatırım tutarlarını, ancak kanun kesinleştiğinde yayımlayacağız; öncesinde değil.",
-    timelineTitle: "Neler oldu",
-    timeline: [
-      {
-        date: "11 Haziran 2026",
-        title: "Meclis yeni kanunu kabul etti",
-        body: "Saeima, yeni Göç Kanunu'nu üçüncü ve son okumada kabul etti.",
-      },
-      {
-        date: "19 Haziran 2026",
-        title: "Cumhurbaşkanı imzalamadı",
-        body: "Cumhurbaşkanı Edgars Rinkēvičs kanunu ilan etmeyi reddetti ve yatırım yoluyla kimin oturum alabileceğini belirleyen hükümler nedeniyle ikinci görüşme için meclise iade etti.",
-      },
-      {
-        date: "12 Ağustos 2026",
-        title: "Komisyonda iki öneri reddedildi",
-        body: "Meclis komisyonu, alternatif yatırım fonlarına yatırım karşılığı oturum verilmesi önerisini ve oturumu gayrimenkul yatırımına bağlayan ayrı bir öneriyi reddetti.",
-      },
-      {
-        date: "20 Ağustos 2026",
-        title: "Mecliste ikinci görüşme",
-        body: "Saeima kanunu ikinci kez görüştü ve hükümleri netleştirmeye devam etti. Bu sayfa yazılırken yatırım–oturum hükümlerinin kesinleştiği kamuoyuna duyurulmamıştı.",
-      },
+    title: "Şirket yatırımıyla Letonya'da oturum",
+    lead: "Program, yatırımcıya ve ailesine bir Letonya şirketine doğrudan yatırım yoluyla Avrupa'da oturum hakkı verir; koşullar sağlanırsa daimi oturuma ve vatandaşlığa giden bir yol da açar.",
+    countryTitle: "Ülke",
+    country: [
+      "In northern Europe on the Baltic Sea — the gateway between the Nordic countries and central and eastern Europe.",
+      "A population of about two million. The capital is Riga.",
+      "Joined the European Union in 2004 and the Schengen area in 2007.",
+      "Visa-free travel, residence and study across the 29 Schengen member states.",
+      "A major logistics hub, well placed for cross-border trade.",
+      "Modern technical infrastructure, with internet speeds among the fastest in the world.",
     ],
-    meaningTitle: "Bu bir yatırımcı için ne anlama geliyor",
-    meaning: [
-      {
-        title: "Mevcut kurallar hâlâ geçerli",
-        body: "Yeni kanun yürürlükte değil. Yürürlüğe girmeden önce verilip kabul edilen başvurular mevcut rejime göre işleniyor.",
-      },
-      {
-        title: "İki yolun kaldırılması öneriliyor",
-        body: "Haziranda kabul edilen metinde yeni kanun, gayrimenkul yolunu ve banka mevduatı yolunu kaldırıyor. Bunların duracağını varsayarak taahhüde girmeyin.",
-      },
-      {
-        title: "Şirket yolu korunuyor",
-        body: "Bir Letonya şirketinin sermayesine yatırım kalıyor, ancak haziranda kabul edilen metne göre bugünkünden daha kısa bir izin süresiyle.",
-      },
+    benefitTitle: "Size ne kazandırır",
+    residencyTitle: "Oturum",
+    residency: [
+      "Legal right of residence in Latvia",
+      "The right to live, study and invest in Latvia",
+      "Freedom of movement across the Schengen area",
+      "The ability to bring family members",
+      "A route to permanent residence and citizenship if the conditions are met",
     ],
-    stanceTitle: "Bizim tutumumuz",
-    stanceBody: "Kanun yeniden yazılırken size bir Letonya eşiği söylemeyeceğiz. Metin ilan edildiğinde, sizin durumunuza neyin ve hangi tarihten itibaren uygulandığını yazılı olarak teyit ederiz. Bu arada Yunanistan programımız yürürlükte ve bu değişiklikten etkilenmiyor.",
-    sourcesTitle: "Kaynaklar",
-    verified: "28 Ağustos 2026'da kontrol edildi",
+    investTitle: "Yatırım",
+    invest: [
+      "You may own and run a business in Latvia",
+      "Access to the European market through that business",
+      "You may hold shares and receive dividends from a Latvian-registered company",
+      "Return on the investment and capital growth",
+    ],
+    condTitle: "Kimler başvurabilir",
+    basicTitle: "Temel koşullar",
+    basic: [
+      "Over 18 and not a national of the EU, EEA or Switzerland",
+      "A clean criminal record, with no serious convictions",
+      "A valid passport and health insurance valid in the Schengen area",
+      "Proof of the lawful source of funds, under anti-money-laundering rules",
+      "The financial capacity to make the investment",
+    ],
+    amountTitle: "Gereken yatırım",
+    amount: [
+      "At least € 50,000 into the share capital of a commercial company.",
+      "Once the first permit is approved, a further € 10,000 is paid into the state budget.",
+      "The usual routes: incorporate a new company, invest in a local business, or buy shares in a trading company.",
+    ],
+    familyTitle: "Kapsanan aile üyeleri",
+    family: [
+      "Spouse and children under 18",
+      "Children over 18 who are still studying and dependent",
+    ],
+    costTitle: "Tahmini toplam maliyet",
+    costCols: ["Kalem", "Tutar (€)"],
+    costs: [
+      { item: "Share capital investment", amount: "55,000" },
+      { item: "Residence permit fee", amount: "5,000" },
+      { item: "Other costs — state fees, insurance, medical (estimate)", amount: "500" },
+      { item: "Registration of a Latvian residential address (annual)", amount: "1,500" },
+      { item: "Payment into the state budget, after approval", amount: "10,000" },
+    ],
+    costTotalLabel: "Toplam",
+    costTotal: "72,000",
+    costNotes: [
+      "Translation costs may arise if documents are not in English, German or French.",
+      "Some smaller costs vary case by case.",
+      "The balance to be held in the Latvian account is around € 84,000, covering the investment and the required minimum living costs.",
+    ],
+    processTitle: "Süreç",
+    process: [
+      { title: "Prepare the file in your home country", body: "Passport valid for at least a year, 4×5 photographs on a white background, a criminal record certificate, consular-legalised documents, and proof of funds." },
+      { title: "Prepare the funds", body: "Put in place the balance required in the Latvian account, covering the investment and the required minimum living costs." },
+      { title: "File in Latvia", body: "Sign the power of attorney, open a Latvian bank account, transfer the funds to it, and file with the migration authority (OCMA)." },
+      { title: "Wait for the decision", body: "Fees by speed: 30 days € 160 per person, 10 days € 280, 5 days € 560. This is the time to a decision, which is not always the final outcome." },
+      { title: "Receive the outcome", body: "The file may be approved, refused, or returned for further documents — the last is common. It can take up to four months, and up to twelve in unusual cases." },
+      { title: "Make the investment", body: "Incorporate or invest in the Latvian company, complete the legal and operational steps, and keep the conditions met for renewal." },
+    ],
+    lawTitle: "Zamanlamayla ilgili bilinmesi gereken",
+    lawBody: "Latvia's Immigration Law is being revised. The text passed by parliament on 11 June 2026 removes the real estate route and the bank deposit route, but KEEPS the company investment route — the route this programme uses. The President returned the law for a second review on 19 June and parliament took it up again on 20 August; as at the date checked the law is not in force, so applications are processed under the current rules. We confirm in writing what applies to your case before you transfer any money.",
+    verified: "Rakamlar NIBELC program dosyasından · hukuki durum 28 Ağustos 2026'da kontrol edildi",
     cta: "Letonya hakkında bize sorun",
-    note: "Bu sayfa, beklemede olan bir yasa değişikliği hakkında genel bilgidir; hukuki danışmanlık değildir. Göç kuralları Letonya makamlarınca belirlenir ve her an değişebilir.",
+    note: "This page is general information about the programme, not legal or investment advice. Conditions, amounts and processing times are set by the Latvian authorities and can change.",
   },
 
   properties: {
