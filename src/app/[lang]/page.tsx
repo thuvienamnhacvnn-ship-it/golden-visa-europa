@@ -74,16 +74,23 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
               <span className="gold-divider__gem" />
             </div>
 
-            <div className="mt-7 flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-3.5">
-              <ButtonLink href={localePath(locale, "contact")} variant="light">
+            {/* Điện thoại: hai nút nằm ngang và tự co theo chữ, đặt thấp hơn
+                hẳn so với tiêu đề. flex-wrap để ngôn ngữ có nhãn dài (Hy Lạp,
+                Latvia) xuống dòng thay vì tràn ra ngoài màn hình. */}
+            <div className="mt-14 flex w-full flex-wrap items-center justify-center gap-3 sm:mt-7 sm:w-auto sm:gap-3.5 lg:justify-start">
+              <ButtonLink href={localePath(locale, "contact")} variant="light" size="sm">
                 {t.hero.ctaPrimary}
               </ButtonLink>
-              <ButtonLink href={localePath(locale, "what-is-golden-visa")} variant="ghost">
+              <ButtonLink
+                href={localePath(locale, "what-is-golden-visa")}
+                variant="ghost"
+                size="sm"
+              >
                 {t.hero.ctaSecondary}
               </ButtonLink>
             </div>
 
-            <p className="mt-9 text-[0.625rem] uppercase tracking-[0.22em] text-on-deep-2/45">
+            <p className="mt-7 text-[0.625rem] uppercase tracking-[0.22em] text-on-deep-2/45 sm:mt-9">
               {t.hero.note}
             </p>
           </div>

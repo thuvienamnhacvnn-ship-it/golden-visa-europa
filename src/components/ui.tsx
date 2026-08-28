@@ -112,22 +112,37 @@ type ButtonProps = {
   href: string;
   children: ReactNode;
   variant?: "solid" | "outline" | "ghost" | "light";
+  /** "sm" thu nút lại trên điện thoại, về cỡ thường từ breakpoint sm trở lên. */
+  size?: "md" | "sm";
   className?: string;
 };
 
-export function ButtonLink({ href, children, variant = "solid", className = "" }: ButtonProps) {
-  const base =
-    "btn inline-flex items-center justify-center gap-2 px-8 py-4 text-sm font-medium tracking-wide";
+export function ButtonLink({
+  href,
+  children,
+  variant = "solid",
+  size = "md",
+  className = "",
+}: ButtonProps) {
+  const base = "btn inline-flex items-center justify-center gap-2 font-medium tracking-wide";
+  const sizes = {
+    md: "px-8 py-4 text-sm",
+    sm: "px-5 py-3 text-[0.8125rem] sm:px-8 sm:py-4 sm:text-sm",
+  } as const;
   const variants = {
     solid: "bg-deep text-on-deep shadow-[0_10px_30px_-14px_rgba(7,27,48,0.65)] hover:bg-deep-3",
     outline: "border border-ink/20 text-ink hover:border-gold-500 hover:text-gold-600 hover:shadow-[0_10px_30px_-16px_rgba(7,27,48,0.4)]",
+    /* Hai kiểu dưới đây nằm trên ẢNH BANNER. Ảnh nhiều chi tiết và sáng tối
+       lẫn lộn nên nút viền mảnh bị chìm — cả hai đều cần bóng đổ đậm để tách
+       khỏi nền, và nút phụ thêm lớp kính mờ làm nền đằng sau chữ. */
     light:
-      "bg-gold-500 text-deep-2 shadow-[0_12px_34px_-14px_rgba(200,164,77,0.75)] hover:bg-gold-400",
-    ghost: "border border-on-deep/25 text-on-deep hover:border-gold-400 hover:text-gold-400",
+      "bg-gold-500 text-deep-2 shadow-[0_10px_20px_-6px_rgba(0,0,0,0.55),0_18px_44px_-16px_rgba(200,164,77,0.85)] ring-1 ring-inset ring-white/25 hover:bg-gold-400 hover:shadow-[0_12px_24px_-6px_rgba(0,0,0,0.6),0_22px_54px_-16px_rgba(200,164,77,0.95)]",
+    ghost:
+      "border border-white/35 bg-deep/45 text-on-deep shadow-[0_10px_24px_-8px_rgba(0,0,0,0.6)] backdrop-blur-md hover:border-gold-400 hover:bg-deep/65 hover:text-gold-400",
   } as const;
 
   return (
-    <Link href={href} className={`${base} ${variants[variant]} ${className}`}>
+    <Link href={href} className={`${base} ${sizes[size]} ${variants[variant]} ${className}`}>
       {children}
     </Link>
   );
