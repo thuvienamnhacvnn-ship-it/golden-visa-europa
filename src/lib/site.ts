@@ -157,3 +157,11 @@ export const site = {
 } as const;
 
 export const officeCityKeys = ["athens", "thessaloniki", "vietnam", "turkiye"] as const;
+
+/**
+ * Ảnh chân dung đội ngũ. Tra theo TÊN vì tên riêng giữ nguyên ở cả năm ngôn
+ * ngữ; ai chưa có ảnh thì trang tự để khung chờ, không cần sửa gì thêm.
+ */
+export const teamPhotos: Record<string, string> = {
+  "Tony Phan": "/photos/team/tony-phan.jpg",
+};

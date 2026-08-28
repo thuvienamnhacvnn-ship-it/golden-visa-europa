@@ -9,6 +9,7 @@ import { Seal } from "@/components/Ornament";
 import { JsonLd } from "@/components/JsonLd";
 import { getDictionary, isLocale, localePath, locales, type Locale } from "@/i18n";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
+import { teamPhotos } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -95,30 +96,50 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
             <p className="mt-5 text-[1.0625rem] leading-[1.8] text-ink/80">{t.teamLead}</p>
           </div>
 
-          {/* Ba người thật do khách xác nhận. Ảnh chân dung vẫn chờ khách gửi
-              nên chỗ ảnh để khung tạm, còn tên và bằng cấp thì đã có. */}
-          <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Ảnh tràn hết bề ngang thẻ, chữ nằm trong phần đệm bên dưới. Để ảnh
+              lọt thỏm giữa lớp đệm như bản trước thì nhìn như ảnh dán tạm.
+              Ai chưa có ảnh thì tự rơi về khung chờ, không phải sửa gì thêm. */}
+          <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {t.team.map((member, i) => (
               <Reveal as="li" key={member.name} delay={i * 80}>
-                <article className="card card-hover card-sweep flex h-full flex-col p-7">
-                  <PlaceholderFrame label={dict.common.needsClientInput} ratio="4 / 5" />
-                  <p className="eyebrow mt-6 text-gold-600">{member.role}</p>
-                  <h3 className="mt-3 text-[1.25rem] leading-snug">{member.name}</h3>
-                  <p className="mt-1 text-[0.8125rem] text-ink/50">{member.honorific}</p>
-                  <ul className="mt-5 flex flex-1 flex-col gap-2.5 border-t border-ink/10 pt-4">
-                    {member.credentials.map((c) => (
-                      <li
-                        key={c}
-                        className="flex items-start gap-3 text-[0.875rem] leading-6 text-ink/70"
-                      >
-                        <span
-                          className="mt-2 block h-1 w-3 shrink-0 bg-gold-500"
-                          aria-hidden="true"
-                        />
-                        {c}
-                      </li>
-                    ))}
-                  </ul>
+                <article className="card card-hover card-sweep flex h-full flex-col overflow-hidden">
+                  {teamPhotos[member.name] ? (
+                    <figure className="zoom-wrap m-0">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src={teamPhotos[member.name]}
+                        alt={member.name}
+                        className="w-full object-cover"
+                        style={{ aspectRatio: "4 / 5" }}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </figure>
+                  ) : (
+                    // Không bọc thêm lớp đệm: bọc thì khung chờ nhỏ hơn ảnh
+                    // thật, ba thẻ cao thấp lệch nhau.
+                    <PlaceholderFrame label={dict.common.needsClientInput} ratio="4 / 5" />
+                  )}
+
+                  <div className="flex flex-1 flex-col p-7">
+                    <p className="eyebrow text-gold-600">{member.role}</p>
+                    <h3 className="mt-3 text-[1.25rem] leading-snug">{member.name}</h3>
+                    <p className="mt-1 text-[0.8125rem] text-ink/50">{member.honorific}</p>
+                    <ul className="mt-5 flex flex-1 flex-col gap-2.5 border-t border-ink/10 pt-4">
+                      {member.credentials.map((c) => (
+                        <li
+                          key={c}
+                          className="flex items-start gap-3 text-[0.875rem] leading-6 text-ink/70"
+                        >
+                          <span
+                            className="mt-2 block h-1 w-3 shrink-0 bg-gold-500"
+                            aria-hidden="true"
+                          />
+                          {c}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </article>
               </Reveal>
             ))}
