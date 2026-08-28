@@ -396,6 +396,7 @@ export const en = {
     eyebrow: "About us",
     title: "About NIBELC Group",
     lead: "A Greek real estate and residence-by-investment firm working with non-European investors since 2014.",
+    groupAlt: "Mr Nikolaos T. Kakkos, Ms Stella Nguyen and Mr Tony Phan",
     intro: [
       "We work at the intersection of three things that usually sit in separate companies: the residence permit, the real estate, and everything that keeps the asset productive afterwards. Holding all three in one team is what lets us commit to timelines instead of forwarding your questions elsewhere.",
       "Our clients are investors and families outside the European Union. Most of them handle the entire process without setting foot in Greece until the permit is ready.",

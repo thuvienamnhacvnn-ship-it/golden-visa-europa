@@ -398,6 +398,7 @@ export const lv: Dictionary = {
     eyebrow: "Par mums",
     title: "Par NIBELC Group",
     lead: "Grieķijas nekustamā īpašuma un uzturēšanās-caur-ieguldījumu uzņēmums, kas kopš 2014. gada strādā ar ieguldītājiem no ārpus Eiropas.",
+    groupAlt: "Nikolaos T. Kakkos, Stella Nguyen un Tony Phan",
     intro: [
       "Mēs strādājam krustpunktā trim lietām, kas parasti atrodas atsevišķos uzņēmumos: uzturēšanās atļauja, nekustamais īpašums un viss, kas pēc tam uztur īpašumu ienesīgu. Tieši tas, ka visas trīs turam vienā komandā, ļauj mums apņemties par termiņiem, nevis pārsūtīt jūsu jautājumus citur.",
       "Mūsu klienti ir ieguldītāji un ģimenes ārpus Eiropas Savienības. Vairums no viņiem izies visu procesu, nespērot kāju Grieķijā, kamēr atļauja nav gatava.",

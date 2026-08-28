@@ -396,6 +396,7 @@ export const tr: Dictionary = {
     eyebrow: "Hakkımızda",
     title: "NIBELC Group hakkında",
     lead: "2014'ten bu yana Avrupa dışı yatırımcılarla çalışan bir Yunan gayrimenkul ve yatırım yoluyla oturum firması.",
+    groupAlt: "Sn. Nikolaos T. Kakkos, Sn. Stella Nguyen ve Sn. Tony Phan",
     intro: [
       "Genellikle ayrı şirketlerde duran üç işin kesişiminde çalışıyoruz: oturma izni, gayrimenkul ve sonrasında varlığı üretken tutan her şey. Üçünü tek ekipte tutmamız, sorularınızı başka yere yönlendirmek yerine takvim taahhüdü verebilmemizi sağlıyor.",
       "Müşterilerimiz Avrupa Birliği dışındaki yatırımcılar ve aileler. Çoğu, izin hazır olana kadar Yunanistan'a ayak basmadan tüm süreci tamamlıyor.",

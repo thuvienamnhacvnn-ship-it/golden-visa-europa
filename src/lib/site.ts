@@ -165,3 +165,10 @@ export const officeCityKeys = ["athens", "thessaloniki", "vietnam", "turkiye"] a
 export const teamPhotos: Record<string, string> = {
   "Tony Phan": "/photos/team/tony-phan.jpg",
 };
+
+/**
+ * Ảnh chụp chung ba người cho banner trang Về chúng tôi.
+ * Bản NGANG: ảnh gốc là ảnh dọc 960×1280, để nguyên thì banner cao hơn một
+ * màn hình và người xem không thấy gì ngoài mảng navy khi vừa mở trang.
+ */
+export const teamGroupPhoto = "/photos/team/doi-ngu-ngang.jpg";

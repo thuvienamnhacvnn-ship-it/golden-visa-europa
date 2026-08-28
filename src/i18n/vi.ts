@@ -397,6 +397,7 @@ export const vi: Dictionary = {
     eyebrow: "Về chúng tôi",
     title: "Về NIBELC Group",
     lead: "Công ty bất động sản và định cư qua đầu tư của Hy Lạp, làm việc với nhà đầu tư ngoài châu Âu từ năm 2014.",
+    groupAlt: "Ông Nikolaos T. Kakkos, bà Stella Nguyen và ông Tony Phan",
     intro: [
       "Chúng tôi làm ở điểm giao của ba việc mà bình thường nằm ở ba công ty khác nhau: giấy phép cư trú, bất động sản, và tất cả những gì giữ cho tài sản sinh lời về sau. Chính việc giữ cả ba trong một đội ngũ cho phép chúng tôi cam kết về tiến độ thay vì chuyển tiếp câu hỏi của quý vị đi nơi khác.",
       "Khách hàng của chúng tôi là các nhà đầu tư và gia đình ngoài Liên minh châu Âu. Phần lớn hoàn tất toàn bộ quy trình mà chưa đặt chân đến Hy Lạp cho tới khi thẻ đã sẵn sàng.",

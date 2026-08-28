@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
-import { Container, Section, PageHero, PlaceholderFrame, Eyebrow, Rule } from "@/components/ui";
+import { Container, Section, PlaceholderFrame, Eyebrow, Rule, Words } from "@/components/ui";
 import { Artwork } from "@/components/Artwork";
 import { crestSrc } from "@/lib/art";
 import { Reveal } from "@/components/Reveal";
@@ -9,7 +9,7 @@ import { Seal } from "@/components/Ornament";
 import { JsonLd } from "@/components/JsonLd";
 import { getDictionary, isLocale, localePath, locales, type Locale } from "@/i18n";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
-import { teamPhotos } from "@/lib/site";
+import { teamPhotos, teamGroupPhoto } from "@/lib/site";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -42,7 +42,67 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
 
   return (
     <>
-      <PageHero eyebrow={t.eyebrow} title={t.title} lead={t.lead} />
+      {/* Banner: chữ bên trái, ảnh chụp chung ba người bên phải.
+          PageHero rỗng dùng trước đây để lại một mảng navy trống hoác, không
+          dính gì tới phần nội dung ngay bên dưới. Ảnh dọc 3/4 nên đặt thành
+          cột riêng chứ không làm nền tràn — làm nền thì cắt mất mặt người. */}
+      <section className="grain relative overflow-hidden bg-deep pb-16 pt-28 text-on-deep md:pb-20 md:pt-36">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.12]"
+          aria-hidden="true"
+          style={{
+            backgroundImage:
+              "repeating-linear-gradient(90deg, transparent 0 79px, #C8A44D 79px 80px)",
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-0"
+          aria-hidden="true"
+          style={{
+            background:
+              "radial-gradient(70% 120% at 78% 8%, color-mix(in srgb, #C8A44D 18%, transparent), transparent 62%)",
+          }}
+        />
+
+        <Container className="relative">
+          <div className="grid items-center gap-12 lg:grid-cols-[1fr_0.82fr] lg:gap-20">
+            <div>
+              <span className="eyebrow inline-flex items-center gap-2 rounded-full border border-gold-400/35 px-3.5 py-1.5 text-gold-400">
+                <span className="inline-block h-1 w-1 rounded-full bg-current" />
+                {t.eyebrow}
+              </span>
+              <h1 className="display mt-7 text-[2.6rem] leading-[1.06] sm:text-[3.4rem] lg:text-[4rem]">
+                <Words text={t.title} />
+              </h1>
+              <p className="mt-6 max-w-xl text-[1.0625rem] leading-[1.85] text-on-deep-2/85">
+                {t.lead}
+              </p>
+            </div>
+
+            {/* KHÔNG bọc Reveal: khối này nằm ngay trên màn hình đầu tiên, bọc
+                vào thì phải cuộn mới hiện và người xem mở trang ra chỉ thấy
+                mảng navy trống. */}
+            <div>
+              <figure className="m-0">
+                <div className="media zoom-wrap rounded-2xl border border-gold-500/30 shadow-[0_36px_80px_-40px_rgba(0,0,0,0.85)]">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={teamGroupPhoto}
+                    alt={t.groupAlt}
+                    className="w-full object-cover"
+                    style={{ aspectRatio: "4 / 3" }}
+                    loading="eager"
+                    decoding="async"
+                  />
+                </div>
+                <figcaption className="mt-4 text-[0.75rem] leading-6 text-on-deep-2/60">
+                  {t.groupAlt}
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </Container>
+      </section>
 
       <Section tone="base">
         <Container>
