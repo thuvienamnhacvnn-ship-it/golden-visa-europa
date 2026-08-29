@@ -220,7 +220,9 @@ export const officeCityKeys = [
  * ngữ; ai chưa có ảnh thì trang tự để khung chờ, không cần sửa gì thêm.
  */
 export const teamPhotos: Record<string, string> = {
+  "Nikolaos T. Kakkos": "/photos/team/nikolaos-kakkos.jpg",
   "Tony Phan": "/photos/team/tony-phan.jpg",
+  "Stella Nguyen": "/photos/team/stella-nguyen.jpg",
 };
 
 /**

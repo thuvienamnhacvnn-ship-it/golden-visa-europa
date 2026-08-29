@@ -121,8 +121,15 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
         <Container>
           <div className="grid gap-14 lg:grid-cols-[0.65fr_1fr] lg:gap-20">
             <Reveal>
-              <Artwork src={crestSrc} alt={t.founder.name} ratio="4 / 5" className="bg-deep" />
-              <p className="mt-4 text-xs leading-6 text-ink/45">{t.portraitPending}</p>
+              {/* Đã có ảnh thật của ông Nikolaos nên dùng ảnh, không dùng huy
+                  hiệu làm ảnh tạm nữa. Huy hiệu vẫn giữ ở public/art/crest.svg
+                  cho những chỗ cần một hình đại diện thương hiệu. */}
+              <Artwork
+                src={teamPhotos[t.founder.name.split(",")[0].trim()] ?? crestSrc}
+                alt={t.founder.name}
+                ratio="4 / 5"
+                className="bg-deep"
+              />
             </Reveal>
 
             <Reveal delay={120}>
@@ -204,7 +211,10 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
               </Reveal>
             ))}
           </ul>
-          <p className="mt-6 text-xs leading-6 text-ink/45">{t.placeholderTeam}</p>
+          {/* Chỉ nhắc chờ ảnh khi còn người thiếu ảnh; hiện đủ cả ba nên ẩn. */}
+          {t.team.some((m) => !teamPhotos[m.name]) ? (
+            <p className="mt-6 text-xs leading-6 text-ink/45">{t.placeholderTeam}</p>
+          ) : null}
         </Container>
       </Section>
 
