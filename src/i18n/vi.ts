@@ -168,9 +168,9 @@ export const vi: Dictionary = {
       verified: "Kiểm chứng ngày 23/08/2026",
       tiers: [
         {
-          amount: "800.000 €",
-          where: "Attica · vùng Thessaloniki · Mykonos · Santorini · các đảo trên 3.100 dân",
-          note: "Những vùng nhu cầu cao, gồm Athens và hầu hết các đảo nổi tiếng.",
+          amount: "250.000 €",
+          where: "Chỉ hai trường hợp đặc biệt, ở bất kỳ đâu",
+          note: "Bất động sản chuyển đổi từ thương mại sang nhà ở, việc chuyển đổi phải hoàn tất trước khi nộp hồ sơ; hoặc công trình được xếp hạng di sản, trùng tu xong trước lần gia hạn đầu tiên. Mỗi bất động sản chỉ áp dụng một lần.",
         },
         {
           amount: "400.000 €",
@@ -178,9 +178,9 @@ export const vi: Dictionary = {
           note: "Phần lớn bán đảo Peloponnese, vùng đất liền, bắc Hy Lạp ngoài Thessaloniki, và các đảo nhỏ.",
         },
         {
-          amount: "250.000 €",
-          where: "Chỉ hai trường hợp đặc biệt, ở bất kỳ đâu",
-          note: "Bất động sản chuyển đổi từ thương mại sang nhà ở, việc chuyển đổi phải hoàn tất trước khi nộp hồ sơ; hoặc công trình được xếp hạng di sản, trùng tu xong trước lần gia hạn đầu tiên. Mỗi bất động sản chỉ áp dụng một lần.",
+          amount: "800.000 €",
+          where: "Attica · vùng Thessaloniki · Mykonos · Santorini · các đảo trên 3.100 dân",
+          note: "Những vùng nhu cầu cao, gồm Athens và hầu hết các đảo nổi tiếng.",
         },
       ],
       sizeTitle: "Diện tích tối thiểu: 120 m²",

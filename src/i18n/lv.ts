@@ -169,9 +169,9 @@ export const lv: Dictionary = {
       verified: "Pārbaudīts 2026. gada 23. augustā",
       tiers: [
         {
-          amount: "800 000 €",
-          where: "Atika · Saloniku reģionālā vienība · Mikona · Santorini · salas ar vairāk nekā 3100 iedzīvotājiem",
-          note: "Augsta pieprasījuma zonas, tostarp Atēnas un lielākā daļa pazīstamo salu.",
+          amount: "250 000 €",
+          where: "Tikai divi īpaši gadījumi, jebkur Grieķijā",
+          note: "Īpašums, kas pārveidots no komerciāla uz dzīvojamu, ar pārveidi pabeigtu pirms pieteikuma; vai valsts aizsargāta ēka, pilnībā atjaunota pirms pirmās atļaujas pagarināšanas. Pieejams vienreiz uz katru īpašumu.",
         },
         {
           amount: "400 000 €",
@@ -179,9 +179,9 @@ export const lv: Dictionary = {
           note: "Lielākā daļa Peloponēsas, kontinentālā iekšzeme, Ziemeļgrieķija ārpus Salonikiem un mazākās salas.",
         },
         {
-          amount: "250 000 €",
-          where: "Tikai divi īpaši gadījumi, jebkur Grieķijā",
-          note: "Īpašums, kas pārveidots no komerciāla uz dzīvojamu, ar pārveidi pabeigtu pirms pieteikuma; vai valsts aizsargāta ēka, pilnībā atjaunota pirms pirmās atļaujas pagarināšanas. Pieejams vienreiz uz katru īpašumu.",
+          amount: "800 000 €",
+          where: "Atika · Saloniku reģionālā vienība · Mikona · Santorini · salas ar vairāk nekā 3100 iedzīvotājiem",
+          note: "Augsta pieprasījuma zonas, tostarp Atēnas un lielākā daļa pazīstamo salu.",
         },
       ],
       sizeTitle: "Minimālā platība: 120 m²",

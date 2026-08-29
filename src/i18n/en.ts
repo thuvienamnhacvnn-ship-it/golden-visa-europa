@@ -167,9 +167,9 @@ export const en = {
       verified: "Verified 23 August 2026",
       tiers: [
         {
-          amount: "€ 800,000",
-          where: "Attica · Thessaloniki regional unit · Mykonos · Santorini · islands with more than 3,100 inhabitants",
-          note: "The high-demand zones, including Athens and most of the well-known islands.",
+          amount: "€ 250,000",
+          where: "Two special cases only, anywhere in Greece",
+          note: "A property converted from commercial to residential use, with the conversion completed before you apply; or a listed building fully restored before your first renewal. Available once per property.",
         },
         {
           amount: "€ 400,000",
@@ -177,9 +177,9 @@ export const en = {
           note: "Most of the Peloponnese, inland mainland, northern Greece outside Thessaloniki, and smaller islands.",
         },
         {
-          amount: "€ 250,000",
-          where: "Two special cases only, anywhere in Greece",
-          note: "A property converted from commercial to residential use, with the conversion completed before you apply; or a listed building fully restored before your first renewal. Available once per property.",
+          amount: "€ 800,000",
+          where: "Attica · Thessaloniki regional unit · Mykonos · Santorini · islands with more than 3,100 inhabitants",
+          note: "The high-demand zones, including Athens and most of the well-known islands.",
         },
       ],
       sizeTitle: "Minimum size: 120 m²",

@@ -167,9 +167,9 @@ export const tr: Dictionary = {
       verified: "23 Ağustos 2026 tarihinde doğrulandı",
       tiers: [
         {
-          amount: "800.000 €",
-          where: "Attika · Selanik bölgesi · Mikonos · Santorini · nüfusu 3.100'ün üzerindeki adalar",
-          note: "Atina ve tanınmış adaların çoğu dâhil, talebin yüksek olduğu bölgeler.",
+          amount: "250.000 €",
+          where: "Yalnızca iki özel durum, ülkenin her yerinde",
+          note: "Ticari kullanımdan konuta dönüştürülmüş ve dönüşümü başvurudan önce tamamlanmış gayrimenkul; veya ilk yenilemeden önce tamamen restore edilen tescilli yapı. Gayrimenkul başına bir kez geçerlidir.",
         },
         {
           amount: "400.000 €",
@@ -177,9 +177,9 @@ export const tr: Dictionary = {
           note: "Mora Yarımadası'nın büyük kısmı, iç kesimler, Selanik dışındaki kuzey Yunanistan ve küçük adalar.",
         },
         {
-          amount: "250.000 €",
-          where: "Yalnızca iki özel durum, ülkenin her yerinde",
-          note: "Ticari kullanımdan konuta dönüştürülmüş ve dönüşümü başvurudan önce tamamlanmış gayrimenkul; veya ilk yenilemeden önce tamamen restore edilen tescilli yapı. Gayrimenkul başına bir kez geçerlidir.",
+          amount: "800.000 €",
+          where: "Attika · Selanik bölgesi · Mikonos · Santorini · nüfusu 3.100'ün üzerindeki adalar",
+          note: "Atina ve tanınmış adaların çoğu dâhil, talebin yüksek olduğu bölgeler.",
         },
       ],
       sizeTitle: "Asgari büyüklük: 120 m²",

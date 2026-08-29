@@ -8,7 +8,7 @@
  * Chạy lại:  node scripts/make-art.mjs
  */
 
-import { mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -318,6 +318,33 @@ function svcManagement(id) {
 
 /* ── Huy hiệu chữ lồng thay cho ảnh chân dung ─────────────────── */
 
+/**
+ * Logo NIBELC lồng vào giữa huy hiệu.
+ *
+ * Đọc thẳng từ public/art/logo-nibelc-light.svg chứ không chép cứng vào đây:
+ * chép cứng thì mỗi lần khách đổi logo phải sửa hai nơi, và lần trước đúng vì
+ * sửa tay vào tệp .svg đã sinh nên chạy lại script là mất sạch, huy hiệu quay
+ * về ngôi sao "NK" cũ.
+ *
+ * Bản chữ TRẮNG vì nền huy hiệu là navy sẫm — bản chữ xanh gốc chìm hẳn.
+ */
+function nibelcMark(cx, cy, width) {
+  const src = readFileSync(join(outDir, "logo-nibelc-light.svg"), "utf8");
+  const inner = src
+    .replace(/^[\s\S]*?<svg[^>]*>/, "")
+    .replace(/<\/svg>\s*$/, "")
+    // id của dải màu phải khác bản logo ngoài trang, không thì đá nhau
+    .replace(/id="nbl-lg/g, 'id="cr-lg')
+    .replace(/url\(#nbl-lg/g, "url(#cr-lg")
+    .trim();
+  const scale = width / 1201.23;
+  const x = cx - width / 2;
+  const y = cy - (375.58 * scale) / 2;
+  return `  <g transform="translate(${x.toFixed(2)} ${y.toFixed(2)}) scale(${scale.toFixed(5)})">
+${inner}
+  </g>`;
+}
+
 function crest() {
   const W = 480, H = 600;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img">
@@ -336,13 +363,11 @@ function crest() {
   <g fill="none" stroke="url(#cr-gold)" stroke-width="1.6">
     <circle cx="240" cy="268" r="118"/>
     <circle cx="240" cy="268" r="98" stroke-opacity="0.45"/>
-    <path d="M240 192 l11 27 l29 3 l-21 21 l6 29 l-25 -15 l-25 15 l6 -29 l-21 -21 l29 -3 z" stroke-opacity="0.85"/>
     <path d="M150 268 h-40 M330 268 h40"/>
   </g>
-  <text x="240" y="322" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="54" letter-spacing="6" fill="url(#cr-gold)">NK</text>
+${nibelcMark(240, 268, 190)}
   <text x="240" y="430" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-        font-size="19" letter-spacing="7" fill="${C.cream}" fill-opacity="0.82">N. KAKKOS ESTATE</text>
+        font-size="19" letter-spacing="7" fill="${C.cream}" fill-opacity="0.82">NIBELC GROUP</text>
   <text x="240" y="462" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
         font-size="12" letter-spacing="5" fill="${C.gold}" fill-opacity="0.8">ATHENS · SINCE 2014</text>
   <g stroke="${C.gold}" stroke-opacity="0.55" stroke-width="1.3" fill="none">
