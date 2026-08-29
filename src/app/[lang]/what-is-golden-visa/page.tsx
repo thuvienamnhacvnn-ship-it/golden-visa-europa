@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Container, Section, PageHero, ButtonLink, Rule, Eyebrow, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
 import { Sparks } from "@/components/Sparks";
+import { TierIcon } from "@/components/TierIcons";
 import { JsonLd } from "@/components/JsonLd";
 import { getDictionary, isLocale, localePath, locales, type Locale } from "@/i18n";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
@@ -123,17 +124,32 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
               <Reveal as="li" key={tier.amount} delay={i * 90}>
                 {/* Bỏ card-hover: lớp đó cũng nhấc thẻ lên, chồng với hiệu ứng
                     của .tier-gold thành nhấc hai lần. */}
-                <div className="card tier-gold flex h-full flex-col p-8 lg:p-10">
+                {/* Căn giữa cả cụm: chữ có lề đều hai bên, ba thẻ nhìn cân
+                    nhau dù độ dài phần ghi chú chênh nhau khá nhiều. */}
+                <div className="card tier-gold flex h-full flex-col items-center p-8 text-center lg:p-9">
                   <span className="relative z-10">
                     <Sparks count={9} seed={i * 7 + 3} />
                   </span>
-                  <span className="tier-gold__amount display relative z-10 text-[2.6rem] text-gold-600">
+
+                  <span className="tier-gold__badge relative z-10 flex h-16 w-16 items-center justify-center rounded-full border border-gold-500/45 text-gold-600">
+                    <TierIcon index={i} className="h-8 w-8" />
+                  </span>
+
+                  <span className="tier-gold__amount display relative z-10 mt-6 text-[2.4rem] leading-none text-gold-600 lg:text-[2.6rem]">
                     {tier.amount}
                   </span>
-                  <p className="tier-gold__where relative z-10 mt-6 border-t border-ink/10 pt-5 text-[0.9375rem] font-medium leading-7 text-ink">
+
+                  <span
+                    className="tier-gold__rule relative z-10 mt-5 block h-px w-12 bg-gold-500/45"
+                    aria-hidden="true"
+                  />
+
+                  <p className="tier-gold__where relative z-10 mt-5 text-[0.9375rem] font-medium leading-7 text-ink">
                     {tier.where}
                   </p>
-                  <p className="tier-gold__note relative z-10 mt-3 text-[0.875rem] leading-7 text-ink/70">
+                  {/* Giới hạn bề ngang đoạn ghi chú cho dòng chữ đều nhau,
+                      không để một dòng dài kéo sát mép thẻ. */}
+                  <p className="tier-gold__note relative z-10 mt-3 max-w-[30ch] text-[0.875rem] leading-7 text-ink/70">
                     {tier.note}
                   </p>
                 </div>
