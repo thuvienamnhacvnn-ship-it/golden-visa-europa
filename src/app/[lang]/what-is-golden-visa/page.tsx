@@ -90,12 +90,14 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
 
           <ul className="mt-14 grid gap-x-12 gap-y-px sm:grid-cols-2 lg:grid-cols-3">
             {t.advantages.map((advantage, i) => (
-              <Reveal as="li" key={advantage} delay={(i % 3) * 70}>
+              <Reveal as="li" key={advantage} delay={(i % 3) * 70} className="gold-hand">
                 <div className="flex items-start gap-5 border-b border-on-deep/12 py-5">
-                  <span className="font-serif text-sm text-gold-500">
+                  <span className="gold-hand__num font-serif text-sm text-gold-500">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span className="text-[0.9375rem] leading-7 text-on-deep-2/85">{advantage}</span>
+                  <span className="gold-hand__text text-[0.9375rem] leading-7 text-on-deep-2/85">
+                    {advantage}
+                  </span>
                 </div>
               </Reveal>
             ))}

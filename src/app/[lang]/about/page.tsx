@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { getDictionary, isLocale, localePath, locales, type Locale } from "@/i18n";
 import { breadcrumbJsonLd } from "@/lib/jsonld";
 import { teamPhotos, teamGroupPhoto } from "@/lib/site";
+import { activityShots } from "@/lib/gallery";
 
 export function generateStaticParams() {
   return locales.map((lang) => ({ lang }));
@@ -215,6 +216,35 @@ export default async function AboutPage({ params }: { params: Promise<{ lang: st
           {t.team.some((m) => !teamPhotos[m.name]) ? (
             <p className="mt-6 text-xs leading-6 text-ink/45">{t.placeholderTeam}</p>
           ) : null}
+        </Container>
+      </Section>
+
+      {/* Ảnh hoạt động: cột dòng chảy để mỗi ảnh giữ nguyên tỉ lệ.
+          KHÔNG cắt về một khuôn chung — đây là ảnh chụp nhóm, cắt cứng là mất
+          đầu người. break-inside-avoid để một ảnh không bị xẻ đôi sang cột sau. */}
+      <Section tone="base">
+        <Container>
+          <div className="max-w-3xl">
+            <Eyebrow>{t.galleryTitle}</Eyebrow>
+            <Rule className="mt-4 mb-6" />
+            <p className="text-[1.0625rem] leading-[1.8] text-ink/80">{t.galleryLead}</p>
+          </div>
+
+          <div className="mt-12 columns-2 gap-4 md:columns-3 lg:columns-4 lg:gap-5">
+            {activityShots.map((shot, i) => (
+              <figure key={shot.src} className="zoom-wrap media m-0 mb-4 break-inside-avoid lg:mb-5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={shot.src}
+                  alt={`${t.galleryAlt} — ${i + 1}`}
+                  className="w-full"
+                  style={{ aspectRatio: String(shot.ratio) }}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </figure>
+            ))}
+          </div>
         </Container>
       </Section>
 
