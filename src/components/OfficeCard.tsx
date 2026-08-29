@@ -47,15 +47,23 @@ export function OfficeCard({
         <p className={`text-[0.75rem] font-semibold uppercase tracking-[0.14em] text-gold-500`}>
           {office.label}
         </p>
+        {/* Ghép từ các phần CÓ giá trị. Văn phòng Hà Nội không có mã bưu chính
+            nên ghép cứng sẽ ra "Ha Dong , Viet Nam" thừa dấu phẩy. */}
         <address className={`mt-1.5 not-italic text-[0.8125rem] leading-6 ${muted}`}>
-          {office.street}, {office.city} {office.postalCode}, {office.country}
+          {[office.street, [office.city, office.postalCode].filter(Boolean).join(" "), office.country]
+            .filter(Boolean)
+            .join(", ")}
         </address>
-        <a
-          href={`tel:${office.phoneHref}`}
-          className={`mt-1 inline-block text-[0.8125rem] font-medium ${strong} transition-colors hover:text-gold-400`}
-        >
-          {office.phone}
-        </a>
+        {/* Ba văn phòng mới chưa có số điện thoại; không có số thì bỏ hẳn liên
+            kết, chứ để nguyên sẽ ra thẻ <a href="tel:"> rỗng bấm được. */}
+        {office.phone ? (
+          <a
+            href={`tel:${office.phoneHref}`}
+            className={`mt-1 inline-block text-[0.8125rem] font-medium ${strong} transition-colors hover:text-gold-400`}
+          >
+            {office.phone}
+          </a>
+        ) : null}
         <a
           href={href}
           target="_blank"

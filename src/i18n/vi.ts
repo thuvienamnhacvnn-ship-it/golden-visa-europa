@@ -490,7 +490,7 @@ export const vi: Dictionary = {
   offices: {
     eyebrow: "Chúng tôi ở đâu",
     title: "Văn phòng",
-    lead: "Bốn văn phòng trên ba châu lục. Hồ sơ của quý vị được xử lý bằng ngôn ngữ và theo múi giờ thuận tiện cho quý vị.",
+    lead: "Sáu văn phòng trên ba châu lục. Hồ sơ của quý vị được xử lý bằng ngôn ngữ và theo múi giờ thuận tiện cho quý vị.",
     items: [
       {
         slug: "athens",
@@ -511,13 +511,31 @@ export const vi: Dictionary = {
         confirmed: true,
       },
       {
-        slug: "vietnam",
-        city: "Việt Nam",
+        slug: "budapest",
+        city: "Budapest",
+        country: "Hungary",
+        address: "József krt. 45, 2em.6B, 1085 Budapest, Hungary",
+        phone: "",
+        role: "NIBELC Manpower Kft · Trung Âu",
+        confirmed: true,
+      },
+      {
+        slug: "germany",
+        city: "Berlin",
+        country: "Đức",
+        address: "Dietrichstraße 16, 16356 Ahrensfelde, Đức",
+        phone: "",
+        role: "NIBELC Germany GmbH · Ahrensfelde",
+        confirmed: true,
+      },
+      {
+        slug: "hanoi",
+        city: "Hà Nội",
         country: "Việt Nam",
-        address: "",
+        address: "Tầng 4, toà Rainbow, lô B – CQ1, Văn Quán, Hà Đông, Hà Nội, Việt Nam",
         phone: "",
         role: "Thị trường Việt Nam · tư vấn khách hàng",
-        confirmed: false,
+        confirmed: true,
       },
       {
         slug: "turkiye",

@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="de-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="de-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="de-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#de-sky)"/>
+  <rect width="800" height="600" fill="url(#de-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="48" y1="0" x2="48" y2="600"/><line x1="96" y1="0" x2="96" y2="600"/><line x1="144" y1="0" x2="144" y2="600"/><line x1="192" y1="0" x2="192" y2="600"/><line x1="240" y1="0" x2="240" y2="600"/><line x1="288" y1="0" x2="288" y2="600"/><line x1="336" y1="0" x2="336" y2="600"/><line x1="384" y1="0" x2="384" y2="600"/><line x1="432" y1="0" x2="432" y2="600"/><line x1="480" y1="0" x2="480" y2="600"/><line x1="528" y1="0" x2="528" y2="600"/><line x1="576" y1="0" x2="576" y2="600"/><line x1="624" y1="0" x2="624" y2="600"/><line x1="672" y1="0" x2="672" y2="600"/><line x1="720" y1="0" x2="720" y2="600"/><line x1="768" y1="0" x2="768" y2="600"/>
+  </g>
+  <g fill="none" stroke="url(#de-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <rect x="248" y="252" width="330" height="38"/>
+    <path d="M248 252 h330" stroke-opacity="0.7"/>
+    <rect x="268" y="290" width="24" height="150"/>
+      <line x1="276" y1="300" x2="276" y2="432" stroke-opacity="0.55"/>
+      <line x1="284" y1="300" x2="284" y2="432" stroke-opacity="0.55"/>
+      <rect x="322" y="290" width="24" height="150"/>
+      <line x1="330" y1="300" x2="330" y2="432" stroke-opacity="0.55"/>
+      <line x1="338" y1="300" x2="338" y2="432" stroke-opacity="0.55"/>
+      <rect x="376" y="290" width="24" height="150"/>
+      <line x1="384" y1="300" x2="384" y2="432" stroke-opacity="0.55"/>
+      <line x1="392" y1="300" x2="392" y2="432" stroke-opacity="0.55"/>
+      <rect x="430" y="290" width="24" height="150"/>
+      <line x1="438" y1="300" x2="438" y2="432" stroke-opacity="0.55"/>
+      <line x1="446" y1="300" x2="446" y2="432" stroke-opacity="0.55"/>
+      <rect x="484" y="290" width="24" height="150"/>
+      <line x1="492" y1="300" x2="492" y2="432" stroke-opacity="0.55"/>
+      <line x1="500" y1="300" x2="500" y2="432" stroke-opacity="0.55"/>
+      <rect x="538" y="290" width="24" height="150"/>
+      <line x1="546" y1="300" x2="546" y2="432" stroke-opacity="0.55"/>
+      <line x1="554" y1="300" x2="554" y2="432" stroke-opacity="0.55"/>
+    <rect x="240" y="440" width="346" height="16"/>
+
+    <!-- Cỗ xe tứ mã: bệ + bánh xe + bốn dáng ngựa gợi ý -->
+    <rect x="356" y="232" width="114" height="20"/>
+    <circle cx="380" cy="216" r="13"/>
+    <path d="M394 216 h18" stroke-opacity="0.7"/>
+    <path d="M414 232 v-22 l16 -12 v34" stroke-opacity="0.8"/>
+    <path d="M434 232 v-26 l14 -10 v36" stroke-opacity="0.8"/>
+    <path d="M452 232 v-20 l12 -10 v30" stroke-opacity="0.65"/>
+
+    <!-- Tháp truyền hình Berlin ở hậu cảnh -->
+    <path d="M666 440 V318"/>
+    <circle cx="666" cy="300" r="26"/>
+    <path d="M666 274 v-34" stroke-opacity="0.8"/>
+    <path d="M666 240 v-26" stroke-opacity="0.6"/>
+    <path d="M640 300 h52" stroke-opacity="0.45"/>
+
+    <path d="M80 456 h640"/>
+  </g>
+
+  <!-- Hàng cây thấp hai bên cho cân -->
+  <g fill="none" stroke="url(#de-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square" stroke-opacity="0.4">
+    <path d="M120 456 v-34"/><circle cx="120" cy="414" r="17"/>
+    <path d="M168 456 v-34"/><circle cx="168" cy="414" r="17"/>
+    <path d="M216 456 v-34"/><circle cx="216" cy="414" r="17"/>
+    <path d="M700 456 v-34"/><circle cx="700" cy="414" r="17"/>
+    <path d="M748 456 v-34"/><circle cx="748" cy="414" r="17"/>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="599" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

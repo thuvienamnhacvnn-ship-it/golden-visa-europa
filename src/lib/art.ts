@@ -34,12 +34,21 @@ const servicePhoto: Record<ServiceSlug, string> = {
  * phố. Tên thành phố đổi theo ngôn ngữ ("Athens" / "Αθήνα" / "Atēnas") nên
  * dùng làm khoá thì mọi ngôn ngữ ngoài tiếng Anh đều tra trượt.
  */
-export type OfficeSlug = "athens" | "thessaloniki" | "vietnam" | "turkiye";
+export type OfficeSlug =
+  | "athens"
+  | "thessaloniki"
+  | "budapest"
+  | "germany"
+  | "hanoi"
+  | "turkiye";
 
 const cityPhoto: Record<OfficeSlug, string> = {
   athens: "tp-athens.jpg",
   thessaloniki: "tp-thessaloniki.jpg",
-  vietnam: "tp-vietnam.jpg",
+  budapest: "tp-budapest.jpg",
+  germany: "tp-duc.jpg",
+  // Hà Nội dùng lại ảnh Việt Nam đã có; chưa có ảnh riêng thì rơi về tranh vẽ.
+  hanoi: "tp-vietnam.jpg",
   turkiye: "tp-tho-nhi-ky.jpg",
 };
 
@@ -60,7 +69,9 @@ const serviceArt: Record<ServiceSlug, string> = {
 const cityArt: Record<OfficeSlug, string> = {
   athens: "/art/office-athens.svg",
   thessaloniki: "/art/office-thessaloniki.svg",
-  vietnam: "/art/office-vietnam.svg",
+  budapest: "/art/office-budapest.svg",
+  germany: "/art/office-germany.svg",
+  hanoi: "/art/office-vietnam.svg",
   turkiye: "/art/office-turkiye.svg",
 };
 

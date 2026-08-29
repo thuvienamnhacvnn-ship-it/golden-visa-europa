@@ -357,13 +357,93 @@ function crest() {
 `;
 }
 
+
+function budapest(id) {
+  const W = 800, H = 600;
+  // Nhà Quốc hội Hungary bên sông Danube: mái vòm giữa, hai cánh có tháp nhọn.
+  const spire = (x, h) =>
+    `<path d="M${x - 10} 400 h20 v-${h} l-10 -26 l-10 26 z"/>
+     <path d="M${x - 14} 400 h28" stroke-opacity="0.7"/>`;
+  const wing = (x0, x1) => {
+    const arches = [];
+    for (let x = x0 + 16; x < x1 - 8; x += 26) {
+      arches.push(`<path d="M${x} 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/>`);
+    }
+    return `<rect x="${x0}" y="336" width="${x1 - x0}" height="64"/>${arches.join("")}`;
+  };
+
+  return frame(id, W, H, `  <g ${stroke(id)}>
+    <!-- Mái vòm trung tâm -->
+    <path d="M340 336 a60 74 0 0 1 120 0"/>
+    <path d="M366 268 a34 42 0 0 1 68 0" stroke-opacity="0.5"/>
+    <path d="M400 262 v-40 l-9 -20 h18 l-9 20"/>
+    <rect x="330" y="336" width="140" height="64"/>
+    <path d="M356 400 v-40 a12 12 0 0 1 24 0 v40" stroke-opacity="0.55"/>
+    <path d="M420 400 v-40 a12 12 0 0 1 24 0 v40" stroke-opacity="0.55"/>
+
+    ${wing(150, 330)}
+    ${wing(470, 650)}
+    ${spire(196, 96)}
+    ${spire(604, 96)}
+    ${spire(262, 64)}
+    ${spire(538, 64)}
+
+    <path d="M120 400 h560"/>
+    <path d="M110 420 h580" stroke-opacity="0.6"/>
+  </g>
+${water(432, W, H)}`);
+}
+
+function germany(id) {
+  const W = 800, H = 600;
+  // Cổng Brandenburg: sáu cột, dầm ngang, cỗ xe tứ mã cách điệu trên đỉnh.
+  const cols = Array.from({ length: 6 }, (_, i) => {
+    const x = 268 + i * 54;
+    return `<rect x="${x}" y="290" width="24" height="150"/>
+      <line x1="${x + 8}" y1="300" x2="${x + 8}" y2="432" stroke-opacity="0.55"/>
+      <line x1="${x + 16}" y1="300" x2="${x + 16}" y2="432" stroke-opacity="0.55"/>`;
+  }).join("\n      ");
+
+  return frame(id, W, H, `  <g ${stroke(id)}>
+    <rect x="248" y="252" width="330" height="38"/>
+    <path d="M248 252 h330" stroke-opacity="0.7"/>
+    ${cols}
+    <rect x="240" y="440" width="346" height="16"/>
+
+    <!-- Cỗ xe tứ mã: bệ + bánh xe + bốn dáng ngựa gợi ý -->
+    <rect x="356" y="232" width="114" height="20"/>
+    <circle cx="380" cy="216" r="13"/>
+    <path d="M394 216 h18" stroke-opacity="0.7"/>
+    <path d="M414 232 v-22 l16 -12 v34" stroke-opacity="0.8"/>
+    <path d="M434 232 v-26 l14 -10 v36" stroke-opacity="0.8"/>
+    <path d="M452 232 v-20 l12 -10 v30" stroke-opacity="0.65"/>
+
+    <!-- Tháp truyền hình Berlin ở hậu cảnh -->
+    <path d="M666 440 V318"/>
+    <circle cx="666" cy="300" r="26"/>
+    <path d="M666 274 v-34" stroke-opacity="0.8"/>
+    <path d="M666 240 v-26" stroke-opacity="0.6"/>
+    <path d="M640 300 h52" stroke-opacity="0.45"/>
+
+    <path d="M80 456 h640"/>
+  </g>
+
+  <!-- Hàng cây thấp hai bên cho cân -->
+  <g ${stroke(id)} stroke-opacity="0.4">
+    ${[120, 168, 216, 700, 748].map((x) => `<path d="M${x} 456 v-34"/><circle cx="${x}" cy="414" r="17"/>`).join("\n    ")}
+  </g>`);
+}
+
 /* ── Xuất ─────────────────────────────────────────────────────── */
+
 
 const art = {
   "office-athens": athens("ath"),
   "office-thessaloniki": thessaloniki("thes"),
   "office-vietnam": vietnam("vn"),
   "office-turkiye": turkiye("tr"),
+  "office-budapest": budapest("bud"),
+  "office-germany": germany("de"),
   "service-golden-visa-acquisition": svcGoldenVisa("sv1"),
   "service-bank-account-acquisition": svcBank("sv2"),
   "service-real-estate-advisory": svcAdvisory("sv3"),

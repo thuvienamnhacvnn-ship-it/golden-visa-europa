@@ -491,7 +491,7 @@ export const el: Dictionary = {
   offices: {
     eyebrow: "Πού βρισκόμαστε",
     title: "Γραφεία",
-    lead: "Τέσσερα γραφεία σε τρεις ηπείρους. Ο φάκελός σας διεκπεραιώνεται στη γλώσσα και τη ζώνη ώρας που σας βολεύει.",
+    lead: "Έξι γραφεία σε τρεις ηπείρους. Ο φάκελός σας διεκπεραιώνεται στη γλώσσα και τη ζώνη ώρας που σας βολεύει.",
     items: [
       {
         slug: "athens",
@@ -512,13 +512,31 @@ export const el: Dictionary = {
         confirmed: true,
       },
       {
-        slug: "vietnam",
-        city: "Βιετνάμ",
+        slug: "budapest",
+        city: "Βουδαπέστη",
+        country: "Ουγγαρία",
+        address: "József krt. 45, 2em.6B, 1085 Βουδαπέστη, Ουγγαρία",
+        phone: "",
+        role: "NIBELC Manpower Kft · κεντρική Ευρώπη",
+        confirmed: true,
+      },
+      {
+        slug: "germany",
+        city: "Βερολίνο",
+        country: "Γερμανία",
+        address: "Dietrichstraße 16, 16356 Ahrensfelde, Γερμανία",
+        phone: "",
+        role: "NIBELC Germany GmbH · Ahrensfelde",
+        confirmed: true,
+      },
+      {
+        slug: "hanoi",
+        city: "Ανόι",
         country: "Βιετνάμ",
-        address: "",
+        address: "4ος όροφος, κτίριο Rainbow, Lot B – CQ1, Van Quan, Ha Dong, Ανόι, Βιετνάμ",
         phone: "",
         role: "Αγορά Βιετνάμ · συμβουλευτική πελατών",
-        confirmed: false,
+        confirmed: true,
       },
       {
         slug: "turkiye",

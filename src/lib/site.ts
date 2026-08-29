@@ -73,6 +73,53 @@ export const site = {
       person: "Mr. Tony Phan",
       mapQuery: "Filippou 28, Perea 57019, Thessaloniki, Greece",
     },
+    {
+      id: "budapest",
+      label: "NIBELC Manpower Kft",
+      street: "József krt. 45, 2em.6B",
+      city: "Budapest",
+      cityLabel: "Budapest",
+      mapBadge: "Budapest",
+      postalCode: "1085",
+      country: "Hungary",
+      countryCode: "HU",
+      // Khách chưa gửi số cho ba văn phòng dưới đây — để trống, không lấy tạm
+      // số của nơi khác.
+      phone: "",
+      phoneHref: "",
+      person: "",
+      mapQuery: "József körút 45, 1085 Budapest, Hungary",
+    },
+    {
+      id: "germany",
+      label: "NIBELC Germany GmbH",
+      street: "Dietrichstraße 16",
+      city: "Ahrensfelde",
+      cityLabel: "Germany",
+      mapBadge: "Berlin",
+      postalCode: "16356",
+      country: "Germany",
+      countryCode: "DE",
+      phone: "",
+      phoneHref: "",
+      person: "",
+      mapQuery: "Dietrichstraße 16, 16356 Ahrensfelde, Germany",
+    },
+    {
+      id: "hanoi",
+      label: "Hanoi Office",
+      street: "4th Floor, Rainbow Building, Lot B – CQ1",
+      city: "Van Quan, Ha Dong",
+      cityLabel: "Ha Noi",
+      mapBadge: "Ha Noi",
+      postalCode: "",
+      country: "Viet Nam",
+      countryCode: "VN",
+      phone: "",
+      phoneHref: "",
+      person: "",
+      mapQuery: "Rainbow Building, Van Quan, Ha Dong, Ha Noi, Vietnam",
+    },
   ] as Office[],
 
   /**
@@ -159,7 +206,14 @@ export const site = {
   ] as { id: string; label: string; url: string }[],
 } as const;
 
-export const officeCityKeys = ["athens", "thessaloniki", "vietnam", "turkiye"] as const;
+export const officeCityKeys = [
+  "athens",
+  "thessaloniki",
+  "budapest",
+  "germany",
+  "hanoi",
+  "turkiye",
+] as const;
 
 /**
  * Ảnh chân dung đội ngũ. Tra theo TÊN vì tên riêng giữ nguyên ở cả năm ngôn

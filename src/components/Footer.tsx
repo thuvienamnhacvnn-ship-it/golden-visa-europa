@@ -73,10 +73,22 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
           ))}
         </div>
 
-        {/* Hai văn phòng, mỗi thẻ có bản đồ nhỏ bấm ra Google Maps */}
-        <div className="mt-12 grid gap-6 border-t border-on-deep/10 pt-2 md:grid-cols-2 lg:gap-10">
-          {site.offices.map((o) => (
-            <OfficeCard key={o.id} office={o} directionsLabel={dict.contact.directions} />
+        {/* Năm văn phòng, mỗi thẻ có bản đồ nhỏ bấm ra Google Maps.
+            Ba cột ở khổ rộng: 5 mục chia 3 thì hàng cuối còn 2, nhìn được.
+            Hai cột ở khổ vừa thì hàng cuối trơ một mục, nên cho mục cuối
+            chiếm cả hàng đúng ở khoảng đó. */}
+        <div className="mt-12 grid gap-6 border-t border-on-deep/10 pt-2 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
+          {site.offices.map((o, i) => (
+            <div
+              key={o.id}
+              className={
+                i === site.offices.length - 1 && site.offices.length % 2 === 1
+                  ? "sm:col-span-2 lg:col-span-1"
+                  : ""
+              }
+            >
+              <OfficeCard office={o} directionsLabel={dict.contact.directions} />
+            </div>
           ))}
         </div>
 

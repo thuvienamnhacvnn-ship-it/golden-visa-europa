@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600" role="img">
+  <defs>
+    <linearGradient id="bud-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F4A72"/>
+      <stop offset="1" stop-color="#071B30"/>
+    </linearGradient>
+    <radialGradient id="bud-sun" cx="0.72" cy="0.26" r="0.34">
+      <stop offset="0" stop-color="#C8A44D" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0"/>
+    </radialGradient>
+    <!-- userSpaceOnUse là bắt buộc: với objectBoundingBox, một nét thẳng đứng
+         hay nằm ngang có bbox rộng/cao bằng 0 nên SVG bỏ không vẽ. -->
+    <linearGradient id="bud-line" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="600">
+      <stop offset="0" stop-color="#D9BD77" stop-opacity="1"/>
+      <stop offset="1" stop-color="#C8A44D" stop-opacity="0.78"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bud-sky)"/>
+  <rect width="800" height="600" fill="url(#bud-sun)"/>
+  <g stroke="#C8A44D" stroke-opacity="0.10" stroke-width="1">
+    <line x1="0" y1="0" x2="0" y2="600"/><line x1="48" y1="0" x2="48" y2="600"/><line x1="96" y1="0" x2="96" y2="600"/><line x1="144" y1="0" x2="144" y2="600"/><line x1="192" y1="0" x2="192" y2="600"/><line x1="240" y1="0" x2="240" y2="600"/><line x1="288" y1="0" x2="288" y2="600"/><line x1="336" y1="0" x2="336" y2="600"/><line x1="384" y1="0" x2="384" y2="600"/><line x1="432" y1="0" x2="432" y2="600"/><line x1="480" y1="0" x2="480" y2="600"/><line x1="528" y1="0" x2="528" y2="600"/><line x1="576" y1="0" x2="576" y2="600"/><line x1="624" y1="0" x2="624" y2="600"/><line x1="672" y1="0" x2="672" y2="600"/><line x1="720" y1="0" x2="720" y2="600"/><line x1="768" y1="0" x2="768" y2="600"/>
+  </g>
+  <g fill="none" stroke="url(#bud-line)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="square">
+    <!-- Mái vòm trung tâm -->
+    <path d="M340 336 a60 74 0 0 1 120 0"/>
+    <path d="M366 268 a34 42 0 0 1 68 0" stroke-opacity="0.5"/>
+    <path d="M400 262 v-40 l-9 -20 h18 l-9 20"/>
+    <rect x="330" y="336" width="140" height="64"/>
+    <path d="M356 400 v-40 a12 12 0 0 1 24 0 v40" stroke-opacity="0.55"/>
+    <path d="M420 400 v-40 a12 12 0 0 1 24 0 v40" stroke-opacity="0.55"/>
+
+    <rect x="150" y="336" width="180" height="64"/><path d="M166 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M192 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M218 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M244 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M270 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M296 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/>
+    <rect x="470" y="336" width="180" height="64"/><path d="M486 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M512 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M538 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M564 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M590 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/><path d="M616 400 v-32 a9 9 0 0 1 18 0 v32" stroke-opacity="0.55"/>
+    <path d="M186 400 h20 v-96 l-10 -26 l-10 26 z"/>
+     <path d="M182 400 h28" stroke-opacity="0.7"/>
+    <path d="M594 400 h20 v-96 l-10 -26 l-10 26 z"/>
+     <path d="M590 400 h28" stroke-opacity="0.7"/>
+    <path d="M252 400 h20 v-64 l-10 -26 l-10 26 z"/>
+     <path d="M248 400 h28" stroke-opacity="0.7"/>
+    <path d="M528 400 h20 v-64 l-10 -26 l-10 26 z"/>
+     <path d="M524 400 h28" stroke-opacity="0.7"/>
+
+    <path d="M120 400 h560"/>
+    <path d="M110 420 h580" stroke-opacity="0.6"/>
+  </g>
+  <g stroke="#C8A44D" stroke-opacity="0.28" stroke-width="1.2" stroke-linecap="round">
+    <line x1="30" y1="442.0" x2="70" y2="442.0"/>
+    <line x1="167" y1="453.3" x2="274" y2="453.3"/>
+    <line x1="304" y1="464.6" x2="478" y2="464.6"/>
+    <line x1="441" y1="475.9" x2="522" y2="475.9"/>
+    <line x1="578" y1="487.1" x2="726" y2="487.1"/>
+    <line x1="135" y1="498.4" x2="190" y2="498.4"/>
+    <line x1="272" y1="509.7" x2="394" y2="509.7"/>
+    <line x1="409" y1="521.0" x2="598" y2="521.0"/>
+    <line x1="546" y1="532.3" x2="642" y2="532.3"/>
+    <line x1="103" y1="543.6" x2="266" y2="543.6"/>
+    <line x1="240" y1="554.9" x2="310" y2="554.9"/>
+    <line x1="377" y1="566.1" x2="514" y2="566.1"/>
+    <line x1="514" y1="577.4" x2="558" y2="577.4"/>
+    <line x1="71" y1="588.7" x2="182" y2="588.7"/>
+  </g>
+  <rect x="0.5" y="0.5" width="799" height="599" fill="none" stroke="#C8A44D" stroke-opacity="0.35"/>
+</svg>

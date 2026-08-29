@@ -489,7 +489,7 @@ export const tr: Dictionary = {
   offices: {
     eyebrow: "Neredeyiz",
     title: "Ofisler",
-    lead: "Üç kıtada dört ofis. Dosyanız size uyan dilde ve saat diliminde yürütülür.",
+    lead: "Üç kıtada altı ofis. Dosyanız size uygun dilde ve saat diliminde yürütülür.",
     items: [
       {
         slug: "athens",
@@ -510,13 +510,31 @@ export const tr: Dictionary = {
         confirmed: true,
       },
       {
-        slug: "vietnam",
-        city: "Vietnam",
+        slug: "budapest",
+        city: "Budapeşte",
+        country: "Macaristan",
+        address: "József krt. 45, 2em.6B, 1085 Budapeşte, Macaristan",
+        phone: "",
+        role: "NIBELC Manpower Kft · Orta Avrupa",
+        confirmed: true,
+      },
+      {
+        slug: "germany",
+        city: "Berlin",
+        country: "Almanya",
+        address: "Dietrichstraße 16, 16356 Ahrensfelde, Almanya",
+        phone: "",
+        role: "NIBELC Germany GmbH · Ahrensfelde",
+        confirmed: true,
+      },
+      {
+        slug: "hanoi",
+        city: "Hanoi",
         country: "Vietnam",
-        address: "",
+        address: "4. kat, Rainbow Binası, Lot B – CQ1, Van Quan, Ha Dong, Hanoi, Vietnam",
         phone: "",
         role: "Vietnam pazarı · müşteri danışmanlığı",
-        confirmed: false,
+        confirmed: true,
       },
       {
         slug: "turkiye",

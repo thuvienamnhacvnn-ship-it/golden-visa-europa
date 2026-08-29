@@ -489,7 +489,7 @@ export const en = {
   offices: {
     eyebrow: "Where we are",
     title: "Offices",
-    lead: "Four offices across three continents. Your file is handled in the language and time zone that suits you.",
+    lead: "Six offices across three continents. Your file is handled in the language and time zone that suits you.",
     items: [
       {
         slug: "athens" as const,
@@ -510,13 +510,31 @@ export const en = {
         confirmed: true,
       },
       {
-        slug: "vietnam" as const,
-        city: "Vietnam",
-        country: "Vietnam",
-        address: "",
+        slug: "budapest" as const,
+        city: "Budapest",
+        country: "Hungary",
+        address: "József krt. 45, 2em.6B, 1085 Budapest, Hungary",
+        phone: "",
+        role: "NIBELC Manpower Kft · central Europe",
+        confirmed: true,
+      },
+      {
+        slug: "germany" as const,
+        city: "Berlin",
+        country: "Germany",
+        address: "Dietrichstraße 16, 16356 Ahrensfelde, Germany",
+        phone: "",
+        role: "NIBELC Germany GmbH · Ahrensfelde",
+        confirmed: true,
+      },
+      {
+        slug: "hanoi" as const,
+        city: "Ha Noi",
+        country: "Viet Nam",
+        address: "4th Floor, Rainbow Building, Lot B – CQ1, Van Quan, Ha Dong, Ha Noi, Viet Nam",
         phone: "",
         role: "Vietnamese market · client advisory",
-        confirmed: false,
+        confirmed: true,
       },
       {
         slug: "turkiye" as const,

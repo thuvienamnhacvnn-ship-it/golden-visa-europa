@@ -491,7 +491,7 @@ export const lv: Dictionary = {
   offices: {
     eyebrow: "Kur mēs esam",
     title: "Biroji",
-    lead: "Četri biroji trijos kontinentos. Jūsu lietu kārto valodā un laika joslā, kas jums ir ērta.",
+    lead: "Seši biroji trijos kontinentos. Jūsu lietu kārto valodā un laika joslā, kas jums ir ērta.",
     items: [
       {
         slug: "athens",
@@ -512,13 +512,31 @@ export const lv: Dictionary = {
         confirmed: true,
       },
       {
-        slug: "vietnam",
-        city: "Vjetnama",
+        slug: "budapest",
+        city: "Budapešta",
+        country: "Ungārija",
+        address: "József krt. 45, 2em.6B, 1085 Budapešta, Ungārija",
+        phone: "",
+        role: "NIBELC Manpower Kft · Centrāleiropa",
+        confirmed: true,
+      },
+      {
+        slug: "germany",
+        city: "Berlīne",
+        country: "Vācija",
+        address: "Dietrichstraße 16, 16356 Ahrensfelde, Vācija",
+        phone: "",
+        role: "NIBELC Germany GmbH · Ahrensfelde",
+        confirmed: true,
+      },
+      {
+        slug: "hanoi",
+        city: "Hanoja",
         country: "Vjetnama",
-        address: "",
+        address: "4. stāvs, Rainbow ēka, Lot B – CQ1, Van Quan, Ha Dong, Hanoja, Vjetnama",
         phone: "",
         role: "Vjetnamas tirgus · klientu konsultācijas",
-        confirmed: false,
+        confirmed: true,
       },
       {
         slug: "turkiye",

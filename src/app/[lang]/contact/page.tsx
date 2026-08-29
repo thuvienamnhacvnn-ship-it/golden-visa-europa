@@ -75,7 +75,13 @@ export default async function ContactPage({ params }: { params: Promise<{ lang: 
                         <br />
                         {o.street}
                         <br />
-                        {o.city} {o.postalCode}, {o.country}
+                        {/* Hà Nội không có mã bưu chính — ghép cứng sẽ thừa dấu phẩy */}
+                        {[
+                          [o.city, o.postalCode].filter(Boolean).join(" "),
+                          o.country,
+                        ]
+                          .filter(Boolean)
+                          .join(", ")}
                       </address>
                       <a
                         href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(
