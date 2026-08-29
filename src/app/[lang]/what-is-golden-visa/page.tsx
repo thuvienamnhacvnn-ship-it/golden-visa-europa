@@ -126,7 +126,7 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
                     của .tier-gold thành nhấc hai lần. */}
                 {/* Căn giữa cả cụm: chữ có lề đều hai bên, ba thẻ nhìn cân
                     nhau dù độ dài phần ghi chú chênh nhau khá nhiều. */}
-                <div className="card tier-gold flex h-full flex-col items-center p-9 text-center lg:p-10">
+                <div className="card tier-gold flex h-full flex-col items-center p-8 text-center lg:p-9">
                   <span className="relative z-10">
                     <Sparks count={9} seed={i * 7 + 3} />
                   </span>
@@ -149,7 +149,7 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
                   </p>
                   {/* Giới hạn bề ngang đoạn ghi chú cho dòng chữ đều nhau,
                       không để một dòng dài kéo sát mép thẻ. */}
-                  <p className="tier-gold__note relative z-10 mt-3 max-w-[30ch] text-ink/70">
+                  <p className="tier-gold__note relative z-10 mt-3 text-ink/70">
                     {tier.note}
                   </p>
                 </div>

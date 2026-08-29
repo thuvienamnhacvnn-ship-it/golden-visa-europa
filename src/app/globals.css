@@ -986,10 +986,16 @@ button:hover .gold-icon-bar {
 .tier-gold__where {
   font-size: 1rem;
   letter-spacing: 0.002em;
+  /* balance chia đều chữ cho các dòng, không để dòng cuối trơ một hai từ */
+  text-wrap: balance;
 }
 .tier-gold__note {
-  font-size: 0.9375rem;
-  line-height: 1.75;
+  font-size: 0.9125rem;
+  line-height: 1.65;
+  /* pretty tránh chữ mồ côi ở dòng cuối mà vẫn giữ dòng đầy.
+     KHÔNG bó hẹp bề ngang: bó lại thì chữ tràn xuống nhiều dòng và thẻ dài
+     ngoẵng, để chữ dùng hết bề ngang trong lề thì thẻ vuông vắn hơn. */
+  text-wrap: pretty;
 }
 
 /* Chữ trên nền vàng: đen và đậm hơn cho ra chất kim loại khắc chữ */
