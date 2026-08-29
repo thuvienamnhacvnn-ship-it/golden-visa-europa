@@ -30,6 +30,9 @@
   --color-on-deep-2: var(--on-deep-2);
 
   --font-serif: var(--font-playfair), Georgia, "Times New Roman", serif;
+  /* Phông có chân cho CHỮ ĐỌC. Khác --font-serif: cái kia là phông trưng bày,
+     xuống cỡ nhỏ thì nét mảnh và khó đọc. */
+  --font-serif-text: var(--font-source-serif), Georgia, "Times New Roman", serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -955,6 +958,38 @@ button:hover .gold-icon-bar {
 }
 .tier-gold:hover::before {
   opacity: 1;
+}
+
+/* Đường bo TRONG: một khung nữa lùi vào 10px, cho thẻ thành hai lớp chồng
+   nhau thay vì một mảng phẳng. Dùng ::after vì ::before đã là lớp nền vàng. */
+.tier-gold::after {
+  content: "";
+  position: absolute;
+  inset: 10px;
+  z-index: 1;
+  border-radius: calc(var(--r) - 6px);
+  border: 1px solid color-mix(in srgb, var(--color-gold-500) 26%, transparent);
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+.tier-gold:hover::after {
+  border-color: rgba(26, 18, 6, 0.32);
+}
+
+/* Chữ nhỏ trong thẻ dùng phông CÓ CHÂN dành cho chữ đọc, không phải phông
+   trưng bày của tiêu đề: phông kia nét thanh đậm chênh nhau nhiều nên xuống
+   cỡ này là mảnh và khó đọc. */
+.tier-gold__where,
+.tier-gold__note {
+  font-family: var(--font-serif-text);
+}
+.tier-gold__where {
+  font-size: 1rem;
+  letter-spacing: 0.002em;
+}
+.tier-gold__note {
+  font-size: 0.9375rem;
+  line-height: 1.75;
 }
 
 /* Chữ trên nền vàng: đen và đậm hơn cho ra chất kim loại khắc chữ */

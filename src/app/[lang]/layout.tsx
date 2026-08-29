@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
+import { Inter, Playfair_Display, Source_Serif_4 } from "next/font/google";
 import { notFound } from "next/navigation";
 import "../globals.css";
 
@@ -13,14 +13,29 @@ import { site } from "@/lib/site";
 import { organizationJsonLd } from "@/lib/jsonld";
 
 const playfair = Playfair_Display({
-  subsets: ["latin", "latin-ext"],
+  // Thiếu "vietnamese" thì dấu tiếng Việt trong tiêu đề rơi về phông hệ thống,
+  // chữ có dấu và chữ không dấu trong cùng một dòng lệch nét thấy rõ.
+  subsets: ["latin", "latin-ext", "vietnamese"],
   variable: "--font-playfair",
   display: "swap",
 });
 
 const inter = Inter({
-  subsets: ["latin", "latin-ext", "vietnamese"],
+  // Thêm "greek" cho bản tiếng Hy Lạp; thiếu thì cả trang đó chạy phông hệ thống.
+  subsets: ["latin", "latin-ext", "greek", "vietnamese"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+/**
+ * Phông có chân dành cho CHỮ ĐỌC, không phải cho tiêu đề.
+ * Playfair là phông trưng bày: đẹp ở cỡ lớn nhưng nét thanh đậm chênh nhau
+ * nhiều nên xuống cỡ nhỏ là mảnh và khó đọc. Source Serif 4 vẽ để đọc, nét
+ * chắc hơn, và phủ đủ latin-ext + Hy Lạp + tiếng Việt cho cả năm ngôn ngữ.
+ */
+const sourceSerif = Source_Serif_4({
+  subsets: ["latin", "latin-ext", "greek", "vietnamese"],
+  variable: "--font-source-serif",
   display: "swap",
 });
 
@@ -76,7 +91,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={dict.meta.htmlLang}
-      className={`${playfair.variable} ${inter.variable}`}
+      className={`${playfair.variable} ${inter.variable} ${sourceSerif.variable}`}
       suppressHydrationWarning
     >
       <head>
