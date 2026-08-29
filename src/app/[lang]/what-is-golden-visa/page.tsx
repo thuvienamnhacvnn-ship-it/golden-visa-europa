@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 
 import { Container, Section, PageHero, ButtonLink, Rule, Eyebrow, SectionHeading } from "@/components/ui";
 import { Reveal } from "@/components/Reveal";
+import { Sparks } from "@/components/Sparks";
 import { JsonLd } from "@/components/JsonLd";
 import { getDictionary, isLocale, localePath, locales, type Locale } from "@/i18n";
 import { breadcrumbJsonLd, faqJsonLd } from "@/lib/jsonld";
@@ -120,14 +121,21 @@ export default async function WhatIsPage({ params }: { params: Promise<{ lang: s
           <ul className="mt-16 grid gap-5 lg:grid-cols-3">
             {t.thresholds.tiers.map((tier, i) => (
               <Reveal as="li" key={tier.amount} delay={i * 90}>
-                <div className="card card-hover card-sweep flex h-full flex-col p-8 lg:p-10">
-                  <span className="display text-[2.6rem] text-gold-600">
+                {/* Bỏ card-hover: lớp đó cũng nhấc thẻ lên, chồng với hiệu ứng
+                    của .tier-gold thành nhấc hai lần. */}
+                <div className="card tier-gold flex h-full flex-col p-8 lg:p-10">
+                  <span className="relative z-10">
+                    <Sparks count={9} seed={i * 7 + 3} />
+                  </span>
+                  <span className="tier-gold__amount display relative z-10 text-[2.6rem] text-gold-600">
                     {tier.amount}
                   </span>
-                  <p className="mt-6 border-t border-ink/10 pt-5 text-[0.9375rem] font-medium leading-7 text-ink">
+                  <p className="tier-gold__where relative z-10 mt-6 border-t border-ink/10 pt-5 text-[0.9375rem] font-medium leading-7 text-ink">
                     {tier.where}
                   </p>
-                  <p className="mt-3 text-[0.875rem] leading-7 text-ink/70">{tier.note}</p>
+                  <p className="tier-gold__note relative z-10 mt-3 text-[0.875rem] leading-7 text-ink/70">
+                    {tier.note}
+                  </p>
                 </div>
               </Reveal>
             ))}

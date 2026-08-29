@@ -912,3 +912,88 @@ button:hover .gold-icon-bar {
     transition: none;
   }
 }
+
+/* ── Ba bảng mức đầu tư: rê chuột vào là cả bảng hoá vàng ──────────
+   Nền vàng đặt ở lớp ::before phủ kín thẻ chứ không đổi background-color
+   trực tiếp: thẻ .card đã có nền và viền riêng, đổi thẳng thì lúc chuyển
+   màu bị giật một nhịp. Lớp phủ mờ dần nên chuyển êm. */
+.tier-gold {
+  position: relative;
+  cursor:
+    url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>\
+<g fill='%23F2C94F' stroke='%236B4E12' stroke-width='1.4' stroke-linejoin='round'>\
+<path d='M12 15V6.5a2.2 2.2 0 0 1 4.4 0V14'/>\
+<path d='M16.4 14v-2.2a2.2 2.2 0 0 1 4.4 0V15'/>\
+<path d='M20.8 15v-1.6a2.2 2.2 0 0 1 4.4 0V21c0 4.4-3 7.6-7.4 7.6h-2.2c-3.3 0-5-1.5-6.4-3.9l-3-5.2a2.2 2.2 0 0 1 3.6-2.5L12 20'/>\
+</g></svg>") 12 4,
+    pointer;
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.tier-gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* z-index 0 chứ KHÔNG phải -1: thẻ .card có nền đục riêng, để -1 thì lớp
+     vàng chui xuống dưới nền đó và gần như không thấy gì. Ở mức 0 nó nằm trên
+     nền thẻ, còn chữ và chùm sao đã có z-10 nên vẫn nổi trên lớp vàng. */
+  z-index: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.38s ease;
+  background: linear-gradient(145deg, #ffe9a3 0%, #f2c94f 42%, #d9a92e 78%, #f7d977 100%);
+}
+.tier-gold:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 138, 26, 0.85);
+  box-shadow:
+    0 14px 28px -12px rgba(0, 0, 0, 0.35),
+    0 28px 60px -24px rgba(200, 164, 77, 0.85);
+}
+.tier-gold:hover::before {
+  opacity: 1;
+}
+
+/* Chữ trên nền vàng: đen và đậm hơn cho ra chất kim loại khắc chữ */
+.tier-gold__amount,
+.tier-gold__where,
+.tier-gold__note {
+  transition: color 0.3s ease, font-weight 0.3s ease, border-color 0.3s ease;
+}
+.tier-gold:hover .tier-gold__amount {
+  color: #1a1206;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.tier-gold:hover .tier-gold__where {
+  color: #241806;
+  font-weight: 600;
+  border-color: rgba(26, 18, 6, 0.28);
+}
+.tier-gold:hover .tier-gold__note {
+  color: #3a2a0d;
+  font-weight: 500;
+}
+
+/* Sao chỉ lấp lánh khi rê vào; lúc thường nằm im để không rối mắt */
+.tier-gold .spark {
+  opacity: 0;
+  color: #fffbe8;
+}
+.tier-gold:hover .spark {
+  animation: spark-twinkle 1.25s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tier-gold,
+  .tier-gold:hover {
+    transform: none;
+    transition: none;
+  }
+  .tier-gold:hover .spark {
+    animation: none;
+    opacity: 0.9;
+  }
+}
