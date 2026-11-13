@@ -443,19 +443,19 @@
   pointer-events: none;
   user-select: none;
 }
-.gold-3d .g-legs{z-index:0;color:#8fa2bc;-webkit-text-stroke:.05em #8fa2bc;paint-order:stroke fill;
-  /* Mỗi bước phải >= 1px, nếu nhỏ hơn Chrome bỏ cả lớp đổ bóng → chân biến mất. */
+.gold-3d .g-legs{z-index:0;color:#2e323a;-webkit-text-stroke:.05em #2e323a;paint-order:stroke fill;
+  /* Chân kim loại ĐEN nhiều lớp: tầng đen xen đường sáng mảnh. Mỗi bước phải >= 1px, nhỏ hơn thì Chrome bỏ cả lớp đổ bóng. */
   filter:
-    drop-shadow(0 .026em 0 #c9a465)
-    drop-shadow(0 .026em 0 #8fa2bc)
-    drop-shadow(0 .026em 0 #7a8fac)
-    drop-shadow(0 .026em 0 #b99a5c)
-    drop-shadow(0 .026em 0 #687e9d)
-    drop-shadow(0 .026em 0 #5a7090)
-    drop-shadow(0 .026em 0 #a98c54)
-    drop-shadow(0 .026em 0 #4d6382)
-    drop-shadow(0 .026em 0 #374968)
-    drop-shadow(0 .05em .06em rgba(0,0,0,.45)) drop-shadow(0 .2em .3em rgba(0,0,0,.5))}
+    drop-shadow(0 .026em 0 #5b616d)
+    drop-shadow(0 .026em 0 #2e323a)
+    drop-shadow(0 .026em 0 #20242b)
+    drop-shadow(0 .026em 0 #50565f)
+    drop-shadow(0 .026em 0 #1b1f25)
+    drop-shadow(0 .026em 0 #14171c)
+    drop-shadow(0 .026em 0 #434852)
+    drop-shadow(0 .026em 0 #0f1216)
+    drop-shadow(0 .026em 0 #090b0e)
+    drop-shadow(0 .05em .06em rgba(0,0,0,.5)) drop-shadow(0 .2em .3em rgba(0,0,0,.55))}
 .gold-3d .g-rim {
   z-index: 1;
   color: #b8891f;
