@@ -5,7 +5,7 @@ import { Container, Section, SectionHeading, Eyebrow, Rule, ButtonLink, TextLink
 import { Artwork } from "@/components/Artwork";
 import { serviceArtSrc, cityArtSrc, crestSrc } from "@/lib/art";
 import { MeanderRule, Seal } from "@/components/Ornament";
-import { HeroVideo } from "@/components/HeroMedia";
+import { BannerVideo, HeroVideo } from "@/components/HeroMedia";
 import { pick } from "@/lib/media";
 import { GoldTitle } from "@/components/GoldTitle";
 import { Sparks } from "@/components/Sparks";
@@ -31,11 +31,13 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         {/* Dùng ảnh tĩnh. Video vẫn nằm ở public/video/banner.mp4 nếu cần bật lại. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src={hero.src}
+          src="/video/hero-athens-snow-poster.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover object-right"
         />
+        {/* Mùa Noel: video camera cố định — bàn đá đặt thẻ vàng + huy hiệu, Athens xa đêm tuyết rơi. Hết mùa: xoá dòng BannerVideo và trả src ảnh về hero.src */}
+        <BannerVideo src="hero-athens-snow.mp4" poster="/video/hero-athens-snow-poster.jpg" />
         {/* Lớp video WebM nền trong suốt — chỉ hiện khi đã có tệp trong public/video/ */}
         <HeroVideo className="opacity-90 mix-blend-screen" />
         {/* Tối dần từ trái để chữ vàng luôn đọc được */}
