@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display, Source_Serif_4 } from "next/font/google";
 import { notFound } from "next/navigation";
+import Script from "next/script";
 import "../globals.css";
 
 import { Header } from "@/components/Header";
@@ -153,6 +154,8 @@ export default async function LocaleLayout({
           // Dữ liệu do chính chúng ta tạo, không phải input người dùng.
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd(locale, dict)) }}
         />
+        {/* Mùa Noel: ông già Noel 3D + xe tuần lộc (public/noel/santa-pet.js). Hết mùa: xoá dòng này. Tắt tạm: ?santa=0 */}
+        <Script src="/noel/santa-pet.js" strategy="afterInteractive" />
       </body>
     </html>
   );
