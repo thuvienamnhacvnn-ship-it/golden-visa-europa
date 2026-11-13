@@ -8,6 +8,9 @@ import { MeanderRule, Seal } from "@/components/Ornament";
 import { BannerVideo, HeroVideo } from "@/components/HeroMedia";
 import { pick } from "@/lib/media";
 import { GoldTitle } from "@/components/GoldTitle";
+import { HeroSnow } from "@/components/HeroSnow";
+import { HeroSleigh } from "@/components/HeroSleigh";
+import { HeroOrnaments } from "@/components/HeroOrnaments";
 import { Sparks } from "@/components/Sparks";
 import { properties } from "@/lib/properties";
 import { Words } from "@/components/ui";
@@ -50,6 +53,8 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           }}
         />
 
+        {/* Xe tuần lộc nền sau chữ + núi đá (chỉ trong hero) */}
+        <HeroSleigh />
         <Container className="relative">
           <div className="flex min-h-[100svh] max-w-2xl flex-col items-center justify-center pb-24 pt-28 text-center lg:items-start lg:pb-32 lg:pt-40 lg:text-left">
             <p className="gold-soft text-[0.85rem] font-semibold uppercase tracking-[0.32em] sm:text-[0.95rem]">
@@ -97,6 +102,9 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             </div>
           </div>
         </Container>
+      {/* Tuyết gần-xa phủ lên cả thẻ, huy hiệu, chữ và nút */}
+        <HeroOrnaments />
+        <HeroSnow />
       </section>
 
       {/* ── Ba mức đầu tư: nối liền mạch từ hero, thay cho bảng số liệu cũ ── */}
