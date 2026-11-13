@@ -58,7 +58,7 @@ export function HeroSnow() {
     // Sprite dựng sẵn: ít biến thể là đủ vì mỗi hạt có cỡ, góc xoay, độ mờ riêng.
     const far = [makeSprite(24, 0, 11, 2), makeSprite(24, 0, 23, 3)];
     const mid = [makeSprite(48, 0.6, 31, 4), makeSprite(48, 0.6, 47, 5), makeSprite(48, 0.8, 59, 4)];
-    const near = [makeSprite(160, 5, 71, 9), makeSprite(160, 6, 83, 8), makeSprite(160, 4, 97, 10), makeSprite(160, 7, 113, 7), makeSprite(160, 5, 127, 9)];
+    const near = [makeSprite(160, 2.5, 71, 9), makeSprite(160, 3, 83, 8), makeSprite(160, 2, 97, 10), makeSprite(160, 3.5, 113, 7), makeSprite(160, 2.5, 127, 9)];
 
     let W = 0, H = 0, dpr = 1, raf = 0, last = performance.now();
     let visible = true, alive = true;
@@ -77,13 +77,13 @@ export function HeroSnow() {
               ? { x: rand(0, W), y: rand(0, H), r: rand(0.8, 2.1), vy: rand(16, 30), sway: rand(3, 8), f: rand(0.4, 0.9), ph: rand(0, 6.3), rot: 0, vr: 0, a: rand(0.4, 0.8), s: Math.floor(rand(0, far.length)), layer }
               : layer === 1
                 ? { x: rand(0, W), y: rand(0, H), r: rand(2.6, 6), vy: rand(42, 78), sway: rand(8, 20), f: rand(0.3, 0.7), ph: rand(0, 6.3), rot: rand(0, 6.3), vr: rand(-0.4, 0.4), a: rand(0.45, 0.8), s: Math.floor(rand(0, mid.length)), layer }
-                : { x: rand(0, W), y: rand(0, H), r: rand(9, 24), vy: rand(110, 200), sway: rand(18, 46), f: rand(0.15, 0.4), ph: rand(0, 6.3), rot: rand(0, 6.3), vr: rand(-0.5, 0.5), a: rand(0.32, 0.62), s: Math.floor(rand(0, near.length)), layer };
+                : { x: rand(0, W), y: rand(0, H), r: rand(12, 32), vy: rand(120, 210), sway: rand(18, 46), f: rand(0.15, 0.4), ph: rand(0, 6.3), rot: rand(0, 6.3), vr: rand(-0.5, 0.5), a: rand(0.5, 0.85), s: Math.floor(rand(0, near.length)), layer };
           flakes.push(f);
         }
       };
       add(170, 0);
-      add(78, 1);
-      add(20, 2);
+      add(100, 1);
+      add(34, 2);
       // vài hạt bụi vàng quanh khu thẻ + huy hiệu (nửa phải hero)
       dust = Array.from({ length: Math.round(26 * k) }, () => ({ x: rand(W * 0.52, W * 0.96), y: rand(H * 0.3, H * 0.78), r: rand(0.8, 2.2), ph: rand(0, 6.3), f: rand(0.5, 1.4) }));
     };
