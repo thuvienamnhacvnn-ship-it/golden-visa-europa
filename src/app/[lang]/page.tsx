@@ -40,7 +40,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
           className="absolute inset-0 h-full w-full object-cover object-right"
         />
         {/* Mùa Noel: video camera cố định — bàn đá đặt thẻ vàng + huy hiệu, Athens xa đêm tuyết rơi. Hết mùa: xoá dòng BannerVideo và trả src ảnh về hero.src */}
-        <BannerVideo src="hero-athens-snow-v3.mp4" poster="/video/hero-athens-snow-v3-poster.jpg" />
+        <BannerVideo src="hero-athens-snow-pp.mp4" poster="/video/hero-athens-snow-v3-poster.jpg" />
         {/* Lớp video WebM nền trong suốt — chỉ hiện khi đã có tệp trong public/video/ */}
         <HeroVideo className="opacity-90 mix-blend-screen" />
         {/* Tối dần từ trái để chữ vàng luôn đọc được */}
