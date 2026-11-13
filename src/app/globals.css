@@ -444,21 +444,17 @@
   user-select: none;
 }
 .gold-3d .g-legs{z-index:0;color:#8fa2bc;-webkit-text-stroke:.05em #8fa2bc;paint-order:stroke fill;
+  /* Mỗi bước phải >= 1px, nếu nhỏ hơn Chrome bỏ cả lớp đổ bóng → chân biến mất. */
   filter:
-    drop-shadow(0 .016em 0 #c9a465)
-    drop-shadow(0 .016em 0 #8fa2bc)
-    drop-shadow(0 .016em 0 #7a8fac)
-    drop-shadow(0 .016em 0 #b99a5c)
-    drop-shadow(0 .016em 0 #687e9d)
-    drop-shadow(0 .016em 0 #5a7090)
-    drop-shadow(0 .016em 0 #a98c54)
-    drop-shadow(0 .016em 0 #4d6382)
-    drop-shadow(0 .016em 0 #425775)
-    drop-shadow(0 .016em 0 #977d4d)
-    drop-shadow(0 .016em 0 #374968)
-    drop-shadow(0 .016em 0 #2e3e5a)
-    drop-shadow(0 .016em 0 #7d683f)
-    drop-shadow(0 .016em 0 #26334b)
+    drop-shadow(0 .026em 0 #c9a465)
+    drop-shadow(0 .026em 0 #8fa2bc)
+    drop-shadow(0 .026em 0 #7a8fac)
+    drop-shadow(0 .026em 0 #b99a5c)
+    drop-shadow(0 .026em 0 #687e9d)
+    drop-shadow(0 .026em 0 #5a7090)
+    drop-shadow(0 .026em 0 #a98c54)
+    drop-shadow(0 .026em 0 #4d6382)
+    drop-shadow(0 .026em 0 #374968)
     drop-shadow(0 .05em .06em rgba(0,0,0,.45)) drop-shadow(0 .2em .3em rgba(0,0,0,.5))}
 .gold-3d .g-rim {
   z-index: 1;
