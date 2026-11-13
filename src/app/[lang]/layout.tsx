@@ -155,7 +155,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd(locale, dict)) }}
         />
         {/* Mùa Noel: ông già Noel 3D + xe tuần lộc (public/noel/santa-pet.js). Hết mùa: xoá dòng này. Tắt tạm: ?santa=0 */}
-        <Script src="/noel/santa-pet.js" strategy="afterInteractive" />
+        <Script src="/noel/santa-pet.js?v=2" strategy="afterInteractive" data-pet="0" />
       </body>
     </html>
   );
