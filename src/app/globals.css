@@ -443,19 +443,15 @@
   pointer-events: none;
   user-select: none;
 }
-.gold-3d .g-legs{z-index:0;color:#2e323a;-webkit-text-stroke:.05em #2e323a;paint-order:stroke fill;
-  /* Chân kim loại ĐEN nhiều lớp: tầng đen xen đường sáng mảnh. Mỗi bước phải >= 1px, nhỏ hơn thì Chrome bỏ cả lớp đổ bóng. */
+.gold-3d .g-legs{z-index:0;color:#2a2e36;-webkit-text-stroke:.05em #2a2e36;paint-order:stroke fill;
+  /* Chân kim loại ĐEN, mỏng nhưng hơi dày: 5 tầng đen xen đường sáng mảnh. Mỗi bước phải >= 1px, nhỏ hơn thì Chrome bỏ cả lớp đổ bóng. */
   filter:
     drop-shadow(0 .026em 0 #5b616d)
-    drop-shadow(0 .026em 0 #2e323a)
-    drop-shadow(0 .026em 0 #20242b)
-    drop-shadow(0 .026em 0 #50565f)
+    drop-shadow(0 .026em 0 #2a2e36)
     drop-shadow(0 .026em 0 #1b1f25)
-    drop-shadow(0 .026em 0 #14171c)
     drop-shadow(0 .026em 0 #434852)
-    drop-shadow(0 .026em 0 #0f1216)
-    drop-shadow(0 .026em 0 #090b0e)
-    drop-shadow(0 .05em .06em rgba(0,0,0,.5)) drop-shadow(0 .2em .3em rgba(0,0,0,.55))}
+    drop-shadow(0 .026em 0 #0c0e12)
+    drop-shadow(0 .04em .05em rgba(0,0,0,.5)) drop-shadow(0 .14em .2em rgba(0,0,0,.5))}
 .gold-3d .g-rim {
   z-index: 1;
   color: #b8891f;
