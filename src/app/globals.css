@@ -423,67 +423,69 @@
    ══════════════════════════════════════════════════════════════ */
 
 .gold-3d {
-  /* Dải màu vàng kim: SÁNG và BÃO HOÀ.
-     Bản trước lấy mẫu từ ảnh nên đỉnh chữ gần như trắng kem (#fffdf0) —
-     sáng thật nhưng mất sắc vàng, nhìn ra bạc ngả kem chứ không ra gold.
-     Bản này giữ độ sáng nhưng kéo bão hoà lên: chỗ sáng nhất vẫn là vàng
-     nhạt chứ không phải trắng, và thân chữ dùng vàng đậm thay vì vàng nhạt.
-     Hai vệt phản quang (28% và 46%) tạo cảm giác mặt kim loại cong. */
-  /* Các mốc bị NÉN vào khoảng 20%–80% chứ không trải đều 0–100%.
-     Lý do: hộp dòng của chữ cao hơn thân chữ. Đo trên trình duyệt với
-     "HY LẠP" cỡ 106px: nét chữ chỉ chiếm từ 19% tới 80% chiều cao hộp.
-     Trải đều 0–100% thì hai đầu sáng nhất và sẫm nhất rơi ra ngoài nét,
-     phần nhìn thấy chỉ còn khúc giữa nên chữ bệt một màu vàng lửng.
-     Nén lại thì cả dải nằm gọn trong thân chữ. Phần ngoài 20/80 vẫn giữ
-     màu đầu và cuối, nên dấu phụ phía trên ăn màu sáng và dấu nặng phía
-     dưới ăn màu sẫm — đúng như khối vàng thật. */
-  background-image: linear-gradient(
-    180deg,
-    #fff0a8 0%,
-    #fff0a8 20%,
-    #ffe368 24.8%,
-    #ffd22e 30.8%,
-    #ffc70f 36.2%,
-    #fff8cf 41%,
-    #ffe775 46.4%,
-    #ffd12b 52.4%,
-    #f9bb0d 59.6%,
-    #ffd943 66.8%,
-    #f5b711 74%,
-    #d9930a 80%,
-    #d9930a 100%
-  );
-  background-size: 100% 100%;
+  /* Chữ vàng 3D dựng bằng BA lớp chồng nhau (xem GoldTitle.tsx):
+       g-legs = chân kim loại nhiều lớp (đường đồng mảnh xen các tầng thép xanh nhạt → sẫm, tô màu 3D nhẹ)
+       g-rim  = viền lớp ngoài, thấp hơn mặt chữ
+       g-face = mặt vàng tây (vàng ngả nhạt, không cam), có cạnh nổi lên khỏi viền
+     Mặt vàng phải nằm trong phần tử RIÊNG: nếu nó là nền của phần tử cha thì mọi lớp con
+     vẽ đè lên nó và chữ ra một màu bệt. */
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  --face-edge: drop-shadow(0 0.012em 0 rgba(115, 78, 12, 0.75)) drop-shadow(0 -0.006em 0 rgba(255, 246, 200, 0.5));
+}
+.gold-3d .g-legs,
+.gold-3d .g-rim {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+.gold-3d .g-legs{z-index:0;color:#8fa2bc;-webkit-text-stroke:.05em #8fa2bc;paint-order:stroke fill;
+  filter:
+    drop-shadow(0 .016em 0 #c9a465)
+    drop-shadow(0 .016em 0 #8fa2bc)
+    drop-shadow(0 .016em 0 #7a8fac)
+    drop-shadow(0 .016em 0 #b99a5c)
+    drop-shadow(0 .016em 0 #687e9d)
+    drop-shadow(0 .016em 0 #5a7090)
+    drop-shadow(0 .016em 0 #a98c54)
+    drop-shadow(0 .016em 0 #4d6382)
+    drop-shadow(0 .016em 0 #425775)
+    drop-shadow(0 .016em 0 #977d4d)
+    drop-shadow(0 .016em 0 #374968)
+    drop-shadow(0 .016em 0 #2e3e5a)
+    drop-shadow(0 .016em 0 #7d683f)
+    drop-shadow(0 .016em 0 #26334b)
+    drop-shadow(0 .05em .06em rgba(0,0,0,.45)) drop-shadow(0 .2em .3em rgba(0,0,0,.5))}
+.gold-3d .g-rim {
+  z-index: 1;
+  color: #b8891f;
+  -webkit-text-stroke: 0.05em #b8891f;
+  paint-order: stroke fill;
+  transform: translateY(0.012em);
+  background-image: linear-gradient(180deg, #e9cf7a, #b88a22 55%, #8f6612);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.gold-3d .g-face {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  background-image: linear-gradient(180deg, #fff4bd 0%, #f4dc82 18%, #e6c55a 40%, #d8b042 55%, #ecd16d 74%, #cfa535 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-
-  /* Đổ khối bằng filter chứ KHÔNG phải text-shadow.
-     Thứ tự vẽ của trình duyệt là: nền → text-shadow → chữ. Mặt vàng ở đây
-     chính là NỀN được cắt theo hình chữ (background-clip: text), nên mọi
-     text-shadow đều nằm ĐÈ LÊN nó. Bản trước đổ khối bằng bảy lớp
-     text-shadow đặc lệch xuống 2–7px, tức là phủ kín gần hết mặt chữ —
-     đó là lý do chữ ra một màu nâu vàng bệt dù dải màu rất sáng.
-     filter: drop-shadow vẽ phía SAU phần tử nên giữ nguyên mặt vàng.
-     Xâu nhiều drop-shadow 1px chồng lên nhau để dựng bề dày khối. */
-  --extrude:
-    drop-shadow(0 1px 0 #c4881a) drop-shadow(0 1px 0 #b8801a)
-    drop-shadow(0 1px 0 #a87316) drop-shadow(0 1px 0 #966412)
-    drop-shadow(0 1px 0 #83530d) drop-shadow(0 1px 0 #6c4209)
-    drop-shadow(0 2px 2px rgba(0, 0, 0, 0.45))
-    drop-shadow(0 12px 22px rgba(0, 0, 0, 0.5));
-  filter: var(--extrude);
-
+  filter: var(--face-edge);
   transition: filter 0.6s ease;
 }
 
-
-
-
-/* Rê chuột: vệt sáng chạy dọc qua mặt kim loại */
-.gold-title:hover .gold-3d,
-.gold-title:focus-visible .gold-3d {
-  filter: brightness(1.1) saturate(1.05) var(--extrude);
+/* Rê chuột: mặt vàng sáng lên */
+.gold-title:hover .gold-3d .g-face,
+.gold-title:focus-visible .gold-3d .g-face {
+  filter: brightness(1.1) saturate(1.05) var(--face-edge);
 }
 
 /* ── Ánh sao ──────────────────────────────────────────────── */
@@ -527,9 +529,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .gold-title:hover .gold-3d,
-  .gold-title:focus-visible .gold-3d {
-    filter: none;
+  .gold-title:hover .gold-3d .g-face,
+  .gold-title:focus-visible .gold-3d .g-face {
+    filter: var(--face-edge);
   }
   .gold-title:hover .spark,
   .gold-title:focus-visible .spark {

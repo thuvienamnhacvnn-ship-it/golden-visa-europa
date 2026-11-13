@@ -61,7 +61,9 @@ export function GoldTitle({
       {/* Ảnh mẫu dùng SANS đậm chứ không phải serif — đó là lý do bản trước
           nhìn không giống. font-sans + 900 + chữ hoa cho khớp. */}
       <span className="gold-3d relative z-10 font-sans font-black uppercase tracking-[-0.02em]">
-        {text}
+        <span className="g-legs" aria-hidden="true">{text}</span>
+        <span className="g-rim" aria-hidden="true">{text}</span>
+        <span className="g-face">{text}</span>
       </span>
       <span className="pointer-events-none absolute inset-0 z-20" aria-hidden="true">
         {stars.map((s) => (

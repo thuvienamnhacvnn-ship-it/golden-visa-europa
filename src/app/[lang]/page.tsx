@@ -31,13 +31,13 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
         {/* Dùng ảnh tĩnh. Video vẫn nằm ở public/video/banner.mp4 nếu cần bật lại. */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/video/hero-athens-snow-poster.jpg"
+          src="/video/hero-athens-snow-v2-poster.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover object-right"
         />
         {/* Mùa Noel: video camera cố định — bàn đá đặt thẻ vàng + huy hiệu, Athens xa đêm tuyết rơi. Hết mùa: xoá dòng BannerVideo và trả src ảnh về hero.src */}
-        <BannerVideo src="hero-athens-snow.mp4" poster="/video/hero-athens-snow-poster.jpg" />
+        <BannerVideo src="hero-athens-snow-v2.mp4" poster="/video/hero-athens-snow-v2-poster.jpg" />
         {/* Lớp video WebM nền trong suốt — chỉ hiện khi đã có tệp trong public/video/ */}
         <HeroVideo className="opacity-90 mix-blend-screen" />
         {/* Tối dần từ trái để chữ vàng luôn đọc được */}
@@ -48,11 +48,6 @@ export default async function HomePage({ params }: { params: Promise<{ lang: str
             background:
               "linear-gradient(90deg, rgba(0,10,30,0.78) 0%, rgba(0,10,30,0.62) 26%, rgba(0,10,30,0.34) 46%, rgba(0,10,30,0.08) 64%, rgba(0,10,30,0) 78%)",
           }}
-        />
-        <div
-          className="absolute inset-x-0 bottom-0 h-40"
-          aria-hidden="true"
-          style={{ background: "linear-gradient(180deg, transparent, var(--surface))" }}
         />
 
         <Container className="relative">
